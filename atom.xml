@@ -8,8 +8,29 @@
         <name>Dr. Hakyll</name>
         <email>dr-hakyll@dr-hakyll.com</email>
     </author>
-    <updated>2015-07-15T00:00:00Z</updated>
+    <updated>2015-07-31T00:00:00Z</updated>
     <entry>
+    <title>Hakyll and CircleCi</title>
+    <link href="/posts/2015-07-31-hakyll-and-circleci.html" />
+    <id>/posts/2015-07-31-hakyll-and-circleci.html</id>
+    <published>2015-07-31T00:00:00Z</published>
+    <updated>2015-07-31T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Hakyll and CircleCi
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-31
+    
+      by Adam
+    
+  </p>
+  <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
+<p>So far, so good.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Beautiful Knowledge</title>
     <link href="/posts/2015-07-15-beautiful-knowledge.html" />
     <id>/posts/2015-07-15-beautiful-knowledge.html</id>
