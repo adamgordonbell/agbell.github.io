@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Dr. Hakyll's Blog</title>
+        <link></link>
+        <description><![CDATA[Dr. Hakyll's blog]]></description>
+        <atom:link href="/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Wed, 15 Jul 2015 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Beautiful Knowledge</title>
+    <link>/posts/2015-07-15-beautiful-knowledge.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Beautiful Knowledge
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Henry David Thoreau
+    
+  </p>
+  <p>We have heard of a Society for the Diffusion of Useful Knowledge. It is said that knowledge is power, and the like. Methinks there is equal need of a Society for the Difussion of Useful Ignorance, what we will call Beautiful Knowledge, a knowledge useful in a higher sense: for what is most of our boasted so-called knowledge but a conceit that we know something, which robs us of the advantage of our actual ignorance? What we call knowledge is often our positive ignorance; ignorance our negative knowledge.</p>
+</div>
+]]></description>
+    <pubDate>Wed, 15 Jul 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-07-15-beautiful-knowledge.html</guid>
+    <dc:creator>Dr. Hakyll</dc:creator>
+</item>
+<item>
+    <title>Walking</title>
+    <link>/posts/2015-05-17-walking.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Walking
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-05-17
+    
+      by Henry David Thoreau
+    
+  </p>
+  <p>Moreover, you must walk like a camel, which is said to be the only beast which ruminates when walking. When a traveler asked Wordsworth’s servant to show him her master’s study, she answered, “Here is his library, but his study is out of doors.”</p>
+</div>
+]]></description>
+    <pubDate>Sun, 17 May 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-05-17-walking.html</guid>
+    <dc:creator>Dr. Hakyll</dc:creator>
+</item>
+
+    </channel>
+</rss>

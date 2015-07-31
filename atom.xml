@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Dr. Hakyll's Blog</title>
+    <link href="/atom.xml" rel="self" />
+    <link href="" />
+    <id>/atom.xml</id>
+    <author>
+        <name>Dr. Hakyll</name>
+        <email>dr-hakyll@dr-hakyll.com</email>
+    </author>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <entry>
+    <title>Beautiful Knowledge</title>
+    <link href="/posts/2015-07-15-beautiful-knowledge.html" />
+    <id>/posts/2015-07-15-beautiful-knowledge.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Beautiful Knowledge
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Henry David Thoreau
+    
+  </p>
+  <p>We have heard of a Society for the Diffusion of Useful Knowledge. It is said that knowledge is power, and the like. Methinks there is equal need of a Society for the Difussion of Useful Ignorance, what we will call Beautiful Knowledge, a knowledge useful in a higher sense: for what is most of our boasted so-called knowledge but a conceit that we know something, which robs us of the advantage of our actual ignorance? What we call knowledge is often our positive ignorance; ignorance our negative knowledge.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Walking</title>
+    <link href="/posts/2015-05-17-walking.html" />
+    <id>/posts/2015-05-17-walking.html</id>
+    <published>2015-05-17T00:00:00Z</published>
+    <updated>2015-05-17T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Walking
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-05-17
+    
+      by Henry David Thoreau
+    
+  </p>
+  <p>Moreover, you must walk like a camel, which is said to be the only beast which ruminates when walking. When a traveler asked Wordsworth’s servant to show him her master’s study, she answered, “Here is his library, but his study is out of doors.”</p>
+</div>
+]]></summary>
+</entry>
+
+</feed>
