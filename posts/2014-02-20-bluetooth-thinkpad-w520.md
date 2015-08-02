@@ -3,7 +3,7 @@ title: How to get bluetooth working in windows 8 / 8.1 on various thinkpads
 author: Adam Bell
 tags: thinkpad, bluetooth
 ---
-![](http://41.media.tumblr.com/83f3cf40020f1f0b1d8ee88318655650/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg)  
+![](/images/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg)  
 
 > **How to get bluetooth working in windows 8 / 8.1 on various thinkpads.**
 
