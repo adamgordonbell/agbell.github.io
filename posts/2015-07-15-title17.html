@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cascade Of Insights - Incrementing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+	<nav class="blog-nav">
+          <a class="blog-nav-item" href="../">Home</a>
+          <a class="blog-nav-item" href="../about.html">About</a>
+          <a class="blog-nav-item" href="../contact.html">Contact</a>
+          <a class="blog-nav-item" href="../archive.html">Archive</a>
+	</nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+	<h1 class="blog-title">Cascade Of Insights</h1>
+	<p class="lead blog-description">
+	  The blog of Adam Gordon Bell (agbell)
+	</p>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-8 blog-main">
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt /><strong>Security Thoughts:</strong></p>
+<p>There are generally three types of authorization in enterprise applications:</p>
+<ol style="list-style-type: decimal">
+<li><span><span></span></span><strong>Role based security</strong> <strong>-</strong> Which actions can a user do - aka role-based access control<span><span></span></span></li>
+<li><span><span></span></span><strong>Entity level security</strong> - A user can only perform an Action on certain objects/data - aka row level security</li>
+<li><strong>Field level security</strong> - A user can see or edit only certain fields of an entity – <em>(this is really fine grained and usually a bad idea)</em></li>
+</ol>
+<p>There is a framework that covers all 3 of these authorization types, Rhino Security. It allows authorization to be abstracted from the business logic as a cross-cutting concern. It is deigned to handle 1 &amp; 2 above, but people have used it to implement 3.</p>
+<p>Here is an example of the type of rules it can easily encompass:</p>
+<blockquote>
+<p>Survey Entity:</p>
+<p>A survey has a start date, an end date, can be marked as applicable to a specific population, may be public or private, etc.</p>
+<p>View Restrictions:</p>
+<p>The specification says that a survey that the user does not own should only be visible to a user iff:</p>
+<ul>
+<li>The survey is public</li>
+<li>The survey is active</li>
+<li>The survey has started</li>
+<li>The survey has not ended</li>
+<li>The survey is for a population that the user is a member of</li>
+</ul>
+<p><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" class="uri">http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx</a></p>
+</blockquote>
+<p><strong>Entity Group:</strong></p>
+<p>The key concept that separates it from standard role based security is the concept of an entity-group. Entity groups are group of, well, entities and users can be granted/denied access to them just like actions.</p>
+<p>I would really love to see someone port this concept to the entity framework. It certainly might not be right for every project, but a cohesive strategy for access control would be a big leap forward compared to a lot of projects I’ve worked on.</p>
+<p><strong>Further Reading:</strong></p>
+<ul>
+<li><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" title="Title of this entry.">Handling complex security conditions with Rhino Security</a></li>
+<li><a href="http://bartreyserhove.blogspot.com/search/label/rhino%20security">Field level security performance with Rhino Security</a></li>
+<li><a href="http://ayende.com/Blog/category/548.aspx">Rhino Security</a></li>
+<li><a href="http://ayende.com/Blog/archive/2007/11/17/A-vision-of-enterprise-platform-Security-Infrastructure.aspx">A vision of enterprise platform Security Infrastructure</a></li>
+<li><a href="http://ayende.com/Blog/archive/2008/01/22/Rhino-Security-Overview-Part-I.aspx">Rhino Security Overview</a></li>
+</ul>
+</div>
+
+	</div>
+
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	  <div class="sidebar-module sidebar-module-inset">
+	    <h4>About</h4>
+	    <p>Adam Bell says stuff. Software building stuff mainly.</p>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Archives</h4>
+	    <ol class="list-unstyled">
+	      <li><a href="#">June 2015</a></li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Elsewhere</h4>
+	    <ol class="list-unstyled">
+	      <li>
+		<a href="https://github.com/agbell/">GitHub</a>
+	      </li>
+	      <li>
+		<a href="https://twitter.com/adamgbell">Twitter</a>
+	      </li>
+	      <li>
+		<a href="https://www.facebook.com/AdamGordonBell">Facebook</a>
+	      </li>
+        <li>
+    <a href="https://www.linkedin.com/in/adamgbell">Linked In</a>
+        </li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <a href="../atom.xml">Atom</a> - <a href="../rss.xml">RSS</a>
+	  </div>
+	</div>
+
+      </div>
+
+    </div>
+
+    <footer class="blog-footer">
+      <p>
+	Site proudly generated by
+	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

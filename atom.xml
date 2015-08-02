@@ -31,42 +31,354 @@
 ]]></summary>
 </entry>
 <entry>
-    <title>Beautiful Knowledge</title>
-    <link href="/posts/2015-07-15-beautiful-knowledge.html" />
-    <id>/posts/2015-07-15-beautiful-knowledge.html</id>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title9.html" />
+    <id>/posts/2015-07-15-title9.html</id>
     <published>2015-07-15T00:00:00Z</published>
     <updated>2015-07-15T00:00:00Z</updated>
     <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
-    Beautiful Knowledge
+    Incrementing
   </h2>
   <p class="blog-post-meta">
     Posted on 2015-07-15
     
-      by Henry David Thoreau
+      by Adam Bell
     
   </p>
-  <p>We have heard of a Society for the Diffusion of Useful Knowledge. It is said that knowledge is power, and the like. Methinks there is equal need of a Society for the Difussion of Useful Ignorance, what we will call Beautiful Knowledge, a knowledge useful in a higher sense: for what is most of our boasted so-called knowledge but a conceit that we know something, which robs us of the advantage of our actual ignorance? What we call knowledge is often our positive ignorance; ignorance our negative knowledge.</p>
+  <p>Let’s say that you won the lottery. That would be great, wouldn’t it?</p>
+<p>Now you’re rich because of this lottery ticket and i ask you: was a good idea for you to buy the ticket?</p>
+<p>Answer is no. No it was not a good idea for you to buy that ticket. The expected value of a lottery ticket is negative. It is a waste of money!</p>
+<p>Lottery tickets are a bad investment. Even though you won that does not mean it was a good idea for you to get the lottery ticket. This is an example of the creeping determinism. It is related to <a href="http://en.wikipedia.org/wiki/Hindsight">Hindsight bias</a>, but it is distinct.</p>
+<blockquote>
+<div>
+<p><strong>“the sense that grows upon us, in retrospect, that what has happened was actually inevitable”</strong></p>
+</div>
+</blockquote>
+<p>You were not destined to win the lottery. There is no fate. You took a gamble, but just because it pays off does not mean that it was good gamble.</p>
+<p><strong>The Generic Case:</strong></p>
+<p>Just because something happened, doesn’t mean it was destined to happen. Life involves a lot of random elements. Just because things went this way does not mean that they were destined to go that way.</p>
+<blockquote>
+<div>
+<p><em><strong>Creeping determinism means that we pay less attention than we should to the things that don’t happen. But we also pay too little attention to most of what does happen. We notice when we just miss the train, but not all the times when it arrives shortly after we do.</strong></em></p>
+</div>
+</blockquote>
+<p>This is covered in the book “everything is obvious” as well as by Gladwell in the new yorker. They all have much better examples than I. Also this was dictated into an Iphone, so hopefully it makes sense.</p>
+<p><a href="http://www.thespacereview.com/article/9/1" class="uri">http://www.thespacereview.com/article/9/1</a></p>
 </div>
 ]]></summary>
 </entry>
 <entry>
-    <title>Walking</title>
-    <link href="/posts/2015-05-17-walking.html" />
-    <id>/posts/2015-05-17-walking.html</id>
-    <published>2015-05-17T00:00:00Z</published>
-    <updated>2015-05-17T00:00:00Z</updated>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title8.html" />
+    <id>/posts/2015-07-15-title8.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
     <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
-    Walking
+    Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-05-17
+    Posted on 2015-07-15
     
-      by Henry David Thoreau
+      by Adam Bell
     
   </p>
-  <p>Moreover, you must walk like a camel, which is said to be the only beast which ruminates when walking. When a traveler asked Wordsworth’s servant to show him her master’s study, she answered, “Here is his library, but his study is out of doors.”</p>
+  <p>I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.</p>
+<p>I’m not looking for Clojure to save me from these “problems” I just started playing with it because of some Rich Hickey talks that made me think there was a better way to develop software.</p>
+<h2 id="problems">Problems:</h2>
+<h3 id="order-of-operations">Order of operations</h3>
+<p>Prefix notation is simpler, but order of operations have never been a big problem in my programming life.</p>
+<h3 id="the-expression-problem">The Expression Problem</h3>
+<p><em><a href="http://en.wikipedia.org/wiki/Expression_problem" class="uri">http://en.wikipedia.org/wiki/Expression_problem</a></em></p>
+<p>Protocols seem cool. But C# has extension methods, so adding a method to a class after the fact is no problem and the namespace scoping of extension methods avoids most monkey patching problems</p>
+<h3 id="concurrency">Concurrency</h3>
+<p>Ok, this is a big one, and making concurrency easier would be a big win for a lot of people. But not for me. I build web apps, I haven’t kicked off a bunch of threads in a long time.</p>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title7.html" />
+    <id>/posts/2015-07-15-title7.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a></p>
+<p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html" class="uri">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p>
+<pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : [http://en.wikipedia.org/wiki/Graham_scan](http://en.wikipedia.org/wiki/Graham_scan) - [2] : [http://en.wikipedia.org/wiki/Convex_hull](http://en.wikipedia.org/wiki/Convex_hull) - [3] : [http://book.realworldhaskell.org/](http://book.realworldhaskell.org/) - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -> [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -> [Point] combineList x = map (\(_, y, _) -> y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -> [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -> [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -> (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -> Point -> Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -> [Point] sortSlope (x:xs) = x : sortBy (\ i j -> (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -> [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw > 0 then CounterClockwise else if ccw < 0 then Clockwise else Straight where ccw = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)	</pre>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title6.html" />
+    <id>/posts/2015-07-15-title6.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <blockquote>
+<p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img src="http://projecteuler.net/images/symbol_times.gif" alt="×" /><span>20 grid?</span></p>
+<p><a href="http://projecteuler.net/problem=11" class="uri">http://projecteuler.net/problem=11</a></p>
+</blockquote>
+<p>It took me forever to find out that transpose existed and that I could use zipWith to get a diagonal - but after that its gets easy.</p>
+<pre>euler11 = maximum(	(maxGridProduct q10Grid) --max of row products :(maxGridProduct $ transpose q10Grid) --max of column products :(maxGridProduct $ diagonalGrid q10Grid)	--max of first diagonal :(maxGridProduct $ diagonalGrid $map reverse q10Grid)	--max of second diagonal :(maxGridProduct $ diagonalGrid $ transpose q10Grid)	--max of first transposed :(maxGridProduct $ diagonalGrid $map reverse $ transpose q10Grid)--max of second : [] ) maxGridProduct :: [[Int]] -> Int maxGridProduct grid = maximum $ map maxRowProduct grid maxRowProduct :: [Int] -> Int maxRowProduct line = maximum . map (product . take 4) $ tails $ line diagonalGrid grid = map (diagonalRow grid) [0..(length grid)] diagonalRow :: [[Int]] -> Int -> [Int] diagonalRow grid offset = zipWith (!!) grid [offset .. max] where len = length $ grid!!0 max = len - 1 q10Grid ::[[Int]] q10Grid = map (map read) $ stringNum where stringNum = map words $ lines " \ \08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n \ \49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n \ \81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65\n \ \52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91\n \ \22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80\n \ \24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50\n \ \32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70\n \ \67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21\n \ \24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72\n \ \21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95\n \ \78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92\n \ \16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57\n \ \86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58\n \ \19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40\n \ \04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66\n \ \88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69\n \ \04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36\n \ \20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16\n \ \20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\n \ \01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48" </pre>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title5.html" />
+    <id>/posts/2015-07-15-title5.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <blockquote>
+<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
+<p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a></p>
+</blockquote>
+<p>By Hand:</p>
+<p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p>
+<p>In haskell:</p>
+<div class="highlight">
+<pre>euler19 = length $ filter isSunday [(year,month) | year <- [1901..2000], month <- [1..12]] isSunday :: (Integer,Int) -> Bool isSunday (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01 where isSunday1 (_,_,7) = True isSunday1 _ = False </pre>
+</div>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title4.html" />
+    <id>/posts/2015-07-15-title4.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <div class="figure">
+<img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="" />
+
+</div>
+<div class="figure">
+<img src="http://41.media.tumblr.com/646b8559a7ae8978dacd30c70fc527cc/tumblr_mwz6ecK0jE1qe4yfuo2_500.jpg" alt="" />
+
+</div>
+<blockquote>
+<p><strong>I got my new teck keyboard from massdrop. It takes some getting used to, but I’m already typing faster. <a href="https://github.com/agbell/TECK">Check out the autohotkey script I used to ease the transition.</a></strong></p>
+</blockquote>
+<div id="text-1" class="outline-text-2">
+<p>In my effort to become a better touch typer, I began looking into ergnomic and mechanical keyboards. The cream of the crop for ergonomic symetric mechanical keyboards appears to be the <a href="http://ergodox.org/">ergodox</a>. It is open source hardware, so you basically have to order the parts your self and get out your soldering gun. They sell these in kit form all the time on massdrop, but this seemed like a little more effort than I wanted to put into a keyboard at this juncture, so when <a href="http://massdrop.com">massdrop</a> did a mass buy for the so call <a href="https://www.trulyergonomic.com/store/index.php">Truly Ergonomic Keyboard</a>, which is a compromise between a traditional keyboard and ergodox, I jumped on it and got my TECK as 25% off.</p>
+<p>Keyboard arrived very quickly from massdrop and I’ve been using it full time for about a month now. I made some modifications to the keymapping using the the included software, switching the control and shift keys to more traditional spots. I also used AutoHotkey on windows and xcape on Ubuntu to get my right control to work as an enter key if pressed alone and some other similar tweaks.</p>
+</div>
+<h3 id="notes-from-first-week-of-use."><span class="section-number-3"></span>Notes from first week of use.</h3>
+<div id="outline-container-1-1-1" class="outline-4">
+<ul>
+<li><h4 id="having-the-shift-keys-on-home-row-is-very-smart">Having the shift keys on home row is very smart</h4></li>
+</ul>
+<blockquote>
+<div id="text-1-1-1" class="outline-text-4">
+but i want to be backward compatible with traditional keyboards so switched it back
+</div>
+</blockquote>
+</div>
+<div id="outline-container-1-1-2" class="outline-4">
+<ul>
+<li><h4 id="enter-is-middle-is-great"><span class="section-number-4"></span>enter is middle is great</h4></li>
+</ul>
+</div>
+<div id="outline-container-1-1-3" class="outline-4">
+<ul>
+<li><h4 id="delete-and-backspace-take-getting-used-to"><span class="section-number-4"></span>delete and backspace take getting used to</h4></li>
+</ul>
+</div>
+<div id="outline-container-1-1-4" class="outline-4">
+<ul>
+<li><h4 id="quotes-key-in-new-place-is-great-for-typing-text-but-not-good-with-vim-and-the-shell"><span class="section-number-4"></span>quotes key in new place is great for typing text, but not good with VIM and the shell</h4></li>
+</ul>
+</div>
+<h2 id="backwards-compatible-tweaks">Backwards compatible tweaks</h2>
+<p>I want to be able to use normal keyboards when I have to, so I made some tweaks to the TECK keyboard to keep it close to default layout.</p>
+<ul>
+<li><p>switched key caps - CTRL and SHIFT</p></li>
+<li><p>right control is enter if pressed alone</p></li>
+<li><p>left control is ESC alone (vimness) means my control is like my old caps lock</p></li>
+<li><p>tried mapping shift on its own to tab, but messed up my shift tabbing</p></li>
+</ul>
+<p><strong>References:</strong></p>
+<ul>
+<li><a href="https://github.com/agbell/TECK">My Autohotkey scripts for the TECK</a></li>
+<li><a href="https://www.trulyergonomic.com/store/index.php">TECK website</a></li>
+<li><a href="http://ergodox.org/">ErgoDox</a></li>
+</ul>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title18.html" />
+    <id>/posts/2015-07-15-title18.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p>Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.</p>
+<script type="text/javascript"><![CDATA[// <![CDATA[ mpmetrics.track("COI_Parser"); // ]]]]><![CDATA[>]]></script>
+<p>Favorite:</p>
+<ul>
+<li><a href="http://code.google.com/p/sprache/" class="uri" title="sprache">http://code.google.com/p/sprache/</a></li>
+</ul>
+<p>Others:</p>
+<ul>
+<li><a href="http://microparser.codeplex.com/" class="uri" title="http://microparser.codeplex.com/">http://microparser.codeplex.com/</a></li>
+<li><a href="http://code.msdn.microsoft.com/RxParsers" class="uri" title="http://code.msdn.microsoft.com/RxParsers">http://code.msdn.microsoft.com/RxParsers</a></li>
+<li><a href="http://jparsec.codehaus.org/NParsec+Tutorial" class="uri" title="http://jparsec.codehaus.org/NParsec+Tutorial">http://jparsec.codehaus.org/NParsec+Tutorial</a></li>
+</ul>
+<p>Blog Series on Parser Combinators in C#:</p>
+<ul>
+<li><a href="http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/" class="uri" title="monadic parser combinators">http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/</a></li>
+<li><a href="http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx" class="uri" title="monadic parser combinators in c#">http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx</a></li>
+</ul>
+<p>Other ways to utilize parsers in c#/ .net:</p>
+<ul>
+<li>ANTLR</li>
+<li>Yacc &amp; Lex (I’ve only ever used these back in my comp sci compiler class)</li>
+</ul>
+<p>Interesting books:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Dragon_Book_%28computer_science%29">Dragon book</a></li>
+<li><a href="http://createyourproglang.com/">Create Your Own Programming Language</a></li>
+</ul>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title17.html" />
+    <id>/posts/2015-07-15-title17.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt="" /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt="" /><strong>Security Thoughts:</strong></p>
+<p>There are generally three types of authorization in enterprise applications:</p>
+<ol style="list-style-type: decimal">
+<li><span><span></span></span><strong>Role based security</strong> <strong>-</strong> Which actions can a user do - aka role-based access control<span><span></span></span></li>
+<li><span><span></span></span><strong>Entity level security</strong> - A user can only perform an Action on certain objects/data - aka row level security</li>
+<li><strong>Field level security</strong> - A user can see or edit only certain fields of an entity – <em>(this is really fine grained and usually a bad idea)</em></li>
+</ol>
+<p>There is a framework that covers all 3 of these authorization types, Rhino Security. It allows authorization to be abstracted from the business logic as a cross-cutting concern. It is deigned to handle 1 &amp; 2 above, but people have used it to implement 3.</p>
+<p>Here is an example of the type of rules it can easily encompass:</p>
+<blockquote>
+<p>Survey Entity:</p>
+<p>A survey has a start date, an end date, can be marked as applicable to a specific population, may be public or private, etc.</p>
+<p>View Restrictions:</p>
+<p>The specification says that a survey that the user does not own should only be visible to a user iff:</p>
+<ul>
+<li>The survey is public</li>
+<li>The survey is active</li>
+<li>The survey has started</li>
+<li>The survey has not ended</li>
+<li>The survey is for a population that the user is a member of</li>
+</ul>
+<p><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" class="uri">http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx</a></p>
+</blockquote>
+<p><strong>Entity Group:</strong></p>
+<p>The key concept that separates it from standard role based security is the concept of an entity-group. Entity groups are group of, well, entities and users can be granted/denied access to them just like actions.</p>
+<p>I would really love to see someone port this concept to the entity framework. It certainly might not be right for every project, but a cohesive strategy for access control would be a big leap forward compared to a lot of projects I’ve worked on.</p>
+<p><strong>Further Reading:</strong></p>
+<ul>
+<li><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" title="Title of this entry.">Handling complex security conditions with Rhino Security</a></li>
+<li><a href="http://bartreyserhove.blogspot.com/search/label/rhino%20security">Field level security performance with Rhino Security</a></li>
+<li><a href="http://ayende.com/Blog/category/548.aspx">Rhino Security</a></li>
+<li><a href="http://ayende.com/Blog/archive/2007/11/17/A-vision-of-enterprise-platform-Security-Infrastructure.aspx">A vision of enterprise platform Security Infrastructure</a></li>
+<li><a href="http://ayende.com/Blog/archive/2008/01/22/Rhino-Security-Overview-Part-I.aspx">Rhino Security Overview</a></li>
+</ul>
+</div>
+]]></summary>
+</entry>
+<entry>
+    <title>Incrementing</title>
+    <link href="/posts/2015-07-15-title16.html" />
+    <id>/posts/2015-07-15-title16.html</id>
+    <published>2015-07-15T00:00:00Z</published>
+    <updated>2015-07-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p>Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.</p>
+<p>Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.</p>
+<h1 id="cache-1.2">Cache 1.2</h1>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>faster key generation strategy - thanks payman</li>
+<li>basic unit tests - thanks payman</li>
+<li>btree disk cache</li>
+<li>removed unity dependency</li>
+<li>simple timetolive setting</li>
+</ul>
+<p><a href="http://cache.codeplex.com/releases/view/60025#DownloadId=204160">Download Here</a></p>
+<p>More Info</p>
+<ul>
+<li><p><a href="http://cascadeofinsights.com/post/1410736927/introducing-attribute-based-caching">Release 1.1 Info</a></p></li>
+<li><p><a href="http://cache.codeplex.com/">Home on Codeplex</a></p></li>
+</ul>
 </div>
 ]]></summary>
 </entry>

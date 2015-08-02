@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cascade Of Insights - Incrementing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+	<nav class="blog-nav">
+          <a class="blog-nav-item" href="../">Home</a>
+          <a class="blog-nav-item" href="../about.html">About</a>
+          <a class="blog-nav-item" href="../contact.html">Contact</a>
+          <a class="blog-nav-item" href="../archive.html">Archive</a>
+	</nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+	<h1 class="blog-title">Cascade Of Insights</h1>
+	<p class="lead blog-description">
+	  The blog of Adam Gordon Bell (agbell)
+	</p>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-8 blog-main">
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    Posted on 2015-07-15
+    
+      by Adam Bell
+    
+  </p>
+  <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a></p>
+<p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html" class="uri">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p>
+<pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : [http://en.wikipedia.org/wiki/Graham_scan](http://en.wikipedia.org/wiki/Graham_scan) - [2] : [http://en.wikipedia.org/wiki/Convex_hull](http://en.wikipedia.org/wiki/Convex_hull) - [3] : [http://book.realworldhaskell.org/](http://book.realworldhaskell.org/) - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -> [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -> [Point] combineList x = map (\(_, y, _) -> y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -> [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -> [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -> (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -> Point -> Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -> [Point] sortSlope (x:xs) = x : sortBy (\ i j -> (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -> [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw > 0 then CounterClockwise else if ccw < 0 then Clockwise else Straight where ccw = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)	</pre>
+</div>
+
+	</div>
+
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	  <div class="sidebar-module sidebar-module-inset">
+	    <h4>About</h4>
+	    <p>Adam Bell says stuff. Software building stuff mainly.</p>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Archives</h4>
+	    <ol class="list-unstyled">
+	      <li><a href="#">June 2015</a></li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Elsewhere</h4>
+	    <ol class="list-unstyled">
+	      <li>
+		<a href="https://github.com/agbell/">GitHub</a>
+	      </li>
+	      <li>
+		<a href="https://twitter.com/adamgbell">Twitter</a>
+	      </li>
+	      <li>
+		<a href="https://www.facebook.com/AdamGordonBell">Facebook</a>
+	      </li>
+        <li>
+    <a href="https://www.linkedin.com/in/adamgbell">Linked In</a>
+        </li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <a href="../atom.xml">Atom</a> - <a href="../rss.xml">RSS</a>
+	  </div>
+	</div>
+
+      </div>
+
+    </div>
+
+    <footer class="blog-footer">
+      <p>
+	Site proudly generated by
+	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

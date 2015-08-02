@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Hakyll and CircleCi</title>
+    <title>Cascade Of Insights - Incrementing</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -40,16 +40,24 @@
 	<div class="col-sm-8 blog-main">
 	  <div class="blog-post">
   <h2 class="blog-post-title">
-    Hakyll and CircleCi
+    Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-31
+    Posted on 2015-07-15
     
-      by Adam
+      by Adam Bell
     
   </p>
-  <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
-<p>So far, so good.</p>
+  <blockquote>
+<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
+<p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a></p>
+</blockquote>
+<p>By Hand:</p>
+<p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p>
+<p>In haskell:</p>
+<div class="highlight">
+<pre>euler19 = length $ filter isSunday [(year,month) | year <- [1901..2000], month <- [1..12]] isSunday :: (Integer,Int) -> Bool isSunday (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01 where isSunday1 (_,_,7) = True isSunday1 _ = False </pre>
+</div>
 </div>
 
 	</div>

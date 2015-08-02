@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Hakyll and CircleCi</title>
+    <title>Cascade Of Insights - Emacs Client on Windows 8</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -40,16 +40,38 @@
 	<div class="col-sm-8 blog-main">
 	  <div class="blog-post">
   <h2 class="blog-post-title">
-    Hakyll and CircleCi
+    Emacs Client on Windows 8
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-31
+    Posted on 2013-10-28
     
-      by Adam
+      by Adam Bell
     
   </p>
-  <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
-<p>So far, so good.</p>
+  <p>Problem:</p>
+<p>I want to use emacs like I use notepadd++ on windows.</p>
+<p><span>That is:</span></p>
+<ul>
+<li>Right click menu item to “edit with Emacs”</li>
+<li>Associate file types with emacs (like .org)</li>
+<li>Have only one emacs open at a time</li>
+</ul>
+<p>Here are the steps I took:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create the context menu like this (<a href="http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu">global_context_emacs.reg</a>) :</p>
+<pre><code>REGEDIT4
+[HKEY_CLASSES_ROOT\*\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\openwemacs]
+@=&quot;&amp;GNU Emacs&quot;
+# The above value appears in the global context menu, # i.e., when you right click on a file.
+# (The '&amp;' makes the next character a shortcut.) &quot;Icon&quot;=&quot;C:\\Program Files\\Emacs\\bin\\emacs.exe,0&quot;
+# The above uses the icon of the Emacs exe for the context # and should match the path used for the command below.
+# The ,0 selects the main icon. [HKEY_CLASSES_ROOT\*\shell\openwemacs\command]
+@=&quot;C:\\Program Files\\Emacs\\bin\\runemacs.exe \&quot;%1\&quot;&quot;
+# The above has to point to where you install Emacs  </code></pre></li>
+<li><p><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></p></li>
+</ol>
 </div>
 
 	</div>
