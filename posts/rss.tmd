@@ -1,0 +1,194 @@
+
+<item>
+<title>
+How to get bluetooth working in windows 8 / 8.1 on various...
+</title>
+<description>
+<img src="http://41.media.tumblr.com/83f3cf40020f1f0b1d8ee88318655650/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg"/><br/><br/><blockquote> <p><strong>How to get bluetooth working in windows 8 / 8.1 on various thinkpads.  </strong></p> </blockquote> <p>Currently, the thinkpads ( w520 for sure, but lots of complaints about others online) do not have working bluetooth drivers.  Or rather the driver exists, but getting the bluetooth to turn on is not possible.</p> <p>I have put together a solution here:</p> <p><a href="https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip">https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip</a></p> <p>This zip has to batch files that will turn on or off the blue tooth device.  It uses the hotkey exe from the windows 7 Lenove hotkey app to force the bluetooth on.</p> <p>It also contains a bluetooth driver, the one I originally used, however I recommend instead that you go straight to broadcom here:</p> <p><a href="http://www.broadcom.com/support/bluetooth/update.php">http://www.broadcom.com/support/bluetooth/update.php</a></p>
+</description>
+<link>http://cascadeofinsights.com/post/77284406256</link>
+<guid>http://cascadeofinsights.com/post/77284406256</guid>
+<pubDate>Thu, 20 Feb 2014 11:19:00 -0500</pubDate>
+</item>
+<item>
+<title>Emacs Client on Windows 8</title>
+<description>
+<p>Problem:</p> <p>I want to use emacs like I use notepadd++ on windows.</p> <p><span>That is:</span></p> <ul><li>Right click menu item to &ldquo;edit with Emacs&rdquo;</li> <li>Associate file types with emacs (like .org)</li> <li>Have only one emacs open at a time</li> </ul><p>Here are the steps I took:</p> <ol><li>Create the context menu like this (<a href="http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu">global_context_emacs.reg</a>) : <blockquote> <pre class="real">REGEDIT4 [HKEY_CLASSES_ROOT\*\shell] [HKEY_CLASSES_ROOT\*\shell\openwemacs] @="&amp;GNU Emacs" # The above value appears in the global context menu, # i.e., when you right click on a file. # (The '&amp;' makes the next character a shortcut.) "Icon"="C:\\Program Files\\Emacs\\bin\\emacs.exe,0" # The above uses the icon of the Emacs exe for the context # and should match the path used for the command below. # The ,0 selects the main icon. [HKEY_CLASSES_ROOT\*\shell\openwemacs\command] @="C:\\Program Files\\Emacs\\bin\\runemacs.exe \"%1\"" # The above has to point to where you install Emacs<br/><br/><br/></pre> </blockquote> </li> <li><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></li> </ol>
+</description>
+<link>http://cascadeofinsights.com/post/73513249603</link>
+<guid>http://cascadeofinsights.com/post/73513249603</guid>
+<pubDate>Thu, 16 Jan 2014 09:46:40 -0500</pubDate>
+</item>
+<item>
+<title>
+I got my new teck keyboard from massdrop. It takes some getting...
+</title>
+<description>
+<img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg"/><br/> <br/><img src="http://41.media.tumblr.com/646b8559a7ae8978dacd30c70fc527cc/tumblr_mwz6ecK0jE1qe4yfuo2_500.jpg"/><br/> <br/><blockquote> <p><strong>I got my new teck keyboard from massdrop. It takes some getting used to, but I’m already typing faster.  <a href="https://github.com/agbell/TECK">Check out the autohotkey script I used to ease the transition.</a></strong></p> </blockquote> <div class="outline-text-2" id="text-1"> <p>In my effort to become a better touch typer, I began looking into ergnomic and mechanical keyboards. The cream of the crop for ergonomic symetric mechanical keyboards appears to be the <a href="http://ergodox.org/">ergodox</a>. It is open source hardware, so you basically have to order the parts your self and get out your soldering gun. They sell these in kit form all the time on massdrop, but this seemed like a little more effort than I wanted to put into a keyboard at this juncture, so when <a href="http://massdrop.com">massdrop</a> did a mass buy for the so call <a href="https://www.trulyergonomic.com/store/index.php">Truly Ergonomic Keyboard</a>, which is a compromise between a traditional keyboard and ergodox, I jumped on it and got my TECK as 25% off.</p> <p>Keyboard arrived very quickly from massdrop and I’ve been using it full time for about a month now. I made some modifications to the keymapping using the the included software, switching the control and shift keys to more traditional spots. I also used AutoHotkey on windows and xcape on Ubuntu to get my right control to work as an enter key if pressed alone and some other similar tweaks.</p> </div> <h3 id="sec-1-1"><span class="section-number-3"></span>Notes from first week of use.</h3> <div class="outline-4" id="outline-container-1-1-1"> <ul><li> <h4 id="sec-1-1-1">Having the shift keys on home row is very smart</h4> </li> </ul><blockquote> <div class="outline-text-4" id="text-1-1-1">but i want to be backward compatible with traditional keyboards so switched it back</div> </blockquote> </div> <div class="outline-4" id="outline-container-1-1-2"> <ul><li> <h4 id="sec-1-1-2"><span class="section-number-4"></span>enter is middle is great</h4> </li> </ul></div> <div class="outline-4" id="outline-container-1-1-3"> <ul><li> <h4 id="sec-1-1-3"><span class="section-number-4"></span>delete and backspace take getting used to</h4> </li> </ul></div> <div class="outline-4" id="outline-container-1-1-4"> <ul><li> <h4 id="sec-1-1-4"><span class="section-number-4"></span>quotes key in new place is great for typing text, but not good with VIM and the shell</h4> </li> </ul></div> <h2 id="sec-1-1-5">Backwards compatible tweaks</h2> <p>I want to be able to use normal keyboards when I have to, so I made some tweaks to the TECK keyboard to keep it close to default layout.</p> <ul><li id="sec-1-1-5-1">switched key caps - CTRL and SHIFT</li> </ul><ul><li id="sec-1-1-5-2">right control is enter if pressed alone</li> </ul><ul><li id="sec-1-1-5-3">left control is ESC alone (vimness) means my control is like my old caps lock</li> </ul><ul><li id="sec-1-1-5-4">tried mapping shift on its own to tab, but messed up my shift tabbing</li> </ul><p><strong>References:</strong></p> <ul><li><a href="https://github.com/agbell/TECK"> My Autohotkey scripts  for the TECK</a></li> <li><a href="https://www.trulyergonomic.com/store/index.php">TECK website</a></li> <li><a href="http://ergodox.org/">ErgoDox </a></li> </ul>
+</description>
+<link>http://cascadeofinsights.com/post/68360321561</link>
+<guid>http://cascadeofinsights.com/post/68360321561</guid>
+<pubDate>Thu, 28 Nov 2013 08:20:00 -0500</pubDate>
+</item>
+<item>
+<title>"Functor is to Lens as Applicative is to Biplate"</title>
+<description>
+“Functor is to Lens as Applicative is to Biplate”<br/><br/> - <em><a href="http://front.math.ucdavis.edu/1103.2841">http://front.math.ucdavis.edu/1103.2841</a></em>
+</description>
+<link>http://cascadeofinsights.com/post/35790868290</link>
+<guid>http://cascadeofinsights.com/post/35790868290</guid>
+<pubDate>Thu, 15 Nov 2012 15:39:00 -0500</pubDate>
+<category>Haskell_Is_Hard</category>
+</item>
+<item>
+<title>Euler 19 by hand and by Haskell</title>
+<description>
+<blockquote> <p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p> <p><a href="http://projecteuler.net/problem=19">http://projecteuler.net/problem=19</a></p> </blockquote> <p>By Hand:</p> <p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p> <p>In haskell:</p> <div class="highlight"> <pre>euler19 = length $ filter isSunday [(year,month) | year &lt;- [1901..2000], month &lt;- [1..12]] isSunday :: (Integer,Int) -&gt; Bool isSunday (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01 where isSunday1 (_,_,7) = True isSunday1 _ = False </pre> </div>
+</description>
+<link>http://cascadeofinsights.com/post/35375415028</link>
+<guid>http://cascadeofinsights.com/post/35375415028</guid>
+<pubDate>Fri, 09 Nov 2012 20:36:00 -0500</pubDate>
+</item>
+<item>
+<title>Euler 11 in haskell</title>
+<description>
+<blockquote> <p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img alt="×" border="0" height="9" src="http://projecteuler.net/images/symbol_times.gif" width="9"/><span>20 grid?</span></p> <p><a href="http://projecteuler.net/problem=11">http://projecteuler.net/problem=11</a></p> </blockquote> <p>It took me forever to find out that transpose existed and that I could use zipWith to get a diagonal - but after that its gets easy.</p> <pre>euler11 = maximum(	(maxGridProduct q10Grid) --max of row products :(maxGridProduct $ transpose q10Grid) --max of column products :(maxGridProduct $ diagonalGrid q10Grid)	--max of first diagonal :(maxGridProduct $ diagonalGrid $map reverse q10Grid)	--max of second diagonal :(maxGridProduct $ diagonalGrid $ transpose q10Grid)	--max of first transposed :(maxGridProduct $ diagonalGrid $map reverse $ transpose q10Grid)--max of second : [] ) maxGridProduct :: [[Int]] -&gt; Int maxGridProduct grid = maximum $ map maxRowProduct grid maxRowProduct :: [Int] -&gt; Int maxRowProduct line = maximum . map (product . take 4) $ tails $ line diagonalGrid grid = map (diagonalRow grid) [0..(length grid)] diagonalRow :: [[Int]] -&gt; Int -&gt; [Int] diagonalRow grid offset = zipWith (!!) grid [offset .. max] where len = length $ grid!!0 max = len - 1 q10Grid ::[[Int]] q10Grid = map (map read) $ stringNum where stringNum = map words $ lines " \ \08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n \ \49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n \ \81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65\n \ \52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91\n \ \22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80\n \ \24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50\n \ \32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70\n \ \67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21\n \ \24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72\n \ \21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95\n \ \78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92\n \ \16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57\n \ \86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58\n \ \19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40\n \ \04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66\n \ \88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69\n \ \04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36\n \ \20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16\n \ \20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\n \ \01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48" </pre>
+</description>
+<link>http://cascadeofinsights.com/post/31613219714</link>
+<guid>http://cascadeofinsights.com/post/31613219714</guid>
+<pubDate>Sat, 15 Sep 2012 17:50:00 -0400</pubDate>
+<category>euler</category>
+<category>haskell</category>
+</item>
+<item>
+<title>Graham's scan algorithm for the convex hull</title>
+<description>
+<p><span>Using the code from the preceding three exercises, implement Graham&rsquo;s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a </span><a class="ulink" href="http://en.wikipedia.org/wiki/Convex_hull" target="_top">convex hull</a><span>. is, and how the </span><a class="ulink" href="http://en.wikipedia.org/wiki/Graham_scan" target="_top">Graham scan algorithm</a><span> should work, on </span><a class="ulink" href="http://en.wikipedia.org/" target="_top">Wikipedia</a></p> <p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p> <pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : <a href="http://en.wikipedia.org/wiki/Graham_scan">http://en.wikipedia.org/wiki/Graham_scan</a> - [2] : <a href="http://en.wikipedia.org/wiki/Convex_hull">http://en.wikipedia.org/wiki/Convex_hull</a> - [3] : <a href="http://book.realworldhaskell.org/">http://book.realworldhaskell.org/</a> - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -&gt; [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -&gt; [Point] combineList x = map (\(_, y, _) -&gt; y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -&gt; [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -&gt; [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -&gt; (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -&gt; Point -&gt; Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -&gt; [Point] sortSlope (x:xs) = x : sortBy (\ i j -&gt; (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -&gt; [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw &gt; 0 then CounterClockwise else if ccw &lt; 0 then Clockwise else Straight where ccw = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)	</pre>
+</description>
+<link>http://cascadeofinsights.com/post/30540287813</link>
+<guid>http://cascadeofinsights.com/post/30540287813</guid>
+<pubDate>Thu, 30 Aug 2012 17:09:00 -0400</pubDate>
+</item>
+<item>
+<title>Problems Clojure thinks I have with C#</title>
+<description>
+<p>I am reading &ldquo;Joy Of Clojure&rdquo;.  It seems like a good book, but it keeps telling me about these problems I have which I don&rsquo;t percieve as problems.</p> <p>I&rsquo;m not looking for Clojure to save me from these &ldquo;problems&rdquo; I just started playing with it because of some Rich Hickey talks that made me think there was a better way to develop software.</p> <h2>Problems:</h2> <h3>Order of operations</h3> <p>Prefix notation is simpler, but order of operations have never been a big problem in my programming life.  </p> <h3>The Expression Problem</h3> <p><em><a href="http://en.wikipedia.org/wiki/Expression_problem">http://en.wikipedia.org/wiki/Expression_problem</a></em></p> <p>Protocols seem cool.  But C# has extension methods, so adding a method to a class after the fact is no problem and the namespace scoping of extension methods avoids most monkey patching problems</p> <h3>Concurrency</h3> <p>Ok, this is a big one, and making concurrency easier would be a big win for a lot of people. But not for me.  I build web apps, I haven&rsquo;t kicked off a bunch of threads in a long time.</p>
+</description>
+<link>http://cascadeofinsights.com/post/26627913311</link>
+<guid>http://cascadeofinsights.com/post/26627913311</guid>
+<pubDate>Fri, 06 Jul 2012 10:00:00 -0400</pubDate>
+</item>
+<item>
+<title>Creeping Determinism</title>
+<description>
+<p>Let&rsquo;s say that you won the lottery. That would be great, wouldn&rsquo;t it?</p> <p>Now you&rsquo;re rich because of this lottery ticket and i ask you: was a good idea for you to buy the ticket?</p> <p>Answer is no. No it was not a good idea for you to buy that ticket. The expected value of a lottery ticket is negative.  It is a waste of money!</p> <p>Lottery tickets are a bad investment.  Even though you won that does not mean it was a good idea for you to get the lottery ticket. This is an example of the creeping determinism.  It is related to <a href="http://en.wikipedia.org/wiki/Hindsight">Hindsight bias</a>, but it is distinct.  </p> <blockquote> <div> <p><strong>“the sense that grows upon us, in retrospect, that what has happened was actually inevitable”</strong></p> </div> </blockquote> <p>You were not destined to win the lottery.  There is no fate.  You took a gamble, but just because it pays off does not mean that it was good gamble.</p> <p><strong>The Generic Case:</strong></p> <p>Just because something happened, doesn&rsquo;t mean it was destined to happen.  Life involves a lot of random elements. Just because things went this way does not mean that they were destined to go that way.</p> <blockquote> <div> <p><em><strong>Creeping determinism means that we pay less attention than we should to the things that don’t happen. But we also pay too little attention to most of what does happen. We notice when we just miss the train, but not all the times when it arrives shortly after we do.</strong></em></p> </div> </blockquote> <p>This is covered in the book &ldquo;everything is obvious&rdquo; as well as by Gladwell in the new yorker.  They all have much better examples than I.  Also this was dictated into an Iphone, so hopefully it makes sense.</p> <p><a href="http://www.thespacereview.com/article/9/1">http://www.thespacereview.com/article/9/1</a></p>
+</description>
+<link>http://cascadeofinsights.com/post/25166231121</link>
+<guid>http://cascadeofinsights.com/post/25166231121</guid>
+<pubDate>Fri, 15 Jun 2012 13:06:00 -0400</pubDate>
+</item>
+<item>
+<title>
+WordPress Force "View all posts in %s" for categories
+</title>
+<description>
+<p>Force categories list not to use category descritption use this:</p> <blockquote> <p>  <span> </span>$args_list = array(</p> <p><span> </span>&lsquo;use_desc_for_title&rsquo; =&gt; 0</p> <p>  <span> </span> <span> </span>);  <span> </span> </p> <p>  <span> </span>$list = wp_list_categories( $args_list );</p> </blockquote>
+</description>
+<link>http://cascadeofinsights.com/post/16331435745</link>
+<guid>http://cascadeofinsights.com/post/16331435745</guid>
+<pubDate>Sun, 22 Jan 2012 21:52:53 -0500</pubDate>
+</item>
+<item>
+<title>Code Generators, You Suck</title>
+<description>
+<blockquote> <p>Code Generators, You Suck.  Well, some of you do. </p> </blockquote> <p>The scaffolding style code generators that generate out a good starting point from which standard coding takes over, those are very useful.</p> <p>The Microsoft brand &ldquo;design surface&rdquo; based code generators (TableAdapters,<a href="http://servicefactory.codeplex.com">WSSF</a>) where the uml diagram of a class needs to be edited, rather than the actual class, those are more harm than good.  if fact they slow development way down.</p> <p>The design surface itself, is not necessarily a bad concept.  it is just a GUI over top of a XML document.  Just don&rsquo;t use it to generate repetitive code.  If code is repetitive, factor it out until its DRY.  Don&rsquo;t break out the code generators.</p>
+</description>
+<link>http://cascadeofinsights.com/post/7265855647</link>
+<guid>http://cascadeofinsights.com/post/7265855647</guid>
+<pubDate>Tue, 05 Jul 2011 12:00:06 -0400</pubDate>
+<category>DRY</category>
+<category>refactor</category>
+<category>codegen</category>
+<category>desing surface</category>
+<category>WWSF</category>
+</item>
+<item>
+<title>ReturnOnException Aspect (postsharp)</title>
+<description>
+<p>    public static class ExceptionHandler</p> <p>  {</p> <p>    [Serializable]<br/>    public class ReturnOnException : OnExceptionAspect<br/>    {<br/>        public ReturnOnException(object objectToReturn)<br/>        {<br/>            _objectToReturn = objectToReturn;<br/>        }<br/><br/>        object _objectToReturn;<br/><br/>        public override void OnException(MethodExecutionEventArgs eventArgs)<br/>        {<br/>            string message = eventArgs.Exception.Message;<br/>            eventArgs.FlowBehavior = FlowBehavior.Return;<br/>            eventArgs.ReturnValue = _objectToReturn;<br/>        }<br/>    }</p> <p>}</p> <p>Usage:</p> <p>//returns -1 on any error</p> <p>[ExceptionHandler.ReturnOnException(-1)]</p> <p>public int DivideBy(int number, int dividedby)<br/>{<br/>return number / dividedby;<br/>    }</p>
+</description>
+<link>http://cascadeofinsights.com/post/7265718718</link>
+<guid>http://cascadeofinsights.com/post/7265718718</guid>
+<pubDate>Tue, 05 Jul 2011 11:58:20 -0400</pubDate>
+<category>AOP</category>
+<category>postsharp</category>
+<category>.net</category>
+<category>csharp</category>
+</item>
+<item>
+<title>Attribute Based Caching Project Covered in infoQ</title>
+<description>
+<p>David Cookery did a short write up of my AOP caching framework on infoQ.  As a result downloads and usage have spiked.  <br/><br/><a href="http://www.infoq.com/news/2011/04/Attribute-Caching">http://www.infoq.com/news/2011/04/Attribute-Caching</a><br/><br/>Attribute based caching has now been downloaded over 200 times and I know of one or two projects taht are using it actively.</p>
+</description>
+<link>http://cascadeofinsights.com/post/4554437112</link>
+<guid>http://cascadeofinsights.com/post/4554437112</guid>
+<pubDate>Tue, 12 Apr 2011 11:42:49 -0400</pubDate>
+</item>
+<item>
+<title>
+Question: Caching and postsharp is not working in my project?
+</title>
+<description>
+<p>You have made a project using attribute based caching, but the cache isn&rsquo;t being hit?</p> <p><span>Does the test project included in the source work?</span></p> <ul><li><span> if you look at the test.csproj you can see the <span class="il">postsharp</span> targets line:<br/><br/><a target="_blank" href="http://cache.codeplex.com/SourceControl/changeset/view/5279#75842">http://cache.codeplex.com/SourceControl/changeset/view/5279#75842</a><br/><br/><pre> <span>&lt;</span><span>Import</span> <span>Project</span><span>=</span><span>"</span><span>..\Cache\lib\<span class="il">PostSharp</span>\<span class="il">PostSharp</span>.targets</span><span>"</span> <span>/&gt;</span><br/><br/><br/><br/></pre> You need that line in project containing the attributes or alternatively you can run the post-sharp installer which will handle this automatically.</span></li> </ul><p>If the test project isn&rsquo;t working, please email me.  agbell at google&rsquo;s email service.</p>
+</description>
+<link>http://cascadeofinsights.com/post/4493821173</link>
+<guid>http://cascadeofinsights.com/post/4493821173</guid>
+<pubDate>Sun, 10 Apr 2011 09:50:50 -0400</pubDate>
+</item>
+<item>
+<title>Tags, Tag Groups, Tag Hierarchies</title>
+<description>
+<p><em>Generic Hierarchical Meta data is cool!  There are many ways to implement it with a standard relational database.  Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance.  Here are some of my notes on the subject:</em></p> <p>If all entities in the system can contain a list of tags, and the tagging system is structured correctly, the following features can be supported:</p> <ul><li><a href="http://en.wikipedia.org/wiki/Faceted_search">faceted search</a> </li> <li>hierarchical organization (categories, sub-cats and so on represented in tag hierarchy)</li> <li>ordering entities (&lsquo;high priority tag&quot;) </li> </ul><p>This should allow for a flexible meta-data system over top of the entities which can be customized with very little code modifications.</p> <p>This can be accomplished by having a tag tree, where tag entities have the following fields:</p> <ul><li>Name</li> <li>ParentId</li> <li>Weight</li> <li>Hierarchy Path (for sub-tree searches)</li> <li>Shortcut</li> </ul><p>The following tag search can then be implemented in SQL:</p> <ul><li>And search (tag X and tag y)</li> <li>Or Search </li> <li>Except search</li> <li>Sub-tree inclusive or not</li> </ul><p>Assuming that most tag trees are only 2 levels deep and using a subtree inclusive search when this is not the case (or always), we treat each tag tree as a facet in a faceted search. </p> <p>A hierarchy of categories and sub categories can be built by building the tag hierarchy and assigning all items into leaf tags and once again using an inclusive tag search as we drill down.</p> <p>If tags in a tree are given weights, entities can be sorted by these tags in , for instance, a grid. </p> <p>Tag Input:</p> <ul><li>specify path example: facet1/tag1, color/red</li> <li>User shortcuts to aid entering new tag {name=&ldquo;color&rdquo;,shortcut=&ldquo;#c&rdquo;}, then can be used like #c/red</li> </ul><ul></ul><p><strong>Other considerations:</strong></p> <p><strong>Null Tag :</strong></p> <p>Null tag could be added to any subtree which would catch all entities without a tag in that tree.  This would be helpful for facet navigation and search. </p> <p><strong><em>Null tag for facet:</em></strong></p> <p>A null tag of &ldquo;Unknown color&rdquo; could be added as a child of the color tag, and would return all entities without a color tag.</p> <p><em><strong>Null tag for sorting:</strong></em></p> <p>A null tag of &ldquo;no priority&rdquo; could be added as a child of the priority tag and be given a weight of zero, hence sorting on this priority tag tree would return un-prioritized entities last.</p> <p><strong>Need cohesive example. Another Post.</strong></p> <p><strong><br/></strong></p> <p><strong>Tagging Links:</strong></p> <ul><li><a href="http://www.miskatonic.org/library/facet-web-howto.html">How to Make a Faceted Classification and Put It On the Web | Miskatonic University Press</a></li> </ul><ul><li><a href="http://en.wikipedia.org/wiki/Faceted_classification">Faceted classification - Wikipedia, the free encyclopedia</a></li> </ul><ul><li><a href="http://www.flickr.com/photos/morville/collections/72157603789246885/">Collection: Faceted Navigation</a></li> </ul><ul><li><a href="http://pubnotes.wordpress.com/2007/10/14/ordered-tags/">Advanced Tagging — Hierarchical And Ordered Tags « PubNotes</a></li> </ul><ul><li><a href="http://culturedcode.com/things/wiki/index.php?title=Advanced_Tagging">Advanced Tagging - Things Wiki</a></li> </ul><p><strong>Tags as categories:</strong></p> <ul><li><a href="http://www.znode.com/">http://www.znode.com/</a></li> </ul><p><em>Znode uses Tag groups to represent categories and to implement a faceted search. Their implementation is only 2 fixed levels however.</em></p>
+</description>
+<link>http://cascadeofinsights.com/post/4135055220</link>
+<guid>http://cascadeofinsights.com/post/4135055220</guid>
+<pubDate>Sun, 27 Mar 2011 11:47:00 -0400</pubDate>
+</item>
+<item>
+<title>Attribute Based Caching 1.2 Released</title>
+<description>
+<p>Attribute Based Caching 1.2 has been Released.  It&rsquo;s still the .net only caching library that has declarative cache invalidation.</p> <p>Attribute Based Caching 1.1 had almost 100 downloads!  Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.</p> <h1>Cache 1.2</h1> <p><strong>Changes:</strong></p> <ul><li>faster key generation strategy - thanks payman</li> <li>basic unit tests - thanks payman</li> <li>btree disk cache</li> <li>removed unity dependency</li> <li>simple timetolive setting</li> </ul><p><a href="http://cache.codeplex.com/releases/view/60025#DownloadId=204160">Download Here</a></p> <p>More Info</p> <ul><li><a href="http://cascadeofinsights.com/post/1410736927/introducing-attribute-based-caching">Release 1.1 Info</a></li> </ul><ul><li><a href="http://cache.codeplex.com/">Home on Codeplex</a></li> </ul>
+</description>
+<link>http://cascadeofinsights.com/post/3003691615</link>
+<guid>http://cascadeofinsights.com/post/3003691615</guid>
+<pubDate>Sat, 29 Jan 2011 21:16:00 -0500</pubDate>
+</item>
+<item>
+<title>Enterprise Software Authorization/ Security</title>
+<description>
+<p class="MsoNormal"><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png"/><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png"/><strong>Security Thoughts:</strong></p> <p class="MsoNormal">There are generally three types of authorization in enterprise applications:</p> <ol><li><span><span> </span></span><strong>Role based security</strong> <strong>- </strong>Which actions can a user do - aka role-based access control <span><span> </span></span></li> <li><span><span></span></span><strong>Entity level security</strong> - A user can only perform an Action on certain objects/data  - aka row level security</li> <li><strong>Field level security</strong> -  A user can see or edit only certain fields of an entity – <em>(this is really fine grained and usually a bad idea)</em></li> </ol><!-- more --><p class="MsoNormal">There is a framework that covers all 3 of these authorization types, Rhino Security. It allows authorization to be abstracted from the business logic as a cross-cutting concern.  It is deigned to handle 1 &amp; 2 above, but people have used it to implement 3. </p> <p class="MsoNormal">Here is an example of the type of rules it can easily encompass:</p> <blockquote> <p class="MsoNormal">Survey Entity:</p> <p class="MsoNormal">A survey has a start date, an end date, can be marked as applicable to a specific population, may be public or private, etc.</p> <p class="MsoNormal">View Restrictions:</p> <p class="MsoNormal">The specification says that a survey that the user does not own should only be visible to a user iff:</p> <ul><li>The survey is public </li> <li>The survey is active </li> <li>The survey has started </li> <li>The survey has not ended </li> <li>The survey is for a population that the user is a member of </li> </ul><p><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx">http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx</a></p> </blockquote> <p><strong>Entity Group:</strong></p> <p>The key concept that separates it from standard role based security is the concept of an entity-group. Entity groups are group of, well, entities and users can be granted/denied access to them just like actions. </p> <p>I would really love to see someone port this concept to the entity framework.  It certainly might not be right for every project, but a cohesive strategy for access control would be a big leap forward compared to a lot of projects I&rsquo;ve worked on.</p> <p><strong>Further Reading:</strong></p> <ul><li><a id="viewpost_ascx_TitleUrl" title="Title of this entry." href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx">Handling complex security conditions with Rhino Security </a></li> <li><a href="http://bartreyserhove.blogspot.com/search/label/rhino%20security">Field level security performance with Rhino Security </a></li> <li><a href="http://ayende.com/Blog/category/548.aspx">Rhino Security </a></li> <li><a href="http://ayende.com/Blog/archive/2007/11/17/A-vision-of-enterprise-platform-Security-Infrastructure.aspx">A vision of enterprise platform Security Infrastructure</a></li> <li><a href="http://ayende.com/Blog/archive/2008/01/22/Rhino-Security-Overview-Part-I.aspx">Rhino Security Overview </a></li> </ul>
+</description>
+<link>http://cascadeofinsights.com/post/2110661335</link>
+<guid>http://cascadeofinsights.com/post/2110661335</guid>
+<pubDate>Sun, 05 Dec 2010 15:47:00 -0500</pubDate>
+<category>rhino security</category>
+<category>row level security</category>
+<category>field level security</category>
+</item>
+<item>
+<title>Parser Combinators in C#</title>
+<description>
+<p>Haskell has parsec, f# has fparsec.  I went searching for a good option for creating parsers in c#. </p> <!-- more --> <script type="text/javascript"><![CDATA[// <![CDATA[ mpmetrics.track("COI_Parser"); // ]]]]><![CDATA[>]]></script><p>Favorite:</p> <ul><li><a title="sprache" target="_blank" href="http://code.google.com/p/sprache/">http://code.google.com/p/sprache/</a></li> </ul><p>Others:</p> <ul><li><a title="http://microparser.codeplex.com/" target="_blank" href="http://microparser.codeplex.com/">http://microparser.codeplex.com/</a></li> <li><a title="http://code.msdn.microsoft.com/RxParsers" target="_blank" href="http://code.msdn.microsoft.com/RxParsers">http://code.msdn.microsoft.com/RxParsers</a></li> <li><a title="http://jparsec.codehaus.org/NParsec+Tutorial" target="_blank" href="http://jparsec.codehaus.org/NParsec+Tutorial">http://jparsec.codehaus.org/NParsec+Tutorial</a></li> </ul><p>Blog Series on Parser Combinators in C#:</p> <ul><li><a title="monadic parser combinators" href="http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/">http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/</a></li> <li><a title="monadic parser combinators in c#" href="http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx">http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx</a></li> </ul><p>Other ways to utilize parsers in c#/ .net:</p> <ul><li>ANTLR</li> <li>Yacc &amp; Lex (I&rsquo;ve only ever used these back in my comp sci compiler class)</li> </ul><p>Interesting books:</p> <ul><li><a href="http://en.wikipedia.org/wiki/Dragon_Book_%28computer_science%29">Dragon book</a></li> <li><a target="_blank" href="http://createyourproglang.com/">Create Your Own Programming Language </a></li> </ul>
+</description>
+<link>http://cascadeofinsights.com/post/1629270971</link>
+<guid>http://cascadeofinsights.com/post/1629270971</guid>
+<pubDate>Sat, 20 Nov 2010 16:01:00 -0500</pubDate>
+<category>parser</category>
+<category>parser-combinator</category>
+<category>antlr</category>
+<category>parsec</category>
+<category>f</category>
+<category>nparsec</category>
+</item>
+</channel>
+</rss>
