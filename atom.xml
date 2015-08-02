@@ -20,11 +20,7 @@
     Hakyll and CircleCi
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-31
-    
-      by Adam
-    
-  </p>
+    <span class="date">2015-07-31</span> - <span class="tags"><a href="/tags/blog.html">blog</a>, <a href="/tags/hakyll.html">hakyll</a>, <a href="/tags/ci.html">ci</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
 <p>So far, so good.</p>
 </div>
@@ -41,11 +37,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>Let’s say that you won the lottery. That would be great, wouldn’t it?</p>
 <p>Now you’re rich because of this lottery ticket and i ask you: was a good idea for you to buy the ticket?</p>
 <p>Answer is no. No it was not a good idea for you to buy that ticket. The expected value of a lottery ticket is negative. It is a waste of money!</p>
@@ -79,11 +71,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.</p>
 <p>I’m not looking for Clojure to save me from these “problems” I just started playing with it because of some Rich Hickey talks that made me think there was a better way to develop software.</p>
 <h2 id="problems">Problems:</h2>
@@ -108,11 +96,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a></p>
 <p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html" class="uri">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p>
 <pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : [http://en.wikipedia.org/wiki/Graham_scan](http://en.wikipedia.org/wiki/Graham_scan) - [2] : [http://en.wikipedia.org/wiki/Convex_hull](http://en.wikipedia.org/wiki/Convex_hull) - [3] : [http://book.realworldhaskell.org/](http://book.realworldhaskell.org/) - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -> [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -> [Point] combineList x = map (\(_, y, _) -> y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -> [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -> [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -> (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -> Point -> Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -> [Point] sortSlope (x:xs) = x : sortBy (\ i j -> (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -> [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw > 0 then CounterClockwise else if ccw < 0 then Clockwise else Straight where ccw = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)	</pre>
@@ -130,11 +114,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <blockquote>
 <p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img src="http://projecteuler.net/images/symbol_times.gif" alt="×" /><span>20 grid?</span></p>
 <p><a href="http://projecteuler.net/problem=11" class="uri">http://projecteuler.net/problem=11</a></p>
@@ -155,11 +135,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <blockquote>
 <p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
 <p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a></p>
@@ -184,11 +160,7 @@
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <div class="figure">
 <img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="" />
 
@@ -258,11 +230,7 @@ but i want to be backward compatible with traditional keyboards so switched it b
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.</p>
 <script type="text/javascript"><![CDATA[// <![CDATA[ mpmetrics.track("COI_Parser"); // ]]]]><![CDATA[>]]></script>
 <p>Favorite:</p>
@@ -304,11 +272,7 @@ but i want to be backward compatible with traditional keyboards so switched it b
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt="" /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt="" /><strong>Security Thoughts:</strong></p>
 <p>There are generally three types of authorization in enterprise applications:</p>
 <ol style="list-style-type: decimal">
@@ -357,11 +321,7 @@ but i want to be backward compatible with traditional keyboards so switched it b
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    Posted on 2015-07-15
-    
-      by Adam Bell
-    
-  </p>
+    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.</p>
 <p>Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.</p>
 <h1 id="cache-1.2">Cache 1.2</h1>
