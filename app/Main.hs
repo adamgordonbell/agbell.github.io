@@ -21,13 +21,26 @@ main =
       compile $ pandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
-
+    -- build up tags
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts tagged \"" ++ tag ++ "\""
+        route idRoute
+        compile $ do
+          posts <- recentFirst =<< loadAll pattern
+          let ctx = constField "title" title
+                    `mappend` listField "posts" postContext (return posts)
+                    `mappend` defaultContext
+          makeItem ""
+                    >>= loadAndApplyTemplate "templates/tag.html" ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
     match "posts/*" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/post.html" postContext
+        >>= loadAndApplyTemplate "templates/post.html" (postContextWithTags tags)
         >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/default.html" postContext
+        >>= loadAndApplyTemplate "templates/default.html" (postContextWithTags tags)
         >>= relativizeUrls
 
     create ["archive.html"] $ do
@@ -81,6 +94,9 @@ feedContext =
 postContext :: Context String
 postContext =
   dateField "date" "%Y-%m-%d" `mappend` defaultContext
+
+postContextWithTags :: Tags -> Context String
+postContextWithTags tags = tagsField "tags" tags `mappend` postContext
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration =
