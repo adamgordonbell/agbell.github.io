@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Truly Ergonomic Keyboard
 author: Adam Bell
-tags: paul-graham, haskell
+tags: keyboard
 ---
 ![](http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg)  
 

@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Enterprise Software Authorization / Security
 author: Adam Bell
-tags: paul-graham, haskell
+tags: row-level-authorization, field-level-authorization
 ---
 ![](file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png)![](http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png)**Security Thoughts:**
 

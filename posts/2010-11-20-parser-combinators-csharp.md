@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Parser Combinators in C#
 author: Adam Bell
-tags: paul-graham, haskell
+tags: parser, parser-combinator, antlr, parsec, f#, c#, nparsec
 ---
 Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.
 

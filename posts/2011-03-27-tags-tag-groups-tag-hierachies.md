@@ -1,7 +1,7 @@
 ---
 title: Incrementing
 author: Adam Bell
-tags: paul-graham, haskell
+tags: tags, data
 ---
 _Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:_
 

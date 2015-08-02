@@ -1,15 +1,6 @@
 
 
-<item>
-<title>"Functor is to Lens as Applicative is to Biplate"</title>
-<description>
-“Functor is to Lens as Applicative is to Biplate”<br/><br/> - <em><a href="http://front.math.ucdavis.edu/1103.2841">http://front.math.ucdavis.edu/1103.2841</a></em>
-</description>
-<link>http://cascadeofinsights.com/post/35790868290</link>
-<guid>http://cascadeofinsights.com/post/35790868290</guid>
-<pubDate>Thu, 15 Nov 2012 15:39:00 -0500</pubDate>
-<category>Haskell_Is_Hard</category>
-</item>
+
 <item>
 <title>Euler 19 by hand and by Haskell</title>
 <description>

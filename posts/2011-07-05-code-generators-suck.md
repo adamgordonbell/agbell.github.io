@@ -1,9 +1,8 @@
 ---
-title: Incrementing
+title: Code Generators, You Suck. Well, some of you do.
 author: Adam Bell
-tags: paul-graham, haskell
+tags: wssf
 ---
-> Code Generators, You Suck. Well, some of you do.
 
 The scaffolding style code generators that generate out a good starting point from which standard coding takes over, those are very useful.
 
