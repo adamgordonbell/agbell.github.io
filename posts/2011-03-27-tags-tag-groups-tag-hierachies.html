@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cascade Of Insights - Incrementing</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+	<nav class="blog-nav">
+          <a class="blog-nav-item" href="../">Home</a>
+          <a class="blog-nav-item" href="../about.html">About</a>
+          <a class="blog-nav-item" href="../contact.html">Contact</a>
+          <a class="blog-nav-item" href="../archive.html">Archive</a>
+	</nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+	<h1 class="blog-title">Cascade Of Insights</h1>
+	<p class="lead blog-description">
+	  The blog of Adam Gordon Bell (agbell)
+	</p>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-8 blog-main">
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Incrementing
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2011-03-27</span> - <span class="tags"><a href="../tags/tags.html">tags</a>, <a href="../tags/data.html">data</a></span>
+  <p><em>Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:</em></p>
+<p>If all entities in the system can contain a list of tags, and the tagging system is structured correctly, the following features can be supported:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Faceted_search">faceted search</a></li>
+<li>hierarchical organization (categories, sub-cats and so on represented in tag hierarchy)</li>
+<li>ordering entities (‘high priority tag“)</li>
+</ul>
+<p>This should allow for a flexible meta-data system over top of the entities which can be customized with very little code modifications.</p>
+<p>This can be accomplished by having a tag tree, where tag entities have the following fields:</p>
+<ul>
+<li>Name</li>
+<li>ParentId</li>
+<li>Weight</li>
+<li>Hierarchy Path (for sub-tree searches)</li>
+<li>Shortcut</li>
+</ul>
+<p>The following tag search can then be implemented in SQL:</p>
+<ul>
+<li>And search (tag X and tag y)</li>
+<li>Or Search</li>
+<li>Except search</li>
+<li>Sub-tree inclusive or not</li>
+</ul>
+<p>Assuming that most tag trees are only 2 levels deep and using a subtree inclusive search when this is not the case (or always), we treat each tag tree as a facet in a faceted search.</p>
+<p>A hierarchy of categories and sub categories can be built by building the tag hierarchy and assigning all items into leaf tags and once again using an inclusive tag search as we drill down.</p>
+<p>If tags in a tree are given weights, entities can be sorted by these tags in , for instance, a grid.</p>
+<p>Tag Input:</p>
+<ul>
+<li>specify path example: facet1/tag1, color/red</li>
+<li>User shortcuts to aid entering new tag {name=“color”,shortcut=“#c”}, then can be used like #c/red</li>
+</ul>
+<p><strong>Other considerations:</strong></p>
+<p><strong>Null Tag :</strong></p>
+<p>Null tag could be added to any subtree which would catch all entities without a tag in that tree. This would be helpful for facet navigation and search.</p>
+<p><strong><em>Null tag for facet:</em></strong></p>
+<p>A null tag of “Unknown color” could be added as a child of the color tag, and would return all entities without a color tag.</p>
+<p><em><strong>Null tag for sorting:</strong></em></p>
+<p>A null tag of “no priority” could be added as a child of the priority tag and be given a weight of zero, hence sorting on this priority tag tree would return un-prioritized entities last.</p>
+<p><strong>Need cohesive example. Another Post.</strong></p>
+<p><strong>Tagging Links:</strong></p>
+<ul>
+<li><p><a href="http://www.miskatonic.org/library/facet-web-howto.html">How to Make a Faceted Classification and Put It On the Web | Miskatonic University Press</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Faceted_classification">Faceted classification - Wikipedia, the free encyclopedia</a></p></li>
+<li><p><a href="http://www.flickr.com/photos/morville/collections/72157603789246885/">Collection: Faceted Navigation</a></p></li>
+<li><p><a href="http://pubnotes.wordpress.com/2007/10/14/ordered-tags/">Advanced Tagging — Hierarchical And Ordered Tags « PubNotes</a></p></li>
+<li><p><a href="http://culturedcode.com/things/wiki/index.php?title=Advanced_Tagging">Advanced Tagging - Things Wiki</a></p></li>
+</ul>
+<p><strong>Tags as categories:</strong></p>
+<ul>
+<li><a href="http://www.znode.com/" class="uri">http://www.znode.com/</a></li>
+</ul>
+<p><em>Znode uses Tag groups to represent categories and to implement a faceted search. Their implementation is only 2 fixed levels however.</em></p>
+</div>
+
+	</div>
+
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	  <div class="sidebar-module sidebar-module-inset">
+	    <h4>About</h4>
+	    <p>Adam Bell says stuff. Software building stuff mainly.</p>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Archives</h4>
+	    <ol class="list-unstyled">
+	      <li><a href="#">June 2015</a></li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Elsewhere</h4>
+	    <ol class="list-unstyled">
+	      <li>
+		<a href="https://github.com/agbell/">GitHub</a>
+	      </li>
+	      <li>
+		<a href="https://twitter.com/adamgbell">Twitter</a>
+	      </li>
+	      <li>
+		<a href="https://www.facebook.com/AdamGordonBell">Facebook</a>
+	      </li>
+        <li>
+    <a href="https://www.linkedin.com/in/adamgbell">Linked In</a>
+        </li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <a href="../atom.xml">Atom</a> - <a href="../rss.xml">RSS</a>
+	  </div>
+	</div>
+
+      </div>
+
+    </div>
+
+    <footer class="blog-footer">
+      <p>
+	Site proudly generated by
+	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

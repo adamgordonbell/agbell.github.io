@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "haskell"</title>
+    <title>Cascade Of Insights - Question: Caching and postsharp is not working in my project?</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,51 +38,24 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "haskell"</h3>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Question: Caching and postsharp is not working in my project?
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2011-04-10</span> - <span class="tags"><a href="../tags/faq.html">faq</a>, <a href="../tags/attribute-based-caching.html">attribute-based-caching</a></span>
+  <p>You have made a project using attribute based caching, but the cache isn’t being hit?</p>
+<p><span>Does the test project included in the source work?</span></p>
 <ul>
-  
-    <li>
-      2015-07-31
-      <a href="../posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title9.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title8.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title7.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title6.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title5.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2014-03-15
-      <a href="../posts/2014-03-15-incrementing.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2012-10-15
-      <a href="../posts/2012-10-15-functor-is-to-lens-as.html">"Functor is to Lens as Applicative is to Biplate"</a>
-    </li>
-  
-</ul>
+<li><p><span>if you look at the test.csproj you can see the <span class="il">postsharp</span> targets line:</p>
+<p><a href="http://cache.codeplex.com/SourceControl/changeset/view/5279#75842" class="uri">http://cache.codeplex.com/SourceControl/changeset/view/5279#75842</a></p>
+<pre> <span><</span><span>Import</span> <span>Project</span><span>=</span><span>"</span><span>..\Cache\lib\<span class="il">PostSharp</span>\<span class="il">PostSharp</span>.targets</span><span>"</span> <span>/></span>  
 
+</pre>
+<p>You need that line in project containing the attributes or alternatively you can run the post-sharp installer which will handle this automatically.</span></p></li>
+</ul>
+<p>If the test project isn’t working, please email me. agbell at google’s email service.</p>
+</div>
 
 	</div>
 

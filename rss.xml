@@ -149,14 +149,135 @@
     <dc:creator>Adam Bell</dc:creator>
 </item>
 <item>
+    <title>Lazy Evaluation In Haskell</title>
+    <link>/posts/2015-01-14-lazy-evaluation.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Lazy Evaluation In Haskell
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-01-14</span> - <span class="tags"></span>
+  <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em></p>
+<p>Summary of Laziness:</p>
+<p>Lazy is good when:</p>
+<ul>
+<li>You are not going to use all the results</li>
+<li>Because you are going to filter some things out at a later stage</li>
+</ul>
+<p>Strict is good otherwise.<br />
+Hence:</p>
+<ul>
+<li>foldl’ for spine-strict results (Int, Map, …),</li>
+<li>foldr for spine-lazy results (mostly just [a]),</li>
+<li>Never use foldl</li>
+</ul>
+<p>The key insight for me has been understanding that lazy evaluation means that functions take in a pointer to a thunk as arguments and then return a thunk as a value. Only looking inside those thunks inputs (via pattern matching or IO) actually forces anything.</p>
+<p>This level of indirection improves composability, you can generate than reduce in a more modular fashion with only some constant overhead for holding on to thunks. The paper “why functional programming matters” has a great explanation of this.</p>
+<p>This all works because whenever you throw something away with <em>i.e. f (a,</em>) = a, the pointer to the thunk, that was never evaluated, and all the evaluations that follow from can get garbage collected away.</p>
+<p>This how foldr can short-circuit on some lazy list, if a condition of f that is passed in doesn’t care about the rest of the list, then we are done.</p>
+<p><span>Links:</span></p>
+<ul>
+<li><a href="http://blog.ezyang.com/category/haskell/haskell-heap/">Ez Yang : how the heap works</a></li>
+<li><a href="http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html" class="uri">http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html</a></li>
+<li><a href="http://www.haskell.org/haskellwiki/Performance/Strictness" class="uri">http://www.haskell.org/haskellwiki/Performance/Strictness</a></li>
+<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness</a></li>
+<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis</a></li>
+</ul>
+</div>
+]]></description>
+    <pubDate>Wed, 14 Jan 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-01-14-lazy-evaluation.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>Incrementing</title>
-    <link>/posts/2015-07-15-title4.html</link>
+    <link>/posts/2014-03-15-incrementing.html</link>
     <description><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Incrementing
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
+    <span class="date">2014-03-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
+  <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.</p>
+<p>His Example:</p>
+<blockquote>
+<p>Write a function that takes a number n, and returns a function that takes another number i and returns n incremented by i.</p>
+</blockquote>
+<p>I think this example is, maybe, unfairly biased towards functional programming languages, and its no surprise that pg shows us that lisp has the shortest implementation.</p>
+<p>It works as a good example, however, because it shows us a concrete demonstration where one language can easily do something (lisp), that others languages are not able to do at all (java).</p>
+<p>Let me try this in haskell.</p>
+<p>So in Haskell, the type of this function f would be:</p>
+<blockquote>
+<p>f :: Num a =&gt; a -&gt; ( a -&gt; a)</p>
+</blockquote>
+<p>meaning f takes a number and returns a function that takes a number and returns another number.</p>
+<p>Since the brackets are right associative, we can drop them to get:</p>
+<blockquote>
+<p>f :: Num a =&gt; a -&gt; a -&gt; a</p>
+</blockquote>
+<p>This is because, in haskell, all functions are considered curried and can be partially applied. Even basic numerical functions like + - / if given one argument will return a function that excepts the next argument.</p>
+<p>For example:</p>
+<blockquote>
+<blockquote>
+<p>:t (+)</p>
+</blockquote>
+<p>(+) :: Num a =&gt; a -&gt; a -&gt; a</p>
+<blockquote>
+<p>:t (+) 4<br />
+(+) 4 :: Num a =&gt; a -&gt; a</p>
+</blockquote>
+</blockquote>
+<p>So (+) 4 returns a function that takes a number and then adds 4 for to it. (<em>I mean, I guess technically, it doesn’t add 4 to it, but returns a new number that is the sum of them, but I think I am still capturing the spirit of the exercise here. Haskell variables are not mutable.)<br />
+</em></p>
+<p>What all of this means, if I haven’t already telegraphed the punchline, is that the complete haskell solution is:</p>
+<blockquote>
+<p>f = (+)</p>
+</blockquote>
+<p>So, in haskell, we don’t need to write this function. We can just use +.</p>
+<p>I think that is pretty cool.</p>
+</div>
+]]></description>
+    <pubDate>Sat, 15 Mar 2014 00:00:00 UT</pubDate>
+    <guid>/posts/2014-03-15-incrementing.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
+    <title>How to get bluetooth working in windows 8 / 8.1 on various thinkpads</title>
+    <link>/posts/2014-02-20-bluetooth-thinkpad-w520.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    How to get bluetooth working in windows 8 / 8.1 on various thinkpads
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2014-02-20</span> - <span class="tags"><a href="/tags/thinkpad.html">thinkpad</a>, <a href="/tags/bluetooth.html">bluetooth</a></span>
+  <div class="figure">
+<img src="/images/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg" alt="" />
+
+</div>
+<blockquote>
+<p><strong>How to get bluetooth working in windows 8 / 8.1 on various thinkpads.</strong></p>
+</blockquote>
+<p>Currently, the thinkpads ( w520 for sure, but lots of complaints about others online) do not have working bluetooth drivers. Or rather the driver exists, but getting the bluetooth to turn on is not possible.</p>
+<p>I have put together a solution here:</p>
+<p><a href="https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip">https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip</a></p>
+<p>This zip has to batch files that will turn on or off the blue tooth device. It uses the hotkey exe from the windows 7 Lenove hotkey app to force the bluetooth on.</p>
+<p>It also contains a bluetooth driver, the one I originally used, however I recommend instead that you go straight to broadcom here:</p>
+<p><a href="http://www.broadcom.com/support/bluetooth/update.php" class="uri">http://www.broadcom.com/support/bluetooth/update.php</a></p>
+</div>
+]]></description>
+    <pubDate>Thu, 20 Feb 2014 00:00:00 UT</pubDate>
+    <guid>/posts/2014-02-20-bluetooth-thinkpad-w520.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
+    <title>Truly Ergonomic Keyboard</title>
+    <link>/posts/2013-11-28-truly-ergonomic-keyboard.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Truly Ergonomic Keyboard
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2013-11-28</span> - <span class="tags"><a href="/tags/keyboard.html">keyboard</a></span>
   <div class="figure">
 <img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="" />
 
@@ -214,131 +335,8 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </ul>
 </div>
 ]]></description>
-    <pubDate>Wed, 15 Jul 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-07-15-title4.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Incrementing</title>
-    <link>/posts/2015-07-15-title18.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Incrementing
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <p>Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.</p>
-<script type="text/javascript"><![CDATA[// <![CDATA[ mpmetrics.track("COI_Parser"); // ]]]]><![CDATA[>]]></script>
-<p>Favorite:</p>
-<ul>
-<li><a href="http://code.google.com/p/sprache/" class="uri" title="sprache">http://code.google.com/p/sprache/</a></li>
-</ul>
-<p>Others:</p>
-<ul>
-<li><a href="http://microparser.codeplex.com/" class="uri" title="http://microparser.codeplex.com/">http://microparser.codeplex.com/</a></li>
-<li><a href="http://code.msdn.microsoft.com/RxParsers" class="uri" title="http://code.msdn.microsoft.com/RxParsers">http://code.msdn.microsoft.com/RxParsers</a></li>
-<li><a href="http://jparsec.codehaus.org/NParsec+Tutorial" class="uri" title="http://jparsec.codehaus.org/NParsec+Tutorial">http://jparsec.codehaus.org/NParsec+Tutorial</a></li>
-</ul>
-<p>Blog Series on Parser Combinators in C#:</p>
-<ul>
-<li><a href="http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/" class="uri" title="monadic parser combinators">http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/</a></li>
-<li><a href="http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx" class="uri" title="monadic parser combinators in c#">http://blogs.msdn.com/b/lukeh/archive/2007/08/19/monadic-parser-combinators-using-c-3-0.aspx</a></li>
-</ul>
-<p>Other ways to utilize parsers in c#/ .net:</p>
-<ul>
-<li>ANTLR</li>
-<li>Yacc &amp; Lex (I’ve only ever used these back in my comp sci compiler class)</li>
-</ul>
-<p>Interesting books:</p>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Dragon_Book_%28computer_science%29">Dragon book</a></li>
-<li><a href="http://createyourproglang.com/">Create Your Own Programming Language</a></li>
-</ul>
-</div>
-]]></description>
-    <pubDate>Wed, 15 Jul 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-07-15-title18.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Incrementing</title>
-    <link>/posts/2015-07-15-title17.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Incrementing
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt="" /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt="" /><strong>Security Thoughts:</strong></p>
-<p>There are generally three types of authorization in enterprise applications:</p>
-<ol style="list-style-type: decimal">
-<li><span><span></span></span><strong>Role based security</strong> <strong>-</strong> Which actions can a user do - aka role-based access control<span><span></span></span></li>
-<li><span><span></span></span><strong>Entity level security</strong> - A user can only perform an Action on certain objects/data - aka row level security</li>
-<li><strong>Field level security</strong> - A user can see or edit only certain fields of an entity – <em>(this is really fine grained and usually a bad idea)</em></li>
-</ol>
-<p>There is a framework that covers all 3 of these authorization types, Rhino Security. It allows authorization to be abstracted from the business logic as a cross-cutting concern. It is deigned to handle 1 &amp; 2 above, but people have used it to implement 3.</p>
-<p>Here is an example of the type of rules it can easily encompass:</p>
-<blockquote>
-<p>Survey Entity:</p>
-<p>A survey has a start date, an end date, can be marked as applicable to a specific population, may be public or private, etc.</p>
-<p>View Restrictions:</p>
-<p>The specification says that a survey that the user does not own should only be visible to a user iff:</p>
-<ul>
-<li>The survey is public</li>
-<li>The survey is active</li>
-<li>The survey has started</li>
-<li>The survey has not ended</li>
-<li>The survey is for a population that the user is a member of</li>
-</ul>
-<p><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" class="uri">http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx</a></p>
-</blockquote>
-<p><strong>Entity Group:</strong></p>
-<p>The key concept that separates it from standard role based security is the concept of an entity-group. Entity groups are group of, well, entities and users can be granted/denied access to them just like actions.</p>
-<p>I would really love to see someone port this concept to the entity framework. It certainly might not be right for every project, but a cohesive strategy for access control would be a big leap forward compared to a lot of projects I’ve worked on.</p>
-<p><strong>Further Reading:</strong></p>
-<ul>
-<li><a href="http://ayende.com/Blog/archive/2009/12/11/handling-complex-security-conditions-with-rhino-security.aspx" title="Title of this entry.">Handling complex security conditions with Rhino Security</a></li>
-<li><a href="http://bartreyserhove.blogspot.com/search/label/rhino%20security">Field level security performance with Rhino Security</a></li>
-<li><a href="http://ayende.com/Blog/category/548.aspx">Rhino Security</a></li>
-<li><a href="http://ayende.com/Blog/archive/2007/11/17/A-vision-of-enterprise-platform-Security-Infrastructure.aspx">A vision of enterprise platform Security Infrastructure</a></li>
-<li><a href="http://ayende.com/Blog/archive/2008/01/22/Rhino-Security-Overview-Part-I.aspx">Rhino Security Overview</a></li>
-</ul>
-</div>
-]]></description>
-    <pubDate>Wed, 15 Jul 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-07-15-title17.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Incrementing</title>
-    <link>/posts/2015-07-15-title16.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Incrementing
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2015-07-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <p>Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.</p>
-<p>Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.</p>
-<h1 id="cache-1.2">Cache 1.2</h1>
-<p><strong>Changes:</strong></p>
-<ul>
-<li>faster key generation strategy - thanks payman</li>
-<li>basic unit tests - thanks payman</li>
-<li>btree disk cache</li>
-<li>removed unity dependency</li>
-<li>simple timetolive setting</li>
-</ul>
-<p><a href="http://cache.codeplex.com/releases/view/60025#DownloadId=204160">Download Here</a></p>
-<p>More Info</p>
-<ul>
-<li><p><a href="http://cascadeofinsights.com/post/1410736927/introducing-attribute-based-caching">Release 1.1 Info</a></p></li>
-<li><p><a href="http://cache.codeplex.com/">Home on Codeplex</a></p></li>
-</ul>
-</div>
-]]></description>
-    <pubDate>Wed, 15 Jul 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-07-15-title16.html</guid>
+    <pubDate>Thu, 28 Nov 2013 00:00:00 UT</pubDate>
+    <guid>/posts/2013-11-28-truly-ergonomic-keyboard.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 
