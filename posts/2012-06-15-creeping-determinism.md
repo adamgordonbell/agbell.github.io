@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Creeping Determinism
 author: Adam Bell
-tags: paul-graham, haskell
+tags: essay
 ---
 Let’s say that you won the lottery. That would be great, wouldn’t it?
 
