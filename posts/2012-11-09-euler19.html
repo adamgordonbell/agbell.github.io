@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "haskell"</title>
+    <title>Cascade Of Insights - Project Euler Problem 19</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,46 +38,23 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "haskell"</h3>
-<ul>
-  
-    <li>
-      2015-07-31
-      <a href="../posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title8.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title7.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2015-07-15
-      <a href="../posts/2015-07-15-title6.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2014-03-15
-      <a href="../posts/2014-03-15-incrementing.html">Incrementing</a>
-    </li>
-  
-    <li>
-      2012-11-09
-      <a href="../posts/2012-11-09-euler19.html">Project Euler Problem 19</a>
-    </li>
-  
-    <li>
-      2012-10-15
-      <a href="../posts/2012-10-15-functor-is-to-lens-as.html">"Functor is to Lens as Applicative is to Biplate"</a>
-    </li>
-  
-</ul>
-
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Project Euler Problem 19
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2012-11-09</span> - <span class="tags"><a href="../tags/euler.html">euler</a>, <a href="../tags/haskell.html">haskell</a></span>
+  <blockquote>
+<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
+<p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a></p>
+</blockquote>
+<p>By Hand:</p>
+<p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p>
+<p>In haskell:</p>
+<div class="highlight">
+<pre>euler19 = length $ filter isSunday [(year,month) | year <- [1901..2000], month <- [1..12]] isSunday :: (Integer,Int) -> Bool isSunday (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01 where isSunday1 (_,_,7) = True isSunday1 _ = False </pre>
+</div>
+</div>
 
 	</div>
 
