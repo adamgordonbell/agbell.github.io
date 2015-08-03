@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Problems Clojure thinks I have with C#
 author: Adam Bell
-tags: paul-graham, haskell
+tags: clojure, c#
 ---
 I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.
 

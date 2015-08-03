@@ -1,7 +1,7 @@
 ---
-title: Incrementing
+title: Graham’s scan algorithm for the convex hull
 author: Adam Bell
-tags: paul-graham, haskell
+tags: haskell
 ---
 <span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> [convex hull](http://en.wikipedia.org/wiki/Convex_hull)<span>. is, and how the</span> [Graham scan algorithm](http://en.wikipedia.org/wiki/Graham_scan) <span>should work, on</span> [Wikipedia](http://en.wikipedia.org/)
 
