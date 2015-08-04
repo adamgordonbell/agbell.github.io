@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cascade Of Insights - Scala Slick Group</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+	<nav class="blog-nav">
+          <a class="blog-nav-item" href="../">Home</a>
+          <a class="blog-nav-item" href="../about.html">About</a>
+          <a class="blog-nav-item" href="../contact.html">Contact</a>
+          <a class="blog-nav-item" href="../archive.html">Archive</a>
+	</nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+	<h1 class="blog-title">Cascade Of Insights</h1>
+	<p class="lead blog-description">
+	  The blog of Adam Gordon Bell (agbell)
+	</p>
+      </div>
+
+      <div class="row">
+	<div class="col-sm-8 blog-main">
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Scala Slick Group
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-08-04</span> - <span class="tags"><a href="../tags/scala.html">scala</a>, <a href="../tags/slick.html">slick</a></span>
+  <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">val</span> join = <span class="kw">for</span> {
+     (f,b) &lt;-
+                  foo.<span class="fu">filter</span>(...) on  innerJoin
+                  bar <span class="fu">on</span> (...)
+   } <span class="kw">yield</span> (o,i,s)</code></pre></div>
+<p>The type of join will be a List[(foo,bar)]. I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {
+    <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
+    <span class="kw">for</span> (i &lt;- t) {
+      <span class="kw">val</span> key = i.<span class="fu">_1</span>
+      <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">_2</span>
+    }
+    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+  }</code></pre></div>
+<p>This groups one element from a tuple into a sublist. If I later add the requirement that each bar has many baz than I need to another method that transforms tuples of 3 into two nested lists.</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
+<span class="kw">def</span> group2[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,List[C])])] = {
+    <span class="fu">group2Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group1</span>(x.<span class="fu">_2</span>)))
+  }
+
+<span class="kw">private</span> <span class="kw">def</span> group2Internal[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,C)])] = {
+   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C)]]()
+   <span class="kw">for</span> (i &lt;- t) {
+     <span class="kw">val</span> key = i.<span class="fu">_1</span>
+     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>))
+   }
+   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+ }</code></pre></div>
+<p>I can do the same for grouping into three nested lists:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group3[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,List[(C,List[D])])])] = {
+    <span class="fu">group3Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group2</span>(x.<span class="fu">_2</span>)))
+}
+
+<span class="kw">private</span> <span class="kw">def</span> group3Internal[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,C,D)])] = {
+   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C,D)]]()
+   <span class="kw">for</span> (i &lt;- t) {
+     <span class="kw">val</span> key = i.<span class="fu">_1</span>
+     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C,D)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>,i.<span class="fu">_4</span>))
+   }
+   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+ }</code></pre></div>
+<p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
+</div>
+
+	</div>
+
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	  <div class="sidebar-module sidebar-module-inset">
+	    <h4>About</h4>
+	    <p>Adam Bell says stuff. Software building stuff mainly.</p>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Archives</h4>
+	    <ol class="list-unstyled">
+	      <li><a href="#">June 2015</a></li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <h4>Elsewhere</h4>
+	    <ol class="list-unstyled">
+	      <li>
+		<a href="https://github.com/agbell/">GitHub</a>
+	      </li>
+	      <li>
+		<a href="https://twitter.com/adamgbell">Twitter</a>
+	      </li>
+	      <li>
+		<a href="https://www.facebook.com/AdamGordonBell">Facebook</a>
+	      </li>
+        <li>
+    <a href="https://www.linkedin.com/in/adamgbell">Linked In</a>
+        </li>
+	    </ol>
+	  </div>
+	  <div class="sidebar-module">
+	    <a href="../atom.xml">Atom</a> - <a href="../rss.xml">RSS</a>
+	  </div>
+	</div>
+
+      </div>
+
+    </div>
+
+    <footer class="blog-footer">
+      <p>
+	Site proudly generated by
+	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

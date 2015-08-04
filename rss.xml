@@ -7,8 +7,66 @@
         <description><![CDATA[Adam Bell's blog]]></description>
         <atom:link href="/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 31 Jul 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Aug 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Scala Slick Group</title>
+    <link>/posts/2015-08-04-scala-slick-group-joins.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Scala Slick Group
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-08-04</span> - <span class="tags"><a href="/tags/scala.html">scala</a>, <a href="/tags/slick.html">slick</a></span>
+  <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">val</span> join = <span class="kw">for</span> {
+     (f,b) &lt;-
+                  foo.<span class="fu">filter</span>(...) on  innerJoin
+                  bar <span class="fu">on</span> (...)
+   } <span class="kw">yield</span> (o,i,s)</code></pre></div>
+<p>The type of join will be a List[(foo,bar)]. I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {
+    <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
+    <span class="kw">for</span> (i &lt;- t) {
+      <span class="kw">val</span> key = i.<span class="fu">_1</span>
+      <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">_2</span>
+    }
+    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+  }</code></pre></div>
+<p>This groups one element from a tuple into a sublist. If I later add the requirement that each bar has many baz than I need to another method that transforms tuples of 3 into two nested lists.</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
+<span class="kw">def</span> group2[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,List[C])])] = {
+    <span class="fu">group2Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group1</span>(x.<span class="fu">_2</span>)))
+  }
+
+<span class="kw">private</span> <span class="kw">def</span> group2Internal[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,C)])] = {
+   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C)]]()
+   <span class="kw">for</span> (i &lt;- t) {
+     <span class="kw">val</span> key = i.<span class="fu">_1</span>
+     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>))
+   }
+   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+ }</code></pre></div>
+<p>I can do the same for grouping into three nested lists:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group3[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,List[(C,List[D])])])] = {
+    <span class="fu">group3Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group2</span>(x.<span class="fu">_2</span>)))
+}
+
+<span class="kw">private</span> <span class="kw">def</span> group3Internal[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,C,D)])] = {
+   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C,D)]]()
+   <span class="kw">for</span> (i &lt;- t) {
+     <span class="kw">val</span> key = i.<span class="fu">_1</span>
+     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C,D)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>,i.<span class="fu">_4</span>))
+   }
+   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
+ }</code></pre></div>
+<p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
+</div>
+]]></description>
+    <pubDate>Tue, 04 Aug 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-08-04-scala-slick-group-joins.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>Hakyll and CircleCi</title>
     <link>/posts/2015-07-31-hakyll-and-circleci.html</link>
     <description><![CDATA[<div class="blog-post">
@@ -319,24 +377,6 @@ but i want to be backward compatible with traditional keyboards so switched it b
 ]]></description>
     <pubDate>Sat, 15 Sep 2012 00:00:00 UT</pubDate>
     <guid>/posts/2012-09-15-euler11.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Graham’s scan algorithm for the convex hull</title>
-    <link>/posts/2012-08-30-grahams-scan.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Graham’s scan algorithm for the convex hull
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2012-08-30</span> - <span class="tags"><a href="/tags/haskell.html">haskell</a></span>
-  <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a></p>
-<p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html" class="uri">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p>
-<pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : [http://en.wikipedia.org/wiki/Graham_scan](http://en.wikipedia.org/wiki/Graham_scan) - [2] : [http://en.wikipedia.org/wiki/Convex_hull](http://en.wikipedia.org/wiki/Convex_hull) - [3] : [http://book.realworldhaskell.org/](http://book.realworldhaskell.org/) - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -> [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -> [Point] combineList x = map (\(_, y, _) -> y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -> [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -> [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -> (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -> Point -> Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -> [Point] sortSlope (x:xs) = x : sortBy (\ i j -> (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -> [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw > 0 then CounterClockwise else if ccw < 0 then Clockwise else Straight where ccw = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)	</pre>
-</div>
-]]></description>
-    <pubDate>Thu, 30 Aug 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-08-30-grahams-scan.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 
