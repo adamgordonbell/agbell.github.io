@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "thinkpad"</title>
+    <title>Cascade Of Insights - Project Euler #9</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,16 +38,37 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "thinkpad"</h3>
-<ul>
-  
-    <li>
-      2014-02-20
-      <a href="../posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
-    </li>
-  
-</ul>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Project Euler #9
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2010-10-07</span> - <span class="tags"><a href="../tags/c%23.html">c#</a>, <a href="../tags/euler.html">euler</a></span>
+  <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
+<p>http://projecteuler.net/index.php?section=problems&amp;id=6</p>
+<p>My Solution:</p>
+<pre><code>var x =
+    (
+        from a in 1.To(Int32.MaxValue)
+        from b in 1.To(a)
+        where a + b + Math.Sqrt(a * a + b * b) == 1000
+        select new { A = a, B = b, C = Math.Sqrt(a * a + b * b) }
+    ).First();</code></pre>
 
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
 
 	</div>
 

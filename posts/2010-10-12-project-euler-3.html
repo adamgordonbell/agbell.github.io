@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "thinkpad"</title>
+    <title>Cascade Of Insights - Euler 3 in c#</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,16 +38,66 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "thinkpad"</h3>
-<ul>
-  
-    <li>
-      2014-02-20
-      <a href="../posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
-    </li>
-  
-</ul>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Euler 3 in c#
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2010-10-12</span> - <span class="tags"><a href="../tags/euler.html">euler</a>, <a href="../tags/c%23.html">c#</a></span>
+  <blockquote>
+<p>Problem 3: What is the largest prime factor of the number 600851475143 ?</p>
+<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" class="uri" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p>
+</blockquote>
+<p>With enough extension methods we can make 3 really simple:</p>
+<blockquote>
+<p>600851475143.LargestPrimeFactor()</p>
+</blockquote>
+<p>Where:</p>
+<pre class="csharp"><code>public static int LargestPrimeFactor(this long number)
+{
+    return number.PrimeFactors().Last();
+}
 
+public static IEnumerable&lt;int&gt; PrimeFactors(this long number)
+{
+    long remainder = number;
+    while (true)
+    {
+        var factor = remainder.SmallestPrimeFactor();
+        yield return factor;
+        remainder = remainder / factor;
+        if (remainder == 1)
+        {
+            break;
+        }
+    }
+}
+
+private static int SmallestPrimeFactor(this long number)
+{
+    var primes = new Eratosthenes();
+    var factor = primes.FirstOrDefault(x =&gt; number.IsDivisbleBy((long)x));
+    if (factor == 0)
+    {
+        throw new Exception(String.Format(“Factor not found! {0}”,number));
+    }
+    return factor;
+}</code></pre>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
 
 	</div>
 

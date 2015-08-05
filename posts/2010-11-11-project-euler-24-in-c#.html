@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "thinkpad"</title>
+    <title>Cascade Of Insights - Project Euler #24 in c#</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,16 +38,73 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "thinkpad"</h3>
-<ul>
-  
-    <li>
-      2014-02-20
-      <a href="../posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
-    </li>
-  
-</ul>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Project Euler #24 in c#
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2010-11-11</span> - <span class="tags"><a href="../tags/euler.html">euler</a>, <a href="../tags/c%23.html">c#</a></span>
+  <p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p>
+<p>012   021   102   120   201   210</p>
+<p>What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?</p>
+<pre class="csharp"><code>[TestClass]
+    public class Problem24
+    {
+        [TestMethod]
+        public void Answer()
+        {
+            var tokens = new string[] { “0”, “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9” };
+            var results = Permutations.Of(tokens).WithLength(10);
+            results
+                .Skip(999999)
+                .Take(1)
+                .ToList()
+                .ForEach(x =&gt; Console.WriteLine(x));
+            Console.ReadLine();
+        }
+    }
 
+public class Permutations
+    {
+        public static Permutations Of(IEnumerable&lt;string&gt; tokens)
+        {
+            return new Permutations { tokens = tokens.ToList() };
+        }
+        private Permutations() { }
+
+        public IList&lt;string&gt; tokens { get; private set; }
+
+        public IEnumerable&lt;String&gt; WithLength(int length)
+        {
+            if (length &lt; 1 || length &gt; tokens.Count())
+            {
+                return null;
+            }
+            if (length == 1)
+            {
+                return tokens.Select(x =&gt; x);
+            }
+            var results = from t in tokens
+                          from x in Permutations.Of(tokens.RemoveWithCopy&lt;String&gt;(t)).WithLength(length - 1)
+                          select t + x; //this is using string builder
+            return results;
+        }
+    }</code></pre>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
 
 	</div>
 

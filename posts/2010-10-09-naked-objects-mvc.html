@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Posts tagged "thinkpad"</title>
+    <title>Cascade Of Insights - Naked Objects MVC - exposing a repository method as a get</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -38,16 +38,37 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h3>Posts tagged "thinkpad"</h3>
-<ul>
-  
-    <li>
-      2014-02-20
-      <a href="../posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
-    </li>
-  
-</ul>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    Naked Objects MVC - exposing a repository method as a get
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2010-10-09</span> - <span class="tags"><a href="../tags/c%23.html">c#</a>, <a href="../tags/NakedObjectsFramework.html">NakedObjectsFramework</a></span>
+  <p>If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.</p>
+<pre class="csharp"><code>public class HomeController : CustomController
+    {
+        public ActionResult Index()
+        {
+            var siteRep = FrameworkHelper.GetService&lt;SimpleRepository&lt;Site&gt;&gt;();
+            return InvokeAction(siteRep, “All”, new FormCollection(), “”, “StandaloneTable”);
+        }
+    }</code></pre>
+<p>Here the home controller will return the StandaloneTable view of the All() method on SimpleRepository<Site>.</p>
 
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
 
 	</div>
 

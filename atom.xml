@@ -64,6 +64,20 @@
    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
  }</code></pre></div>
 <p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -81,6 +95,20 @@
     <span class="date">2015-07-31</span> - <span class="tags"><a href="/tags/blog.html">blog</a>, <a href="/tags/hakyll.html">hakyll</a>, <a href="/tags/ci.html">ci</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
 <p>So far, so good.</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -122,6 +150,20 @@ Hence:</p>
 <li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness</a></li>
 <li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis</a></li>
 </ul>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -174,6 +216,20 @@ Hence:</p>
 </blockquote>
 <p>So, in haskell, we don’t need to write this function. We can just use +.</p>
 <p>I think that is pretty cool.</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -202,6 +258,20 @@ Hence:</p>
 <p>This zip has to batch files that will turn on or off the blue tooth device. It uses the hotkey exe from the windows 7 Lenove hotkey app to force the bluetooth on.</p>
 <p>It also contains a bluetooth driver, the one I originally used, however I recommend instead that you go straight to broadcom here:</p>
 <p><a href="http://www.broadcom.com/support/bluetooth/update.php" class="uri">http://www.broadcom.com/support/bluetooth/update.php</a></p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -272,6 +342,20 @@ but i want to be backward compatible with traditional keyboards so switched it b
 <li><a href="https://www.trulyergonomic.com/store/index.php">TECK website</a></li>
 <li><a href="http://ergodox.org/">ErgoDox</a></li>
 </ul>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -311,6 +395,20 @@ but i want to be backward compatible with traditional keyboards so switched it b
 # The above has to point to where you install Emacs  </code></pre></li>
 <li><p><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></p></li>
 </ol>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -336,6 +434,20 @@ but i want to be backward compatible with traditional keyboards so switched it b
 <div class="highlight">
 <pre>euler19 = length $ filter isSunday [(year,month) | year <- [1901..2000], month <- [1..12]] isSunday :: (Integer,Int) -> Bool isSunday (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01 where isSunday1 (_,_,7) = True isSunday1 _ = False </pre>
 </div>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -356,6 +468,20 @@ but i want to be backward compatible with traditional keyboards so switched it b
 <li><em><a href="http://front.math.ucdavis.edu/1103.2841" class="uri">http://front.math.ucdavis.edu/1103.2841</a></em></li>
 </ul>
 <p>Haskell, the language with seemingly endless new concepts to learn about</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
@@ -377,6 +503,20 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </blockquote>
 <p>It took me forever to find out that transpose existed and that I could use zipWith to get a diagonal - but after that its gets easy.</p>
 <pre>euler11 = maximum(	(maxGridProduct q10Grid) --max of row products :(maxGridProduct $ transpose q10Grid) --max of column products :(maxGridProduct $ diagonalGrid q10Grid)	--max of first diagonal :(maxGridProduct $ diagonalGrid $map reverse q10Grid)	--max of second diagonal :(maxGridProduct $ diagonalGrid $ transpose q10Grid)	--max of first transposed :(maxGridProduct $ diagonalGrid $map reverse $ transpose q10Grid)--max of second : [] ) maxGridProduct :: [[Int]] -> Int maxGridProduct grid = maximum $ map maxRowProduct grid maxRowProduct :: [Int] -> Int maxRowProduct line = maximum . map (product . take 4) $ tails $ line diagonalGrid grid = map (diagonalRow grid) [0..(length grid)] diagonalRow :: [[Int]] -> Int -> [Int] diagonalRow grid offset = zipWith (!!) grid [offset .. max] where len = length $ grid!!0 max = len - 1 q10Grid ::[[Int]] q10Grid = map (map read) $ stringNum where stringNum = map words $ lines " \ \08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n \ \49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\n \ \81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65\n \ \52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91\n \ \22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80\n \ \24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50\n \ \32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70\n \ \67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21\n \ \24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72\n \ \21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95\n \ \78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92\n \ \16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57\n \ \86 56 00 48 35 71 89 07 05 44 44 37 44 60 21 58 51 54 17 58\n \ \19 80 81 68 05 94 47 69 28 73 92 13 86 52 17 77 04 89 55 40\n \ \04 52 08 83 97 35 99 16 07 97 57 32 16 26 26 79 33 27 98 66\n \ \88 36 68 87 57 62 20 72 03 46 33 67 46 55 12 32 63 93 53 69\n \ \04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36\n \ \20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16\n \ \20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\n \ \01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48" </pre>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 ]]></summary>
 </entry>
