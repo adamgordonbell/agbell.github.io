@@ -1,5 +1,5 @@
 ---
-title: Euler 3 in c#
+title: Project Euler 3 in c#
 author: Adam Bell
 tags: euler, c#
 ---
