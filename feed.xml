@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <channel>
-        <title>Cascade Of Insights</title>
-        <link></link>
-        <description><![CDATA[Adam Bell's blog]]></description>
-        <atom:link href="/rss.xml" rel="self"
-                   type="application/rss+xml" />
-        <lastBuildDate>Tue, 04 Aug 2015 00:00:00 UT</lastBuildDate>
-        <item>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Cascade Of Insights</title>
+    <link href="/feed.xml" rel="self" />
+    <link href="" />
+    <id>/feed.xml</id>
+    <author>
+        <name>Adam Bell</name>
+        <email>agbell at gmail.com</email>
+    </author>
+    <updated>2015-08-04T00:00:00Z</updated>
+    <entry>
     <title>Scala Slick Group</title>
-    <link>/posts/2015-08-04-scala-slick-group-joins.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2015-08-04-scala-slick-group-joins.html" />
+    <id>/posts/2015-08-04-scala-slick-group-joins.html</id>
+    <published>2015-08-04T00:00:00Z</published>
+    <updated>2015-08-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Scala Slick Group
   </h2>
@@ -76,15 +80,15 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Tue, 04 Aug 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-08-04-scala-slick-group-joins.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Hakyll and CircleCi</title>
-    <link>/posts/2015-07-31-hakyll-and-circleci.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2015-07-31-hakyll-and-circleci.html" />
+    <id>/posts/2015-07-31-hakyll-and-circleci.html</id>
+    <published>2015-07-31T00:00:00Z</published>
+    <updated>2015-07-31T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Hakyll and CircleCi
   </h2>
@@ -107,15 +111,15 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Fri, 31 Jul 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-07-31-hakyll-and-circleci.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Lazy Evaluation In Haskell</title>
-    <link>/posts/2015-01-14-lazy-evaluation.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2015-01-14-lazy-evaluation.html" />
+    <id>/posts/2015-01-14-lazy-evaluation.html</id>
+    <published>2015-01-14T00:00:00Z</published>
+    <updated>2015-01-14T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Lazy Evaluation In Haskell
   </h2>
@@ -161,15 +165,15 @@ Hence:</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Wed, 14 Jan 2015 00:00:00 UT</pubDate>
-    <guid>/posts/2015-01-14-lazy-evaluation.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Incrementing</title>
-    <link>/posts/2014-03-15-incrementing.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2014-03-15-incrementing.html" />
+    <id>/posts/2014-03-15-incrementing.html</id>
+    <published>2014-03-15T00:00:00Z</published>
+    <updated>2014-03-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Incrementing
   </h2>
@@ -226,15 +230,15 @@ Hence:</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Sat, 15 Mar 2014 00:00:00 UT</pubDate>
-    <guid>/posts/2014-03-15-incrementing.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>How to get bluetooth working in windows 8 / 8.1 on various thinkpads</title>
-    <link>/posts/2014-02-20-bluetooth-thinkpad-w520.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2014-02-20-bluetooth-thinkpad-w520.html" />
+    <id>/posts/2014-02-20-bluetooth-thinkpad-w520.html</id>
+    <published>2014-02-20T00:00:00Z</published>
+    <updated>2014-02-20T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     How to get bluetooth working in windows 8 / 8.1 on various thinkpads
   </h2>
@@ -267,15 +271,15 @@ Hence:</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Thu, 20 Feb 2014 00:00:00 UT</pubDate>
-    <guid>/posts/2014-02-20-bluetooth-thinkpad-w520.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Truly Ergonomic Keyboard</title>
-    <link>/posts/2013-11-28-truly-ergonomic-keyboard.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2013-11-28-truly-ergonomic-keyboard.html" />
+    <id>/posts/2013-11-28-truly-ergonomic-keyboard.html</id>
+    <published>2013-11-28T00:00:00Z</published>
+    <updated>2013-11-28T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Truly Ergonomic Keyboard
   </h2>
@@ -345,15 +349,15 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Thu, 28 Nov 2013 00:00:00 UT</pubDate>
-    <guid>/posts/2013-11-28-truly-ergonomic-keyboard.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Emacs Client on Windows 8</title>
-    <link>/posts/2013-10-28-emacs-client-on-windows.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2013-10-28-emacs-client-on-windows.html" />
+    <id>/posts/2013-10-28-emacs-client-on-windows.html</id>
+    <published>2013-10-28T00:00:00Z</published>
+    <updated>2013-10-28T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Emacs Client on Windows 8
   </h2>
@@ -397,15 +401,15 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Mon, 28 Oct 2013 00:00:00 UT</pubDate>
-    <guid>/posts/2013-10-28-emacs-client-on-windows.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Project Euler #19 in haskell and by hand</title>
-    <link>/posts/2012-11-09-euler19.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2012-11-09-euler19.html" />
+    <id>/posts/2012-11-09-euler19.html</id>
+    <published>2012-11-09T00:00:00Z</published>
+    <updated>2012-11-09T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Project Euler #19 in haskell and by hand
   </h2>
@@ -435,15 +439,15 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Fri, 09 Nov 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-11-09-euler19.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>"Functor is to Lens as Applicative is to Biplate"</title>
-    <link>/posts/2012-10-15-functor-is-to-lens-as.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2012-10-15-functor-is-to-lens-as.html" />
+    <id>/posts/2012-10-15-functor-is-to-lens-as.html</id>
+    <published>2012-10-15T00:00:00Z</published>
+    <updated>2012-10-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     "Functor is to Lens as Applicative is to Biplate"
   </h2>
@@ -469,15 +473,15 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Mon, 15 Oct 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-10-15-functor-is-to-lens-as.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
+]]></summary>
+</entry>
+<entry>
     <title>Project Euler #11 in haskell</title>
-    <link>/posts/2012-09-15-euler11.html</link>
-    <description><![CDATA[<div class="blog-post">
+    <link href="/posts/2012-09-15-euler11.html" />
+    <id>/posts/2012-09-15-euler11.html</id>
+    <published>2012-09-15T00:00:00Z</published>
+    <updated>2012-09-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
     Project Euler #11 in haskell
   </h2>
@@ -503,11 +507,7 @@ but i want to be backward compatible with traditional keyboards so switched it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-]]></description>
-    <pubDate>Sat, 15 Sep 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-09-15-euler11.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
+]]></summary>
+</entry>
 
-    </channel>
-</rss>
+</feed>
