@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-blog.css">
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 
   </head>
 
@@ -38,255 +39,449 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <h2>Welcome</h2>
-
-<p>Welcome to my blog!</p>
-
-<h2>Posts</h2>
-<ul>
+	  
+<div id="content">
+  <ul class="posts">
   
-    <li>
-      2015-08-04
-      <a href="./posts/2015-08-04-scala-slick-group-joins.html">Scala Slick Group</a>
-      <p>
-      
-        <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2015-08-04-scala-slick-group-joins.html">Scala Slick Group</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2015-08-04</time>
+        <div class="tags"><a href="./tags/scala.html">scala</a>, <a href="./tags/slick.html">slick</a></div>
+      </div>
+    </header>
+    
+      <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
 <div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">val</span> join = <span class="kw">for</span> {
      (f,b) &lt;-
                   foo.<span class="fu">filter</span>(...) on  innerJoin
                   bar <span class="fu">on</span> (...)
    } <span class="kw">yield</span> (o,i,s)</code></pre></div>
 
-      
-      </p>
-      <!-- <a href="/posts/2015-08-04-scala-slick-group-joins.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2015-08-04-scala-slick-group-joins.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2015-07-31
-      <a href="./posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
-      <p>
-      
-        <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. 
-      
-      </p>
-      <!-- <a href="/posts/2015-07-31-hakyll-and-circleci.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2015-07-31</time>
+        <div class="tags"><a href="./tags/blog.html">blog</a>, <a href="./tags/hakyll.html">hakyll</a>, <a href="./tags/ci.html">ci</a>, <a href="./tags/haskell.html">haskell</a></div>
+      </div>
+    </header>
+    
+      <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2015-07-31-hakyll-and-circleci.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2015-01-14
-      <a href="./posts/2015-01-14-lazy-evaluation.html">Lazy Evaluation In Haskell</a>
-      <p>
-      
-        <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em> 
-      
-      </p>
-      <!-- <a href="/posts/2015-01-14-lazy-evaluation.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2015-01-14-lazy-evaluation.html">Lazy Evaluation In Haskell</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2015-01-14</time>
+        <div class="tags"></div>
+      </div>
+    </header>
+    
+      <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em> 
+    
+
+
+    <div class="continue-link"><a href="./posts/2015-01-14-lazy-evaluation.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2014-03-15
-      <a href="./posts/2014-03-15-incrementing.html">Incrementing</a>
-      <p>
-      
-        <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it. 
-      
-      </p>
-      <!-- <a href="/posts/2014-03-15-incrementing.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2014-03-15-incrementing.html">Incrementing</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2014-03-15</time>
+        <div class="tags"><a href="./tags/paul-graham.html">paul-graham</a>, <a href="./tags/haskell.html">haskell</a></div>
+      </div>
+    </header>
+    
+      <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2014-03-15-incrementing.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2014-02-20
-      <a href="./posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
-      <p>
-      
-        <div class="figure">
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2014-02-20-bluetooth-thinkpad-w520.html">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2014-02-20</time>
+        <div class="tags"><a href="./tags/thinkpad.html">thinkpad</a>, <a href="./tags/bluetooth.html">bluetooth</a></div>
+      </div>
+    </header>
+    
+      <div class="figure">
 <img src="./images/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg" alt />
 
 </div>
 <blockquote>
 <p><strong>How to get bluetooth working in windows 8 / 8.1 on various thinkpads.</strong> 
-      
-      </p>
-      <!-- <a href="/posts/2014-02-20-bluetooth-thinkpad-w520.html">Read more</a> -->
-    </li>
-  
-    <li>
-      2013-11-28
-      <a href="./posts/2013-11-28-truly-ergonomic-keyboard.html">Truly Ergonomic Keyboard</a>
-      <p>
-      
-        <p><img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt /><br />
+    
 
-      
-      </p>
-      <!-- <a href="/posts/2013-11-28-truly-ergonomic-keyboard.html">Read more</a> -->
-    </li>
+
+    <div class="continue-link"><a href="./posts/2014-02-20-bluetooth-thinkpad-w520.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2013-10-28
-      <a href="./posts/2013-10-28-emacs-client-on-windows.html">Emacs Client on Windows 8</a>
-      <p>
-      
-        <p>Problem:</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2013-11-28-truly-ergonomic-keyboard.html">Truly Ergonomic Keyboard</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2013-11-28</time>
+        <div class="tags"><a href="./tags/keyboard.html">keyboard</a></div>
+      </div>
+    </header>
+    
+      <p><img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt /><br />
+
+    
+
+
+    <div class="continue-link"><a href="./posts/2013-11-28-truly-ergonomic-keyboard.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
+  
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2013-10-28-emacs-client-on-windows.html">Emacs Client on Windows 8</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2013-10-28</time>
+        <div class="tags"><a href="./tags/emacs.html">emacs</a>, <a href="./tags/windows.html">windows</a></div>
+      </div>
+    </header>
+    
+      <p>Problem:</p>
 <p>I want to use emacs like I use notepadd++ on windows. 
-      
-      </p>
-      <!-- <a href="/posts/2013-10-28-emacs-client-on-windows.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2013-10-28-emacs-client-on-windows.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-11-09
-      <a href="./posts/2012-11-09-euler19.html">Project Euler #19 in haskell and by hand</a>
-      <p>
-      
-        <blockquote>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-11-09-euler19.html">Project Euler #19 in haskell and by hand</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-11-09</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/haskell.html">haskell</a></div>
+      </div>
+    </header>
+    
+      <blockquote>
 <p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
 <p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a> 
-      
-      </p>
-      <!-- <a href="/posts/2012-11-09-euler19.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-11-09-euler19.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-10-15
-      <a href="./posts/2012-10-15-functor-is-to-lens-as.html">"Functor is to Lens as Applicative is to Biplate"</a>
-      <p>
-      
-      </p>
-      <!-- <a href="/posts/2012-10-15-functor-is-to-lens-as.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-10-15-functor-is-to-lens-as.html">"Functor is to Lens as Applicative is to Biplate"</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-10-15</time>
+        <div class="tags"><a href="./tags/haskell.html">haskell</a>, <a href="./tags/haskell-is-hard.html">haskell-is-hard</a></div>
+      </div>
+    </header>
+    
+      <p>“Functor is to Lens as Applicative is to Biplate”</p>
+<ul>
+<li><em><a href="http://front.math.ucdavis.edu/1103.2841" class="uri">http://front.math.ucdavis.edu/1103.2841</a></em></li>
+</ul>
+<p>Haskell, the language with seemingly endless new concepts to learn about</p>
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-10-15-functor-is-to-lens-as.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-09-15
-      <a href="./posts/2012-09-15-euler11.html">Project Euler #11 in haskell</a>
-      <p>
-      
-        <blockquote>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-09-15-euler11.html">Project Euler #11 in haskell</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-09-15</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/haskell.html">haskell</a></div>
+      </div>
+    </header>
+    
+      <blockquote>
 <p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img src="http://projecteuler.net/images/symbol_times.gif" alt="×" /><span>20 grid?</span></p>
 <p><a href="http://projecteuler.net/problem=11" class="uri">http://projecteuler.net/problem=11</a> 
-      
-      </p>
-      <!-- <a href="/posts/2012-09-15-euler11.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-09-15-euler11.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-08-30
-      <a href="./posts/2012-08-30-grahams-scan.html">Graham’s scan algorithm for the convex hull</a>
-      <p>
-      
-        <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a> 
-      
-      </p>
-      <!-- <a href="/posts/2012-08-30-grahams-scan.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-08-30-grahams-scan.html">Graham’s scan algorithm for the convex hull</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-08-30</time>
+        <div class="tags"><a href="./tags/haskell.html">haskell</a></div>
+      </div>
+    </header>
+    
+      <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a> 
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-08-30-grahams-scan.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-07-15
-      <a href="./posts/2012-07-15-wordpress.html">WordPress Force “View all posts in %s” for categories</a>
-      <p>
-      
-        <p>Force categories list not to use category descritption use this: 
-      
-      </p>
-      <!-- <a href="/posts/2012-07-15-wordpress.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-07-15-wordpress.html">WordPress Force “View all posts in %s” for categories</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-07-15</time>
+        <div class="tags"><a href="./tags/wordpress.html">wordpress</a></div>
+      </div>
+    </header>
+    
+      <p>Force categories list not to use category descritption use this: 
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-07-15-wordpress.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-07-06
-      <a href="./posts/2012-07-06-clojure-problems.html">Problems Clojure thinks I have with C#</a>
-      <p>
-      
-        <p>I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems. 
-      
-      </p>
-      <!-- <a href="/posts/2012-07-06-clojure-problems.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-07-06-clojure-problems.html">Problems Clojure thinks I have with C#</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-07-06</time>
+        <div class="tags"><a href="./tags/clojure.html">clojure</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-07-06-clojure-problems.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2012-06-15
-      <a href="./posts/2012-06-15-creeping-determinism.html">Creeping Determinism</a>
-      <p>
-      
-        <p>Let’s say that you won the lottery. That would be great, wouldn’t it? 
-      
-      </p>
-      <!-- <a href="/posts/2012-06-15-creeping-determinism.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2012-06-15-creeping-determinism.html">Creeping Determinism</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2012-06-15</time>
+        <div class="tags"><a href="./tags/essay.html">essay</a></div>
+      </div>
+    </header>
+    
+      <p>Let’s say that you won the lottery. That would be great, wouldn’t it? 
+    
+
+
+    <div class="continue-link"><a href="./posts/2012-06-15-creeping-determinism.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-07-05
-      <a href="./posts/2011-07-05-return-on-execption.html">ReturnOnException Aspect (postsharp)</a>
-      <p>
-      
-        <p>This comes in handy sometimes. 
-      
-      </p>
-      <!-- <a href="/posts/2011-07-05-return-on-execption.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-07-05-return-on-execption.html">ReturnOnException Aspect (postsharp)</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-07-05</time>
+        <div class="tags"><a href="./tags/c%23.html">c#</a>, <a href="./tags/postsharp.html">postsharp</a>, <a href="./tags/aop.html">aop</a></div>
+      </div>
+    </header>
+    
+      <p>This comes in handy sometimes. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-07-05-return-on-execption.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-07-05
-      <a href="./posts/2011-07-05-code-generators-suck.html">Code Generators, You Suck. Well, some of you do.</a>
-      <p>
-      
-      </p>
-      <!-- <a href="/posts/2011-07-05-code-generators-suck.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-07-05-code-generators-suck.html">Code Generators, You Suck. Well, some of you do.</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-07-05</time>
+        <div class="tags"><a href="./tags/wssf.html">wssf</a></div>
+      </div>
+    </header>
+    
+      <p>The scaffolding style code generators that generate out a good starting point from which standard coding takes over, those are very useful.</p>
+<p>The Microsoft brand “design surface” based code generators (TableAdapters,<a href="http://servicefactory.codeplex.com">WSSF</a>) where the uml diagram of a class needs to be edited, rather than the actual class, those are more harm than good. if fact they slow development way down.</p>
+<p>The design surface itself, is not necessarily a bad concept. it is just a GUI over top of a XML document. Just don’t use it to generate repetitive code. If code is repetitive, factor it out until its DRY. Don’t break out the code generators.</p>
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-07-05-code-generators-suck.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-04-12
-      <a href="./posts/2011-04-12-infoq.html">Attribute Based Caching Project Covered in infoQs</a>
-      <p>
-      
-        <p>David Cookery did a short write up of my AOP caching framework on infoQ. As a result downloads and usage have spiked. 
-      
-      </p>
-      <!-- <a href="/posts/2011-04-12-infoq.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-04-12-infoq.html">Attribute Based Caching Project Covered in infoQs</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-04-12</time>
+        <div class="tags"><a href="./tags/attribute-based-caching.html">attribute-based-caching</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>David Cookery did a short write up of my AOP caching framework on infoQ. As a result downloads and usage have spiked. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-04-12-infoq.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-04-10
-      <a href="./posts/2011-04-10-aop-faq.html">Question: Caching and postsharp is not working in my project?</a>
-      <p>
-      
-        <p>You have made a project using attribute based caching, but the cache isn’t being hit? 
-      
-      </p>
-      <!-- <a href="/posts/2011-04-10-aop-faq.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-04-10-aop-faq.html">Question: Caching and postsharp is not working in my project?</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-04-10</time>
+        <div class="tags"><a href="./tags/faq.html">faq</a>, <a href="./tags/attribute-based-caching.html">attribute-based-caching</a></div>
+      </div>
+    </header>
+    
+      <p>You have made a project using attribute based caching, but the cache isn’t being hit? 
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-04-10-aop-faq.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-03-27
-      <a href="./posts/2011-03-27-tags-tag-groups-tag-hierachies.html">Incrementing</a>
-      <p>
-      
-        <p><em>Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:</em> 
-      
-      </p>
-      <!-- <a href="/posts/2011-03-27-tags-tag-groups-tag-hierachies.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-03-27-tags-tag-groups-tag-hierachies.html">Incrementing</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-03-27</time>
+        <div class="tags"><a href="./tags/tags.html">tags</a>, <a href="./tags/data.html">data</a></div>
+      </div>
+    </header>
+    
+      <p><em>Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:</em> 
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-03-27-tags-tag-groups-tag-hierachies.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2011-01-29
-      <a href="./posts/2011-01-29-aop-12-release.html">Attribute Based Caching 1.2 Released</a>
-      <p>
-      
-        <p>Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2011-01-29-aop-12-release.html">Attribute Based Caching 1.2 Released</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2011-01-29</time>
+        <div class="tags"><a href="./tags/attribute-based-caching.html">attribute-based-caching</a>, <a href="./tags/c%23.html">c#</a>, <a href="./tags/release.html">release</a></div>
+      </div>
+    </header>
+    
+      <p>Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.</p>
 <p>Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.</p>
 <h1 id="cache-1.2">Cache 1.2</h1>
 
-      
-      </p>
-      <!-- <a href="/posts/2011-01-29-aop-12-release.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2011-01-29-aop-12-release.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-12-05
-      <a href="./posts/2010-12-05-enterprise-software-authorization.html">Enterprise Software Authorization / Security</a>
-      <p>
-      
-        <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt /><strong>Security Thoughts:</strong></p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-12-05-enterprise-software-authorization.html">Enterprise Software Authorization / Security</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-12-05</time>
+        <div class="tags"><a href="./tags/row-level-authorization.html">row-level-authorization</a>, <a href="./tags/field-level-authorization.html">field-level-authorization</a></div>
+      </div>
+    </header>
+    
+      <p><img src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/moz-screenshot-1.png" alt /><img src="http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png" alt /><strong>Security Thoughts:</strong></p>
 <p>There are generally three types of authorization in enterprise applications:</p>
 <ol style="list-style-type: decimal">
 <li><span><span></span></span><strong>Role based security</strong> <strong>-</strong> Which actions can a user do - aka role-based access control<span><span></span></span></li>
@@ -294,70 +489,115 @@
 <li><strong>Field level security</strong> - A user can see or edit only certain fields of an entity – <em>(this is really fine grained and usually a bad idea)</em></li>
 </ol>
 
-      
-      </p>
-      <!-- <a href="/posts/2010-12-05-enterprise-software-authorization.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-12-05-enterprise-software-authorization.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-11-20
-      <a href="./posts/2010-11-20-parser-combinators-csharp.html">Parser Combinators in C#</a>
-      <p>
-      
-        <p>Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#. 
-      
-      </p>
-      <!-- <a href="/posts/2010-11-20-parser-combinators-csharp.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-11-20-parser-combinators-csharp.html">Parser Combinators in C#</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-11-20</time>
+        <div class="tags"><a href="./tags/parser.html">parser</a>, <a href="./tags/parser-combinator.html">parser-combinator</a>, <a href="./tags/antlr.html">antlr</a>, <a href="./tags/parsec.html">parsec</a>, <a href="./tags/f%23.html">f#</a>, <a href="./tags/c%23.html">c#</a>, <a href="./tags/nparsec.html">nparsec</a></div>
+      </div>
+    </header>
+    
+      <p>Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-11-20-parser-combinators-csharp.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-11-11
-      <a href="./posts/2010-11-11-project-euler-24-in-c%23.html">Project Euler #24 in c#</a>
-      <p>
-      
-        <p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-11-11-project-euler-24-in-c%23.html">Project Euler #24 in c#</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-11-11</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p>
 <p>012   021   102   120   201   210</p>
 <p>What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?</p>
 
-      
-      </p>
-      <!-- <a href="/posts/2010-11-11-project-euler-24-in-c%23.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-11-11-project-euler-24-in-c%23.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-11-10
-      <a href="./posts/2010-11-10-project-euler-8.html">Project Euler 8 in C#</a>
-      <p>
-      
-        <p>Discover the largest product of five consecutive digits in the 1000-digit number.</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-11-10-project-euler-8.html">Project Euler 8 in C#</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-11-10</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>Discover the largest product of five consecutive digits in the 1000-digit number.</p>
 <p>http://projecteuler.net/index.php?section=problems&amp;id=8</p>
 
-      
-      </p>
-      <!-- <a href="/posts/2010-11-10-project-euler-8.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-11-10-project-euler-8.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-26
-      <a href="./posts/2010-10-26-introducing-attribute-based-caching.html">Introducing Attribute Based Caching</a>
-      <p>
-      
-        <blockquote>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-26-introducing-attribute-based-caching.html">Introducing Attribute Based Caching</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-26</time>
+        <div class="tags"><a href="./tags/c%23.html">c#</a>, <a href="./tags/attribute-based-caching.html">attribute-based-caching</a></div>
+      </div>
+    </header>
+    
+      <blockquote>
 <p>“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”</p>
 </blockquote>
 <p>I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing <a href="http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/" title="caching">caching</a> with postsharp.  However, none handled cache invalidation in a nice declarative way.  </p>
 
-      
-      </p>
-      <!-- <a href="/posts/2010-10-26-introducing-attribute-based-caching.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-26-introducing-attribute-based-caching.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-12
-      <a href="./posts/2010-10-12-project-euler-3.html">Project Euler 3 in c#</a>
-      <p>
-      
-        <blockquote>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-12-project-euler-3.html">Project Euler 3 in c#</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-12</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <blockquote>
 <p>Problem 3: What is the largest prime factor of the number 600851475143 ?</p>
 <p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" class="uri" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p>
 </blockquote>
@@ -366,56 +606,101 @@
 <p>600851475143.LargestPrimeFactor()</p>
 </blockquote>
 <p>Where:
-      
-      </p>
-      <!-- <a href="/posts/2010-10-12-project-euler-3.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-12-project-euler-3.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-09
-      <a href="./posts/2010-10-09-naked-objects-mvc.html">Naked Objects MVC - exposing a repository method as a get</a>
-      <p>
-      
-        <p>If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required. 
-      
-      </p>
-      <!-- <a href="/posts/2010-10-09-naked-objects-mvc.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-09-naked-objects-mvc.html">Naked Objects MVC - exposing a repository method as a get</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-09</time>
+        <div class="tags"><a href="./tags/c%23.html">c#</a>, <a href="./tags/NakedObjectsFramework.html">NakedObjectsFramework</a></div>
+      </div>
+    </header>
+    
+      <p>If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-09-naked-objects-mvc.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-07
-      <a href="./posts/2010-10-07-project-euler-9.html">Project Euler #9</a>
-      <p>
-      
-        <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. 
-      
-      </p>
-      <!-- <a href="/posts/2010-10-07-project-euler-9.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-07-project-euler-9.html">Project Euler #9</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-07</time>
+        <div class="tags"><a href="./tags/c%23.html">c#</a>, <a href="./tags/euler.html">euler</a></div>
+      </div>
+    </header>
+    
+      <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. 
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-07-project-euler-9.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-06
-      <a href="./posts/2010-10-06-project-euler-6.html">Project Euler #6</a>
-      <p>
-      
-      </p>
-      <!-- <a href="/posts/2010-10-06-project-euler-6.html">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-06-project-euler-6.html">Project Euler #6</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-06</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>Ok, this one is stupidly simple:</p>
+<pre><code>var squaredsum = Math.Pow(1.To(100).Sum(), 2);
+var sumedsquare = 1.To(100).Select(x =&gt; x * x).Sum();
+Console.WriteLine(squaredsum - sumedsquare);
+</code></pre>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-06-project-euler-6.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
-    <li>
-      2010-10-06
-      <a href="./posts/2010-10-06-project-euler-5.html">Project Euler #5</a>
-      <p>
-      
-        <p>Here is my solution to the fo llowing project Euler Problem:</p>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./posts/2010-10-06-project-euler-5.html">Project Euler #5</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2010-10-06</time>
+        <div class="tags"><a href="./tags/euler.html">euler</a>, <a href="./tags/c%23.html">c#</a></div>
+      </div>
+    </header>
+    
+      <p>Here is my solution to the fo llowing project Euler Problem:</p>
 <p>2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.</p>
 <p>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? 
-      
-      </p>
-      <!-- <a href="/posts/2010-10-06-project-euler-5.html">Read more</a> -->
-    </li>
+    
+
+
+    <div class="continue-link"><a href="./posts/2010-10-06-project-euler-5.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   
 </ul>
+</div>
 
 
 	</div>
