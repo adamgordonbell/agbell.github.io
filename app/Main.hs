@@ -32,9 +32,9 @@ main =
         route idRoute
         compile $ do
           posts <- recentFirst =<< loadAll pattern
-          let ctx = constField "title" title
-                    `mappend` listField "posts" postContext (return posts)
-                    `mappend` defaultContext
+          let ctx = constField "title" title <>
+                    listField "posts" postContext (return posts) <>
+                    defaultContext
           makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -43,26 +43,11 @@ main =
     match "posts/*" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-      -- >>= saveSnapshot "content"
+        >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/post.html" (postContextWithTeaser tags)
       --  >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/default.html" (postContextWithTeaser tags)
         >>= relativizeUrls
-
-    --archive
-    create ["archive.html"] $ do
-      route idRoute
-      compile $ do
-        posts <- recentFirst =<< loadAll "posts/*"
-        let archiveContext =
-              listField "posts" postContext (return posts) `mappend`
-              constField "title" "Archives" `mappend`
-              defaultContext
-
-        makeItem ""
-          >>= loadAndApplyTemplate "templates/archive.html" archiveContext
-          >>= loadAndApplyTemplate "templates/default.html" archiveContext
-          >>= relativizeUrls
 
     -- index
     match "index.html" $ do
@@ -70,8 +55,8 @@ main =
       compile $ do
         posts <- recentFirst =<< loadAll "posts/*"
         let indexContext =
-              listField "posts" postContext (return posts) `mappend`
-              constField "title" "Home" `mappend`
+              listField "posts" postContext (return posts) <>
+              constField "title" "Home" <>
               defaultContext
 
         getResourceBody
