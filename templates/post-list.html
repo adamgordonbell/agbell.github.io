@@ -1,14 +1,27 @@
-<ul>
+<div id="content">
+  <ul class="posts">
   $for(posts)$
-    <li>
-      $date$
-      <a href="$url$">$title$</a>
-      <p>
-      $if(teaser)$
-        $teaser$
-      $endif$
-      </p>
-      <!-- <a href="$url$">Read more</a> -->
-    </li>
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="$url$">$title$</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">$date$</time>
+        <div class="tags">$tags$</div>
+      </div>
+    </header>
+    $if(teaser)$
+      $teaser$
+    $else$
+      $body$
+    $endif$
+
+
+    <div class="continue-link"><a href="$url$">Continue reading &raquo;</a></div>
+  </article>
+  <li>
   $endfor$
 </ul>
+</div>
