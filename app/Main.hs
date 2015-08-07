@@ -2,12 +2,16 @@
 
 module Main (main) where
 
-import Data.Monoid (mappend)
+import Data.Monoid (mappend, (<>))
 import Hakyll
 
 main :: IO ()
 main =
   hakyll $ do
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+    match "templates/*" (compile templateCompiler)
+
     match "images/*" $ do
       route idRoute
       compile copyFileCompiler
@@ -21,9 +25,8 @@ main =
       compile $ pandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
-        
-    -- build up tags
-    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+    -- tags
     tagsRules tags $ \tag pattern -> do
         let title = "Posts tagged \"" ++ tag ++ "\""
         route idRoute
@@ -36,14 +39,17 @@ main =
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
                     >>= relativizeUrls
+    -- posts
     match "posts/*" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/post.html" (postContextWithTags tags)
-        >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/default.html" (postContextWithTags tags)
+      -- >>= saveSnapshot "content"
+        >>= loadAndApplyTemplate "templates/post.html" (postContextWithTeaser tags)
+      --  >>= saveSnapshot "content"
+        >>= loadAndApplyTemplate "templates/default.html" (postContextWithTeaser tags)
         >>= relativizeUrls
 
+    --archive
     create ["archive.html"] $ do
       route idRoute
       compile $ do
@@ -58,6 +64,7 @@ main =
           >>= loadAndApplyTemplate "templates/default.html" archiveContext
           >>= relativizeUrls
 
+    -- index
     match "index.html" $ do
       route idRoute
       compile $ do
@@ -72,8 +79,7 @@ main =
           >>= loadAndApplyTemplate "templates/default.html" indexContext
           >>= relativizeUrls
 
-    match "templates/*" (compile templateCompiler)
-
+    -- feeds
     create ["atom.xml"] $ do
       route idRoute
       compile $ do
@@ -90,14 +96,22 @@ main =
 
 feedContext :: Context String
 feedContext =
-  postContext `mappend` bodyField "description"
+  postContext <> bodyField "description"
 
 postContext :: Context String
 postContext =
-  dateField "date" "%Y-%m-%d" `mappend` defaultContext
+  dateField "date" "%Y-%m-%d" <>
+  defaultContext
 
 postContextWithTags :: Tags -> Context String
-postContextWithTags tags = tagsField "tags" tags `mappend` postContext
+postContextWithTags tags =
+  tagsField "tags" tags <>
+  postContext
+
+postContextWithTeaser :: Tags -> Context String
+postContextWithTeaser tags =
+  teaserField "teaser" "content" <>
+  (postContextWithTags tags)
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration =

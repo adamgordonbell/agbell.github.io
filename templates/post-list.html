@@ -3,6 +3,12 @@
     <li>
       $date$
       <a href="$url$">$title$</a>
+      <p>
+      $if(teaser)$
+        $teaser$
+      $endif$
+      </p>
+      <!-- <a href="$url$">Read more</a> -->
     </li>
   $endfor$
 </ul>
