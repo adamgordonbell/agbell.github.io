@@ -11,7 +11,7 @@ With enough extension methods we can make 3 really simple:
 
 > 600851475143.LargestPrimeFactor()
 
-Where:
+Where:<!--more-->
 
 ``` csharp
 public static int LargestPrimeFactor(this long number)

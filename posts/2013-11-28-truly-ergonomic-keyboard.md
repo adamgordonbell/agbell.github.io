@@ -4,7 +4,7 @@ author: Adam Bell
 tags: keyboard
 ---
 ![](http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg)  
-
+<!--more-->
 ![](http://41.media.tumblr.com/646b8559a7ae8978dacd30c70fc527cc/tumblr_mwz6ecK0jE1qe4yfuo2_500.jpg)  
 
 > **I got my new teck keyboard from massdrop. It takes some getting used to, but I’m already typing faster. [Check out the autohotkey script I used to ease the transition.](https://github.com/agbell/TECK)**

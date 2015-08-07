@@ -4,7 +4,7 @@ author: Adam Bell
 tags: tags, data
 ---
 _Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:_
-
+<!--more-->
 If all entities in the system can contain a list of tags, and the tagging system is structured correctly, the following features can be supported:
 
 *   [faceted search](http://en.wikipedia.org/wiki/Faceted_search)

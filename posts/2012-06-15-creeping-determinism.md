@@ -4,7 +4,7 @@ author: Adam Bell
 tags: essay
 ---
 Let’s say that you won the lottery. That would be great, wouldn’t it?
-
+<!--more-->
 Now you’re rich because of this lottery ticket and i ask you: was a good idea for you to buy the ticket?
 
 Answer is no. No it was not a good idea for you to buy that ticket. The expected value of a lottery ticket is negative. It is a waste of money!

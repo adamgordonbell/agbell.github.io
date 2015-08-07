@@ -3,6 +3,7 @@ title: ReturnOnException Aspect (postsharp)
 author: Adam Bell
 tags: c#, postsharp, aop
 ---
+This comes in handy sometimes. <!--more-->
 ```
 public static class ExceptionHandler
 {

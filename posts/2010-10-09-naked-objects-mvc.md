@@ -4,7 +4,7 @@ author: Adam Bell
 tags: c#, NakedObjectsFramework
 ---
 If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.
-
+<!--more-->
 ``` csharp
 public class HomeController : CustomController
     {

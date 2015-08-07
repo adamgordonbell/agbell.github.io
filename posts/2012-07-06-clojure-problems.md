@@ -4,7 +4,7 @@ author: Adam Bell
 tags: clojure, c#
 ---
 I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.
-
+<!--more-->
 I’m not looking for Clojure to save me from these “problems” I just started playing with it because of some Rich Hickey talks that made me think there was a better way to develop software.
 
 ## Problems:

@@ -7,6 +7,8 @@ Discover the largest product of five consecutive digits in the 1000-digit number
 
 http://projecteuler.net/index.php?section=problems&id=8
 
+<!--more-->
+
 ``` csharp
 [TestClass]
     public class Problem8

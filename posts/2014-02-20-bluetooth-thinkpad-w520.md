@@ -6,7 +6,7 @@ tags: thinkpad, bluetooth
 ![](/images/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg)  
 
 > **How to get bluetooth working in windows 8 / 8.1 on various thinkpads.**
-
+<!--more-->
 Currently, the thinkpads ( w520 for sure, but lots of complaints about others online) do not have working bluetooth drivers. Or rather the driver exists, but getting the bluetooth to turn on is not possible.
 
 I have put together a solution here:

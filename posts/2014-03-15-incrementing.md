@@ -5,7 +5,7 @@ tags: paul-graham, haskell
 ---
 
 In [an old essay](http://www.paulgraham.com/icad.html), Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.
-
+<!--more-->
 His Example:
 
 > Write a function that takes a number n, and returns a function that takes another number i and returns n incremented by i.

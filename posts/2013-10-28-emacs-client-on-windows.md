@@ -6,7 +6,7 @@ tags: emacs, windows
 Problem:
 
 I want to use emacs like I use notepadd++ on windows.
-
+<!--more-->
 <span>That is:</span>
 
 *   Right click menu item to “edit with Emacs”

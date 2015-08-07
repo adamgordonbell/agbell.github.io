@@ -4,7 +4,7 @@ author: Adam Bell
 ---
 
 _This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance._
-
+<!--more-->
 Summary of Laziness:
 
 Lazy is good when:

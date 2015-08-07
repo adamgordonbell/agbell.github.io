@@ -11,6 +11,8 @@ There are generally three types of authorization in enterprise applications:
 2.  <span><span></span></span>**Entity level security** - A user can only perform an Action on certain objects/data - aka row level security
 3.  **Field level security** - A user can see or edit only certain fields of an entity – _(this is really fine grained and usually a bad idea)_
 
+<!--more-->
+
 There is a framework that covers all 3 of these authorization types, Rhino Security. It allows authorization to be abstracted from the business logic as a cross-cutting concern. It is deigned to handle 1 & 2 above, but people have used it to implement 3\.
 
 Here is an example of the type of rules it can easily encompass:

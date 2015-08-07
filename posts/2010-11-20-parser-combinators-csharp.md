@@ -4,8 +4,7 @@ author: Adam Bell
 tags: parser, parser-combinator, antlr, parsec, f#, c#, nparsec
 ---
 Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.
-
-<script type="text/javascript"><![CDATA[// <![CDATA[ mpmetrics.track("COI_Parser"); // ]]]]><![CDATA[>]]></script>
+<!--more-->
 
 Favorite:
 
@@ -17,6 +16,7 @@ Others:
 *   [http://code.msdn.microsoft.com/RxParsers](http://code.msdn.microsoft.com/RxParsers "http://code.msdn.microsoft.com/RxParsers")
 *   [http://jparsec.codehaus.org/NParsec+Tutorial](http://jparsec.codehaus.org/NParsec+Tutorial "http://jparsec.codehaus.org/NParsec+Tutorial")
 
+
 Blog Series on Parser Combinators in C#:
 
 *   [http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/](http://lorgonblog.wordpress.com/2007/12/02/c-3-0-lambda-and-the-first-post-of-a-series-about-monadic-parser-combinators/ "monadic parser combinators")
@@ -26,6 +26,8 @@ Other ways to utilize parsers in c#/ .net:
 
 *   ANTLR
 *   Yacc & Lex (I’ve only ever used these back in my comp sci compiler class)
+
+
 
 Interesting books:
 

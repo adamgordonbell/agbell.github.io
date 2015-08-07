@@ -64,6 +64,20 @@ main =
           >>= loadAndApplyTemplate "templates/default.html" indexContext
           >>= relativizeUrls
 
+    -- archive
+    create ["archive.html"] $ do
+      route idRoute
+      compile $ do
+        posts <- recentFirst =<< loadAll "posts/*"
+        let archiveContext =
+              listField "posts" postContext (return posts) `mappend`
+              constField "title" "Archives" `mappend`
+              defaultContext
+
+        makeItem ""
+          >>= loadAndApplyTemplate "templates/archive.html" archiveContext
+          >>= loadAndApplyTemplate "templates/default.html" archiveContext
+          >>= relativizeUrls
     -- feeds
     create ["feed.xml"] $ do
       route idRoute

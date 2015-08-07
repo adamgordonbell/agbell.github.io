@@ -7,7 +7,7 @@ tags: c#, attribute-based-caching
 
 I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing [caching](http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/ "caching") with postsharp.  However, none handled cache invalidation in a nice declarative way.  
 
-
+<!--more-->
 
 I have released a caching library that uses [postsharp](http://www.sharpcrafters.com "Postsharp") on codeplex.  
 

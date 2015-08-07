@@ -4,7 +4,7 @@ author: Adam Bell
 tags: wordpress
 ---
 Force categories list not to use category descritption use this:
-
+<!--more-->
 
 ```
 
