@@ -12,7 +12,7 @@ val join = for {
                   bar on (...)
    } yield (o,i,s)
 ```
-<!-- MORE -->
+<!--more-->
 
 The type of join will be a List[(foo,bar)].  I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:
 

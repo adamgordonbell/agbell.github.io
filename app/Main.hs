@@ -43,19 +43,19 @@ main =
     match "posts/*" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/post.html" (postContextWithTeaser tags)
-      --  >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/default.html" (postContextWithTeaser tags)
+        >>= saveSnapshot "content-for-teaser"
+        >>= loadAndApplyTemplate "templates/post.html" (postContextWithTags tags)
+        >>= saveSnapshot "feed-post-content"
+        >>= loadAndApplyTemplate "templates/default.html" (postContextWithTags tags)
         >>= relativizeUrls
 
     -- index
     match "index.html" $ do
       route idRoute
       compile $ do
-        posts <- recentFirst =<< loadAll "posts/*"
+        posts <- recentFirst =<< loadAllSnapshots  "posts/*" "content-for-teaser"
         let indexContext =
-              listField "posts" postContext (return posts) <>
+              listField "posts" (postContextWithTeaser tags) (return posts) <>
               constField "title" "Home" <>
               defaultContext
 
@@ -65,18 +65,18 @@ main =
           >>= relativizeUrls
 
     -- feeds
-    create ["atom.xml"] $ do
+    create ["feed.xml"] $ do
       route idRoute
       compile $ do
         posts <- fmap (take 10) . recentFirst
-                   =<< loadAllSnapshots "posts/*" "content"
+                   =<< loadAllSnapshots "posts/*" "feed-post-content"
         renderAtom feedConfiguration feedContext posts
 
     create ["rss.xml"] $ do
       route idRoute
       compile $ do
         posts <- fmap (take 10) . recentFirst
-                   =<< loadAllSnapshots "posts/*" "content"
+                   =<< loadAllSnapshots "posts/*" "feed-post-content"
         renderRss feedConfiguration feedContext posts
 
 feedContext :: Context String
@@ -95,7 +95,7 @@ postContextWithTags tags =
 
 postContextWithTeaser :: Tags -> Context String
 postContextWithTeaser tags =
-  teaserField "teaser" "content" <>
+  teaserField "teaser" "content-for-teaser" <>
   (postContextWithTags tags)
 
 feedConfiguration :: FeedConfiguration
