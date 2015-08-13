@@ -129,8 +129,8 @@ Any sufficiently advanced technology is
 
 Speaking of Technology. Forget Womens UFC, if you want to see a truly epic battle,  watch my mom try to "find the internet" on her tablet.
 
-And my mom has nothing on the truly elderly.  Yesterday my wife looked more confused  than Rob Ford would look on jeopardy, when her great uncle responded to her email with a hand written letter. It came in the mail! Thats Crazy! I would have been less shocked had it not been addressed.  Kourtney O'Dwyer, peterbough, British colony of upper canada.  God save the king.
+And my mom has nothing on the truly elderly.  Yesterday my wife's great uncle responded to her email with a hand written letter.  She looked about as confused as Rob Ford on jeopardy.  It came in the mail! Thats Crazy! I would have been less shocked had it not been addressed.  Kourtney O'Dwyer, peterbough, British colony of upper canada.  God save the king.
 
-The things is, though, Old people have a lot of skills that we younger people lack.  Like the ability to give directions based on local information. Yesterday I got the following directions from an old man.  "Now your going to want to drive straight for a good bit and then turn left where Chalky Anderson used to live and if you pass aphothecary you've gone too far"
+The things is, though, Old people have a lot of skills that I do not.  Like the ability to give directions based on local information. Yesterday I got the following directions from an old man.  "Now your going to want to drive straight for a good bit and then turn left where Chalky Anderson used to live and if you pass aphothecary you've gone too far"
 
 So after Brads pushing me out of my comfort zone, I feel I learned a little bit about comedy.  I would like to end with a quote from Steve Jobs "You can lead a Herring to water, but you have to do it real fast or he'll die." Actually, thats a quote from Gary Busey but I think the point still holds.
