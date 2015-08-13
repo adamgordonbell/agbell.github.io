@@ -4,6 +4,7 @@ module Main (main) where
 
 import Data.Monoid (mappend, (<>))
 import Hakyll
+import Data.List
 
 main :: IO ()
 main =
@@ -31,7 +32,7 @@ main =
         let title = "Posts tagged \"" ++ tag ++ "\""
         route idRoute
         compile $ do
-          posts <- recentFirst =<< loadAll pattern
+          posts <- recentFirstNonDrafts =<< loadAll pattern
           let ctx = constField "title" title <>
                     listField "posts" postContext (return posts) <>
                     defaultContext
@@ -53,7 +54,7 @@ main =
     match "index.html" $ do
       route idRoute
       compile $ do
-        posts <- recentFirst =<< loadAllSnapshots  "posts/*" "content-for-teaser"
+        posts <- recentFirstNonDrafts =<< loadAllSnapshots  "posts/*" "content-for-teaser"
         let indexContext =
               listField "posts" (postContextWithTeaser tags) (return posts) <>
               constField "title" "Home" <>
@@ -68,7 +69,7 @@ main =
     create ["archive.html"] $ do
       route idRoute
       compile $ do
-        posts <- recentFirst =<< loadAll "posts/*"
+        posts <- recentFirstNonDrafts =<< loadAll "posts/*"
         let archiveContext =
               listField "posts" postContext (return posts) `mappend`
               constField "title" "Archives" `mappend`
@@ -82,14 +83,14 @@ main =
     create ["feed.xml"] $ do
       route idRoute
       compile $ do
-        posts <- fmap (take 10) . recentFirst
+        posts <- fmap (take 10) . recentFirstNonDrafts
                    =<< loadAllSnapshots "posts/*" "feed-post-content"
         renderAtom feedConfiguration feedContext posts
 
     create ["rss.xml"] $ do
       route idRoute
       compile $ do
-        posts <- fmap (take 10) . recentFirst
+        posts <- fmap (take 10) . recentFirstNonDrafts
                    =<< loadAllSnapshots "posts/*" "feed-post-content"
         renderRss feedConfiguration feedContext posts
 
