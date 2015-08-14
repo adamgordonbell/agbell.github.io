@@ -106,7 +106,7 @@ preacher
 
 ---------
 
-* Reading here in "Comedy Writing Secrets" it says, working with groups of 10 or less is the hardest audience availabe in comedy.  Try to focus in on one person, and maybe wink at them to try to get them laughing and hopefully other will follow.
+* Reading here in "Comedy Writing Secrets" it says try to focus in on one person, and maybe wink at them to try to get them laughing and hopefully other will follow.
 * Wink
 * I find its helpful to say the word wink, as you wink.
 * In truth, I feel I haven't totally mastered the wink, one I've learned is when not to use them.  "No officer, I haven't been drinking WINK", "Of course I'll finish that work on Time Brad, WINK"
