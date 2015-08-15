@@ -90,7 +90,7 @@ main =
     create ["rss.xml"] $ do
       route idRoute
       compile $ do
-        posts <- fmap (take 10) . recentFirstNonrafts
+        posts <- fmap (take 10) . recentFirstNonDrafts
                    =<< loadAllSnapshots "posts/**" "feed-post-content"
         renderRss feedConfiguration feedContext posts
 
