@@ -2,15 +2,17 @@
 
 module Main (main) where
 
-import Data.Monoid (mappend, (<>))
 import Hakyll
+import Hakyll.Web.Paginate
 import Data.List
+import Data.Monoid (mappend, (<>))
+import Data.Functor ((<$>))
 
 main :: IO ()
 main =
   hakyll $ do
     tags <- buildTags "posts/**" (fromCapture "tags/*.html")
-
+    pages <- buildPages "posts/**"
     match "templates/*" (compile templateCompiler)
 
     match "images/*" $ do
@@ -64,6 +66,12 @@ main =
           >>= applyAsTemplate indexContext
           >>= loadAndApplyTemplate "templates/default.html" indexContext
           >>= relativizeUrls
+    paginateRules pages $ \index pattern -> do
+        route $ setExtension "html"
+        compile $ makeItem ""
+            >>= loadAndApplyTemplate "templates/index.html" (indexCtx index pages tags)
+            >>= loadAndApplyTemplate "templates/base.html"  (indexCtx index pages tags)
+            >>= relativizeUrls
 
     -- archive
     create ["archive.html"] $ do
@@ -113,6 +121,16 @@ postContextWithTeaser tags =
   teaserField "teaser" "content-for-teaser" <>
   (postContextWithTags tags)
 
+indexCtx :: PageNumber -> Paginate -> Tags -> Context String
+indexCtx i pages tags = defaultContext
+        <> constField "title" "HOME"
+        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAll "posts/*.md"))
+        <> modificationTimeField "mod" "%Y-%m-%d"
+        <> paginateContext pages i
+  where
+        start = 5 * (i -1)
+        end   = 5 * i
+
 feedConfiguration :: FeedConfiguration
 feedConfiguration =
   FeedConfiguration
@@ -132,3 +150,12 @@ recentFirstNonDrafts :: (MonadMetadata m, Functor m) => [Item a] -> m [Item a]
 recentFirstNonDrafts items = do
                        nondrafts <- nonDrafts items
                        recentFirst nondrafts
+
+buildPages :: (MonadMetadata m) => Pattern -> m Paginate
+buildPages pattern = buildPaginateWith (return . paginateEvery 5) pattern $ \index ->
+   if index == 1
+      then fromFilePath "index.html"
+      else fromFilePath $ "index/p/" ++ show index ++ ".html"
+
+takeFromTo :: Int -> Int -> [a] -> [a]
+takeFromTo start end = drop start . take end
