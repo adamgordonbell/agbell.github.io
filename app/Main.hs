@@ -69,8 +69,7 @@ main =
     paginateRules pages $ \index pattern -> do
         route $ setExtension "html"
         compile $ makeItem ""
-            >>= loadAndApplyTemplate "templates/index.html" (indexCtx index pages tags)
-            >>= loadAndApplyTemplate "templates/base.html"  (indexCtx index pages tags)
+            >>= loadAndApplyTemplate "templates/default.html" (indexCtx index pages tags)
             >>= relativizeUrls
 
     -- archive
@@ -124,7 +123,7 @@ postContextWithTeaser tags =
 indexCtx :: PageNumber -> Paginate -> Tags -> Context String
 indexCtx i pages tags = defaultContext
         <> constField "title" "HOME"
-        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAll "posts/*.md"))
+        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAll "posts/**"))
         <> modificationTimeField "mod" "%Y-%m-%d"
         <> paginateContext pages i
   where
