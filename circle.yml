@@ -34,5 +34,5 @@ deployment:
       - cd _site/ && git push origin master
       - git status
       - git add _site/
-      - git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]"
+      - git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]" || true
       - git push origin hakyll
