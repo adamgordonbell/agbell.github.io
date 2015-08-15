@@ -9,7 +9,7 @@ import Data.List
 main :: IO ()
 main =
   hakyll $ do
-    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+    tags <- buildTags "posts/**" (fromCapture "tags/*.html")
 
     match "templates/*" (compile templateCompiler)
 
@@ -41,7 +41,7 @@ main =
                     >>= loadAndApplyTemplate "templates/default.html" ctx
                     >>= relativizeUrls
     -- posts
-    match "posts/*" $ do
+    match "posts/**" $ do
       route (setExtension "html")
       compile $ pandocCompiler
         >>= saveSnapshot "content-for-teaser"
@@ -54,7 +54,7 @@ main =
     match "index.html" $ do
       route idRoute
       compile $ do
-        posts <- recentFirstNonDrafts =<< loadAllSnapshots  "posts/*" "content-for-teaser"
+        posts <- recentFirstNonDrafts =<< loadAllSnapshots  "posts/**" "content-for-teaser"
         let indexContext =
               listField "posts" (postContextWithTeaser tags) (return posts) <>
               constField "title" "Home" <>
@@ -69,7 +69,7 @@ main =
     create ["archive.html"] $ do
       route idRoute
       compile $ do
-        posts <- recentFirstNonDrafts =<< loadAll "posts/*"
+        posts <- recentFirstNonDrafts =<< loadAll "posts/**"
         let archiveContext =
               listField "posts" postContext (return posts) `mappend`
               constField "title" "Archives" `mappend`
@@ -84,14 +84,14 @@ main =
       route idRoute
       compile $ do
         posts <- fmap (take 10) . recentFirstNonDrafts
-                   =<< loadAllSnapshots "posts/*" "feed-post-content"
+                   =<< loadAllSnapshots "posts/**" "feed-post-content"
         renderAtom feedConfiguration feedContext posts
 
     create ["rss.xml"] $ do
       route idRoute
       compile $ do
-        posts <- fmap (take 10) . recentFirstNonDrafts
-                   =<< loadAllSnapshots "posts/*" "feed-post-content"
+        posts <- fmap (take 10) . recentFirstNonrafts
+                   =<< loadAllSnapshots "posts/**" "feed-post-content"
         renderRss feedConfiguration feedContext posts
 
 feedContext :: Context String
@@ -124,7 +124,7 @@ feedConfiguration =
     }
 
 nonDrafts :: (MonadMetadata m, Functor m) => [Item a] -> m [Item a]
-nonDrafts = return . filter f
+nonDrafts = return
   where
     f = not . isPrefixOf "posts/drafts/" . show . itemIdentifier
 
