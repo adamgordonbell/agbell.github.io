@@ -3,7 +3,7 @@ title: Project Euler #5
 author: Adam Bell
 tags: euler, c#
 ---
-Here is my solution to the fo   llowing project Euler Problem:
+Here is my solution to the following project Euler Problem:
 
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
