@@ -66,9 +66,11 @@ main =
           >>= applyAsTemplate indexContext
           >>= loadAndApplyTemplate "templates/default.html" indexContext
           >>= relativizeUrls
+
     paginateRules pages $ \index pattern -> do
         route $ setExtension "html"
         compile $ makeItem ""
+            >>= loadAndApplyTemplate "templates/post-list.html" (indexCtx index pages tags)
             >>= loadAndApplyTemplate "templates/default.html" (indexCtx index pages tags)
             >>= relativizeUrls
 
@@ -86,6 +88,7 @@ main =
           >>= loadAndApplyTemplate "templates/archive.html" archiveContext
           >>= loadAndApplyTemplate "templates/default.html" archiveContext
           >>= relativizeUrls
+
     -- feeds
     create ["feed.xml"] $ do
       route idRoute
