@@ -1,16 +1,18 @@
 ---
 title: Mixed Metaphors
 author: Adam Bell
-tags: humor
+tags: humor, presentation
 ---
 
+Here I'm collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing
 
  * I wouldn't eat that with a ten foot pole
+ <!--more-->
  * She has a heart as big as gold
  * He's likes a duck out of water
  * I'm going to sleep like a baby's bottom
  * I have to pee like a gift horse: in the mouth
- * Six of one man's garbadge is a half dozen of the others
+ * Six of one man's garbage is a half dozen of the others
  * He's a wolf in cheap clothing
  * Wake up and smell the coffee on the wall
  * It's like shooting fish in a barrel full of monkeys.
