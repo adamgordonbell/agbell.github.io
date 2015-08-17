@@ -29,19 +29,6 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    -- tags
-    tagsRules tags $ \tag pattern -> do
-        let title = "Posts tagged \"" ++ tag ++ "\""
-        route idRoute
-        compile $ do
-          posts <- recentFirstNonDrafts =<< loadAll pattern
-          let ctx = constField "title" title <>
-                    listField "posts" postContext (return posts) <>
-                    defaultContext
-          makeItem ""
-                    >>= loadAndApplyTemplate "templates/tag.html" ctx
-                    >>= loadAndApplyTemplate "templates/default.html" ctx
-                    >>= relativizeUrls
     -- posts
     match "posts/**" $ do
       route (setExtension "html")
@@ -66,6 +53,20 @@ main =
           >>= applyAsTemplate indexContext
           >>= loadAndApplyTemplate "templates/default.html" indexContext
           >>= relativizeUrls
+
+    -- tags
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts tagged \"" ++ tag ++ "\""
+        route idRoute
+        compile $ do
+          posts <- recentFirstNonDrafts =<< loadAll pattern
+          let ctx = constField "title" title <>
+                    listField "posts" postContext (return posts) <>
+                    defaultContext
+          makeItem ""
+                    >>= loadAndApplyTemplate "templates/tag.html" ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
 
     paginateRules pages $ \index pattern -> do
         route $ setExtension "html"
@@ -144,7 +145,7 @@ feedConfiguration =
     }
 
 nonDrafts :: (MonadMetadata m, Functor m) => [Item a] -> m [Item a]
-nonDrafts = return
+nonDrafts = return. filter f
   where
     f = not . isPrefixOf "posts/drafts/" . show . itemIdentifier
 
