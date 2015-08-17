@@ -39,20 +39,6 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" (postContextWithTags tags)
         >>= relativizeUrls
 
-    -- index
-    match "index.html" $ do
-      route idRoute
-      compile $ do
-        posts <- recentFirstNonDrafts =<< loadAllSnapshots  "posts/**" "content-for-teaser"
-        let indexContext =
-              listField "posts" (postContextWithTeaser tags) (return posts) <>
-              constField "title" "Home" <>
-              defaultContext
-
-        getResourceBody
-          >>= applyAsTemplate indexContext
-          >>= loadAndApplyTemplate "templates/default.html" indexContext
-          >>= relativizeUrls
 
     -- tags
     tagsRules tags $ \tag pattern -> do
@@ -127,7 +113,7 @@ postContextWithTeaser tags =
 indexCtx :: PageNumber -> Paginate -> Tags -> Context String
 indexCtx i pages tags = defaultContext
         <> constField "title" "HOME"
-        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAllSnapshots  "posts/**" "content-for-teaser"))
+        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirstNonDrafts =<< loadAllSnapshots  "posts/**" "content-for-teaser"))
         <> modificationTimeField "mod" "%Y-%m-%d"
         <> paginateContext pages i
   where
