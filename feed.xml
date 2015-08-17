@@ -20,14 +20,15 @@
     Mixed Metaphors
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2015-08-11</span> - <span class="tags"><a href="/tags/humor.html">humor</a></span>
-  <ul>
-<li>I wouldn’t eat that with a ten foot pole</li>
+    <span class="date">2015-08-11</span> - <span class="tags"><a href="/tags/humor.html">humor</a>, <a href="/tags/presentation.html">presentation</a></span>
+  <p>Here I’m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing</p>
+<ul>
+<li>I wouldn’t eat that with a ten foot pole <!--more--></li>
 <li>She has a heart as big as gold</li>
 <li>He’s likes a duck out of water</li>
 <li>I’m going to sleep like a baby’s bottom</li>
 <li>I have to pee like a gift horse: in the mouth</li>
-<li>Six of one man’s garbadge is a half dozen of the others</li>
+<li>Six of one man’s garbage is a half dozen of the others</li>
 <li>He’s a wolf in cheap clothing</li>
 <li>Wake up and smell the coffee on the wall</li>
 <li>It’s like shooting fish in a barrel full of monkeys.</li>
@@ -78,7 +79,7 @@
                   foo.<span class="fu">filter</span>(...) on  innerJoin
                   bar <span class="fu">on</span> (...)
    } <span class="kw">yield</span> (o,i,s)</code></pre></div>
-<!--more-->
+<p>c</p>
 <p>The type of join will be a List[(foo,bar)]. I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:</p>
 <div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {
     <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
