@@ -127,7 +127,7 @@ postContextWithTeaser tags =
 indexCtx :: PageNumber -> Paginate -> Tags -> Context String
 indexCtx i pages tags = defaultContext
         <> constField "title" "HOME"
-        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAll "posts/**"))
+        <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirst =<< loadAllSnapshots  "posts/**" "content-for-teaser"))
         <> modificationTimeField "mod" "%Y-%m-%d"
         <> paginateContext pages i
   where

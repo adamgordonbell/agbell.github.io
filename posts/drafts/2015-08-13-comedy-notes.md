@@ -50,7 +50,7 @@ Favorite Comedians
  1. Jerry Seinfeld
   * "It's amazing the amount of news that happens each day always exactly fills the paper"
  1. Dmitry Martin
-  * "When someone describes themselves aas a taxpayer, they're about to be an asshole"
+  * "When someone describes themselves as a taxpayer, they're about to be an asshole"
   * Irate citizens
   * Funny: ?
  1. Chris Rock
@@ -134,3 +134,6 @@ And my mom has nothing on the truly elderly.  Yesterday my wife's great uncle re
 The things is, though, Old people have a lot of skills that I do not.  Like the ability to give directions based on local information. Yesterday I got the following directions from an old man.  "Now your going to want to drive straight for a good bit and then turn left where Chalky Anderson used to live and if you pass aphothecary you've gone too far"
 
 So after Brads pushing me out of my comfort zone, I feel I learned a little bit about comedy.  I would like to end with a quote from Steve Jobs "You can lead a Herring to water, but you have to do it real fast or he'll die." Actually, thats a quote from Gary Busey but I think the point still holds.
+
+----
+The school I went to from grade 1 to grade 6 was rural and not very diverse.  I didn't learn that until in university I was hanging out with some friends of a friend who happened to have gone to the same school as me, but one year ahead.  She said probably remember me, i was the black one.
