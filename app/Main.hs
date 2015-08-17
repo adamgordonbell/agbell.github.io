@@ -54,11 +54,12 @@ main =
                     >>= loadAndApplyTemplate "templates/default.html" ctx
                     >>= relativizeUrls
 
+    -- index and paged listing
     paginateRules pages $ \index pattern -> do
         route $ setExtension "html"
         compile $ makeItem ""
-            >>= loadAndApplyTemplate "templates/post-list.html" (indexCtx index pages tags)
-            >>= loadAndApplyTemplate "templates/default.html" (indexCtx index pages tags)
+            >>= loadAndApplyTemplate "templates/post-list.html" (indexContext index pages tags)
+            >>= loadAndApplyTemplate "templates/default.html" (indexContext index pages tags)
             >>= relativizeUrls
 
     -- archive
@@ -110,8 +111,8 @@ postContextWithTeaser tags =
   teaserField "teaser" "content-for-teaser" <>
   (postContextWithTags tags)
 
-indexCtx :: PageNumber -> Paginate -> Tags -> Context String
-indexCtx i pages tags = defaultContext
+indexContext :: PageNumber -> Paginate -> Tags -> Context String
+indexContext i pages tags = defaultContext
         <> constField "title" "HOME"
         <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirstNonDrafts =<< loadAllSnapshots  "posts/**" "content-for-teaser"))
         <> modificationTimeField "mod" "%Y-%m-%d"
