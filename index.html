@@ -82,44 +82,7 @@
                   foo.<span class="fu">filter</span>(...) on  innerJoin
                   bar <span class="fu">on</span> (...)
    } <span class="kw">yield</span> (o,i,s)</code></pre></div>
-<p>c</p>
-<p>The type of join will be a List[(foo,bar)]. I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {
-    <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-    <span class="kw">for</span> (i &lt;- t) {
-      <span class="kw">val</span> key = i.<span class="fu">_1</span>
-      <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">_2</span>
-    }
-    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
-  }</code></pre></div>
-<p>This groups one element from a tuple into a sublist. If I later add the requirement that each bar has many baz than I need to another method that transforms tuples of 3 into two nested lists.</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
-<span class="kw">def</span> group2[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,List[C])])] = {
-    <span class="fu">group2Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group1</span>(x.<span class="fu">_2</span>)))
-  }
 
-<span class="kw">private</span> <span class="kw">def</span> group2Internal[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,C)])] = {
-   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C)]]()
-   <span class="kw">for</span> (i &lt;- t) {
-     <span class="kw">val</span> key = i.<span class="fu">_1</span>
-     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>))
-   }
-   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
- }</code></pre></div>
-<p>I can do the same for grouping into three nested lists:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group3[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,List[(C,List[D])])])] = {
-    <span class="fu">group3Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group2</span>(x.<span class="fu">_2</span>)))
-}
-
-<span class="kw">private</span> <span class="kw">def</span> group3Internal[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,C,D)])] = {
-   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C,D)]]()
-   <span class="kw">for</span> (i &lt;- t) {
-     <span class="kw">val</span> key = i.<span class="fu">_1</span>
-     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C,D)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>,i.<span class="fu">_4</span>))
-   }
-   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
- }</code></pre></div>
-<p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
     
 
 
