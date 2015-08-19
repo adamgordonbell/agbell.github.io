@@ -7,8 +7,68 @@
         <description><![CDATA[Adam Bell's blog]]></description>
         <atom:link href="/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 11 Aug 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Aug 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>More Scala Groups And Tuples</title>
+    <link>/posts/2015-08-19-more-scala-groups-and-tuples.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    More Scala Groups And Tuples
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-08-19</span> - <span class="tags"><a href="/tags/scala.html">scala</a>, <a href="/tags/slick.html">slick</a>, <a href="/tags/tuples.html">tuples</a></span>
+  <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">import</span> shapeless.<span class="fu">_</span>
+<span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>.<span class="fu">_</span>
+<span class="kw">import</span> poly.<span class="fu">_</span>
+
+<span class="kw">object</span> GroupLists {
+<span class="kw">def</span> group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {
+      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
+      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D)]()
+      <span class="kw">for</span> (i &lt;- t) {
+        <span class="kw">val</span> key = i.<span class="fu">head</span>
+        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
+        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
+      }
+      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
+    }</code></pre></div>
+<p>That was easy. The use of head and drop from shapeless lets you act on tuples like they are lists. However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.</p>
+<p>Here is the same implementation for 5-tuples:</p>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
+<span class="kw">def</span> group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)] = {
+      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
+      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D,E)]()
+      <span class="kw">for</span> (i &lt;- t) {
+        <span class="kw">val</span> key = i.<span class="fu">head</span>
+        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
+        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
+      }
+      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
+    }</code></pre></div>
+<p>The interesting thing here is that, except for type annotations, these definitions are exactly the same.</p>
+<p>To be continued…</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></description>
+    <pubDate>Wed, 19 Aug 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-08-19-more-scala-groups-and-tuples.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>Mixed Metaphors</title>
     <link>/posts/2015-08-11-mixed-metaphors.html</link>
     <description><![CDATA[<div class="blog-post">
@@ -494,40 +554,6 @@ isSunday  (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01
 ]]></description>
     <pubDate>Fri, 09 Nov 2012 00:00:00 UT</pubDate>
     <guid>/posts/2012-11-09-euler19.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>"Functor is to Lens as Applicative is to Biplate"</title>
-    <link>/posts/2012-10-15-functor-is-to-lens-as.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    "Functor is to Lens as Applicative is to Biplate"
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2012-10-15</span> - <span class="tags"><a href="/tags/haskell.html">haskell</a>, <a href="/tags/haskell-is-hard.html">haskell-is-hard</a></span>
-  <p>“Functor is to Lens as Applicative is to Biplate”</p>
-<ul>
-<li><em><a href="http://front.math.ucdavis.edu/1103.2841" class="uri">http://front.math.ucdavis.edu/1103.2841</a></em></li>
-</ul>
-<p>Haskell, the language with seemingly endless new concepts to learn about</p>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></description>
-    <pubDate>Mon, 15 Oct 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-10-15-functor-is-to-lens-as.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 

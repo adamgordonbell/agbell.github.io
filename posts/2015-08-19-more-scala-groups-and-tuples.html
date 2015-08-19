@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - index</title>
+    <title>Cascade Of Insights - More Scala Groups And Tuples</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap-blog.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
     <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 
   </head>
@@ -20,10 +20,10 @@
     <div class="blog-masthead">
       <div class="container">
 	<nav class="blog-nav">
-          <a class="blog-nav-item" href="./">Home</a>
-          <a class="blog-nav-item" href="./about.html">About</a>
-          <a class="blog-nav-item" href="./contact.html">Contact</a>
-          <a class="blog-nav-item" href="./archive.html">Archive</a>
+          <a class="blog-nav-item" href="../">Home</a>
+          <a class="blog-nav-item" href="../about.html">About</a>
+          <a class="blog-nav-item" href="../contact.html">Contact</a>
+          <a class="blog-nav-item" href="../archive.html">Archive</a>
 	</nav>
       </div>
     </div>
@@ -39,22 +39,13 @@
 
       <div class="row">
 	<div class="col-sm-8 blog-main">
-	  <div id="content">
-  <ul class="posts">
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-08-19-more-scala-groups-and-tuples.html">More Scala Groups And Tuples</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-08-19</time>
-        <div class="tags"><a href="./tags/scala.html">scala</a>, <a href="./tags/slick.html">slick</a>, <a href="./tags/tuples.html">tuples</a></div>
-      </div>
-    </header>
-    
-      <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
+	  <div class="blog-post">
+  <h2 class="blog-post-title">
+    More Scala Groups And Tuples
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-08-19</span> - <span class="tags"><a href="../tags/scala.html">scala</a>, <a href="../tags/slick.html">slick</a>, <a href="../tags/tuples.html">tuples</a></span>
+  <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
 <div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">import</span> shapeless.<span class="fu">_</span>
 <span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>.<span class="fu">_</span>
 <span class="kw">import</span> poly.<span class="fu">_</span>
@@ -85,110 +76,21 @@
     }</code></pre></div>
 <p>The interesting thing here is that, except for type annotations, these definitions are exactly the same.</p>
 <p>To be continued…</p>
-    
 
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
 
-    <div class="continue-link"><a href="./posts/2015-08-19-more-scala-groups-and-tuples.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-08-11-mixed-metaphors.html">Mixed Metaphors</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-08-11</time>
-        <div class="tags"><a href="./tags/humor.html">humor</a>, <a href="./tags/presentation.html">presentation</a></div>
-      </div>
-    </header>
-    
-      <p>Here I’m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing</p>
-<ul>
-<li>I wouldn’t eat that with a ten foot pole 
-    
-
-
-    <div class="continue-link"><a href="./posts/2015-08-11-mixed-metaphors.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-08-04-scala-slick-group-joins.html">Scala Slick Group</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-08-04</time>
-        <div class="tags"><a href="./tags/scala.html">scala</a>, <a href="./tags/slick.html">slick</a></div>
-      </div>
-    </header>
-    
-      <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">val</span> join = <span class="kw">for</span> {
-     (f,b) &lt;-
-                  foo.<span class="fu">filter</span>(...) on  innerJoin
-                  bar <span class="fu">on</span> (...)
-   } <span class="kw">yield</span> (o,i,s)</code></pre></div>
-
-    
-
-
-    <div class="continue-link"><a href="./posts/2015-08-04-scala-slick-group-joins.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-07-31</time>
-        <div class="tags"><a href="./tags/blog.html">blog</a>, <a href="./tags/hakyll.html">hakyll</a>, <a href="./tags/ci.html">ci</a>, <a href="./tags/haskell.html">haskell</a></div>
-      </div>
-    </header>
-    
-      <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. 
-    
-
-
-    <div class="continue-link"><a href="./posts/2015-07-31-hakyll-and-circleci.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-01-14-lazy-evaluation.html">Lazy Evaluation In Haskell</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-01-14</time>
-        <div class="tags"></div>
-      </div>
-    </header>
-    
-      <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em> 
-    
-
-
-    <div class="continue-link"><a href="./posts/2015-01-14-lazy-evaluation.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-</ul>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-<ul class="pagination">
-
-
-
-<li class="page-next"><a href="./index/p/2.html">show older posts</a></li>
-
-</ul>
 
 	</div>
 
@@ -224,7 +126,7 @@
 	    </ol>
 	  </div>
 	  <div class="sidebar-module">
-	    <a href="./atom.xml">Atom</a> - <a href="./rss.xml">RSS</a>
+	    <a href="../atom.xml">Atom</a> - <a href="../rss.xml">RSS</a>
 	  </div>
 	</div>
 
