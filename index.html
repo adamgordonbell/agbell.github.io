@@ -70,21 +70,7 @@
       }
       map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
     }</code></pre></div>
-<p>That was easy. The use of head and drop from shapeless lets you act on tuples like they are lists. However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.</p>
-<p>Here is the same implementation for 5-tuples:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
-<span class="kw">def</span> group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)] = {
-      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D,E)]()
-      <span class="kw">for</span> (i &lt;- t) {
-        <span class="kw">val</span> key = i.<span class="fu">head</span>
-        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
-        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
-      }
-      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
-    }</code></pre></div>
-<p>The interesting thing here is that, except for type annotations, these definitions are exactly the same.</p>
-<p>To be continued…</p>
+
     
 
 

@@ -37,6 +37,7 @@
       }
       map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
     }</code></pre></div>
+<!--more-->
 <p>That was easy. The use of head and drop from shapeless lets you act on tuples like they are lists. However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.</p>
 <p>Here is the same implementation for 5-tuples:</p>
 <div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
