@@ -23,7 +23,7 @@ def group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {
       map.map(b => (b._1, b._2.toList) ++ mapOther(b._1)).toList
     }
 ```
-
+<!--more-->
 That was easy.  The use of head and drop from shapeless lets you act on tuples like they are lists.  However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.  
 
 Here is the same implementation for 5-tuples:
