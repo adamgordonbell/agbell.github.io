@@ -7,8 +7,38 @@
         <description><![CDATA[Adam Bell's blog]]></description>
         <atom:link href="/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 19 Aug 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Aug 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Test For Don</title>
+    <link>/posts/2015-08-20-test-for-don.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Test For Don
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-08-20</span> - <span class="tags"><a href="/tags/test.html">test</a>, <a href="/tags/test1.html">test1</a></span>
+  <p>Test Test <!--more--> Test Test</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></description>
+    <pubDate>Thu, 20 Aug 2015 00:00:00 UT</pubDate>
+    <guid>/posts/2015-08-20-test-for-don.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>More Scala Groups And Tuples</title>
     <link>/posts/2015-08-19-more-scala-groups-and-tuples.html</link>
     <description><![CDATA[<div class="blog-post">
@@ -513,48 +543,6 @@ but i want to be backward compatible with traditional keyboards so switched it b
 ]]></description>
     <pubDate>Mon, 28 Oct 2013 00:00:00 UT</pubDate>
     <guid>/posts/2013-10-28-emacs-client-on-windows.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Project Euler #19 in haskell and by hand</title>
-    <link>/posts/2012-11-09-euler19.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Project Euler #19 in haskell and by hand
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2012-11-09</span> - <span class="tags"><a href="/tags/euler.html">euler</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <blockquote>
-<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
-<p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a> <!--more--> By Hand:</p>
-</blockquote>
-<p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p>
-<p>In haskell:</p>
-<pre><code>euler19 = length $ filter isSunday [(year,month) | year &lt;- [1901..2000], month &lt;- [1..12]]
-
-isSunday :: (Integer,Int) -&gt; Bool
-isSunday  (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01
-    where
-        isSunday1 (_,_,7) = True
-        isSunday1 _ = False</code></pre>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></description>
-    <pubDate>Fri, 09 Nov 2012 00:00:00 UT</pubDate>
-    <guid>/posts/2012-11-09-euler19.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 
