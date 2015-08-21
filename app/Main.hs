@@ -115,6 +115,7 @@ indexContext :: PageNumber -> Paginate -> Tags -> Context String
 indexContext i pages tags = defaultContext
         <> constField "title" "HOME"
         <> listField "posts" (postContextWithTeaser tags) (takeFromTo start end <$> (recentFirstNonDrafts =<< loadAllSnapshots  "posts/**" "content-for-teaser"))
+        <> field "taglist" (\_ -> renderTagCloud 80 250 tags)
         <> modificationTimeField "mod" "%Y-%m-%d"
         <> paginateContext pages i
   where
