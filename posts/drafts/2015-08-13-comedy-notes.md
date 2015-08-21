@@ -110,21 +110,30 @@ preacher
 * Wink
 * I find its helpful to say the word wink, as you wink.
 * In truth, I feel I haven't totally mastered the wink, one I've learned is when not to use them.  "No officer, I haven't been drinking WINK", "Of course I'll finish that work on Time Brad, WINK"
+* 
+----
+Ok Winking out of the way, lets go to personal stories
+----
+The school I went to as a child was not very diverse.  Years later, I'm in university, and learning the world is a much more diverse place.  I met some girls at a bar and one of them happeneds to have gone to the same school as me, but one year ahead.  She said you probably remember me, i was the black kid.
+
+---
+I was at the dentist that other day.  Strange thing about me, from a dentists perscpetive is that I have all my wisdow teeth. Once I asked my dentist about getting them out. And he says, I swear, "Ah, you'll be fine horse mouth".  And I'm just sitting there, kind of trying to process it while he backtracks says " Ah, you have kind of a big jaw, and ..."
+---
 
 The comedy book suggests I take some common idioms or quotes and rewrite them to be funny.  Here is what I have got:
 
 
-"The ipod completely changed the way we approach music.  Ear buds completely change the way I prevent people from talking to me on the bus."
+~~"The ipod completely changed the way we approach music.  Ear buds completely change the way I prevent people from talking to me on the bus."~~
 
-"Your work is going to fill a large part of your life, and the only way to be truly happy is to do what you beleive is great work.  And the only way to do what you beleive is great work to be a delusional naricisist."
+~~ "Your work is going to fill a large part of your life, and the only way to be truly happy is to do what you beleive is great work.  And the only way to do what you beleive is great work to be a delusional naricisist."~~
 
 * The customer is always      writing me angry emails
 
 *
 Any sufficiently advanced technology is
-* going confuse my mom
 * going to need to be fixed when I visit my uncles house
-* will be used by my dad to update his Linked in profile to "Self Employeed and Loving it"
+* going confuse my mom
+* ~~ will be used by my dad to update his Linked in profile to "Self Employeed and Loving it"~~
 
 
 Speaking of Technology. Forget Womens UFC, if you want to see a truly epic battle,  watch my mom try to "find the internet" on her tablet.
@@ -135,5 +144,5 @@ The things is, though, Old people have a lot of skills that I do not.  Like the 
 
 So after Brads pushing me out of my comfort zone, I feel I learned a little bit about comedy.  I would like to end with a quote from Steve Jobs "You can lead a Herring to water, but you have to do it real fast or he'll die." Actually, thats a quote from Gary Busey but I think the point still holds.
 
+
 ----
-The school I went to from grade 1 to grade 6 was rural and not very diverse.  I didn't learn that until in university I was hanging out with some friends of a friend who happened to have gone to the same school as me, but one year ahead.  She said probably remember me, i was the black one.
