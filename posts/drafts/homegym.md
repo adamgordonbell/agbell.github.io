@@ -4,12 +4,18 @@ author: Adam Bell
 tags: gym
 ---
 
-Need:
+Plan 1:
 * Barbell
 * Power Rack
 * Bumper Plates
 * Inclide / Decline Bench
 
+Cheaper Plan:
+ * Olympic Dumbells $100
+ * Adjustable Bench $200 - $300
+ * Cast Iron Weights (4 x 2.5, 5, 10) $100
+  
+ 
 Barbell:
  * [Cap OB-86B Walmart](http://www.walmart.ca/en/ip/cap-barbell-olympic-bar-2-inch-1200-pound-capacity-7-ft/6000188615841) $165
  * [Cap OB-85](http://www.walmart.ca/en/ip/cap-barbell-2-inch-olympic-weight-bar-7-ft/6000188643491)  $84
