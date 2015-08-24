@@ -1,3 +1,8 @@
+---
+title: Home Gym
+author: Adam Bell
+tags: gym
+---
 
 Need:
 * Barbell
@@ -10,4 +15,21 @@ Barbell:
  * [Cap OB-85](http://www.walmart.ca/en/ip/cap-barbell-2-inch-olympic-weight-bar-7-ft/6000188643491)  $84
  * [Comparisons](http://www.amazon.com/CAP-Barbell-Olympic-2-Inch-Chrome/dp/B002OOYINA)
  * [Rogue Ohio Bar](http://www.roguecanada.ca/rogue-ohio-power-bar)
+ * 
+ 
+Bumper Plates:
+ * [AmStaff Rubber bumper](http://www.fitnessavenue.ca/item.php?id=280) $1.25 / lb
+ * [Treadmill Factory bumpers](http://www.treadmillfactory.ca/bumper-plates-toronto-canada) $1.50 - $2 / lb
+ * 
+
+Candian Stores:
+ * http://www.treadmillfactory.ca/
+ * http://www.fitnessavenue.ca/
+ * www.xtcfitness.ca
+ * https://www.landmarkathletics.com/
+ * 
+ 
+Links:
+* http://www.garage-gyms.com/
+* https://www.reddit.com/r/homegym/
  
