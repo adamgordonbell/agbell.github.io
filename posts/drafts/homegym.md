@@ -25,12 +25,18 @@ Bumper Plates:
  
 Iron Plates
  * [York](http://www.xtcfitness.ca/strength/weight-plates/york-standard-olympic-plates-york-barbell-canada.html) $0.80 / lb
+ * 
+ 
+Squat Rack
+ * [DIY Wood](http://homemadestrength.blogspot.ca/2011/04/more-than-just-squat-stands.html)
 
 Candian Stores:
  * http://www.treadmillfactory.ca/
  * http://www.fitnessavenue.ca/
  * www.xtcfitness.ca
  * https://www.landmarkathletics.com/
+ * 
+ 
  * 
  
 Links:
