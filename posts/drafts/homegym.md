@@ -35,7 +35,7 @@ Dumbbells
  * Powerblock
  * ironmaster
  * bowflex
- * [olympic dumbells](http://www.amazon.ca/Cap-Barbell-20-Inch-Olympic-Dumbbell/dp/B0010YOBB4/ref=sr_1_45?ie=UTF8&qid=1440449537&sr=8-45&keywords=dumbbell#productDetails)
+ * [olympic dumbells](http://www.amazon.ca/Cap-Barbell-20-Inch-Olympic-Dumbbell/dp/B0010YOBB4/ref=sr_1_45?ie=UTF8&qid=1440449537&sr=8-45&keywords=dumbbell#productDetails) $48 x 2
  * standard dumbbells
  
 Search:
