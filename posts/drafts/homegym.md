@@ -21,6 +21,10 @@ Bumper Plates:
  * [AmStaff Rubber bumper](http://www.fitnessavenue.ca/item.php?id=280) $1.25 / lb
  * [Treadmill Factory bumpers](http://www.treadmillfactory.ca/bumper-plates-toronto-canada) $1.50 - $2 / lb
  * [York Training Bumpers](http://www.xtcfitness.ca/strength/bumper-plates/york-solid-rubber-training-bumper-plates-olympc-plates-rubber-weights-york-bumper-plates-weight-plates-canada-york-barbell.html) $1.10 / lb
+ * 
+ 
+Iron Plates
+ * [York](http://www.xtcfitness.ca/strength/weight-plates/york-standard-olympic-plates-york-barbell-canada.html) $0.80 / lb
 
 Candian Stores:
  * http://www.treadmillfactory.ca/
