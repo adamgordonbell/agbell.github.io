@@ -25,4 +25,4 @@ The school I went to as a child was not very diverse.  Years later, I'm in unive
 
 I was at the dentist that other day.  Strange thing about me, from a dentists perspective is that I have all my wisdom teeth. Once I asked my dentist about getting them out. And he says, I swear, "Ah, you'll be fine horse mouth".  And I'm just sitting there, kind of trying to process it while he backtracks says " Ah, you have kind of a big jaw, and ..."
 
-So I'd like to thank Brad pushing me out of my comfort zone. I feel I learned a little bit about comedy.  I would like to end with a quote from Steve Jobs "You can lead a Herring to water, but you have to do it real fast or he'll die." So actually, thats a quote from Gary Busey but I think the point still holds.
+So I'd like to thank Brad pushing me out of my comfort zone. I feel I learned a little bit about comedy.  I would like to end with a quote from Steve Jobs "You can lead a fish to water, but you have to do it real fast or he'll die." So actually, thats a quote from Gary Busey but I think the point still holds.
