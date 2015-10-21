@@ -8,8 +8,43 @@
         <name>Adam Bell</name>
         <email>agbell at gmail.com</email>
     </author>
-    <updated>2015-08-19T00:00:00Z</updated>
+    <updated>2015-10-21T00:00:00Z</updated>
     <entry>
+    <title>Fitness Books</title>
+    <link href="/posts/2015-10-21-fitness-books.html" />
+    <id>/posts/2015-10-21-fitness-books.html</id>
+    <published>2015-10-21T00:00:00Z</published>
+    <updated>2015-10-21T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Fitness Books
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-10-21</span> - <span class="tags"><a href="/tags/fitness.html">fitness</a></span>
+  <p>I’ve read a lot of fitness biographies over the last little while. Here is a list.</p>
+<p>Favorite Fitness Type Books: * Squat Every Day * Born To Run * Learn To Breathe Fire</p>
+<p>Biography Type Fitness Books I liked: * Embrace The Suck * Finding Ultra * Running with the Kenyans * The Way of the Runner: A Journey into the Fabled World of Japanese Running * Eat And Run * Ultra Marathon Man ( and 50 / 50) * 3 Book by Chris Moore</p>
+<p>Reference * Starting Strength * The first 20 minutes * Which comes first cardio or weights * Strength Training Anatomy</p>
+<p>Crappy: * Body By Science * Unbeatable mind</p>
+<p>No Category * Running with the mind of meditation * what I talk about when I talk about Running</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>More Scala Groups And Tuples</title>
     <link href="/posts/2015-08-19-more-scala-groups-and-tuples.html" />
     <id>/posts/2015-08-19-more-scala-groups-and-tuples.html</id>
@@ -499,48 +534,6 @@ but i want to be backward compatible with traditional keyboards so switched it b
 # The above has to point to where you install Emacs  </code></pre></li>
 <li><p><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></p></li>
 </ol>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Project Euler #19 in haskell and by hand</title>
-    <link href="/posts/2012-11-09-euler19.html" />
-    <id>/posts/2012-11-09-euler19.html</id>
-    <published>2012-11-09T00:00:00Z</published>
-    <updated>2012-11-09T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Project Euler #19 in haskell and by hand
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2012-11-09</span> - <span class="tags"><a href="/tags/euler.html">euler</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <blockquote>
-<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
-<p><a href="http://projecteuler.net/problem=19" class="uri">http://projecteuler.net/problem=19</a> <!--more--> By Hand:</p>
-</blockquote>
-<p>There are 12 * 100 first of the months, 1/7 of them fall on sundays, therefore euler19 = 1200/7 ~= 171</p>
-<p>In haskell:</p>
-<pre><code>euler19 = length $ filter isSunday [(year,month) | year &lt;- [1901..2000], month &lt;- [1..12]]
-
-isSunday :: (Integer,Int) -&gt; Bool
-isSunday  (year, month) = isSunday1 $ toWeekDate $ fromGregorian year month 01
-    where
-        isSunday1 (_,_,7) = True
-        isSunday1 _ = False</code></pre>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
