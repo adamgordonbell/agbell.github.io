@@ -4,7 +4,9 @@ author: Adam Bell
 tags: fitness
 ---
 
-I've read a lot of fitness biographies over the last little while.  Here is a quick list.  
+I've read a lot of fitness biographies over the last little while.  Here is a quick list.
+
+<!--more-->
 
 Favorite Fitness Type Books:
 
