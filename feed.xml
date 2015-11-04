@@ -8,8 +8,40 @@
         <name>Adam Bell</name>
         <email>agbell at gmail.com</email>
     </author>
-    <updated>2015-10-21T00:00:00Z</updated>
+    <updated>2015-11-04T00:00:00Z</updated>
     <entry>
+    <title>Bitcoin Transactions</title>
+    <link href="/posts/2015-11-04-bitcoin-transactions-volume.html" />
+    <id>/posts/2015-11-04-bitcoin-transactions-volume.html</id>
+    <published>2015-11-04T00:00:00Z</published>
+    <updated>2015-11-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Bitcoin Transactions
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2015-11-04</span> - <span class="tags"><a href="/tags/prediction.html">prediction</a>, <a href="/tags/good-judgement-project.html">good-judgement-project</a></span>
+  <p>What will be the average number of Bitcoin transactions per day in the first week of June 2016?</p>
+<!--more-->
+<p>https://www.gjopen.com/questions/46-what-will-be-the-average-number-of-bitcoin-transactions-per-day-in-the-first-week-of-june-2016</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Fitness Books</title>
     <link href="/posts/2015-10-21-fitness-books.html" />
     <id>/posts/2015-10-21-fitness-books.html</id>
@@ -519,58 +551,6 @@ but i want to be backward compatible with traditional keyboards so switched it b
 <li><a href="https://www.trulyergonomic.com/store/index.php">TECK website</a></li>
 <li><a href="http://ergodox.org/">ErgoDox</a></li>
 </ul>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Emacs Client on Windows 8</title>
-    <link href="/posts/2013-10-28-emacs-client-on-windows.html" />
-    <id>/posts/2013-10-28-emacs-client-on-windows.html</id>
-    <published>2013-10-28T00:00:00Z</published>
-    <updated>2013-10-28T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Emacs Client on Windows 8
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2013-10-28</span> - <span class="tags"><a href="/tags/emacs.html">emacs</a>, <a href="/tags/windows.html">windows</a></span>
-  <p>Problem:</p>
-<p>I want to use emacs like I use notepadd++ on windows. <!--more--> <span>That is:</span></p>
-<ul>
-<li>Right click menu item to “edit with Emacs”</li>
-<li>Associate file types with emacs (like .org)</li>
-<li>Have only one emacs open at a time</li>
-</ul>
-<p>Here are the steps I took:</p>
-<ol style="list-style-type: decimal">
-<li><p>Create the context menu like this (<a href="http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu">global_context_emacs.reg</a>) :</p>
-<pre><code>REGEDIT4
-[HKEY_CLASSES_ROOT\*\shell]
-
-[HKEY_CLASSES_ROOT\*\shell\openwemacs]
-@=&quot;&amp;GNU Emacs&quot;
-# The above value appears in the global context menu, # i.e., when you right click on a file.
-# (The &#39;&amp;&#39; makes the next character a shortcut.) &quot;Icon&quot;=&quot;C:\\Program Files\\Emacs\\bin\\emacs.exe,0&quot;
-# The above uses the icon of the Emacs exe for the context # and should match the path used for the command below.
-# The ,0 selects the main icon. [HKEY_CLASSES_ROOT\*\shell\openwemacs\command]
-@=&quot;C:\\Program Files\\Emacs\\bin\\runemacs.exe \&quot;%1\&quot;&quot;
-# The above has to point to where you install Emacs  </code></pre></li>
-<li><p><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></p></li>
-</ol>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
