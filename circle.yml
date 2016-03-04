@@ -11,7 +11,8 @@ dependencies:
     - gunzip /tmp/stack.gz && chmod +x /tmp/stack
     - sudo mv /tmp/stack /usr/bin/stack
   override:
-    - stack setup
+    - stack setup:
+        timeout: 1200
 
 test:
   override:
