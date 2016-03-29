@@ -28,7 +28,8 @@
 <li><a href="https://github.com/NixOS/nixpkgs/pull/13572/commits/c267f5b71122453268d55ef665f20262be7f53d9">submitted as a pull request to nixpkgs</a></li>
 </ul>
 <h3 id="including-package-in-configuration.nix">Including package in configuration.nix:</h3>
-<p>If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service in the is configured globally in NixOS so we need to be able to reference our forked package repo in our configuration.nix file. <em>If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn’t wait for that.</em></p>
+<p>If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service that is configured globally in NixOS so we needed to be able to reference our forked package repo in our configuration.nix file.</p>
+<p><em>If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn’t wait for that.</em></p>
 <h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix :</h3>
 <p>We created a reference to our forked packages using a let expression in our configuration.nix file. This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.</p>
 <p>Using a let expression, we pulled in our fork of nixpkgs:</p>
