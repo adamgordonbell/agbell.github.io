@@ -20,7 +20,9 @@ The nix-channel we were on didn't have the latest version of something we needed
 
 ### Including package in configuration.nix:
 
-If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service in the is configured globally in NixOS so we need to be able to reference our forked package repo in our configuration.nix file.  *If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn't wait for that.*
+If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service that is configured globally in NixOS so we needed to be able to reference our forked package repo in our configuration.nix file. 
+
+*If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn't wait for that.*
 
 ### Referencing our fork of nixpkgs in our configuration.nix :
 We created a reference to our forked packages using a let expression in our configuration.nix file.  This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.
