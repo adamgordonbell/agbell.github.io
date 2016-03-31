@@ -7,9 +7,11 @@ import Hakyll.Web.Paginate
 import Data.List
 import Data.Monoid (mappend, (<>))
 import Data.Functor ((<$>))
+import qualified GHC.IO.Encoding as E
 
 main :: IO ()
-main =
+main = do
+  E.setLocaleEncoding E.utf8
   hakyll $ do
     tags <- buildTags "posts/**" (fromCapture "tags/*.html")
     pages <- buildPages "posts/**"
