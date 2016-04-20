@@ -20,7 +20,7 @@ with replacement as (
  )
  select * from replacement
 ```
-*The cte might seems verbose, but I'm going to need it later, and it helps my sql stay organized*
+*The cte might seem verbose, but I'm going to need it later, and it helps my sql stay organized*
 
 ### Testing the select as an update, without applying changes:
 ``` sql
