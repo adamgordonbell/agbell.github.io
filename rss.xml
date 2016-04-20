@@ -7,8 +7,83 @@
         <description><![CDATA[Adam Bell's blog]]></description>
         <atom:link href="/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 26 Mar 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 20 Apr 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Postgres Update With Join</title>
+    <link>/posts/2016-04-20-postgres-update-with-join.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Postgres Update With Join
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2016-04-20</span> - <span class="tags"><a href="/tags/postgres.html">postgres</a>, <a href="/tags/cte.html">cte</a>, <a href="/tags/update.html">update</a></span>
+  <p>How to perform and update with a join using CTE’s in postgres</p>
+<ul>
+<li>in a cte, write a select that returns the update to values, and the join on conditions</li>
+<li>join on that in the update</li>
+<li>Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run</li>
+</ul>
+<!--more-->
+<h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte:</h3>
+<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">with</span> replacement <span class="kw">as</span> (
+	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
+  <span class="kw">where</span> x= something
+ )
+ <span class="kw">select</span> * <span class="kw">from</span> replacement</code></pre></div>
+<p><em>The cte might seems verbose, but I’m going to need it later, and it helps my sql stay organized</em></p>
+<h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes:</h3>
+<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">BEGIN</span>;
+
+
+<span class="kw">with</span> replacement <span class="kw">as</span> (
+	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
+  <span class="kw">where</span> x= something
+ )
+
+ <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname
+ <span class="kw">set</span> <span class="fu">value</span> = replacement.value
+ <span class="kw">from</span> replacement
+ <span class="kw">where</span> shortname.condtion1 = replacement.condtion1
+ <span class="kw">and</span> shortname.condtion2 = replacement.condition2;
+
+<span class="co">-- Test query for manually confirming the results look like what you were expecting</span>
+<span class="kw">SELECT</span> <span class="fu">value</span>, condition1, condition2 <span class="kw">from</span> <span class="ot">&quot;LongName&quot;</span> shortname
+<span class="kw">where</span> x=something
+
+ <span class="kw">ROLLBACK</span>;</code></pre></div>
+<p>If the select result looks good, you can run it without the transaction to update.</p>
+<h3 id="run-it">Run it</h3>
+<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">with</span> replacement <span class="kw">as</span> (
+	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
+  <span class="kw">where</span> x= something
+ )
+
+ <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname
+ <span class="kw">set</span> <span class="fu">value</span> = replacement.value
+ <span class="kw">from</span> replacement
+ <span class="kw">where</span> shortname.condtion1 = replacement.condtion1
+ <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</code></pre></div>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></description>
+    <pubDate>Wed, 20 Apr 2016 00:00:00 UT</pubDate>
+    <guid>/posts/2016-04-20-postgres-update-with-join.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>Using Custom Packages in NixOs Configuration File</title>
     <link>/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html</link>
     <description><![CDATA[<div class="blog-post">
@@ -527,47 +602,6 @@ Hence:</p>
 ]]></description>
     <pubDate>Sat, 15 Mar 2014 00:00:00 UT</pubDate>
     <guid>/posts/2014-03-15-incrementing.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>How to get bluetooth working in windows 8 / 8.1 on various thinkpads</title>
-    <link>/posts/2014-02-20-bluetooth-thinkpad-w520.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    How to get bluetooth working in windows 8 / 8.1 on various thinkpads
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2014-02-20</span> - <span class="tags"><a href="/tags/thinkpad.html">thinkpad</a>, <a href="/tags/bluetooth.html">bluetooth</a></span>
-  <div class="figure">
-<img src="/images/tumblr_n1aynyeIzo1qe4yfuo1_500.jpg" alt="" />
-
-</div>
-<blockquote>
-<p><strong>How to get bluetooth working in windows 8 / 8.1 on various thinkpads.</strong> <!--more--> Currently, the thinkpads ( w520 for sure, but lots of complaints about others online) do not have working bluetooth drivers. Or rather the driver exists, but getting the bluetooth to turn on is not possible.</p>
-</blockquote>
-<p>I have put together a solution here:</p>
-<p><a href="https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip">https://dl.dropboxusercontent.com/u/7773580/lenovo/Adams%20bt%20enable.zip</a></p>
-<p>This zip has to batch files that will turn on or off the blue tooth device. It uses the hotkey exe from the windows 7 Lenove hotkey app to force the bluetooth on.</p>
-<p>It also contains a bluetooth driver, the one I originally used, however I recommend instead that you go straight to broadcom here:</p>
-<p><a href="http://www.broadcom.com/support/bluetooth/update.php" class="uri">http://www.broadcom.com/support/bluetooth/update.php</a></p>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></description>
-    <pubDate>Thu, 20 Feb 2014 00:00:00 UT</pubDate>
-    <guid>/posts/2014-02-20-bluetooth-thinkpad-w520.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 
