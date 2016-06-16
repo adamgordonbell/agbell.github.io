@@ -46,6 +46,27 @@
   <article>
     <header>
       <h1 class="entry-title">
+        <a href="./posts/2016-06-16-merging-and-conflict-resolution.html">Merging and Conflict Resolution</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2016-06-16</time>
+        <div class="tags"><a href="./tags/git.html">git</a>, <a href="./tags/merging.html">merging</a></div>
+      </div>
+    </header>
+    
+      <p>Git merge drivers.</p>
+
+    
+
+
+    <div class="continue-link"><a href="./posts/2016-06-16-merging-and-conflict-resolution.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
+  
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
         <a href="./posts/2016-04-20-postgres-update-with-join.html">Postgres Update With Join</a>
       </h1>
       <div class="meta">
@@ -131,42 +152,6 @@
   </article>
   <li>
   
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./posts/2015-08-19-more-scala-groups-and-tuples.html">More Scala Groups And Tuples</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2015-08-19</time>
-        <div class="tags"><a href="./tags/scala.html">scala</a>, <a href="./tags/slick.html">slick</a>, <a href="./tags/tuples.html">tuples</a></div>
-      </div>
-    </header>
-    
-      <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">import</span> shapeless.<span class="fu">_</span>
-<span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>.<span class="fu">_</span>
-<span class="kw">import</span> poly.<span class="fu">_</span>
-
-<span class="kw">object</span> GroupLists {
-<span class="kw">def</span> group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {
-      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D)]()
-      <span class="kw">for</span> (i &lt;- t) {
-        <span class="kw">val</span> key = i.<span class="fu">head</span>
-        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
-        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
-      }
-      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
-    }</code></pre></div>
-
-    
-
-
-    <div class="continue-link"><a href="./posts/2015-08-19-more-scala-groups-and-tuples.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
 </ul>
 </div>
 <ul class="pagination">
@@ -177,7 +162,7 @@
 
 </ul>
 <h2>Tags</h2>
-<p><a style="font-size: 80%" href="./tags/NakedObjectsFramework.html">NakedObjectsFramework</a> <a style="font-size: 80%" href="./tags/antlr.html">antlr</a> <a style="font-size: 80%" href="./tags/aop.html">aop</a> <a style="font-size: 119%" href="./tags/attribute-based-caching.html">attribute-based-caching</a> <a style="font-size: 80%" href="./tags/blog.html">blog</a> <a style="font-size: 80%" href="./tags/bluetooth.html">bluetooth</a> <a style="font-size: 80%" href="./tags/brain_gym.html">brain_gym</a> <a style="font-size: 236%" href="./tags/c%23.html">c#</a> <a style="font-size: 80%" href="./tags/ci.html">ci</a> <a style="font-size: 80%" href="./tags/clojure.html">clojure</a> <a style="font-size: 80%" href="./tags/comedy.html">comedy</a> <a style="font-size: 80%" href="./tags/cte.html">cte</a> <a style="font-size: 80%" href="./tags/data.html">data</a> <a style="font-size: 80%" href="./tags/emacs.html">emacs</a> <a style="font-size: 80%" href="./tags/essay.html">essay</a> <a style="font-size: 171%" href="./tags/euler.html">euler</a> <a style="font-size: 80%" href="./tags/f%23.html">f#</a> <a style="font-size: 80%" href="./tags/faq.html">faq</a> <a style="font-size: 80%" href="./tags/field-level-authorization.html">field-level-authorization</a> <a style="font-size: 80%" href="./tags/fitness.html">fitness</a> <a style="font-size: 80%" href="./tags/good-judgement-project.html">good-judgement-project</a> <a style="font-size: 80%" href="./tags/gym.html">gym</a> <a style="font-size: 80%" href="./tags/hakyll.html">hakyll</a> <a style="font-size: 145%" href="./tags/haskell.html">haskell</a> <a style="font-size: 80%" href="./tags/haskell-is-hard.html">haskell-is-hard</a> <a style="font-size: 80%" href="./tags/humor.html">humor</a> <a style="font-size: 93%" href="./tags/ideas.html">ideas</a> <a style="font-size: 80%" href="./tags/keyboard.html">keyboard</a> <a style="font-size: 80%" href="./tags/nix.html">nix</a> <a style="font-size: 80%" href="./tags/nixos.html">nixos</a> <a style="font-size: 80%" href="./tags/nparsec.html">nparsec</a> <a style="font-size: 80%" href="./tags/parsec.html">parsec</a> <a style="font-size: 80%" href="./tags/parser.html">parser</a> <a style="font-size: 80%" href="./tags/parser-combinator.html">parser-combinator</a> <a style="font-size: 80%" href="./tags/paul-graham.html">paul-graham</a> <a style="font-size: 80%" href="./tags/postgres.html">postgres</a> <a style="font-size: 80%" href="./tags/postsharp.html">postsharp</a> <a style="font-size: 80%" href="./tags/prediction.html">prediction</a> <a style="font-size: 80%" href="./tags/presentation.html">presentation</a> <a style="font-size: 80%" href="./tags/release.html">release</a> <a style="font-size: 80%" href="./tags/row-level-authorization.html">row-level-authorization</a> <a style="font-size: 93%" href="./tags/scala.html">scala</a> <a style="font-size: 93%" href="./tags/slick.html">slick</a> <a style="font-size: 80%" href="./tags/tags.html">tags</a> <a style="font-size: 80%" href="./tags/thinkpad.html">thinkpad</a> <a style="font-size: 80%" href="./tags/tuples.html">tuples</a> <a style="font-size: 80%" href="./tags/update.html">update</a> <a style="font-size: 80%" href="./tags/windows.html">windows</a> <a style="font-size: 80%" href="./tags/wordpress.html">wordpress</a> <a style="font-size: 80%" href="./tags/wssf.html">wssf</a></p>
+<p><a style="font-size: 80%" href="./tags/NakedObjectsFramework.html">NakedObjectsFramework</a> <a style="font-size: 80%" href="./tags/antlr.html">antlr</a> <a style="font-size: 80%" href="./tags/aop.html">aop</a> <a style="font-size: 119%" href="./tags/attribute-based-caching.html">attribute-based-caching</a> <a style="font-size: 80%" href="./tags/blog.html">blog</a> <a style="font-size: 80%" href="./tags/bluetooth.html">bluetooth</a> <a style="font-size: 80%" href="./tags/brain_gym.html">brain_gym</a> <a style="font-size: 236%" href="./tags/c%23.html">c#</a> <a style="font-size: 80%" href="./tags/ci.html">ci</a> <a style="font-size: 80%" href="./tags/clojure.html">clojure</a> <a style="font-size: 80%" href="./tags/comedy.html">comedy</a> <a style="font-size: 80%" href="./tags/cte.html">cte</a> <a style="font-size: 80%" href="./tags/data.html">data</a> <a style="font-size: 80%" href="./tags/emacs.html">emacs</a> <a style="font-size: 80%" href="./tags/essay.html">essay</a> <a style="font-size: 171%" href="./tags/euler.html">euler</a> <a style="font-size: 80%" href="./tags/f%23.html">f#</a> <a style="font-size: 80%" href="./tags/faq.html">faq</a> <a style="font-size: 80%" href="./tags/field-level-authorization.html">field-level-authorization</a> <a style="font-size: 80%" href="./tags/fitness.html">fitness</a> <a style="font-size: 80%" href="./tags/git.html">git</a> <a style="font-size: 80%" href="./tags/good-judgement-project.html">good-judgement-project</a> <a style="font-size: 80%" href="./tags/gym.html">gym</a> <a style="font-size: 80%" href="./tags/hakyll.html">hakyll</a> <a style="font-size: 145%" href="./tags/haskell.html">haskell</a> <a style="font-size: 80%" href="./tags/haskell-is-hard.html">haskell-is-hard</a> <a style="font-size: 80%" href="./tags/humor.html">humor</a> <a style="font-size: 93%" href="./tags/ideas.html">ideas</a> <a style="font-size: 80%" href="./tags/keyboard.html">keyboard</a> <a style="font-size: 80%" href="./tags/merging.html">merging</a> <a style="font-size: 80%" href="./tags/nix.html">nix</a> <a style="font-size: 80%" href="./tags/nixos.html">nixos</a> <a style="font-size: 80%" href="./tags/nparsec.html">nparsec</a> <a style="font-size: 80%" href="./tags/parsec.html">parsec</a> <a style="font-size: 80%" href="./tags/parser.html">parser</a> <a style="font-size: 80%" href="./tags/parser-combinator.html">parser-combinator</a> <a style="font-size: 80%" href="./tags/paul-graham.html">paul-graham</a> <a style="font-size: 80%" href="./tags/postgres.html">postgres</a> <a style="font-size: 80%" href="./tags/postsharp.html">postsharp</a> <a style="font-size: 80%" href="./tags/prediction.html">prediction</a> <a style="font-size: 80%" href="./tags/presentation.html">presentation</a> <a style="font-size: 80%" href="./tags/release.html">release</a> <a style="font-size: 80%" href="./tags/row-level-authorization.html">row-level-authorization</a> <a style="font-size: 93%" href="./tags/scala.html">scala</a> <a style="font-size: 93%" href="./tags/slick.html">slick</a> <a style="font-size: 80%" href="./tags/tags.html">tags</a> <a style="font-size: 80%" href="./tags/thinkpad.html">thinkpad</a> <a style="font-size: 80%" href="./tags/tuples.html">tuples</a> <a style="font-size: 80%" href="./tags/update.html">update</a> <a style="font-size: 80%" href="./tags/windows.html">windows</a> <a style="font-size: 80%" href="./tags/wordpress.html">wordpress</a> <a style="font-size: 80%" href="./tags/wssf.html">wssf</a></p>
 
 	</div>
 

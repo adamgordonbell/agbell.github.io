@@ -7,8 +7,57 @@
         <description><![CDATA[Adam Bell's blog]]></description>
         <atom:link href="/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 20 Apr 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jun 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Merging and Conflict Resolution</title>
+    <link>/posts/2016-06-16-merging-and-conflict-resolution.html</link>
+    <description><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Merging and Conflict Resolution
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2016-06-16</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a></span>
+  <p>Git merge drivers.</p>
+<!--more-->
+<p>Background:</p>
+<ul>
+<li><a href="https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver">defining a custom merger driver</a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+<p>Merge Drivers:</p>
+<ul>
+<li><a href="https://github.com/beck/git-po-merge">po merge</a></li>
+<li><a href="https://www.npmjs.com/package/git-json-merge">json merge</a></li>
+<li><a href="https://gist.github.com/seanh/378623">logfile</a></li>
+<li><a href="http://blog.ezyang.com/2011/07/synthetic-git-merges/">line ending preprocess</a></li>
+<li><a href="https://github.com/timoc/org-merge-driver">org mode</a></li>
+<li><a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob;f=lib/git-merge-changelog.c;h=9d4bd5c809d7bd0724a535a1da22ccb5e831d38e;hb=HEAD">change log</a></li>
+<li><a href="https://github.com/ralfth/pom-merge-driver">pom file</a></li>
+</ul>
+<p>Other things: * custom merge strategy * custom diff * <a href="http://share.find.coop/doc/ssmerge.html">merge csv</a></p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></description>
+    <pubDate>Thu, 16 Jun 2016 00:00:00 UT</pubDate>
+    <guid>/posts/2016-06-16-merging-and-conflict-resolution.html</guid>
+    <dc:creator>Adam Bell</dc:creator>
+</item>
+<item>
     <title>Postgres Update With Join</title>
     <link>/posts/2016-04-20-postgres-update-with-join.html</link>
     <description><![CDATA[<div class="blog-post">
@@ -537,71 +586,6 @@ Hence:</p>
 ]]></description>
     <pubDate>Wed, 14 Jan 2015 00:00:00 UT</pubDate>
     <guid>/posts/2015-01-14-lazy-evaluation.html</guid>
-    <dc:creator>Adam Bell</dc:creator>
-</item>
-<item>
-    <title>Incrementing</title>
-    <link>/posts/2014-03-15-incrementing.html</link>
-    <description><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Incrementing
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2014-03-15</span> - <span class="tags"><a href="/tags/paul-graham.html">paul-graham</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it. <!--more--> His Example:</p>
-<blockquote>
-<p>Write a function that takes a number n, and returns a function that takes another number i and returns n incremented by i.</p>
-</blockquote>
-<p>I think this example is, maybe, unfairly biased towards functional programming languages, and its no surprise that pg shows us that lisp has the shortest implementation.</p>
-<p>It works as a good example, however, because it shows us a concrete demonstration where one language can easily do something (lisp), that others languages are not able to do at all (java).</p>
-<p>Let me try this in haskell.</p>
-<p>So in Haskell, the type of this function f would be:</p>
-<blockquote>
-<p>f :: Num a =&gt; a -&gt; ( a -&gt; a)</p>
-</blockquote>
-<p>meaning f takes a number and returns a function that takes a number and returns another number.</p>
-<p>Since the brackets are right associative, we can drop them to get:</p>
-<blockquote>
-<p>f :: Num a =&gt; a -&gt; a -&gt; a</p>
-</blockquote>
-<p>This is because, in haskell, all functions are considered curried and can be partially applied. Even basic numerical functions like + - / if given one argument will return a function that excepts the next argument.</p>
-<p>For example:</p>
-<blockquote>
-<blockquote>
-<p>:t (+)</p>
-</blockquote>
-<p>(+) :: Num a =&gt; a -&gt; a -&gt; a</p>
-<blockquote>
-<p>:t (+) 4<br />
-(+) 4 :: Num a =&gt; a -&gt; a</p>
-</blockquote>
-</blockquote>
-<p>So (+) 4 returns a function that takes a number and then adds 4 for to it. (<em>I mean, I guess technically, it doesn’t add 4 to it, but returns a new number that is the sum of them, but I think I am still capturing the spirit of the exercise here. Haskell variables are not mutable.)<br />
-</em></p>
-<p>What all of this means, if I haven’t already telegraphed the punchline, is that the complete haskell solution is:</p>
-<blockquote>
-<p>f = (+)</p>
-</blockquote>
-<p>So, in haskell, we don’t need to write this function. We can just use +.</p>
-<p>I think that is pretty cool.</p>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></description>
-    <pubDate>Sat, 15 Mar 2014 00:00:00 UT</pubDate>
-    <guid>/posts/2014-03-15-incrementing.html</guid>
     <dc:creator>Adam Bell</dc:creator>
 </item>
 
