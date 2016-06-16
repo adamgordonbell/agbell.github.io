@@ -59,6 +59,36 @@
 ]]></summary>
 </entry>
 <entry>
+    <title>Gathering Git Conflicts</title>
+    <link href="/posts/2016-06-16-gathering-git-conflicts.html" />
+    <id>/posts/2016-06-16-gathering-git-conflicts.html</id>
+    <published>2016-06-16T00:00:00Z</published>
+    <updated>2016-06-16T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Gathering Git Conflicts
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2016-06-16</span> - <span class="tags"><a href="/tags/draft.html">draft</a></span>
+  <p>How can we gather a whole bunch of git conflicts to use as test cases for git merge drivers <!--more--></p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>Postgres Update With Join</title>
     <link href="/posts/2016-04-20-postgres-update-with-join.html" />
     <id>/posts/2016-04-20-postgres-update-with-join.html</id>
@@ -518,60 +548,6 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
     <span class="date">2015-07-31</span> - <span class="tags"><a href="/tags/blog.html">blog</a>, <a href="/tags/hakyll.html">hakyll</a>, <a href="/tags/ci.html">ci</a>, <a href="/tags/haskell.html">haskell</a></span>
   <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. <!--more--> Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
 <p>So far, so good.</p>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Lazy Evaluation In Haskell</title>
-    <link href="/posts/2015-01-14-lazy-evaluation.html" />
-    <id>/posts/2015-01-14-lazy-evaluation.html</id>
-    <published>2015-01-14T00:00:00Z</published>
-    <updated>2015-01-14T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Lazy Evaluation In Haskell
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2015-01-14</span> - <span class="tags"></span>
-  <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em> <!--more--> Summary of Laziness:</p>
-<p>Lazy is good when:</p>
-<ul>
-<li>You are not going to use all the results</li>
-<li>Because you are going to filter some things out at a later stage</li>
-</ul>
-<p>Strict is good otherwise.<br />
-Hence:</p>
-<ul>
-<li>foldl’ for spine-strict results (Int, Map, …),</li>
-<li>foldr for spine-lazy results (mostly just [a]),</li>
-<li>Never use foldl</li>
-</ul>
-<p>The key insight for me has been understanding that lazy evaluation means that functions take in a pointer to a thunk as arguments and then return a thunk as a value. Only looking inside those thunks inputs (via pattern matching or IO) actually forces anything.</p>
-<p>This level of indirection improves composability, you can generate than reduce in a more modular fashion with only some constant overhead for holding on to thunks. The paper “why functional programming matters” has a great explanation of this.</p>
-<p>This all works because whenever you throw something away with <em>i.e. f (a,</em>) = a, the pointer to the thunk, that was never evaluated, and all the evaluations that follow from can get garbage collected away.</p>
-<p>This how foldr can short-circuit on some lazy list, if a condition of f that is passed in doesn’t care about the rest of the list, then we are done.</p>
-<p><span>Links:</span></p>
-<ul>
-<li><a href="http://blog.ezyang.com/category/haskell/haskell-heap/">Ez Yang : how the heap works</a></li>
-<li><a href="http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html" class="uri">http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html</a></li>
-<li><a href="http://www.haskell.org/haskellwiki/Performance/Strictness" class="uri">http://www.haskell.org/haskellwiki/Performance/Strictness</a></li>
-<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness</a></li>
-<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis" class="uri">http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis</a></li>
-</ul>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
