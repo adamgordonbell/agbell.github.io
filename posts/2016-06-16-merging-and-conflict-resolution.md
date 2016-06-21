@@ -24,6 +24,7 @@ Merge Drivers:
 * [pom file](https://github.com/ralfth/pom-merge-driver)
 
 Other things:
+
 * custom merge strategy
 * custom diff
 * [merge csv](http://share.find.coop/doc/ssmerge.html)
