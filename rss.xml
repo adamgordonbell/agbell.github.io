@@ -36,7 +36,12 @@
 <li><a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob;f=lib/git-merge-changelog.c;h=9d4bd5c809d7bd0724a535a1da22ccb5e831d38e;hb=HEAD">change log</a></li>
 <li><a href="https://github.com/ralfth/pom-merge-driver">pom file</a></li>
 </ul>
-<p>Other things: * custom merge strategy * custom diff * <a href="http://share.find.coop/doc/ssmerge.html">merge csv</a></p>
+<p>Other things:</p>
+<ul>
+<li>custom merge strategy</li>
+<li>custom diff</li>
+<li><a href="http://share.find.coop/doc/ssmerge.html">merge csv</a></li>
+</ul>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
