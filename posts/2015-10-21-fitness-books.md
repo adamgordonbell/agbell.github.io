@@ -1,7 +1,7 @@
 ---
 title: Fitness Books
 author: Adam Bell
-tags: fitness
+tags: fitness, books
 ---
 
 I've read a lot of fitness biographies over the last little while.  Here is a quick list.
@@ -24,12 +24,6 @@ Biography Type Fitness Books I liked:
  * Ultra Marathon Man ( and 50 / 50)
  * 3 Books by Chris Moore
 
-Reference:
-
- * Starting Strength
- * The first 20 minutes
- * Which comes first cardio or weights
- * Strength Training Anatomy
 
 Crappy:
 
@@ -46,5 +40,3 @@ To Read:
  * Running on empty
  * Natural Born Heroes
  * Run or Die
- * First : What it Takes to win
- * Free+Style
