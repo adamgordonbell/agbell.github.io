@@ -1,5 +1,5 @@
 ---
-title: Merging and Conflict Resolution
+title: Git Custom Merge Drivers
 author: Adam Bell
 tags: git, merging
 ---
@@ -9,9 +9,6 @@ Git merge drivers.
 Background:
 
 * [defining a custom merger driver](https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver)
-* []()
-* []()
-* []()
 
 Merge Drivers:
 
@@ -25,6 +22,4 @@ Merge Drivers:
 
 Other things:
 
-* custom merge strategy
-* custom diff
 * [merge csv](http://share.find.coop/doc/ssmerge.html)
