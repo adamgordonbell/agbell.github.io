@@ -23,10 +23,10 @@ To press shift+space in the previous example, you need in addition to a space/sh
 
 ```
 
-In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt.  Shift is placed under A and ;.  Additionally, F or J active a layer with F1-F12 as well as some extra keys (~/|?\) and arrow keys under my right hand.  My Escape key also acts as the windows key if held down.  It sounds complicated, but the muscle memory takes over after an hour or two and it just feels fast and simple.
+In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt.  Shift is placed under A and ;.  Additionally, F or J, when held down, active a layer with shown on the center right of the keymap above.  My Escape key also acts as the windows key if held down.  It sounds complicated, but the muscle memory takes over after an hour or two and it just feels fast and simple.
 
 Resources:
 
  * [My keymap for the ergodox keyboard](https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h)
  * [TMK firmware](https://github.com/tmk/tmk_keyboard)
- * [QMK firmware](https://github.com/jackhumbert/qmk_firmwares)
+ * [QMK firmware](https://github.com/jackhumbert/qmk_firmware)
