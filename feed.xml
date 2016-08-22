@@ -8,44 +8,58 @@
         <name>Adam Bell</name>
         <email>agbell at gmail.com</email>
     </author>
-    <updated>2016-06-16T00:00:00Z</updated>
+    <updated>2016-08-21T00:00:00Z</updated>
     <entry>
-    <title>Merging and Conflict Resolution</title>
-    <link href="/posts/2016-06-16-merging-and-conflict-resolution.html" />
-    <id>/posts/2016-06-16-merging-and-conflict-resolution.html</id>
-    <published>2016-06-16T00:00:00Z</published>
-    <updated>2016-06-16T00:00:00Z</updated>
+    <title>A Better 3-way merge?</title>
+    <link href="/posts/2016-08-21-a-better-3-way-merge.html" />
+    <id>/posts/2016-08-21-a-better-3-way-merge.html</id>
+    <published>2016-08-21T00:00:00Z</published>
+    <updated>2016-08-21T00:00:00Z</updated>
     <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
-    Merging and Conflict Resolution
+    A Better 3-way merge?
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-06-16</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a></span>
-  <p>Git merge drivers.</p>
-<!--more-->
-<p>Background:</p>
-<ul>
-<li><a href="https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver">defining a custom merger driver</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-<p>Merge Drivers:</p>
-<ul>
-<li><a href="https://github.com/beck/git-po-merge">po merge</a></li>
-<li><a href="https://www.npmjs.com/package/git-json-merge">json merge</a></li>
-<li><a href="https://gist.github.com/seanh/378623">logfile</a></li>
-<li><a href="http://blog.ezyang.com/2011/07/synthetic-git-merges/">line ending preprocess</a></li>
-<li><a href="https://github.com/timoc/org-merge-driver">org mode</a></li>
-<li><a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob;f=lib/git-merge-changelog.c;h=9d4bd5c809d7bd0724a535a1da22ccb5e831d38e;hb=HEAD">change log</a></li>
-<li><a href="https://github.com/ralfth/pom-merge-driver">pom file</a></li>
-</ul>
-<p>Other things:</p>
-<ul>
-<li>custom merge strategy</li>
-<li>custom diff</li>
-<li><a href="http://share.find.coop/doc/ssmerge.html">merge csv</a></li>
-</ul>
+    <span class="date">2016-08-21</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a>, <a href="/tags/dummy_tag.html">dummy_tag</a></span>
+  <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question. <!--more--></p>
+<h2 id="an-example">An Example</h2>
+<h3 id="base-file">Base file:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int) : Option[Int]</code></pre></div>
+<h3 id="their-file">Their file:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int, c : String) : Option[Int]</code></pre></div>
+<h3 id="our-file">Our File:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String) : Option[Int]</code></pre></div>
+<h3 id="expected-result">Expected Result:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String, c : String) : Option[Int]</code></pre></div>
+<p>The above will need to manually resolved in git, both branches makes change to the same line, so git does not know how to resolve this.</p>
+<p>However, if we had a similar merge, where the code was split across multiple lines, the 3-way merge would have no problem:</p>
+<h3 id="base-file-1">Base file:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
+  a : string
+  ,b : Int
+   ) : Option[Int]</code></pre></div>
+<h3 id="their-file-1">Their file:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
+  a : string
+  ,b : Int
+  ,c : String
+  ) : Option[Int]</code></pre></div>
+<h3 id="our-file-1">Our File:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
+  a : string
+  ,b: Int
+  ,b2 : String
+  ) : Option[Int]</code></pre></div>
+<h3 id="result">Result:</h3>
+<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
+  a : string
+  ,b: Int
+  ,b2 : String
+  ,c  : String
+  ) : Option[Int]</code></pre></div>
+<p>Thus we can see that by knowing where a line in a file can be split, we should be able to eliminate some merge conflicts. If we wrote a bash script that called the default 3-way merge, and in cases of conflict, it introduced new lines everywhere possible based on the syntax rules of file and then called it again, before removing the introduced new lines, we would reduce the number of conflicts.</p>
+<p>It would handle our original case, by spreading the code across more lines, merging it and then recombining it. We could then use that script as our custom merge driver.</p>
+<p>Now I just have to write the thing and test it. Stay tuned.</p>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -64,18 +78,37 @@
 ]]></summary>
 </entry>
 <entry>
-    <title>Gathering Git Conflicts</title>
-    <link href="/posts/2016-06-16-gathering-git-conflicts.html" />
-    <id>/posts/2016-06-16-gathering-git-conflicts.html</id>
+    <title>Git Custom Merge Drivers</title>
+    <link href="/posts/2016-06-16-merging-and-conflict-resolution.html" />
+    <id>/posts/2016-06-16-merging-and-conflict-resolution.html</id>
     <published>2016-06-16T00:00:00Z</published>
     <updated>2016-06-16T00:00:00Z</updated>
     <summary type="html"><![CDATA[<div class="blog-post">
   <h2 class="blog-post-title">
-    Gathering Git Conflicts
+    Git Custom Merge Drivers
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-06-16</span> - <span class="tags"><a href="/tags/draft.html">draft</a></span>
-  <p>How can we gather a whole bunch of git conflicts to use as test cases for git merge drivers <!--more--></p>
+    <span class="date">2016-06-16</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a></span>
+  <p>Git merge drivers.</p>
+<!--more-->
+<p>Background:</p>
+<ul>
+<li><a href="https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver">defining a custom merger driver</a></li>
+</ul>
+<p>Merge Drivers:</p>
+<ul>
+<li><a href="https://github.com/beck/git-po-merge">po merge</a></li>
+<li><a href="https://www.npmjs.com/package/git-json-merge">json merge</a></li>
+<li><a href="https://gist.github.com/seanh/378623">logfile</a></li>
+<li><a href="http://blog.ezyang.com/2011/07/synthetic-git-merges/">line ending preprocess</a></li>
+<li><a href="https://github.com/timoc/org-merge-driver">org mode</a></li>
+<li><a href="http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob;f=lib/git-merge-changelog.c;h=9d4bd5c809d7bd0724a535a1da22ccb5e831d38e;hb=HEAD">change log</a></li>
+<li><a href="https://github.com/ralfth/pom-merge-driver">pom file</a></li>
+</ul>
+<p>Other things:</p>
+<ul>
+<li><a href="http://share.find.coop/doc/ssmerge.html">merge csv</a></li>
+</ul>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -292,7 +325,7 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
     Fitness Books
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2015-10-21</span> - <span class="tags"><a href="/tags/fitness.html">fitness</a></span>
+    <span class="date">2015-10-21</span> - <span class="tags"><a href="/tags/fitness.html">fitness</a>, <a href="/tags/books.html">books</a></span>
   <p>I’ve read a lot of fitness biographies over the last little while. Here is a quick list.</p>
 <!--more-->
 <p>Favorite Fitness Type Books:</p>
@@ -311,13 +344,6 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
 <li>Ultra Marathon Man ( and 50 / 50)</li>
 <li>3 Books by Chris Moore</li>
 </ul>
-<p>Reference:</p>
-<ul>
-<li>Starting Strength</li>
-<li>The first 20 minutes</li>
-<li>Which comes first cardio or weights</li>
-<li>Strength Training Anatomy</li>
-</ul>
 <p>Crappy:</p>
 <ul>
 <li>Body By Science</li>
@@ -333,8 +359,6 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
 <li>Running on empty</li>
 <li>Natural Born Heroes</li>
 <li>Run or Die</li>
-<li>First : What it Takes to win</li>
-<li>Free+Style</li>
 </ul>
 
   <div id="disqus_thread"></div>
