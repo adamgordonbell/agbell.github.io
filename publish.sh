@@ -1,4 +1,5 @@
 set -e
+set -x
 git submodule init
 git submodule update
 cd _site
