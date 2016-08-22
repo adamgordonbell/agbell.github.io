@@ -1,7 +1,7 @@
 ---
 title: Bitcoin Transactions
 author: Adam Bell
-tags: prediction, good-judgement-project
+tags: prediction, good-judgement-project, bitcoin
 ---
 
 What will be the average number of Bitcoin transactions per day in the first week of June 2016?
