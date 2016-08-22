@@ -16,5 +16,6 @@ git commit -m "Update [ci skip]"
 git push origin master
 cd ..
 git add _site/
+git adda
 git commit -m "Update [ci skip]"
 git push origin hakyll
