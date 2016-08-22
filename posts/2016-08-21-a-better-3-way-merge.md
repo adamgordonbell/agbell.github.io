@@ -1,7 +1,7 @@
 ---
 title: A Better 3-way merge?
 author: Adam Bell
-tags: git, merging
+tags: git, merging, scala
 ---
 3-way merge works great for code merges in the majority of cases.  Can we do better, however.  Can we decrease the number of places where a manual conflict resolution is required.  I would say, yes we can, if we know more about the syntax of the file in question.
 <!--more-->
