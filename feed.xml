@@ -8,8 +8,57 @@
         <name>Adam Bell</name>
         <email>agbell at gmail.com</email>
     </author>
-    <updated>2016-08-21T00:00:00Z</updated>
+    <updated>2016-08-22T00:00:00Z</updated>
     <entry>
+    <title>Modifier Keys in the Home Row</title>
+    <link href="/posts/2016-08-22-modifier-keys-in-the-home-row.html" />
+    <id>/posts/2016-08-22-modifier-keys-in-the-home-row.html</id>
+    <published>2016-08-22T00:00:00Z</published>
+    <updated>2016-08-22T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="blog-post">
+  <h2 class="blog-post-title">
+    Modifier Keys in the Home Row
+  </h2>
+  <p class="blog-post-meta">
+    <span class="date">2016-08-22</span> - <span class="tags"><a href="/tags/keyboard.html">keyboard</a>, <a href="/tags/ergodox.html">ergodox</a></span>
+  <p><img src="/images/keyboard-layout_ergodox.png" alt="" /> With today’s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row. <!--more--></p>
+<p>I don’t like having to leave the home row on the keyboard enter commands like CTRL-S or even CTRL-ALT-Left Arrow. Using the tmk firmware or ( the qmk fork) I am able to have my keys function as normal when pressed, but as a modifier when held down.</p>
+<h2 id="dual-role-keys"><a href="https://en.wikipedia.org/wiki/Modifier_key#Dual-role_keys">Dual-role keys:</a></h2>
+<pre><code>
+It is possible to use (with some utility software) one same key both as a normal key and as a modifier.
+
+For example, you can use the space bar both as a normal Space bar and as a Shift. Intuitively, it&#39;ll be a Space when you want a whitespace, and a Shift when you want it to act as a shift. I.e. when you simply press and release it, it is the usual space, but when you press other keys, say X, Y and Z, while holding down the space, then they will be treated as ⇧ Shift plus X, Y and Z.
+
+The above example is known as &quot;SandS&quot;, standing for &quot;Space and Shift&quot; in Japan. But any number of any combinations are possible.
+
+To press shift+space in the previous example, you need in addition to a space/shift dual role key, one of (a) another space/shift key, (b) a usual shift, or (c) a usual space key.
+-- Wikipedia
+</code></pre>
+<p>In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt. Shift is placed under A and ;. Additionally, F or J active a layer with F1-F12 as well as some extra keys (~/|?) and arrow keys under my right hand. My Escape key also acts as the windows key if held down. It sounds complicated, but the muscle memory takes over after an hour or two and it just feels fast and simple.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h">My keymap for the ergodox keyboard</a></li>
+<li><a href="https://github.com/tmk/tmk_keyboard">TMK firmware</a></li>
+<li><a href="https://github.com/jackhumbert/qmk_firmwares">QMK firmware</a></li>
+</ul>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+]]></summary>
+</entry>
+<entry>
     <title>A Better 3-way merge?</title>
     <link href="/posts/2016-08-21-a-better-3-way-merge.html" />
     <id>/posts/2016-08-21-a-better-3-way-merge.html</id>
@@ -20,7 +69,7 @@
     A Better 3-way merge?
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-08-21</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a></span>
+    <span class="date">2016-08-21</span> - <span class="tags"><a href="/tags/git.html">git</a>, <a href="/tags/merging.html">merging</a>, <a href="/tags/scala.html">scala</a></span>
   <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question. <!--more--></p>
 <h2 id="an-example">An Example</h2>
 <h3 id="base-file">Base file:</h3>
@@ -546,37 +595,6 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
  }</code></pre></div>
 <p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'cascadeofinsightsadamgbell';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-]]></summary>
-</entry>
-<entry>
-    <title>Hakyll and CircleCi</title>
-    <link href="/posts/2015-07-31-hakyll-and-circleci.html" />
-    <id>/posts/2015-07-31-hakyll-and-circleci.html</id>
-    <published>2015-07-31T00:00:00Z</published>
-    <updated>2015-07-31T00:00:00Z</updated>
-    <summary type="html"><![CDATA[<div class="blog-post">
-  <h2 class="blog-post-title">
-    Hakyll and CircleCi
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">2015-07-31</span> - <span class="tags"><a href="/tags/blog.html">blog</a>, <a href="/tags/hakyll.html">hakyll</a>, <a href="/tags/ci.html">ci</a>, <a href="/tags/haskell.html">haskell</a></span>
-  <p>This blog was on tumblr, which was easy to setup and post and such. However, I spend like 8 hours a day with a text editor open and a git in terminal window. <!--more--> Also I’m always look for an excuse to use haskell. So I’m moving things over to <a href="http://jaspervdj.be/hakyll/">Hakyll</a>. I followed <a href="http://www.stackbuilders.com/news/dr-hakyll-create-a-github-page-with-hakyll-and-circleci">this great tutorial</a> on how to setup things up with CircleCI, so now I just commit and push and my site updates.</p>
-<p>So far, so good.</p>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
