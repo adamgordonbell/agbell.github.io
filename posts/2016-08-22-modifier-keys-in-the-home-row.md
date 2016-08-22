@@ -27,6 +27,6 @@ In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt.  
 
 Resources:
 
- * [My keymap for the ergodox keyboard](https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.hs)
+ * [My keymap for the ergodox keyboard](https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h)
  * [TMK firmware](https://github.com/tmk/tmk_keyboard)
  * [QMK firmware](https://github.com/jackhumbert/qmk_firmwares)
