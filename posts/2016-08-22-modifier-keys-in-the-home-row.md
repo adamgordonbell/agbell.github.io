@@ -1,7 +1,7 @@
 ---
 title: Modifier Keys in the Home Row
 author: Adam Bell
-tags: keyboard
+tags: keyboard, ergodox
 ---
 ![](/images/keyboard-layout_ergodox.png)
 With today's opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.
