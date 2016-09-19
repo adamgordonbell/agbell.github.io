@@ -1,9 +1,20 @@
 ---
-title: Contact
+title: Contact Me
 ---
+![](/images/profile.jpg)  
+I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at agbell@gmail.com.
 
-Um, yeah, contact me.
+More Adam:
 
-I can be found on facebook, twitter, linkedin or emailed at agbell at gmail.com
+ * [StackOverflow](http://stackoverflow.com/users/135202/adam)
+ * [GitHub](https://github.com/agbell/)
+ * [Linked In](https://www.linkedin.com/in/adamgbell)
+ * [Hacker News](https://news.ycombinator.com/user?id=agbell)
 
-Maybe I'll put a contact form here as well.  Time will tell.
+ Even More Adam:
+
+ * [Exercism](http://exercism.io/agbell)
+ * [Project Euler](https://projecteuler.net/profile/agbell.png)
+ * [Vim Golf](http://www.vimgolf.com/adamgbell)
+ * [Twitter](https://twitter.com/adamgbell)
+ * [Facebook](https://www.facebook.com/AdamGordonBell)
