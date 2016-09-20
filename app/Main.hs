@@ -25,10 +25,16 @@ main = do
       route idRoute
       compile compressCssCompiler
 
-    match (fromList ["about.md", "contact.md"]) $ do
+    match "index.md" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/wide.html" defaultContext
+        >>= relativizeUrls
+
+    match "pages/**" $ do
+      route (setExtension "html")
+      compile $ pandocCompiler
+        >>= loadAndApplyTemplate "templates/wide.html" defaultContext
         >>= relativizeUrls
 
     -- posts
@@ -147,7 +153,7 @@ recentFirstNonDrafts items = do
 buildPages :: (MonadMetadata m) => Pattern -> m Paginate
 buildPages pattern = buildPaginateWith (return . paginateEvery 5) pattern $ \index ->
    if index == 1
-      then fromFilePath "index.html"
+      then fromFilePath "pages/blog.html"
       else fromFilePath $ "index/p/" ++ show index ++ ".html"
 
 takeFromTo :: Int -> Int -> [a] -> [a]
