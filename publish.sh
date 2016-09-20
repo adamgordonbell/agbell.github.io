@@ -6,6 +6,7 @@ function pause(){
 }
 
 echo "All work must be commited in hakyll before running"
+pause
 git submodule init
 git submodule update
 cd _site
