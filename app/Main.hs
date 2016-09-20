@@ -28,13 +28,13 @@ main = do
     match "index.md" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/wide.html" defaultContext
+        >>= loadAndApplyTemplate "templates/frame.html" defaultContext
         >>= relativizeUrls
 
     match "pages/**" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/wide.html" defaultContext
+        >>= loadAndApplyTemplate "templates/frame.html" defaultContext
         >>= relativizeUrls
 
     -- posts
@@ -45,6 +45,7 @@ main = do
         >>= loadAndApplyTemplate "templates/post.html" (postContextWithTags tags)
         >>= saveSnapshot "feed-post-content"
         >>= loadAndApplyTemplate "templates/default.html" (postContextWithTags tags)
+        >>= loadAndApplyTemplate "templates/frame.html" (postContextWithTags tags)
         >>= relativizeUrls
 
 
@@ -60,6 +61,7 @@ main = do
           makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= loadAndApplyTemplate "templates/frame.html" ctx
                     >>= relativizeUrls
 
     -- index and paged listing
@@ -68,6 +70,7 @@ main = do
         compile $ makeItem ""
             >>= loadAndApplyTemplate "templates/post-list.html" (indexContext index pages tags)
             >>= loadAndApplyTemplate "templates/default.html" (indexContext index pages tags)
+            >>= loadAndApplyTemplate "templates/frame.html" (indexContext index pages tags)
             >>= relativizeUrls
 
     -- archive
@@ -83,6 +86,7 @@ main = do
         makeItem ""
           >>= loadAndApplyTemplate "templates/archive.html" archiveContext
           >>= loadAndApplyTemplate "templates/default.html" archiveContext
+          >>= loadAndApplyTemplate "templates/frame.html" archiveContext
           >>= relativizeUrls
 
     -- feeds
