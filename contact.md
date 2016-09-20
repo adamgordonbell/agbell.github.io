@@ -18,4 +18,3 @@ More Adam:
  * [Vim Golf](http://www.vimgolf.com/adamgbell)
  * [Twitter](https://twitter.com/adamgbell)
  * [Facebook](https://www.facebook.com/AdamGordonBell)
-dd
