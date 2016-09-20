@@ -28,13 +28,15 @@ main = do
     match "index.md" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/frame.html" defaultContext
+        >>= loadAndApplyTemplate "templates/page.html" (postContextWithTags tags)
+        >>= loadAndApplyTemplate "templates/frame.html" (postContextWithTags tags)
         >>= relativizeUrls
 
     match "pages/**" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/frame.html" defaultContext
+        >>= loadAndApplyTemplate "templates/page.html" (postContextWithTags tags)
+        >>= loadAndApplyTemplate "templates/frame.html" (postContextWithTags tags)
         >>= relativizeUrls
 
     -- posts
@@ -57,7 +59,7 @@ main = do
           posts <- recentFirstNonDrafts =<< loadAll pattern
           let ctx = constField "title" title <>
                     listField "posts" postContext (return posts) <>
-                    defaultContext
+                    (postContextWithTags tags)
           makeItem ""
                     >>= loadAndApplyTemplate "templates/tag.html" ctx
                     >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -78,15 +80,10 @@ main = do
       route idRoute
       compile $ do
         posts <- recentFirstNonDrafts =<< loadAll "posts/**"
-        let archiveContext =
-              listField "posts" postContext (return posts) `mappend`
-              constField "title" "Archives" `mappend`
-              defaultContext
-
         makeItem ""
-          >>= loadAndApplyTemplate "templates/archive.html" archiveContext
-          >>= loadAndApplyTemplate "templates/default.html" archiveContext
-          >>= loadAndApplyTemplate "templates/frame.html" archiveContext
+          >>= loadAndApplyTemplate "templates/archive.html" (archiveContext posts tags)
+          >>= loadAndApplyTemplate "templates/default.html" (archiveContext posts tags)
+          >>= loadAndApplyTemplate "templates/frame.html" (archiveContext posts tags)
           >>= relativizeUrls
 
     -- feeds
@@ -104,6 +101,12 @@ main = do
                    =<< loadAllSnapshots "posts/**" "feed-post-content"
         renderRss feedConfiguration feedContext posts
 
+archiveContext :: [Item String] -> Tags -> Context String
+archiveContext posts tags =
+   listField "posts" postContext (return posts)
+  <> constField "title" "Archives"
+  <> (postContextWithTags tags)
+
 feedContext :: Context String
 feedContext =
   postContext <> bodyField "description"
@@ -115,8 +118,9 @@ postContext =
 
 postContextWithTags :: Tags -> Context String
 postContextWithTags tags =
-  tagsField "tags" tags <>
-  postContext
+  tagsField "tags" tags
+  <> field "taglist" (\_ -> renderTagCloud 80 250 tags)
+  <> postContext
 
 postContextWithTeaser :: Tags -> Context String
 postContextWithTeaser tags =
