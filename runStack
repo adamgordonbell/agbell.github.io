@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-ZLIB="$(nix-build --no-out-link "<nixpkgs>" -A zlib)"
-PSQL="$(nix-build --no-out-link "<nixpkgs>" -A postgresql)"
-exec stack                                                             \
-     --extra-lib-dirs=${ZLIB}/lib --extra-include-dirs=${ZLIB}/include \
-     --extra-lib-dirs=${PSQL}/lib --extra-include-dirs=${PSQL}/include \
-     $*
