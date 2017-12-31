@@ -18,7 +18,7 @@ dependencies:
   override:
     - stack setup +RTS -M1024m -K1024m :
         timeout: 1200
-    - stack build --fast --dependencies-only -j1 :
+    - stack build -j1 :
         timeout: 1200
 
 test:
