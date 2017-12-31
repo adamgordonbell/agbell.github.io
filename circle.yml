@@ -16,13 +16,13 @@ dependencies:
     - gunzip /tmp/stack.gz && chmod +x /tmp/stack
     - sudo mv /tmp/stack /usr/bin/stack
   override:
-    - stack setup:
+    - stack setup +RTS -M1024m -K1024m :
         timeout: 1200
 
 
 test:
   override:
-    - stack build:
+    - stack build --only-dependencies -j1 :
         timeout: 1200
     - git submodule init
     - git submodule update
