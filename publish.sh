@@ -15,7 +15,8 @@ git checkout master
 cd ..
 stack setup
 stack build
-stack exec cascadeofinsights clean
+# not needed bc removed
+#stack exec cascadeofinsights clean
 stack exec cascadeofinsights build
 
 cd _site/
