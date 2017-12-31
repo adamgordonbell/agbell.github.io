@@ -11,6 +11,7 @@ Hi!  I'm Adam Bell.  I am a software engineer.  I love building software and I l
 More Adam:
 
  * [My Blog](/pages/blog.html)
+ * [Podcast I Host](http://corecursive.com)
  * [GitHub](https://github.com/agbell/)
  * [StackOverflow](http://stackoverflow.com/users/135202/adam)
  * [Linked In](https://www.linkedin.com/in/adamgbell)
