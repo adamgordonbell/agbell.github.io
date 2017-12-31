@@ -11,7 +11,7 @@ tags: git, merging, scala
 ### Base file:
 ``` scala
 def x(a : string, b : Int) : Option[Int]
-```
+```  
 
 ### Their file:
 ``` scala
