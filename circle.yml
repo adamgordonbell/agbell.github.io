@@ -21,7 +21,6 @@ dependencies:
     - stack build --fast --dependencies-only -j1 :
         timeout: 1200
 
-
 test:
   override:
     - git submodule init
