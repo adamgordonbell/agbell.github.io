@@ -1,5 +1,5 @@
 set -e
-sh runStack --nix setup
-sh runStack --nix build
-sh runStack --nix exec cascadeofinsights clean
-sh runStack --nix exec cascadeofinsights watch
+sh stack setup
+sh stack build
+sh stack exec cascadeofinsights clean
+sh stack exec cascadeofinsights watch

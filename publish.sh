@@ -12,10 +12,10 @@ git submodule update
 cd _site
 git checkout master
 cd ..
-sh runStack --nix setup
-sh runStack --nix build
-#sh runStack --nix exec cascadeofinsights clean
-sh runStack --nix exec cascadeofinsights build
+sh stack setup
+sh stack build
+sh stack exec cascadeofinsights clean
+sh stack exec cascadeofinsights build
 
 cd _site/
 git adda

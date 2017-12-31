@@ -15,5 +15,6 @@ More Adam:
  * [StackOverflow](http://stackoverflow.com/users/135202/adam)
  * [Linked In](https://www.linkedin.com/in/adamgbell)
  * [Email](mailto:agbell@gmail.com)
+ 
 </div>
 </div>
