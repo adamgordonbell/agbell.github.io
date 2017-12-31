@@ -1,5 +1,5 @@
 set -e
-sh stack setup
-sh stack build
-sh stack exec cascadeofinsights clean
-sh stack exec cascadeofinsights watch
+stack setup
+stack build
+stack exec cascadeofinsights clean
+stack exec cascadeofinsights watch

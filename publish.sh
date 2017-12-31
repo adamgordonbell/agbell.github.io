@@ -7,15 +7,16 @@ function pause(){
 
 echo "All work must be commited in hakyll before running"
 pause
+rm -rf /_site
 git submodule init
 git submodule update
 cd _site
 git checkout master
 cd ..
-sh stack setup
-sh stack build
-sh stack exec cascadeofinsights clean
-sh stack exec cascadeofinsights build
+stack setup
+stack build
+stack exec cascadeofinsights clean
+stack exec cascadeofinsights build
 
 cd _site/
 git adda
