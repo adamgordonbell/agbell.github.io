@@ -12,8 +12,8 @@ dependencies:
   cache_directories:
     - "~/.stack"
   pre:
-    - wget https://get.haskellstack.org/ -qO- /tmp/stack
-    - chmod +x /tmp/stack
+    - wget https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64-static.tar.gz -O /tmp/stack.gz
+    - gunzip /tmp/stack.gz && chmod +x /tmp/stack
     - sudo mv /tmp/stack /usr/bin/stack
   override:
     - stack setup +RTS -M1024m -K1024m :
