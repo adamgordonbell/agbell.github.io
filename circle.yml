@@ -11,9 +11,9 @@ machine:
 dependencies:
   cache_directories:
     - "~/.stack"
-  pre:
-    - curl -L https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz | tar zx -C /tmp
-    - sudo mv /tmp/stack-1.6.3-linux-x86_64/stack /usr/bin
+  # pre:
+    # - curl -L https://github.com/commercialhaskell/stack/releases/download/v1.6.3/stack-1.6.3-linux-x86_64.tar.gz | tar zx -C /tmp
+    # - sudo mv /tmp/stack-1.6.3-linux-x86_64/stack /usr/bin
   override:
     - stack setup :
         timeout: 1200
