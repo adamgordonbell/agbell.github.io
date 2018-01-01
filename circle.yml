@@ -32,6 +32,7 @@ deployment:
   production:
     branch: hakyll
     commands:
+      - stack build --fast -j1
       - git config --global user.email circleci@circleci
       - git config --global user.name CircleCI
       - cd _site/ && git status
