@@ -17,7 +17,7 @@ dependencies:
   override:
     - stack setup :
         timeout: 1200
-    - stack build -j1 :
+    - stack build --fast --only-dependencies -j1 :
         timeout: 1200
 
 test:
