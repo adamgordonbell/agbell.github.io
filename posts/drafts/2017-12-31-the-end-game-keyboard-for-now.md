@@ -1,8 +1,7 @@
 ---
 title: The End Game Keyboard (for now)
 author: Adam Bell
-tags: draft
-#keyboard, ergodox, planck, lets-split
+tags: draft, keyboard, ergodox, planck, lets-split
 ---
 
 If I could combine the features I love from a bunch of keyboards ....
