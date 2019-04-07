@@ -2,11 +2,11 @@
 title: Adam Bell - Software Engineer
 ---
 <div class="row">
-<div class="col-md-4">
-<img src="./images/profile.jpg" height="250px" width="250px" alt="Adam Bell">
+<div class="col-md-6">
+<img src="./images/profiles/IMG_1177_web.jpg" height="550px" width="500px" alt="Adam Gordon Bell">
 </div>
-<div class="col-md-8">  
-Hi!  I'm Adam Bell.  I am a software engineer.  I love building software and I love learning things.  I am based in Peterborough, Canada but I work remotely with developers all over the world.
+<div class="col-md-6">  
+Hi!  I'm Adam Gordon Bell.  I am a software engineer.  I love building software and I love learning things.  I am based in Peterborough, Canada but I work remotely with developers all over the world.  I have a podcast called [CoRecursive](http://corecursive.com)
 
 More Adam:
 

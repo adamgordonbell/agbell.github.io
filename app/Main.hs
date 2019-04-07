@@ -17,9 +17,13 @@ main = do
     pages <- buildPages "posts/**"
     match "templates/*" (compile templateCompiler)
 
-    match "images/*" $ do
+    match "images/profiles/*" $ do
       route idRoute
       compile copyFileCompiler
+
+    match "images/*" $ do
+        route idRoute
+        compile copyFileCompiler  
 
     match "css/*" $ do
       route idRoute
