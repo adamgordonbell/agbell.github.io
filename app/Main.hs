@@ -32,14 +32,14 @@ main = do
     match "index.md" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/page.html" (postContextWithTags tags)
+        >>= loadAndApplyTemplate "templates/mainpage.html" (postContextWithTags tags)
         >>= loadAndApplyTemplate "templates/frame.html" (postContextWithTags tags)
         >>= relativizeUrls
 
     match "pages/**" $ do
       route (setExtension "html")
       compile $ pandocCompiler
-        >>= loadAndApplyTemplate "templates/page.html" (postContextWithTags tags)
+        >>= loadAndApplyTemplate "templates/mainpage.html" (postContextWithTags tags)
         >>= loadAndApplyTemplate "templates/frame.html" (postContextWithTags tags)
         >>= relativizeUrls
 

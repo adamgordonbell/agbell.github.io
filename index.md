@@ -10,7 +10,7 @@ Hi!  I'm Adam Gordon Bell.  I am a software engineer.  I love building software 
 
 More Adam:
 
- * [My Blog](/pages/blog.html)
+ * [My Abandoned Blog](/pages/blog.html)
  * [Podcast I Host](http://corecursive.com)
  * [GitHub](https://github.com/agbell/)
  * [StackOverflow](http://stackoverflow.com/users/135202/adam)
