@@ -1,9 +1,12 @@
 ---
 title: Contact Me
+title_short: Hit me up
+description: Email and places I have or do hangout
 ---
 <div class="row">
 <div class="col-md-4">
-<img src="/images/profile.jpg" height="250px" width="250px" alt="Adam Bell">
+<img src="/images/profiles/IMG_0447_web.jpg" height="400px" width="300px" alt="Adam Bell"><br/>
+<center><a href="/images/profiles/IMG_0447.jpg">high resolution version</a></center>
 </div>
 <div class="col-md-8">
 I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at adam@corecursive.com.
