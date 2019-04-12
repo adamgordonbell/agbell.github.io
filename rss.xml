@@ -17,7 +17,7 @@
   </h2>
   <p class="blog-post-meta">
     <span class="date">2016-08-22</span> - <span class="tags"><a href="/tags/keyboard.html">keyboard</a>, <a href="/tags/ergodox.html">ergodox</a></span>
-  <p><img src="/images/keyboard-layout_ergodox.png" alt="" /> With today’s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row. <!--more--></p>
+  <p><img src="/images/keyboard-layout_ergodox.png" /> With today’s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row. <!--more--></p>
 <p>I don’t like having to leave the home row on the keyboard enter commands like CTRL-S or even CTRL-ALT-Left Arrow. Using the tmk firmware or ( the qmk fork) I am able to have my keys function as normal when pressed, but as a modifier when held down.</p>
 <h2 id="dual-role-keys"><a href="https://en.wikipedia.org/wiki/Modifier_key#Dual-role_keys">Dual-role keys:</a></h2>
 <pre><code>
@@ -69,39 +69,39 @@ To press shift+space in the previous example, you need in addition to a space/sh
   <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question. <!--more--></p>
 <h2 id="an-example">An Example</h2>
 <h3 id="base-file">Base file:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int) : Option[Int]</a></code></pre></div>
 <h3 id="their-file">Their file:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int, c : String) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int, c : String) : Option[Int]</a></code></pre></div>
 <h3 id="our-file">Our File:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String) : Option[Int]</a></code></pre></div>
 <h3 id="expected-result">Expected Result:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String, c : String) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String, c : String) : Option[Int]</a></code></pre></div>
 <p>The above will need to manually resolved in git, both branches makes change to the same line, so git does not know how to resolve this.</p>
 <p>However, if we had a similar merge, where the code was split across multiple lines, the 3-way merge would have no problem:</p>
 <h3 id="base-file-1">Base file:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
-  a : string
-  ,b : Int
-   ) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  a : string</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">  ,b : Int</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">   ) : Option[Int]</a></code></pre></div>
 <h3 id="their-file-1">Their file:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
-  a : string
-  ,b : Int
-  ,c : String
-  ) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  a : string</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  ,b : Int</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  ,c : String</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">  ) : Option[Int]</a></code></pre></div>
 <h3 id="our-file-1">Our File:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
-  a : string
-  ,b: Int
-  ,b2 : String
-  ) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">  a : string</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">  ,b: Int</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">  ,b2 : String</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">  ) : Option[Int]</a></code></pre></div>
 <h3 id="result">Result:</h3>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> <span class="fu">x</span>(
-  a : string
-  ,b: Int
-  ,b2 : String
-  ,c  : String
-  ) : Option[Int]</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">  a : string</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">  ,b: Int</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">  ,b2 : String</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">  ,c  : String</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">  ) : Option[Int]</a></code></pre></div>
 <p>Thus we can see that by knowing where a line in a file can be split, we should be able to eliminate some merge conflicts. If we wrote a bash script that called the default 3-way merge, and in cases of conflict, it introduced new lines everywhere possible based on the syntax rules of file and then called it again, before removing the introduced new lines, we would reduce the number of conflicts.</p>
 <p>It would handle our original case, by spreading the code across more lines, merging it and then recombining it. We could then use that script as our custom merge driver.</p>
 <p>Now I just have to write the thing and test it. Stay tuned.</p>
@@ -191,44 +191,44 @@ To press shift+space in the previous example, you need in addition to a space/sh
 </ul>
 <!--more-->
 <h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte:</h3>
-<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">with</span> replacement <span class="kw">as</span> (
-	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
-  <span class="kw">where</span> x= something
- )
- <span class="kw">select</span> * <span class="kw">from</span> replacement</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="kw">where</span> x= something</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"> )</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"> <span class="kw">select</span> * <span class="kw">from</span> replacement</a></code></pre></div>
 <p><em>The cte might seem verbose, but I’m going to need it later, and it helps my sql stay organized</em></p>
 <h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes:</h3>
-<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">BEGIN</span>;
-
-
-<span class="kw">with</span> replacement <span class="kw">as</span> (
-	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
-  <span class="kw">where</span> x= something
- )
-
- <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname
- <span class="kw">set</span> <span class="fu">value</span> = replacement.value
- <span class="kw">from</span> replacement
- <span class="kw">where</span> shortname.condtion1 = replacement.condtion1
- <span class="kw">and</span> shortname.condtion2 = replacement.condition2;
-
-<span class="co">-- Test query for manually confirming the results look like what you were expecting</span>
-<span class="kw">SELECT</span> <span class="fu">value</span>, condition1, condition2 <span class="kw">from</span> <span class="ot">&quot;LongName&quot;</span> shortname
-<span class="kw">where</span> x=something
-
- <span class="kw">ROLLBACK</span>;</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">BEGIN</span>;</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">  <span class="kw">where</span> x= something</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"> )</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"> <span class="kw">set</span> <span class="fu">value</span> = replacement.value</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"> <span class="kw">from</span> replacement</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"> <span class="kw">where</span> shortname.condtion1 = replacement.condtion1</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"> <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">-- Test query for manually confirming the results look like what you were expecting</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="kw">SELECT</span> <span class="fu">value</span>, condition1, condition2 <span class="kw">from</span> <span class="ot">&quot;LongName&quot;</span> shortname</a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="kw">where</span> x=something</a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"> <span class="kw">ROLLBACK</span>;</a></code></pre></div>
 <p>If the select result looks good, you can run it without the transaction to update.</p>
 <h3 id="run-it">Run it</h3>
-<div class="sourceCode"><pre class="sourceCode sql"><code class="sourceCode sql"><span class="kw">with</span> replacement <span class="kw">as</span> (
-	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere
-  <span class="kw">where</span> x= something
- )
-
- <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname
- <span class="kw">set</span> <span class="fu">value</span> = replacement.value
- <span class="kw">from</span> replacement
- <span class="kw">where</span> shortname.condtion1 = replacement.condtion1
- <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="kw">where</span> x= something</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"> )</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"> <span class="kw">set</span> <span class="fu">value</span> = replacement.value</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"> <span class="kw">from</span> replacement</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"> <span class="kw">where</span> shortname.condtion1 = replacement.condtion1</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"> <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</a></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -274,21 +274,21 @@ To press shift+space in the previous example, you need in addition to a space/sh
 <h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix :</h3>
 <p>We created a reference to our forked packages using a let expression in our configuration.nix file. This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.</p>
 <p>Using a let expression, we pulled in our fork of nixpkgs:</p>
-<pre class="configuration.nix"><code>{ config, pkgs, ... }:
-
-let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-    ....</code></pre>
-<pre class="configuration.nix"><code>...
-  services.postgresql = {
-        enable = true;
-        extraPlugins = [ (custompkgs.postgis.override { postgresql = pkgs.postgresql95; }).v_2_2_1 ];
-    };
-...</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode configuration.nix"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">{</span> <span class="ex">config</span>, pkgs, ... <span class="kw">}</span>:</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="bu">let</span> custompkgs = import /usr/local/nixpkgs/default.nix <span class="dt">{}</span><span class="kw">;</span> <span class="kw">in</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">{</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="ex">imports</span> =</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">    [ <span class="co"># Include the results of the hardware scan.</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">      <span class="ex">./hardware-configuration.nix</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">    ];</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="ex">....</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode configuration.nix"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">...</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="ex">services.postgresql</span> = {</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">        <span class="bu">enable</span> = true<span class="kw">;</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">        <span class="ex">extraPlugins</span> = [ (custompkgs.postgis.override { postgresql = pkgs.postgresql95<span class="kw">;</span> })<span class="ex">.v_2_2_1</span> ]<span class="kw">;</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">    };</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="ex">...</span></a></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -334,8 +334,10 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
 <li>Who is making these transactions? What is causing the increase?</li>
 <li><a href="https://tradeblock.com/blog/analysis-of-bitcoin-transaction-size-trends">Some represent a stress test of the network</a></li>
 <li><a href="https://blog.coinbase.com/2015/07/15/bitcoin-trends-in-1h-2015/">rest is a wide demographic</a></li>
-<li>How many transactions per day can bitcoin handle</li>
+<li>How many transactions per day can bitcoin handle
+<ul>
 <li>Currently 7 transactions per second which is 600K transactions in day, so does not affect prediction</li>
+</ul></li>
 <li></li>
 </ul>
 <h2 id="other-predictors">Other predictors</h2>
@@ -435,35 +437,35 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
   <p class="blog-post-meta">
     <span class="date">2015-08-19</span> - <span class="tags"><a href="/tags/scala.html">scala</a>, <a href="/tags/slick.html">slick</a>, <a href="/tags/tuples.html">tuples</a></span>
   <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">import</span> shapeless.<span class="fu">_</span>
-<span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>.<span class="fu">_</span>
-<span class="kw">import</span> poly.<span class="fu">_</span>
-
-<span class="kw">object</span> GroupLists {
-<span class="kw">def</span> group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {
-      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D)]()
-      <span class="kw">for</span> (i &lt;- t) {
-        <span class="kw">val</span> key = i.<span class="fu">head</span>
-        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
-        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
-      }
-      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
-    }</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">import</span> shapeless._</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>._</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">import</span> poly._</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">object</span> GroupLists {</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">def</span> group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D)]()</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">      <span class="kw">for</span> (i &lt;- t) {</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">        <span class="kw">val</span> key = i.<span class="fu">head</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">      }</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">      map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>, b._<span class="fl">2.</span>toList) ++ <span class="fu">mapOther</span>(b._<span class="dv">1</span>)).<span class="fu">toList</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    }</a></code></pre></div>
 <!--more-->
 <p>That was easy. The use of head and drop from shapeless lets you act on tuples like they are lists. However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.</p>
 <p>Here is the same implementation for 5-tuples:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
-<span class="kw">def</span> group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)] = {
-      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D,E)]()
-      <span class="kw">for</span> (i &lt;- t) {
-        <span class="kw">val</span> key = i.<span class="fu">head</span>
-        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span>
-        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))
-      }
-      map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>, b.<span class="fu">_2</span>.<span class="fu">toList</span>) ++ <span class="fu">mapOther</span>(b.<span class="fu">_1</span>)).<span class="fu">toList</span>
-    }</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb2-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">def</span> group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)] = {</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D,E)]()</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">      <span class="kw">for</span> (i &lt;- t) {</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">        <span class="kw">val</span> key = i.<span class="fu">head</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">      }</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">      map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>, b._<span class="fl">2.</span>toList) ++ <span class="fu">mapOther</span>(b._<span class="dv">1</span>)).<span class="fu">toList</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11">    }</a></code></pre></div>
 <p>The interesting thing here is that, except for type annotations, these definitions are exactly the same.</p>
 <p>To be continued…</p>
 
@@ -548,48 +550,48 @@ let custompkgs = import /usr/local/nixpkgs/default.nix {}; in
   <p class="blog-post-meta">
     <span class="date">2015-08-04</span> - <span class="tags"><a href="/tags/scala.html">scala</a>, <a href="/tags/slick.html">slick</a></span>
   <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">val</span> join = <span class="kw">for</span> {
-     (f,b) &lt;-
-                  foo.<span class="fu">filter</span>(...) on  innerJoin
-                  bar <span class="fu">on</span> (...)
-   } <span class="kw">yield</span> (o,i,s)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">val</span> join = <span class="kw">for</span> {</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">     (f,b) &lt;-</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">                  foo.<span class="fu">filter</span>(...) on  innerJoin</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">                  bar <span class="fu">on</span> (...)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">   } <span class="kw">yield</span> (o,i,s)</a></code></pre></div>
 <!--more-->
 <p>The type of join will be a List[(foo,bar)]. I want the bars grouped by foo, not a tuple of each. I can transform to a grouped format like so:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {
-    <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()
-    <span class="kw">for</span> (i &lt;- t) {
-      <span class="kw">val</span> key = i.<span class="fu">_1</span>
-      <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">_2</span>
-    }
-    map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
-  }</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">def</span> group1[A,B](t : List[(A,B)]) : List[(A,List[B])] = {</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">    <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">for</span> (i &lt;- t) {</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">      <span class="kw">val</span> key = i._<span class="dv">1</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">      <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i._<span class="dv">2</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">    }</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>,b._<span class="fl">2.</span>toList)).<span class="fu">toList</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">  }</a></code></pre></div>
 <p>This groups one element from a tuple into a sublist. If I later add the requirement that each bar has many baz than I need to another method that transforms tuples of 3 into two nested lists.</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala">
-<span class="kw">def</span> group2[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,List[C])])] = {
-    <span class="fu">group2Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group1</span>(x.<span class="fu">_2</span>)))
-  }
-
-<span class="kw">private</span> <span class="kw">def</span> group2Internal[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,C)])] = {
-   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C)]]()
-   <span class="kw">for</span> (i &lt;- t) {
-     <span class="kw">val</span> key = i.<span class="fu">_1</span>
-     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>))
-   }
-   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
- }</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb3-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">def</span> group2[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,List[C])])] = {</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="fu">group2Internal</span>(t).<span class="fu">map</span>(x =&gt; (x._<span class="dv">1</span>,<span class="fu">group1</span>(x._<span class="dv">2</span>)))</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">  }</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">private</span> <span class="kw">def</span> group2Internal[A,B,C](t : List[(A,B,C)]) : List[(A,List[(B,C)])] = {</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C)]]()</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">   <span class="kw">for</span> (i &lt;- t) {</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">     <span class="kw">val</span> key = i._<span class="dv">1</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C)]()) + ((i._<span class="dv">2</span>,i._<span class="dv">3</span>))</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">   }</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">   map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>,b._<span class="fl">2.</span>toList)).<span class="fu">toList</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"> }</a></code></pre></div>
 <p>I can do the same for grouping into three nested lists:</p>
-<div class="sourceCode"><pre class="sourceCode scala"><code class="sourceCode scala"><span class="kw">def</span> group3[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,List[(C,List[D])])])] = {
-    <span class="fu">group3Internal</span>(t).<span class="fu">map</span>(x =&gt; (x.<span class="fu">_1</span>,<span class="fu">group2</span>(x.<span class="fu">_2</span>)))
-}
-
-<span class="kw">private</span> <span class="kw">def</span> group3Internal[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,C,D)])] = {
-   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C,D)]]()
-   <span class="kw">for</span> (i &lt;- t) {
-     <span class="kw">val</span> key = i.<span class="fu">_1</span>
-     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C,D)]()) + ((i.<span class="fu">_2</span>,i.<span class="fu">_3</span>,i.<span class="fu">_4</span>))
-   }
-   map.<span class="fu">map</span>(b =&gt; (b.<span class="fu">_1</span>,b.<span class="fu">_2</span>.<span class="fu">toList</span>)).<span class="fu">toList</span>
- }</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">def</span> group3[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,List[(C,List[D])])])] = {</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">    <span class="fu">group3Internal</span>(t).<span class="fu">map</span>(x =&gt; (x._<span class="dv">1</span>,<span class="fu">group2</span>(x._<span class="dv">2</span>)))</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw">private</span> <span class="kw">def</span> group3Internal[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[(B,C,D)])] = {</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">   <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[(B,C,D)]]()</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">   <span class="kw">for</span> (i &lt;- t) {</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">     <span class="kw">val</span> key = i._<span class="dv">1</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">     <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[(B,C,D)]()) + ((i._<span class="dv">2</span>,i._<span class="dv">3</span>,i._<span class="dv">4</span>))</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">   }</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">   map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>,b._<span class="fl">2.</span>toList)).<span class="fu">toList</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"> }</a></code></pre></div>
 <p>There is obviously a pattern here that should be abstractable. However, at the type level, tuples of different sizes are unqiue types, so this gets tricky. It should be possible to use the <a href="https://github.com/milessabin/shapeless">shapeless</a> library to abstract over the tuple size. In practice I never need more than group3, so this will stay in its expanded form for now.</p>
 
   <div id="disqus_thread"></div>

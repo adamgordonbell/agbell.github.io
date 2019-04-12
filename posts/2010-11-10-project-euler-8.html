@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Cascade Of Insights - Project Euler 8 in C#</title>
+    <title>Adam Gordon Bell - Project Euler 8 in C#</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-blog.css">
@@ -16,26 +16,29 @@
   </head>
 
   <body>
-
+    
     <div class="blog-masthead">
       <div class="container">
 	       <nav class="blog-nav">
            <a class="blog-nav-item" href="../">Home</a>
-           <a class="blog-nav-item" href="../pages/blog.html">Blog</a>
+           <a class="blog-nav-item" href="../">About</a>
+           <a class="blog-nav-item" href="../">Interviews</a>
+           <a class="blog-nav-item" href="../">Talks</a>
            <a class="blog-nav-item" href="../pages/contact.html">Contact</a>
+           <a class="blog-nav-item" href="../pages/blog.html">Blog</a>
            <a class="blog-nav-item" href="../archive.html">Blog Archive</a>
+           <a class="blog-nav-item" href="../archive.html">Photos</a>
 	      </nav>
       </div>
     </div>
 
     <div class="container">
       <div class="blog-header">
-	       <h1 class="blog-title">Cascade Of Insights</h1>
-	         <p class="lead blog-description">Personal Site of Adam Gordon Bell - Software Engineer</p>
+	       <h1 class="blog-title">Hey, this is my blog</h1>
+	         <p class="lead blog-description">It is somewhat abandoned.</p>
       </div>
-        
-
-<div class="row">
+				<div class="row">
+					<div class="col-sm-12 blog-main" <div class="row">
 	<div class="col-sm-8 blog-main">
 	  <div class="blog-post">
   <h2 class="blog-post-title">
@@ -46,37 +49,44 @@
   <p>Discover the largest product of five consecutive digits in the 1000-digit number.</p>
 <p>http://projecteuler.net/index.php?section=problems&amp;id=8</p>
 <!--more-->
-<p>``` csharp [TestClass] public class Problem8 {</p>
-<pre><code>    [TestMethod]
-    public void Answer()
-    {
-        var Consecutive5s =
-            from a in 0.To(999 - 5)
-            select new
-            {
-                sum = ConsecutiveFive(a)
-                    .Select(x =&gt; Convert.ToInt32(x))
-                    .Product(),
-                numbers = ConsecutiveFive(a)
-            };
-
-        var max = Consecutive5s.First(x =&gt; x.sum == Consecutive5s.Max(y =&gt; y.sum));
-        Console.WriteLine(max.sum);
-    }
-
-    static IEnumerable&lt;Char&gt; ConsecutiveFive(int start)
-    {
-        return numbers
-                    .AsEnumerable()
-                    .Skip(start)
-                    .Take(5);
-
-    }
-
-
-    static string numbers = &quot;7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450&quot;;
-}</code></pre>
-<p>public static int Product(this IEnumerable<int> source) { return source.Aggregate<int>((x, y) =&gt; x * y); } ```</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode csharp"><code class="sourceCode cs"><a class="sourceLine" id="cb1-1" data-line-number="1">[TestClass]</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    <span class="kw">public</span> <span class="kw">class</span> Problem8</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    {</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">        [TestMethod]</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">        <span class="kw">public</span> <span class="dt">void</span> <span class="fu">Answer</span>()</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">        {</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">            var Consecutive5s =</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">                from a <span class="kw">in</span> <span class="fl">0.</span><span class="fu">To</span>(<span class="dv">999</span> - <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">                select <span class="kw">new</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">                {</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">                    sum = <span class="fu">ConsecutiveFive</span>(a)</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">                        .<span class="fu">Select</span>(x =&gt; Convert.<span class="fu">ToInt32</span>(x))</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">                        .<span class="fu">Product</span>(),</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">                    numbers = <span class="fu">ConsecutiveFive</span>(a)</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">                };</a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">            <span class="dt">var</span> max = Consecutive5s.<span class="fu">First</span>(x =&gt; x.<span class="fu">sum</span> == Consecutive5s.<span class="fu">Max</span>(y =&gt; y.<span class="fu">sum</span>));</a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">            Console.<span class="fu">WriteLine</span>(max.<span class="fu">sum</span>);</a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">        }</a>
+<a class="sourceLine" id="cb1-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">        <span class="kw">static</span> IEnumerable&lt;Char&gt; <span class="fu">ConsecutiveFive</span>(<span class="dt">int</span> start)</a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">        {</a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">            <span class="kw">return</span> numbers</a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">                        .<span class="fu">AsEnumerable</span>()</a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">                        .<span class="fu">Skip</span>(start)</a>
+<a class="sourceLine" id="cb1-27" data-line-number="27">                        .<span class="fu">Take</span>(<span class="dv">5</span>);</a>
+<a class="sourceLine" id="cb1-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb1-29" data-line-number="29">        }</a>
+<a class="sourceLine" id="cb1-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb1-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb1-32" data-line-number="32">        <span class="kw">static</span> <span class="dt">string</span> numbers = <span class="st">&quot;7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450&quot;</span>;</a>
+<a class="sourceLine" id="cb1-33" data-line-number="33">    }</a>
+<a class="sourceLine" id="cb1-34" data-line-number="34"></a>
+<a class="sourceLine" id="cb1-35" data-line-number="35"> <span class="kw">public</span> <span class="kw">static</span> <span class="dt">int</span> <span class="fu">Product</span>(<span class="kw">this</span> IEnumerable&lt;<span class="dt">int</span>&gt; source)</a>
+<a class="sourceLine" id="cb1-36" data-line-number="36"> {</a>
+<a class="sourceLine" id="cb1-37" data-line-number="37">            <span class="kw">return</span> source.<span class="fu">Aggregate</span>&lt;<span class="dt">int</span>&gt;((x, y) =&gt; x * y);</a>
+<a class="sourceLine" id="cb1-38" data-line-number="38"> }</a></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -98,7 +108,7 @@
 	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 	  <div class="sidebar-module sidebar-module-inset">
 	    <h4>About</h4>
-	    <p>Adam Bell says stuff. Software building stuff mainly.</p>
+	    <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
 	  </div>
 	  <div class="sidebar-module">
 	    <h4>Elsewhere</h4>
@@ -122,16 +132,16 @@
 	  </div>
 	</div>
 </div>
+</div>
+</div>
+</div>
 
-    </div>
-
-    <footer class="blog-footer">
-      <p>
-	       Site made with
-	        <a href="http://jaspervdj.be/hakyll">Hakyll</a>
-      </p>
-    </footer>
-    <!-- google analytics -->
+<footer class="blog-footer">
+<p>
+ Site made with
+	<a href="http://jaspervdj.be/hakyll">Hakyll</a>
+</p>
+</footer>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
