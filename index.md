@@ -9,15 +9,22 @@ description: This is the website for Adam Gordon Bell -  developer, podcast host
 <center><a href="./images/profiles/IMG_1177_cropped.jpg">hi res</a></center>
 </div>
 <div class="col-md-6">  
-Hi!  I'm Adam Gordon Bell.  I am a software engineer.  I love building software and I love learning things.  I am based in Peterborough, Canada but I work remotely with developers all over the world.  I have a podcast called [CoRecursive](http://corecursive.com)
+I am a software engineer.  I love building software and I love learning things.  I am based in Peterborough, Canada but I work remotely with developers all over the world.  
 
-More Adam:
+-   [CoRecursive Podcast](https://corecursive.com/)
 
- * [My Abandoned Blog](/pages/blog.html)
- * [Podcast I Host](http://corecursive.com)
- * [GitHub](https://github.com/agbell/)
- * [StackOverflow](http://stackoverflow.com/users/135202/adam)
- * [Linked In](https://www.linkedin.com/in/adamgbell)
- * [Email](mailto:agbell@gmail.com)
+    >  Adam is the host of the corecusive podcast, where you can learn from experts about the field of software development.
+
+-   [Media Appearances](/pages/media.html)
+
+    >  List of articles and media appearances that Adam has made.
+
+- [Blog](/pages/blog.html)
+
+    >  Here is my blog.  I don't write as often as I should but I've built up some content over the years
+- [Email](mailto:adam@corecursive.com)
+
+    > Reach out to me.   
+
 </div>
 </div>

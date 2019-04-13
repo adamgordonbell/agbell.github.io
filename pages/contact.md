@@ -9,7 +9,7 @@ description: Email and places I have or do hangout
 <center><a href="/images/profiles/IMG_0447.jpg">high resolution version</a></center>
 </div>
 <div class="col-md-8">
-I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at adam@corecursive.com.
+I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at adam@corecursive.com or DM me on twitter.
 
 Various profile pages around the web:
 
