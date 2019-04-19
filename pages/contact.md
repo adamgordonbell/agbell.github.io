@@ -13,14 +13,16 @@ I am based in Peterborough, Canada but I love working with teams remotely.  If y
 
 Various profile pages around the web:
 
- * [StackOverflow](http://stackoverflow.com/users/135202/adam)
+ * [CoRecursive](https://corecursive.com/host/)
+ * [Twitter](https://twitter.com/adamgordonbell)
  * [GitHub](https://github.com/agbell/)
- * [Linked In](https://www.linkedin.com/in/adamgbell)
+ * [Linked In](https://www.linkedin.com/in/adamgordonbell)
  * [Hacker News](https://news.ycombinator.com/user?id=agbell)
+ * [Reddit](https://www.reddit.com/user/agbell)
+ * [StackOverflow](http://stackoverflow.com/users/135202/adam)
  * [Exercism](https://exercism.io/profiles/agbell)
  * [Project Euler](https://projecteuler.net/profile/agbell.png)
  * [Vim Golf](http://www.vimgolf.com/adamgbell)
- * [Twitter](https://twitter.com/adamgordonbell)
  * [Facebook](https://www.facebook.com/AdamGordonBell)
  </div>
  </div>
