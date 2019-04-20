@@ -11,6 +11,7 @@ rm -rf /_site
 git submodule init
 git submodule update
 cd _site
+git pull origin master
 git checkout master
 cd ..
 stack setup
