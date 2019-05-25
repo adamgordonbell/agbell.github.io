@@ -7,6 +7,8 @@ function pause(){
 
 echo "All work must be commited in hakyll before running"
 pause
+# clean removes cache
+stack exec cascadeofinsights clean
 rm -rf /_site
 git submodule init
 git submodule update
@@ -16,8 +18,6 @@ git checkout master
 cd ..
 stack setup
 stack build
-# not needed bc removed
-#stack exec cascadeofinsights clean
 stack exec cascadeofinsights build
 
 cd _site/
