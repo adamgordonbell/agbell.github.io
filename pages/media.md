@@ -42,15 +42,21 @@ description: This is a list of works of media in which I am featured in some way
     > * [Audio Version](https://6figuredev.com/podcast/episode-094-functional-programming-with-adam-gordon-bell/)
     > * [Video Version](https://www.youtube.com/watch?v=q1BElpbIyxA)
 
+-   [Programming Throwdown - Functional Programming](https://www.programmingthrowdown.com/2019/06/episode-91-functional-programming-with.html)
+
+    >  Adam talks with Patrick Wheeler and Jason Gauci about the basics of funtional programming and also how ideas from functional programming paradigms are migrating to other languages because of their usefulness.
+
 -   [Signify Technologies Interview](https://www.signifytechnology.com/blog/2019/05/an-insight-into-the-journey-of-corecursive-podcast-creator-adam-gordon-bell)
 
     >  An insight into the journey of the CoRecursive Podcast. 
 
 -   [The Accidental Engineer](https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/)
 
-    >  In this episode of the Accidental Engineer, Adam shares the pros/cons of full-time remote software engineering roles, how remote teams can come together around incidents in production software and 
-why Docker rose to popularity and how to adopt in your engineering org.
+    >  In this episode of the Accidental Engineer, Adam shares the pros/cons of full-time remote software engineering roles, how remote teams can come together around incidents in production software and why Docker rose to popularity and how to adopt in your engineering org.
 
+-   [COAP Podcast - Remote Working Interview](https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/)
+
+    >  Adam talks to Dave and Woody about working remotely.  Topics covered include: organizational impediments to remote work and tools and methodologies for working in a distributed team.
 
 -   [A Geek Leader Podcast](https://www.ageekleader.com/agl-102-corecursive-with-adam-gordon-bell/)
 
