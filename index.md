@@ -15,6 +15,11 @@ I am a software engineer who [podcasts](https://corecursive.com/) and works in d
 
     >  Adam is the host of the CoRecusive podcast, where you can learn from experts about the field of software development.
 
+-   [Articles](/pages/articles.html)
+
+    >  List of articles Adam has written.
+
+
 -   [Media Appearances](/pages/media.html)
 
     >  List of articles and media appearances that Adam has made.
