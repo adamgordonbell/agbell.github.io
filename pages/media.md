@@ -10,6 +10,8 @@ description: This is a list of works of media in which I am featured in some way
 </div>
 <div class="col-md-8">
 
+This list is probably out of date. 
+
 ## Hosting
 
 -  [Corecursive Podcast - Host](https://corecursive.com/)
@@ -65,10 +67,6 @@ description: This is a list of works of media in which I am featured in some way
 -   [Lucid Programming Podcast](https://www.youtube.com/watch?v=C0PuCgQrxZU)
 
     >  Bullet Journaling, Remote Work, and Developer Productivity: An Interview with Adam Gordon Bell
-
--   [Podcast Engineering Show - Coming Soon](https://podcastengineeringschool.com/)
-
-    >  Chris Curran interviews Adam Gordon Bell about his podcast CoRecursive
 
 ## Articles
 

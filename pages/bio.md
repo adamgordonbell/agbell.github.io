@@ -4,11 +4,11 @@ title_short: Bio
 description: When asked for a biography, I send people here
 ---
 <div class="row">
-<div class="col-md-4">
-<img src="/images/profiles/IMG_1205_web.jpg" height="400px" width="300px" alt="Adam Bell"><br/>
-<center><a href="/images/profiles/IMG_1205.jpg">high resolution version</a></center>
+<div class="col-md-6">
+<img src="/images/profiles/IMG_1177_web.jpg" height="550px" width="500px" alt="Adam Gordon Bell"><br/>
+<center><a href="/images/profiles/IMG_1177_cropped.jpg">hi res</a></center>
 </div>
-<div class="col-md-8">
+<div class="col-md-6">
 
 ## Bio
 
