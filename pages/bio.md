@@ -17,7 +17,7 @@ Adam Gordon Bell has spent 14+ years in the trenches as a software developer. Hi
 CoRecursive features interviews on technical topics of interest to software developers.  If you are a professional software developer or someone who likes to code or has an interest in programming languages, you will love our podcast. 
 
 ## Resume
-You can find something like a resume on [Linked In](https://www.linkedin.com/in/adamgbell) or contact adam@corecursive.com
+You can find something like a resume on [Linked In](https://www.linkedin.com/in/adamgordonbell) or contact adam@corecursive.com
 
  </div>
  </div>
