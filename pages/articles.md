@@ -26,5 +26,7 @@ description: Here is a collection of things I have written
 
     >  TimSort is fast, but why and can we beat it?
 
+-   Find more on [earthly](https://earthly.dev/blog/authors/adam/), [dev.to](https://dev.to/adamgordonbell), [freecodecamp](https://www.freecodecamp.org/news/author/adam-gordon-bell/), [medium](https://medium.com/@adamgordonbell) and [hackernoon](https://hackernoon.com/u/adamgordonbell).
+
  </div>
  </div>
