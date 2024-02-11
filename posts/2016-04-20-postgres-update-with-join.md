@@ -11,24 +11,26 @@ How to perform and update with a join using CTE's in postgres
 * Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run
 
 <!--more-->
-### Writing and testing the select as a cte:
+### Writing and testing the select as a cte
 
 ``` sql
 with replacement as (
-	select value, condtion1, condtion2 from somewhere
+ select value, condtion1, condtion2 from somewhere
   where x= something
  )
  select * from replacement
 ```
+
 *The cte might seem verbose, but I'm going to need it later, and it helps my sql stay organized*
 
-### Testing the select as an update, without applying changes:
+### Testing the select as an update, without applying changes
+
 ``` sql
 BEGIN;
 
 
 with replacement as (
-	select value, condtion1, condtion2 from somewhere
+ select value, condtion1, condtion2 from somewhere
   where x= something
  )
 
@@ -49,9 +51,10 @@ where x=something
 If the select result looks good, you can run it without the transaction to update.
 
 ### Run it
+
 ``` sql
 with replacement as (
-	select value, condtion1, condtion2 from somewhere
+ select value, condtion1, condtion2 from somewhere
   where x= something
  )
 

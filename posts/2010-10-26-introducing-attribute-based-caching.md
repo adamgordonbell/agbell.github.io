@@ -15,19 +15,19 @@ I have released a caching library that uses [postsharp](http://www.sharpcrafters
 
 It has some neat attribute based cache invalidation features and can use an in-memory cache or velocity.
 
-
 (Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching)
-*   Declarative Caching & Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache & trigger cache invalidation)
 
-### Simple Example( No invalidation):
+* Declarative Caching & Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache & trigger cache invalidation)
+
+### Simple Example( No invalidation)
 
 > [Cache.Cacheable] //this method now cached, will only be called once per guid  
 > public SomeExpensiveObject GetExpensiveObject(Guid userId)  
 > {  
->  ..  
+> ..  
 > }
 
-### Full Featured Example:
+### Full Featured Example
 
 > <pre><span>using</span> System;  
 > <span>using</span> System.Collections.Generic;  
@@ -40,7 +40,7 @@ It has some neat attribute based cache invalidation features and can use an in-m
 >     <span>class</span> <span>UserRepository</span>  
 >     {  
 >         <span>//Get All Users is cached in Key = "GetAllUsers"</span>  
->         [<span>Cache</span>.<span>Cacheable</span>(<span>"GetAllUsers"</span>)]   
+>         [<span>Cache</span>.<span>Cacheable</span>(<span>"GetAllUsers"</span>)]
 >         <span>List</span><<span>User</span>> GetAllUsers()  
 >         {  
 >             ...  
@@ -69,13 +69,13 @@ It has some neat attribute based cache invalidation features and can use an in-m
 >         {  
 >             ...  
 >         }  
->         
+>
 >     }  
 > }  
 > </pre>
 
 [http://cache.codeplex.com/SourceControl/changeset/view/1505#25143](http://cache.codeplex.com/SourceControl/changeset/view/1505#25143 "example") <span> </span>
 
-This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion. 
+This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion.
 
 Please excuse the empty method bodies for now.  I will have a better sample project put together at some point.

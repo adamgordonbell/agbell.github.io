@@ -4,6 +4,7 @@ author: Adam Bell
 tags: c#, postsharp, aop
 ---
 This comes in handy sometimes. <!--more-->
+
 ```
 public static class ExceptionHandler
 {
@@ -28,6 +29,7 @@ public static class ExceptionHandler
 
 }
 ```
+
 Usage:
 
 ```

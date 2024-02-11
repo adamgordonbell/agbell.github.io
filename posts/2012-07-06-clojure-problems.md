@@ -7,7 +7,7 @@ I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telli
 <!--more-->
 I’m not looking for Clojure to save me from these “problems” I just started playing with it because of some Rich Hickey talks that made me think there was a better way to develop software.
 
-## Problems:
+## Problems
 
 ### Order of operations
 

@@ -5,9 +5,10 @@ tags: c#, euler
 ---
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 <!--more-->
-http://projecteuler.net/index.php?section=problems&id=6
+<http://projecteuler.net/index.php?section=problems&id=6>
 
 My Solution:
+
 ```
 var x =
     (

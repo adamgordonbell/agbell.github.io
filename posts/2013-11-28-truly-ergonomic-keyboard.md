@@ -3,9 +3,9 @@ title: Truly Ergonomic Keyboard
 author: Adam Bell
 tags: keyboard
 ---
-![](http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg)  
+![keyboard](http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg)  
 <!--more-->
-![](http://41.media.tumblr.com/646b8559a7ae8978dacd30c70fc527cc/tumblr_mwz6ecK0jE1qe4yfuo2_500.jpg)  
+![keyboard](http://41.media.tumblr.com/646b8559a7ae8978dacd30c70fc527cc/tumblr_mwz6ecK0jE1qe4yfuo2_500.jpg)  
 
 > **I got my new teck keyboard from massdrop. It takes some getting used to, but I’m already typing faster. [Check out the autohotkey script I used to ease the transition.](https://github.com/agbell/TECK)**
 
@@ -17,11 +17,11 @@ Keyboard arrived very quickly from massdrop and I’ve been using it full time f
 
 </div>
 
-### <span class="section-number-3"></span>Notes from first week of use.
+### <span class="section-number-3"></span>Notes from first week of use
 
 <div class="outline-4" id="outline-container-1-1-1">
 
-*   #### Having the shift keys on home row is very smart
+* #### Having the shift keys on home row is very smart
 
 > <div class="outline-text-4" id="text-1-1-1">but i want to be backward compatible with traditional keyboards so switched it back</div>
 
@@ -29,19 +29,19 @@ Keyboard arrived very quickly from massdrop and I’ve been using it full time f
 
 <div class="outline-4" id="outline-container-1-1-2">
 
-*   #### <span class="section-number-4"></span>enter is middle is great
+* #### <span class="section-number-4"></span>enter is middle is great
 
 </div>
 
 <div class="outline-4" id="outline-container-1-1-3">
 
-*   #### <span class="section-number-4"></span>delete and backspace take getting used to
+* #### <span class="section-number-4"></span>delete and backspace take getting used to
 
 </div>
 
 <div class="outline-4" id="outline-container-1-1-4">
 
-*   #### <span class="section-number-4"></span>quotes key in new place is great for typing text, but not good with VIM and the shell
+* #### <span class="section-number-4"></span>quotes key in new place is great for typing text, but not good with VIM and the shell
 
 </div>
 
@@ -49,16 +49,16 @@ Keyboard arrived very quickly from massdrop and I’ve been using it full time f
 
 I want to be able to use normal keyboards when I have to, so I made some tweaks to the TECK keyboard to keep it close to default layout.
 
-*   switched key caps - CTRL and SHIFT
+* switched key caps - CTRL and SHIFT
 
-*   right control is enter if pressed alone
+* right control is enter if pressed alone
 
-*   left control is ESC alone (vimness) means my control is like my old caps lock
+* left control is ESC alone (vimness) means my control is like my old caps lock
 
-*   tried mapping shift on its own to tab, but messed up my shift tabbing
+* tried mapping shift on its own to tab, but messed up my shift tabbing
 
 **References:**
 
-*   [My Autohotkey scripts for the TECK](https://github.com/agbell/TECK)
-*   [TECK website](https://www.trulyergonomic.com/store/index.php)
-*   [ErgoDox](http://ergodox.org/)
+* [My Autohotkey scripts for the TECK](https://github.com/agbell/TECK)
+* [TECK website](https://www.trulyergonomic.com/store/index.php)
+* [ErgoDox](http://ergodox.org/)

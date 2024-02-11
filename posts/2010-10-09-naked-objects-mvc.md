@@ -15,4 +15,5 @@ public class HomeController : CustomController
         }
     }
 ```
+
 Here the home controller will return the StandaloneTable view of the All() method on SimpleRepository<Site>.

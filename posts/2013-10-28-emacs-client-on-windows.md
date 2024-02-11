@@ -9,13 +9,14 @@ I want to use emacs like I use notepadd++ on windows.
 <!--more-->
 <span>That is:</span>
 
-*   Right click menu item to “edit with Emacs”
-*   Associate file types with emacs (like .org)
-*   Have only one emacs open at a time
+* Right click menu item to “edit with Emacs”
+* Associate file types with emacs (like .org)
+* Have only one emacs open at a time
 
 Here are the steps I took:
 
-1.  Create the context menu like this ([global_context_emacs.reg](http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu)) :
+1. Create the context menu like this ([global_context_emacs.reg](http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu)) :
+
     ```
     REGEDIT4
     [HKEY_CLASSES_ROOT\*\shell]
@@ -29,4 +30,5 @@ Here are the steps I took:
     @="C:\\Program Files\\Emacs\\bin\\runemacs.exe \"%1\""
     # The above has to point to where you install Emacs  
     ```
-2.  <span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See [here](http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html)</span>
+
+2. <span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See [here](http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html)</span>

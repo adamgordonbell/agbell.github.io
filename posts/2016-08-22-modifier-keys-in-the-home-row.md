@@ -3,13 +3,14 @@ title: Modifier Keys in the Home Row
 author: Adam Bell
 tags: keyboard, ergodox
 ---
-![](/images/keyboard-layout_ergodox.png)
+![ergodox](/images/keyboard-layout_ergodox.png)
 With today's opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.
 <!--more-->
 
 I don't like having to leave the home row on the keyboard enter commands like CTRL-S or even CTRL-ALT-Left Arrow.  Using the tmk firmware or ( the qmk fork) I am able to have my keys function as normal when pressed, but as a modifier when held down.
 
 ## [Dual-role keys:](https://en.wikipedia.org/wiki/Modifier_key#Dual-role_keys)
+
 ```
 
 It is possible to use (with some utility software) one same key both as a normal key and as a modifier.
@@ -27,6 +28,6 @@ In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt.  
 
 Resources:
 
- * [My keymap for the ergodox keyboard](https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h)
- * [TMK firmware](https://github.com/tmk/tmk_keyboard)
- * [QMK firmware](https://github.com/jackhumbert/qmk_firmware)
+* [My keymap for the ergodox keyboard](https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h)
+* [TMK firmware](https://github.com/tmk/tmk_keyboard)
+* [QMK firmware](https://github.com/jackhumbert/qmk_firmware)

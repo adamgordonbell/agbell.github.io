@@ -27,6 +27,7 @@ def group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {
 That was easy.  The use of head and drop from shapeless lets you act on tuples like they are lists.  However abstracting away the size of the tuples gets tricky, because we need type annotations to make the compiler happy.  
 
 Here is the same implementation for 5-tuples:
+
 ``` scala
 
 def group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)] = {
@@ -41,6 +42,7 @@ def group1ThreeExtra[A,B,C,D,E](t : List[(A,B,C,D,E)]) : List[(A,List[B],C,D,E)]
     }
 
 ```
+
 The interesting thing here is that, except for type annotations, these definitions are exactly the same.
 
 To be continued...

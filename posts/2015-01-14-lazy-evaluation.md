@@ -9,15 +9,15 @@ Summary of Laziness:
 
 Lazy is good when:
 
-*   You are not going to use all the results
-*   Because you are going to filter some things out at a later stage
+* You are not going to use all the results
+* Because you are going to filter some things out at a later stage
 
 Strict is good otherwise.  
 Hence:
 
-*   foldl’ for spine-strict results (Int, Map, …),
-*   foldr for spine-lazy results (mostly just [a]),
-*   Never use foldl
+* foldl’ for spine-strict results (Int, Map, …),
+* foldr for spine-lazy results (mostly just [a]),
+* Never use foldl
 
 The key insight for me has been understanding that lazy evaluation means that functions take in a pointer to a thunk as arguments and then return a thunk as a value. Only looking inside those thunks inputs (via pattern matching or IO) actually forces anything.
 
@@ -29,8 +29,8 @@ This how foldr can short-circuit on some lazy list, if a condition of f that is 
 
 <span>Links:</span>
 
-*   [Ez Yang : how the heap works](http://blog.ezyang.com/category/haskell/haskell-heap/)
-*   [http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html)
-*   [http://www.haskell.org/haskellwiki/Performance/Strictness](http://www.haskell.org/haskellwiki/Performance/Strictness)
-*   [http://en.wikibooks.org/wiki/Haskell/Laziness](http://en.wikibooks.org/wiki/Haskell/Laziness)
-*   [http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis](http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis)
+* [Ez Yang : how the heap works](http://blog.ezyang.com/category/haskell/haskell-heap/)
+* [http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html)
+* [http://www.haskell.org/haskellwiki/Performance/Strictness](http://www.haskell.org/haskellwiki/Performance/Strictness)
+* [http://en.wikibooks.org/wiki/Haskell/Laziness](http://en.wikibooks.org/wiki/Haskell/Laziness)
+* [http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis](http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis)

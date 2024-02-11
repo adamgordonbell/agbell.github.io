@@ -5,7 +5,7 @@ tags: euler, c#
 ---
 Discover the largest product of five consecutive digits in the 1000-digit number.
 
-http://projecteuler.net/index.php?section=problems&id=8
+<http://projecteuler.net/index.php?section=problems&id=8>
 
 <!--more-->
 

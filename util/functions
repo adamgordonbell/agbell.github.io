@@ -12,8 +12,8 @@ list(){
 }
 
 pause(){
-   echo " enter to continue.  Ctrl-C to bail"
-   read -p "$*"
+   echo "Press enter to continue.  Ctrl-C to bail."
+   read -p ""
 }
 
 ## External
@@ -65,4 +65,34 @@ publish() {
     git add .
     git commit -m "Update [ci skip]"
     git push origin hakyll
+}
+
+new_post() {
+    date_pattern=$(date "+%Y-%m-%d")-
+
+    echo -n "Post name > "
+    read title
+    # Convert to ASCII, to lowercase, keep only alphanum and ._- space, and turn spaces into dashes
+    clean_title=$(echo "$title" \
+        | iconv -f utf8 -t ascii//translit \
+        | tr '[:upper:]' '[:lower:]' \
+        | tr -dc 'a-z0-9. _-' \
+        | tr ' ' '-')
+
+    filename="$date_pattern$clean_title.md"
+    author=$(git config --get user.name)
+
+    # Ensure the directory exists before attempting to write the file
+    mkdir -p "posts/"
+
+    # Use heredoc correctly to write to the file
+    cat > "posts/${filename}" <<EOF
+    ---
+    title: "$title"
+    author: $author
+    tags: draft
+    ---
+
+    <!--more-->
+EOF
 }

@@ -9,7 +9,8 @@ Here is my solution to the following project Euler Problem:
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 <!--more-->
-http://projecteuler.net/index.php?section=problems&id=5
+<http://projecteuler.net/index.php?section=problems&id=5>
+
 ```
  int result =
     (
@@ -18,7 +19,9 @@ http://projecteuler.net/index.php?section=problems&id=5
         select a
     ).FirstOrDefault();
 ```
+
 Where:
+
 ```
 static class Multiples
 {
@@ -29,7 +32,9 @@ static class Multiples
     }
 }
 ```
+
 And:
+
 ```
 public static bool IsDivisbleBy(this int x, IEnumerable<int> range)
 {
