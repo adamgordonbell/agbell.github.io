@@ -43,9 +43,10 @@
     Using Custom Packages in NixOs Configuration File
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-03-26</span> - <span class="tags"><a href="../tags/nix.html">nix</a>, <a href="../tags/nixos.html">nixos</a></span>
+    <span class="date">2016-03-26</span> - <span class="tags"><a title="All pages tagged 'nix'." href="../tags/nix.html">nix</a>, <a title="All pages tagged 'nixos'." href="../tags/nixos.html">nixos</a></span>
   <p>Here is a problem we encountered with NixOS:</p>
-<p>The nix-channel we were on didn’t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version. <!--more--></p>
+<p>The nix-channel we were on didn’t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.
+<!--more--></p>
 <h3 id="upgrading-nix-package-postgis">Upgrading Nix Package PostGIS:</h3>
 <p><em>same steps apply for any package</em></p>
 <ul>
@@ -60,21 +61,21 @@
 <h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix :</h3>
 <p>We created a reference to our forked packages using a let expression in our configuration.nix file. This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.</p>
 <p>Using a let expression, we pulled in our fork of nixpkgs:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode configuration.nix"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">{</span> <span class="ex">config</span>, pkgs, ... <span class="kw">}</span>:</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="bu">let</span> custompkgs = import /usr/local/nixpkgs/default.nix <span class="dt">{}</span><span class="kw">;</span> <span class="kw">in</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">{</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="ex">imports</span> =</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">    [ <span class="co"># Include the results of the hardware scan.</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">      <span class="ex">./hardware-configuration.nix</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">    ];</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="ex">....</span></a></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode configuration.nix"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">...</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="ex">services.postgresql</span> = {</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">        <span class="bu">enable</span> = true<span class="kw">;</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">        <span class="ex">extraPlugins</span> = [ (custompkgs.postgis.override { postgresql = pkgs.postgresql95<span class="kw">;</span> })<span class="ex">.v_2_2_1</span> ]<span class="kw">;</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">    };</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="ex">...</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode configuration.nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">{</span> <span class="va">config</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> <span class="va">custompkgs</span> <span class="op">=</span> <span class="bu">import</span> <span class="ss">/usr/local/nixpkgs/default.nix</span> <span class="op">{};</span> <span class="kw">in</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">imports</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span> <span class="co"># Include the results of the hardware scan.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="ss">./hardware-configuration.nix</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">];</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    ....</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode configuration.nix"><code class="sourceCode nix"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  services.postgresql = <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">extraPlugins</span> <span class="op">=</span> <span class="op">[</span> <span class="op">(</span>custompkgs.postgis.override <span class="op">{</span> <span class="va">postgresql</span> <span class="op">=</span> pkgs.postgresql95<span class="op">;</span> <span class="op">})</span>.v_2_2_1 <span class="op">];</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">

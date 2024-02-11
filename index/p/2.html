@@ -49,7 +49,7 @@
       </h1>
       <div class="meta">
         <time pubdate data-updated="true">2015-11-04</time>
-        <div class="tags"><a href="../../tags/prediction.html">prediction</a>, <a href="../../tags/good-judgement-project.html">good-judgement-project</a>, <a href="../../tags/bitcoin.html">bitcoin</a></div>
+        <div class="tags"><a title="All pages tagged 'prediction'." href="../../tags/prediction.html">prediction</a>, <a title="All pages tagged 'good-judgement-project'." href="../../tags/good-judgement-project.html">good-judgement-project</a>, <a title="All pages tagged 'bitcoin'." href="../../tags/bitcoin.html">bitcoin</a></div>
       </div>
     </header>
     
@@ -70,7 +70,7 @@
       </h1>
       <div class="meta">
         <time pubdate data-updated="true">2015-10-21</time>
-        <div class="tags"><a href="../../tags/fitness.html">fitness</a>, <a href="../../tags/books.html">books</a></div>
+        <div class="tags"><a title="All pages tagged 'fitness'." href="../../tags/fitness.html">fitness</a>, <a title="All pages tagged 'books'." href="../../tags/books.html">books</a></div>
       </div>
     </header>
     
@@ -91,26 +91,26 @@
       </h1>
       <div class="meta">
         <time pubdate data-updated="true">2015-08-19</time>
-        <div class="tags"><a href="../../tags/scala.html">scala</a>, <a href="../../tags/slick.html">slick</a>, <a href="../../tags/tuples.html">tuples</a></div>
+        <div class="tags"><a title="All pages tagged 'scala'." href="../../tags/scala.html">scala</a>, <a title="All pages tagged 'slick'." href="../../tags/slick.html">slick</a>, <a title="All pages tagged 'tuples'." href="../../tags/tuples.html">tuples</a></div>
       </div>
     </header>
     
       <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them. Here I have a list of 4-tuples and I want to group the second tuple by the first. <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">import</span> shapeless._</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">import</span> syntax.<span class="fu">std</span>.<span class="fu">tuple</span>._</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">import</span> poly._</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">object</span> GroupLists {</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">def</span> group1TwoExtra[A,B,C,D](t : List[(A,B,C,D)]) : List[(A,List[B],C,D)] = {</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">      <span class="kw">val</span> map = LinkedHashMap[A, LinkedHashSet[B]]()</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">      <span class="kw">val</span> mapOther = scala.<span class="fu">collection</span>.<span class="fu">mutable</span>.<span class="fu">Map</span>[A,(C,D)]()</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">      <span class="kw">for</span> (i &lt;- t) {</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">        <span class="kw">val</span> key = i.<span class="fu">head</span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">        <span class="fu">map</span>(key) = map.<span class="fu">lift</span>(key).<span class="fu">getOrElse</span>(LinkedHashSet[B]()) + i.<span class="fu">drop</span>(<span class="dv">1</span>).<span class="fu">head</span></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">        mapOther += (key -&gt; i.<span class="fu">drop</span>(<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13">      }</a>
-<a class="sourceLine" id="cb1-14" data-line-number="14">      map.<span class="fu">map</span>(b =&gt; (b._<span class="dv">1</span>, b._<span class="fl">2.</span>toList) ++ <span class="fu">mapOther</span>(b._<span class="dv">1</span>)).<span class="fu">toList</span></a>
-<a class="sourceLine" id="cb1-15" data-line-number="15">    }</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> shapeless<span class="op">.</span>_</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> syntax<span class="op">.</span>std<span class="op">.</span>tuple<span class="op">.</span>_</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> poly<span class="op">.</span>_</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">object</span> GroupLists <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> group1TwoExtra<span class="op">[</span>A<span class="op">,</span>B<span class="op">,</span>C<span class="op">,</span>D<span class="op">](</span>t <span class="op">:</span> <span class="ex">List</span><span class="op">[(</span>A<span class="op">,</span>B<span class="op">,</span>C<span class="op">,</span>D<span class="op">)])</span> <span class="op">:</span> <span class="ex">List</span><span class="op">[(</span>A<span class="op">,</span><span class="ex">List</span><span class="op">[</span>B<span class="op">],</span>C<span class="op">,</span>D<span class="op">)]</span> <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">val</span> map <span class="op">=</span> <span class="ex">LinkedHashMap</span><span class="op">[</span>A<span class="op">,</span> <span class="ex">LinkedHashSet</span><span class="op">[</span>B<span class="op">]]()</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">val</span> mapOther <span class="op">=</span> scala<span class="op">.</span>collection<span class="op">.</span>mutable<span class="op">.</span><span class="ex">Map</span><span class="op">[</span>A<span class="op">,(</span>C<span class="op">,</span>D<span class="op">)]()</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> <span class="op">(</span>i <span class="op">&lt;-</span> t<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">val</span> key <span class="op">=</span> i<span class="op">.</span>head</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">map</span><span class="op">(</span>key<span class="op">)</span> <span class="op">=</span> map<span class="op">.</span><span class="fu">lift</span><span class="op">(</span>key<span class="op">).</span><span class="fu">getOrElse</span><span class="op">(</span><span class="ex">LinkedHashSet</span><span class="op">[</span>B<span class="op">]())</span> <span class="op">+</span> i<span class="op">.</span><span class="fu">drop</span><span class="op">(</span><span class="dv">1</span><span class="op">).</span>head</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        mapOther <span class="op">+=</span> <span class="op">(</span>key <span class="op">-&gt;</span> i<span class="op">.</span><span class="fu">drop</span><span class="op">(</span><span class="dv">2</span><span class="op">))</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      map<span class="op">.</span><span class="fu">map</span><span class="op">(</span>b <span class="op">=&gt;</span> <span class="op">(</span>b<span class="op">.</span>_1<span class="op">,</span> b<span class="op">.</span>_2<span class="op">.</span>toList<span class="op">)</span> <span class="op">++</span> <span class="fu">mapOther</span><span class="op">(</span>b<span class="op">.</span>_1<span class="op">)).</span>toList</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
 
     
 
@@ -127,13 +127,14 @@
       </h1>
       <div class="meta">
         <time pubdate data-updated="true">2015-08-11</time>
-        <div class="tags"><a href="../../tags/humor.html">humor</a>, <a href="../../tags/presentation.html">presentation</a></div>
+        <div class="tags"><a title="All pages tagged 'humor'." href="../../tags/humor.html">humor</a>, <a title="All pages tagged 'presentation'." href="../../tags/presentation.html">presentation</a></div>
       </div>
     </header>
     
       <p>Here I’m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing</p>
 <ul>
-<li>I wouldn’t eat that with a ten foot pole 
+<li>I wouldn’t eat that with a ten foot pole
+
     
 
 
@@ -149,16 +150,16 @@
       </h1>
       <div class="meta">
         <time pubdate data-updated="true">2015-08-04</time>
-        <div class="tags"><a href="../../tags/scala.html">scala</a>, <a href="../../tags/slick.html">slick</a></div>
+        <div class="tags"><a title="All pages tagged 'scala'." href="../../tags/scala.html">scala</a>, <a title="All pages tagged 'slick'." href="../../tags/slick.html">slick</a></div>
       </div>
     </header>
     
       <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">val</span> join = <span class="kw">for</span> {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">     (f,b) &lt;-</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">                  foo.<span class="fu">filter</span>(...) on  innerJoin</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">                  bar <span class="fu">on</span> (...)</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">   } <span class="kw">yield</span> (o,i,s)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> join <span class="op">=</span> <span class="cf">for</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="op">(</span>f<span class="op">,</span>b<span class="op">)</span> <span class="op">&lt;-</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                  foo<span class="op">.</span><span class="fu">filter</span><span class="op">(...)</span> on  innerJoin</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                  bar <span class="fu">on</span> <span class="op">(...)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span> <span class="cf">yield</span> <span class="op">(</span>o<span class="op">,</span>i<span class="op">,</span>s<span class="op">)</span></span></code></pre></div>
 
     
 

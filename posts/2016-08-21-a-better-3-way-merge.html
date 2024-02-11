@@ -43,43 +43,44 @@
     A Better 3-way merge?
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-08-21</span> - <span class="tags"><a href="../tags/git.html">git</a>, <a href="../tags/merging.html">merging</a>, <a href="../tags/scala.html">scala</a></span>
-  <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question. <!--more--></p>
+    <span class="date">2016-08-21</span> - <span class="tags"><a title="All pages tagged 'git'." href="../tags/git.html">git</a>, <a title="All pages tagged 'merging'." href="../tags/merging.html">merging</a>, <a title="All pages tagged 'scala'." href="../tags/scala.html">scala</a></span>
+  <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question.
+<!--more--></p>
 <h2 id="an-example">An Example</h2>
 <h3 id="base-file">Base file:</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b <span class="op">:</span> <span class="bu">Int</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="their-file">Their file:</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b : Int, c : String) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b <span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> c <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="our-file">Our File:</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> b2 <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="expected-result">Expected Result:</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(a : string, b: Int, b2 : String, c : String) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> b2 <span class="op">:</span> <span class="ex">String</span><span class="op">,</span> c <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <p>The above will need to manually resolved in git, both branches makes change to the same line, so git does not know how to resolve this.</p>
 <p>However, if we had a similar merge, where the code was split across multiple lines, the 3-way merge would have no problem:</p>
 <h3 id="base-file-1">Base file:</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">  a : string</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3">  ,b : Int</a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">   ) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b <span class="op">:</span> <span class="bu">Int</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="their-file-1">Their file:</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">  a : string</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">  ,b : Int</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4">  ,c : String</a>
-<a class="sourceLine" id="cb6-5" data-line-number="5">  ) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b <span class="op">:</span> <span class="bu">Int</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>c <span class="op">:</span> <span class="ex">String</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="our-file-1">Our File:</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2">  a : string</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3">  ,b: Int</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">  ,b2 : String</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">  ) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b<span class="op">:</span> <span class="bu">Int</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b2 <span class="op">:</span> <span class="ex">String</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <h3 id="result">Result:</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode scala"><code class="sourceCode scala"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">def</span> <span class="fu">x</span>(</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">  a : string</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">  ,b: Int</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">  ,b2 : String</a>
-<a class="sourceLine" id="cb8-5" data-line-number="5">  ,c  : String</a>
-<a class="sourceLine" id="cb8-6" data-line-number="6">  ) : Option[Int]</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b<span class="op">:</span> <span class="bu">Int</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b2 <span class="op">:</span> <span class="ex">String</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>c  <span class="op">:</span> <span class="ex">String</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <p>Thus we can see that by knowing where a line in a file can be split, we should be able to eliminate some merge conflicts. If we wrote a bash script that called the default 3-way merge, and in cases of conflict, it introduced new lines everywhere possible based on the syntax rules of file and then called it again, before removing the introduced new lines, we would reduce the number of conflicts.</p>
 <p>It would handle our original case, by spreading the code across more lines, merging it and then recombining it. We could then use that script as our custom merge driver.</p>
 <p>Now I just have to write the thing and test it. Stay tuned.</p>

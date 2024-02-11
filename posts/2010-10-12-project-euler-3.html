@@ -43,46 +43,46 @@
     Project Euler 3 in c#
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2010-10-12</span> - <span class="tags"><a href="../tags/euler.html">euler</a>, <a href="../tags/c%23.html">c#</a></span>
+    <span class="date">2010-10-12</span> - <span class="tags"><a title="All pages tagged 'euler'." href="../tags/euler.html">euler</a>, <a title="All pages tagged 'c#'." href="../tags/c%23.html">c#</a></span>
   <blockquote>
 <p>Problem 3: What is the largest prime factor of the number 600851475143 ?</p>
-<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" class="uri" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p>
+<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p>
 </blockquote>
 <p>With enough extension methods we can make 3 really simple:</p>
 <blockquote>
 <p>600851475143.LargestPrimeFactor()</p>
 </blockquote>
 <p>Where:<!--more--></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode csharp"><code class="sourceCode cs"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">public</span> <span class="kw">static</span> <span class="dt">int</span> <span class="fu">LargestPrimeFactor</span>(<span class="kw">this</span> <span class="dt">long</span> number)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">{</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="kw">return</span> number.<span class="fu">PrimeFactors</span>().<span class="fu">Last</span>();</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">}</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">public</span> <span class="kw">static</span> IEnumerable&lt;<span class="dt">int</span>&gt; <span class="fu">PrimeFactors</span>(<span class="kw">this</span> <span class="dt">long</span> number)</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">{</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">    <span class="dt">long</span> remainder = number;</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="kw">while</span> (<span class="kw">true</span>)</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">    {</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">        <span class="dt">var</span> factor = remainder.<span class="fu">SmallestPrimeFactor</span>();</a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">        <span class="kw">yield</span> <span class="kw">return</span> factor;</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13">        remainder = remainder / factor;</a>
-<a class="sourceLine" id="cb1-14" data-line-number="14">        <span class="kw">if</span> (remainder == <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb1-15" data-line-number="15">        {</a>
-<a class="sourceLine" id="cb1-16" data-line-number="16">            <span class="kw">break</span>;</a>
-<a class="sourceLine" id="cb1-17" data-line-number="17">        }</a>
-<a class="sourceLine" id="cb1-18" data-line-number="18">    }</a>
-<a class="sourceLine" id="cb1-19" data-line-number="19">}</a>
-<a class="sourceLine" id="cb1-20" data-line-number="20"></a>
-<a class="sourceLine" id="cb1-21" data-line-number="21"><span class="kw">private</span> <span class="kw">static</span> <span class="dt">int</span> <span class="fu">SmallestPrimeFactor</span>(<span class="kw">this</span> <span class="dt">long</span> number)</a>
-<a class="sourceLine" id="cb1-22" data-line-number="22">{</a>
-<a class="sourceLine" id="cb1-23" data-line-number="23">    <span class="dt">var</span> primes = <span class="kw">new</span> <span class="fu">Eratosthenes</span>();</a>
-<a class="sourceLine" id="cb1-24" data-line-number="24">    <span class="dt">var</span> factor = primes.<span class="fu">FirstOrDefault</span>(x =&gt; number.<span class="fu">IsDivisbleBy</span>((<span class="dt">long</span>)x));</a>
-<a class="sourceLine" id="cb1-25" data-line-number="25">    <span class="kw">if</span> (factor == <span class="dv">0</span>)</a>
-<a class="sourceLine" id="cb1-26" data-line-number="26">    {</a>
-<a class="sourceLine" id="cb1-27" data-line-number="27">        <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">Exception</span>(String.<span class="fu">Format</span>(“Factor not found! {<span class="dv">0</span>}”,number));</a>
-<a class="sourceLine" id="cb1-28" data-line-number="28">    }</a>
-<a class="sourceLine" id="cb1-29" data-line-number="29">    <span class="kw">return</span> factor;</a>
-<a class="sourceLine" id="cb1-30" data-line-number="30">}</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode csharp"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">static</span> <span class="dt">int</span> <span class="fu">LargestPrimeFactor</span><span class="op">(</span><span class="kw">this</span> <span class="dt">long</span> number<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> number<span class="op">.</span><span class="fu">PrimeFactors</span><span class="op">().</span><span class="fu">Last</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">static</span> IEnumerable<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="fu">PrimeFactors</span><span class="op">(</span><span class="kw">this</span> <span class="dt">long</span> number<span class="op">)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> remainder <span class="op">=</span> number<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">var</span> factor <span class="op">=</span> remainder<span class="op">.</span><span class="fu">SmallestPrimeFactor</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">yield</span> <span class="kw">return</span> factor<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        remainder <span class="op">=</span> remainder <span class="op">/</span> factor<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>remainder <span class="op">==</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">break</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="kw">static</span> <span class="dt">int</span> <span class="fu">SmallestPrimeFactor</span><span class="op">(</span><span class="kw">this</span> <span class="dt">long</span> number<span class="op">)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">var</span> primes <span class="op">=</span> <span class="kw">new</span> <span class="fu">Eratosthenes</span><span class="op">();</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">var</span> factor <span class="op">=</span> primes<span class="op">.</span><span class="fu">FirstOrDefault</span><span class="op">(</span>x <span class="op">=&gt;</span> number<span class="op">.</span><span class="fu">IsDivisbleBy</span><span class="op">((</span><span class="dt">long</span><span class="op">)</span>x<span class="op">));</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="op">(</span>factor <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="kw">throw</span> <span class="kw">new</span> <span class="fu">Exception</span><span class="op">(</span>String<span class="op">.</span><span class="fu">Format</span><span class="op">(</span>“Factor not found<span class="op">!</span> <span class="op">{</span><span class="dv">0</span><span class="op">}</span>”<span class="op">,</span>number<span class="op">));</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> factor<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">

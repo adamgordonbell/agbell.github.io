@@ -43,16 +43,17 @@
     Introducing Attribute Based Caching
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2010-10-26</span> - <span class="tags"><a href="../tags/c%23.html">c#</a>, <a href="../tags/attribute-based-caching.html">attribute-based-caching</a></span>
+    <span class="date">2010-10-26</span> - <span class="tags"><a title="All pages tagged 'c#'." href="../tags/c%23.html">c#</a>, <a title="All pages tagged 'attribute-based-caching'." href="../tags/attribute-based-caching.html">attribute-based-caching</a></span>
   <blockquote>
 <p>“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”</p>
 </blockquote>
 <p>I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing <a href="http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/" title="caching">caching</a> with postsharp.  However, none handled cache invalidation in a nice declarative way.  </p>
 <!--more-->
 <p>I have released a caching library that uses <a href="http://www.sharpcrafters.com" title="Postsharp">postsharp</a> on codeplex.</p>
-<p><a href="http://cache.codeplex.com/" title="http://cache.codeplex.com/"></a><strong><a href="http://cache.codeplex.com/" class="uri">http://cache.codeplex.com/</a></strong></p>
+<p><a href="http://cache.codeplex.com/" title="http://cache.codeplex.com/"></a><strong><a href="http://cache.codeplex.com/">http://cache.codeplex.com/</a></strong></p>
 <p>It has some neat attribute based cache invalidation features and can use an in-memory cache or velocity.</p>
-<p>(Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching) * Declarative Caching &amp; Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache &amp; trigger cache invalidation)</p>
+<p>(Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching)
+* Declarative Caching &amp; Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache &amp; trigger cache invalidation)</p>
 <h3 id="simple-example-no-invalidation">Simple Example( No invalidation):</h3>
 <blockquote>
 <p>[Cache.Cacheable] //this method now cached, will only be called once per guid<br />
@@ -108,7 +109,7 @@ public SomeExpensiveObject GetExpensiveObject(Guid userId)<br />
 }  
 </pre>
 </blockquote>
-<p><a href="http://cache.codeplex.com/SourceControl/changeset/view/1505#25143" class="uri" title="example">http://cache.codeplex.com/SourceControl/changeset/view/1505#25143</a> <span> </span></p>
+<p><a href="http://cache.codeplex.com/SourceControl/changeset/view/1505#25143" title="example">http://cache.codeplex.com/SourceControl/changeset/view/1505#25143</a> <span> </span></p>
 <p>This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion. </p>
 <p>Please excuse the empty method bodies for now.  I will have a better sample project put together at some point.</p>
 

@@ -43,7 +43,7 @@
     Postgres Update With Join
   </h2>
   <p class="blog-post-meta">
-    <span class="date">2016-04-20</span> - <span class="tags"><a href="../tags/postgres.html">postgres</a>, <a href="../tags/cte.html">cte</a>, <a href="../tags/update.html">update</a></span>
+    <span class="date">2016-04-20</span> - <span class="tags"><a title="All pages tagged 'postgres'." href="../tags/postgres.html">postgres</a>, <a title="All pages tagged 'cte'." href="../tags/cte.html">cte</a>, <a title="All pages tagged 'update'." href="../tags/update.html">update</a></span>
   <p>How to perform and update with a join using CTE’s in postgres</p>
 <ul>
 <li>in a cte, write a select that returns the update to values, and the join on conditions</li>
@@ -52,44 +52,44 @@
 </ul>
 <!--more-->
 <h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte:</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="kw">where</span> x= something</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"> )</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"> <span class="kw">select</span> * <span class="kw">from</span> replacement</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">select</span> <span class="op">*</span> <span class="kw">from</span> replacement</span></code></pre></div>
 <p><em>The cte might seem verbose, but I’m going to need it later, and it helps my sql stay organized</em></p>
 <h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes:</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">BEGIN</span>;</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">  <span class="kw">where</span> x= something</a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"> )</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"> <span class="kw">set</span> <span class="fu">value</span> = replacement.value</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"> <span class="kw">from</span> replacement</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"> <span class="kw">where</span> shortname.condtion1 = replacement.condtion1</a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"> <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">-- Test query for manually confirming the results look like what you were expecting</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="kw">SELECT</span> <span class="fu">value</span>, condition1, condition2 <span class="kw">from</span> <span class="ot">&quot;LongName&quot;</span> shortname</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="kw">where</span> x=something</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"> <span class="kw">ROLLBACK</span>;</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span>;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="kw">set</span> <span class="fu">value</span> <span class="op">=</span> replacement.<span class="fu">value</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="kw">from</span> replacement</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="kw">where</span> shortname.condtion1 <span class="op">=</span> replacement.condtion1</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="kw">and</span> shortname.condtion2 <span class="op">=</span> replacement.condition2;</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">-- Test query for manually confirming the results look like what you were expecting</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">value</span>, condition1, condition2 <span class="kw">from</span> <span class="ot">&quot;LongName&quot;</span> shortname</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">where</span> x<span class="op">=</span>something</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a> <span class="kw">ROLLBACK</span>;</span></code></pre></div>
 <p>If the select result looks good, you can run it without the transaction to update.</p>
 <h3 id="run-it">Run it</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">with</span> replacement <span class="kw">as</span> (</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="kw">where</span> x= something</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"> )</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"> <span class="kw">set</span> <span class="fu">value</span> = replacement.value</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"> <span class="kw">from</span> replacement</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"> <span class="kw">where</span> shortname.condtion1 = replacement.condtion1</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"> <span class="kw">and</span> shortname.condtion2 = replacement.condition2;</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> )</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a> <span class="kw">update</span> <span class="ot">&quot;LongName&quot;</span> <span class="kw">as</span> shortname</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> <span class="kw">set</span> <span class="fu">value</span> <span class="op">=</span> replacement.<span class="fu">value</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a> <span class="kw">from</span> replacement</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a> <span class="kw">where</span> shortname.condtion1 <span class="op">=</span> replacement.condtion1</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a> <span class="kw">and</span> shortname.condtion2 <span class="op">=</span> replacement.condition2;</span></code></pre></div>
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
