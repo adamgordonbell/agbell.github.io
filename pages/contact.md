@@ -13,9 +13,7 @@ Hi, You can call me Adam.
 
 I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at **[adam@corecursive.com](mailto:adam@corecursive.com)** or DM me on twitter. 
 
-Gordon is my middle name and using it helps disambiguate me from all the other Adam Bell's out there.
-
-Various profile pages around the web:
+Here are various places you can find me around the web:
 
  * [CoRecursive](https://corecursive.com/)
  * [Earthly](https://earthly.dev/blog/authors/adam/)

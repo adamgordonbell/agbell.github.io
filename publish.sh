@@ -9,7 +9,7 @@ echo "All work must be commited in hakyll before running"
 pause
 # clean removes cache
 stack exec cascadeofinsights clean
-rm -rf /_site
+rm -rf _site _cache
 git submodule init
 git submodule update
 cd _site
