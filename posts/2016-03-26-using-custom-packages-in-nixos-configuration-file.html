@@ -47,7 +47,7 @@
   <p>Here is a problem we encountered with NixOS:</p>
 <p>The nix-channel we were on didn’t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.
 <!--more--></p>
-<h3 id="upgrading-nix-package-postgis">Upgrading Nix Package PostGIS:</h3>
+<h3 id="upgrading-nix-package-postgis">Upgrading Nix Package PostGIS</h3>
 <p><em>same steps apply for any package</em></p>
 <ul>
 <li>fork nixpkgs in GitHub</li>
@@ -55,10 +55,10 @@
 <li>built it</li>
 <li><a href="https://github.com/NixOS/nixpkgs/pull/13572/commits/c267f5b71122453268d55ef665f20262be7f53d9">submitted as a pull request to nixpkgs</a></li>
 </ul>
-<h3 id="including-package-in-configuration.nix">Including package in configuration.nix:</h3>
+<h3 id="including-package-in-configuration.nix">Including package in configuration.nix</h3>
 <p>If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service that is configured globally in NixOS so we needed to be able to reference our forked package repo in our configuration.nix file.</p>
 <p><em>If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn’t wait for that.</em></p>
-<h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix :</h3>
+<h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix</h3>
 <p>We created a reference to our forked packages using a let expression in our configuration.nix file. This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.</p>
 <p>Using a let expression, we pulled in our fork of nixpkgs:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode configuration.nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">{</span> <span class="va">config</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>

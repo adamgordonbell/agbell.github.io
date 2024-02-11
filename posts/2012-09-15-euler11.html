@@ -52,13 +52,13 @@ It took me forever to find out that transpose existed and that I could use zipWi
 </blockquote>
 <pre><code>euler11 =
  maximum(
-	(maxGridProduct q10Grid)  			       --max of row products
-	:(maxGridProduct $ transpose q10Grid)   		       --max of column products
-	:(maxGridProduct $ diagonalGrid q10Grid)		        --max of first diagonal
-	:(maxGridProduct $ diagonalGrid $map reverse q10Grid)	--max of second diagonal
-	:(maxGridProduct $ diagonalGrid $ transpose q10Grid)	--max of first transposed
-	:(maxGridProduct $ diagonalGrid $map reverse $ transpose q10Grid)--max of second
-	: []
+ (maxGridProduct q10Grid)            --max of row products
+ :(maxGridProduct $ transpose q10Grid)            --max of column products
+ :(maxGridProduct $ diagonalGrid q10Grid)          --max of first diagonal
+ :(maxGridProduct $ diagonalGrid $map reverse q10Grid) --max of second diagonal
+ :(maxGridProduct $ diagonalGrid $ transpose q10Grid) --max of first transposed
+ :(maxGridProduct $ diagonalGrid $map reverse $ transpose q10Grid)--max of second
+ : []
    )
 
 maxGridProduct :: [[Int]] -&gt; Int
@@ -66,17 +66,17 @@ maxGridProduct grid = maximum $ map maxRowProduct grid
 
 maxRowProduct :: [Int] -&gt; Int
 maxRowProduct line = maximum
-		. map (product . take 4)
-		$ tails
-		$ line
+  . map (product . take 4)
+  $ tails
+  $ line
 
 diagonalGrid grid = map (diagonalRow grid) [0..(length grid)]
 
 diagonalRow :: [[Int]] -&gt; Int -&gt; [Int]
 diagonalRow grid offset = zipWith (!!) grid [offset .. max]
-	where
-	len = length $ grid!!0
-	max = len - 1
+ where
+ len = length $ grid!!0
+ max = len - 1
 
 q10Grid ::[[Int]]
 q10Grid = map (map read) $ stringNum

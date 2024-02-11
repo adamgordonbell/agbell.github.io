@@ -52,9 +52,11 @@
 <p>I have released a caching library that uses <a href="http://www.sharpcrafters.com" title="Postsharp">postsharp</a> on codeplex.</p>
 <p><a href="http://cache.codeplex.com/" title="http://cache.codeplex.com/"></a><strong><a href="http://cache.codeplex.com/">http://cache.codeplex.com/</a></strong></p>
 <p>It has some neat attribute based cache invalidation features and can use an in-memory cache or velocity.</p>
-<p>(Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching)
-* Declarative Caching &amp; Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache &amp; trigger cache invalidation)</p>
-<h3 id="simple-example-no-invalidation">Simple Example( No invalidation):</h3>
+<p>(Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching)</p>
+<ul>
+<li>Declarative Caching &amp; Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache &amp; trigger cache invalidation)</li>
+</ul>
+<h3 id="simple-example-no-invalidation">Simple Example( No invalidation)</h3>
 <blockquote>
 <p>[Cache.Cacheable] //this method now cached, will only be called once per guid<br />
 public SomeExpensiveObject GetExpensiveObject(Guid userId)<br />
@@ -62,7 +64,7 @@ public SomeExpensiveObject GetExpensiveObject(Guid userId)<br />
 ..<br />
 }</p>
 </blockquote>
-<h3 id="full-featured-example">Full Featured Example:</h3>
+<h3 id="full-featured-example">Full Featured Example</h3>
 <blockquote>
 <pre><span>using</span> System;  
 <span>using</span> System.Collections.Generic;  
@@ -75,7 +77,7 @@ public SomeExpensiveObject GetExpensiveObject(Guid userId)<br />
     <span>class</span> <span>UserRepository</span>  
     {  
         <span>//Get All Users is cached in Key = "GetAllUsers"</span>  
-        [<span>Cache</span>.<span>Cacheable</span>(<span>"GetAllUsers"</span>)]   
+        [<span>Cache</span>.<span>Cacheable</span>(<span>"GetAllUsers"</span>)]
         <span>List</span><<span>User</span>> GetAllUsers()  
         {  
             ...  
@@ -104,13 +106,13 @@ public SomeExpensiveObject GetExpensiveObject(Guid userId)<br />
         {  
             ...  
         }  
-        
+
     }  
 }  
 </pre>
 </blockquote>
 <p><a href="http://cache.codeplex.com/SourceControl/changeset/view/1505#25143" title="example">http://cache.codeplex.com/SourceControl/changeset/view/1505#25143</a> <span> </span></p>
-<p>This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion. </p>
+<p>This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion.</p>
 <p>Please excuse the empty method bodies for now.  I will have a better sample project put together at some point.</p>
 
   <div id="disqus_thread"></div>

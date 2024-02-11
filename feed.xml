@@ -21,7 +21,7 @@
   </h2>
   <p class="blog-post-meta">
     <span class="date">2016-08-22</span> - <span class="tags"><a title="All pages tagged &#39;keyboard&#39;." href="/tags/keyboard.html">keyboard</a>, <a title="All pages tagged &#39;ergodox&#39;." href="/tags/ergodox.html">ergodox</a></span>
-  <p><img src="/images/keyboard-layout_ergodox.png" />
+  <p><img src="/images/keyboard-layout_ergodox.png" alt="ergodox" />
 With today’s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.
 <!--more--></p>
 <p>I don’t like having to leave the home row on the keyboard enter commands like CTRL-S or even CTRL-ALT-Left Arrow. Using the tmk firmware or ( the qmk fork) I am able to have my keys function as normal when pressed, but as a modifier when held down.</p>
@@ -75,34 +75,34 @@ To press shift+space in the previous example, you need in addition to a space/sh
   <p>3-way merge works great for code merges in the majority of cases. Can we do better, however. Can we decrease the number of places where a manual conflict resolution is required. I would say, yes we can, if we know more about the syntax of the file in question.
 <!--more--></p>
 <h2 id="an-example">An Example</h2>
-<h3 id="base-file">Base file:</h3>
+<h3 id="base-file">Base file</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b <span class="op">:</span> <span class="bu">Int</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="their-file">Their file:</h3>
+<h3 id="their-file">Their file</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b <span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> c <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="our-file">Our File:</h3>
+<h3 id="our-file">Our File</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> b2 <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="expected-result">Expected Result:</h3>
+<h3 id="expected-result">Expected Result</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span>a <span class="op">:</span> string<span class="op">,</span> b<span class="op">:</span> <span class="bu">Int</span><span class="op">,</span> b2 <span class="op">:</span> <span class="ex">String</span><span class="op">,</span> c <span class="op">:</span> <span class="ex">String</span><span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
 <p>The above will need to manually resolved in git, both branches makes change to the same line, so git does not know how to resolve this.</p>
 <p>However, if we had a similar merge, where the code was split across multiple lines, the 3-way merge would have no problem:</p>
-<h3 id="base-file-1">Base file:</h3>
+<h3 id="base-file-1">Base file</h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b <span class="op">:</span> <span class="bu">Int</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="their-file-1">Their file:</h3>
+<h3 id="their-file-1">Their file</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b <span class="op">:</span> <span class="bu">Int</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>c <span class="op">:</span> <span class="ex">String</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="our-file-1">Our File:</h3>
+<h3 id="our-file-1">Our File</h3>
 <div class="sourceCode" id="cb7"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b<span class="op">:</span> <span class="bu">Int</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b2 <span class="op">:</span> <span class="ex">String</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">)</span> <span class="op">:</span> <span class="ex">Option</span><span class="op">[</span><span class="bu">Int</span><span class="op">]</span></span></code></pre></div>
-<h3 id="result">Result:</h3>
+<h3 id="result">Result</h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">x</span><span class="op">(</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">:</span> string</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span>b<span class="op">:</span> <span class="bu">Int</span></span>
@@ -197,19 +197,19 @@ To press shift+space in the previous example, you need in addition to a space/sh
 <li>Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run</li>
 </ul>
 <!--more-->
-<h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte:</h3>
+<h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> )</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">select</span> <span class="op">*</span> <span class="kw">from</span> replacement</span></code></pre></div>
 <p><em>The cte might seem verbose, but I’m going to need it later, and it helps my sql stay organized</em></p>
-<h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes:</h3>
+<h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span>;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> )</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
@@ -227,7 +227,7 @@ To press shift+space in the previous example, you need in addition to a space/sh
 <p>If the select result looks good, you can run it without the transaction to update.</p>
 <h3 id="run-it">Run it</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> replacement <span class="kw">as</span> (</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>	<span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">select</span> <span class="fu">value</span>, condtion1, condtion2 <span class="kw">from</span> somewhere</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span> x<span class="op">=</span> something</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> )</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -268,7 +268,7 @@ To press shift+space in the previous example, you need in addition to a space/sh
   <p>Here is a problem we encountered with NixOS:</p>
 <p>The nix-channel we were on didn’t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.
 <!--more--></p>
-<h3 id="upgrading-nix-package-postgis">Upgrading Nix Package PostGIS:</h3>
+<h3 id="upgrading-nix-package-postgis">Upgrading Nix Package PostGIS</h3>
 <p><em>same steps apply for any package</em></p>
 <ul>
 <li>fork nixpkgs in GitHub</li>
@@ -276,10 +276,10 @@ To press shift+space in the previous example, you need in addition to a space/sh
 <li>built it</li>
 <li><a href="https://github.com/NixOS/nixpkgs/pull/13572/commits/c267f5b71122453268d55ef665f20262be7f53d9">submitted as a pull request to nixpkgs</a></li>
 </ul>
-<h3 id="including-package-in-configuration.nix">Including package in configuration.nix:</h3>
+<h3 id="including-package-in-configuration.nix">Including package in configuration.nix</h3>
 <p>If this package were a stand-alone program, we could have installed it from our forked pkgs. However, this package is referenced in a service that is configured globally in NixOS so we needed to be able to reference our forked package repo in our configuration.nix file.</p>
 <p><em>If we were on the unstable channel the package would have eventually shown up, when our pull request was merged in and when the channel is updated from Github. However, we couldn’t wait for that.</em></p>
-<h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix :</h3>
+<h3 id="referencing-our-fork-of-nixpkgs-in-our-configuration.nix">Referencing our fork of nixpkgs in our configuration.nix</h3>
 <p>We created a reference to our forked packages using a let expression in our configuration.nix file. This allowed us to globally reference packages both from the channel we are subscribed and from our custompkgs fork.</p>
 <p>Using a let expression, we pulled in our fork of nixpkgs:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode configuration.nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">{</span> <span class="va">config</span><span class="op">,</span> <span class="va">pkgs</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>:</span>
@@ -329,7 +329,7 @@ To press shift+space in the previous example, you need in addition to a space/sh
   <p>What will be the average number of Bitcoin transactions per day in the first week of June 2016?</p>
 <!--more-->
 <p><a href="https://www.gjopen.com/questions/46-what-will-be-the-average-number-of-bitcoin-transactions-per-day-in-the-first-week-of-june-2016">question</a></p>
-<h3 id="simple-estimate-based-on-extrapolation-of-graph">Simple Estimate (based on extrapolation of graph) :</h3>
+<h3 id="simple-estimate-based-on-extrapolation-of-graph">Simple Estimate (based on extrapolation of graph)</h3>
 <ul>
 <li>Averaged over 90 days, the transaction volume is climbing consistently. <a href="https://blockchain.info/charts/n-transactions?timespan=all&amp;showDataPoints=false&amp;daysAverageString=90&amp;show_header=true&amp;scale=0&amp;address=">Chart</a></li>
 <li>But, it goes sideways or slightly down in periods of up to 6 months long, which could leave it below 125, so I will say 25% chance of below 125.</li>
