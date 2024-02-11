@@ -11,27 +11,43 @@ description: Email and places I have or do hangout
 <div class="col-md-8">
 Hi, You can call me Adam.
 
-I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at adam@corecursive.com or DM me on twitter. 
+I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at **[adam@corecursive.com](mailto:adam@corecursive.com)** or DM me on twitter. 
 
 Gordon is my middle name and using it helps disambiguate me from all the other Adam Bell's out there.
 
 Various profile pages around the web:
 
  * [CoRecursive](https://corecursive.com/)
+ * [Earthly](https://earthly.dev/blog/authors/adam/)
  * [Twitter](https://twitter.com/adamgordonbell)
  * [GitHub](https://github.com/adamgordonbell/)
  * [Linked In](https://www.linkedin.com/in/adamgordonbell)
+
+Social Media:
+
  * [Hacker News](https://news.ycombinator.com/user?id=adamgordonbell)
  * [Reddit](https://www.reddit.com/user/adamgordonbell)
- * [earthly](https://earthly.dev/blog/authors/adam/)
  * [dev.to](https://dev.to/adamgordonbell)
- * [freecodecamp](https://www.freecodecamp.org/news/author/adam-gordon-bell/)
- * [medium](https://medium.com/@adamgordonbell)
- * [hackernoon](https://hackernoon.com/u/adamgordonbell)
  * [StackOverflow](http://stackoverflow.com/users/135202/adam)
+
+Writing: 
+
+ * [earthly](https://earthly.dev/blog/authors/adam/)
+ * [medium](https://medium.com/@adamgordonbell)
+ * [freecodecamp](https://www.freecodecamp.org/news/author/adam-gordon-bell/)
+ * [hackernoon](https://hackernoon.com/u/adamgordonbell)
+
+Video / Talks:
+
+ * [Earthly Youtube](https://www.youtube.com/@EarthlyTech)
+ * [Adam Gordon Bell Youtube](https://www.youtube.com/@AdamGordonBell)
+
+Etc:
+
  * [Exercism](https://exercism.io/profiles/agbell)
  * [Project Euler](https://projecteuler.net/profile/agbell.png)
  * [Vim Golf](http://www.vimgolf.com/adamgbell)
  * [Facebook](https://www.facebook.com/AdamGordonBell)
+
  </div>
  </div>
