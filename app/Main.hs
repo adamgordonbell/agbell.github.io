@@ -157,7 +157,7 @@ nonDrafts = return. filter f
   where
     f = not . isPrefixOf "posts/drafts/" . show . itemIdentifier
 
-recentFirstNonDrafts :: (MonadMetadata m, Functor m) => [Item a] -> m [Item a]
+recentFirstNonDrafts :: (MonadMetadata m, MonadFail m, Functor m) => [Item a] -> m [Item a]
 recentFirstNonDrafts items = do
                        nondrafts <- nonDrafts items
                        recentFirst nondrafts
