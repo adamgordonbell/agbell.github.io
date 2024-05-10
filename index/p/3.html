@@ -45,6 +45,32 @@
   <article>
     <header>
       <h1 class="entry-title">
+        <a href="../../posts/2015-08-04-scala-slick-group-joins.html">Scala Slick Group</a>
+      </h1>
+      <div class="meta">
+        <time pubdate data-updated="true">2015-08-04</time>
+        <div class="tags"><a title="All pages tagged 'scala'." href="../../tags/scala.html">scala</a>, <a title="All pages tagged 'slick'." href="../../tags/slick.html">slick</a></div>
+      </div>
+    </header>
+    
+      <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scala"><code class="sourceCode scala"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">val</span> join <span class="op">=</span> <span class="cf">for</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="op">(</span>f<span class="op">,</span>b<span class="op">)</span> <span class="op">&lt;-</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                  foo<span class="op">.</span><span class="fu">filter</span><span class="op">(...)</span> on  innerJoin</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                  bar <span class="fu">on</span> <span class="op">(...)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span> <span class="cf">yield</span> <span class="op">(</span>o<span class="op">,</span>i<span class="op">,</span>s<span class="op">)</span></span></code></pre></div>
+
+    
+
+
+    <div class="continue-link"><a href="../../posts/2015-08-04-scala-slick-group-joins.html">Continue reading &raquo;</a></div>
+  </article>
+  <li>
+  
+  <li>
+  <article>
+    <header>
+      <h1 class="entry-title">
         <a href="../../posts/2015-07-31-hakyll-and-circleci.html">Hakyll and CircleCi</a>
       </h1>
       <div class="meta">
@@ -120,27 +146,6 @@
 
 
     <div class="continue-link"><a href="../../posts/2014-02-20-bluetooth-thinkpad-w520.html">Continue reading &raquo;</a></div>
-  </article>
-  <li>
-  
-  <li>
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="../../posts/2013-11-28-truly-ergonomic-keyboard.html">Truly Ergonomic Keyboard</a>
-      </h1>
-      <div class="meta">
-        <time pubdate data-updated="true">2013-11-28</time>
-        <div class="tags"><a title="All pages tagged 'keyboard'." href="../../tags/keyboard.html">keyboard</a></div>
-      </div>
-    </header>
-    
-      <p><img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="keyboard" /><br />
-
-    
-
-
-    <div class="continue-link"><a href="../../posts/2013-11-28-truly-ergonomic-keyboard.html">Continue reading &raquo;</a></div>
   </article>
   <li>
   
