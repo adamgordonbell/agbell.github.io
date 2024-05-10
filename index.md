@@ -9,9 +9,10 @@ description: This is the website for Adam Gordon Bell - developer, developer rel
 <center><a href="/images/profiles/IMG_1205.jpg">high resolution version</a></center>
 </div>
 <div class="col-md-8">  
-I am a software engineer who [podcasts](https://corecursive.com/) and works in developer relations at [Earthly](https://earthly.dev).  I love building software and I love learning things.  I am based in Peterborough, Canada.  
+I am a software engineer who [podcasts](https://corecursive.com/) and works in developer relations at [Earthly](https://earthly.dev).  I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
 
-You can [leave me anonymous feedback](https://www.admonymous.co/adamgordonbell) or [Email me](mailto:adam@corecursive.com).
+You can [📝 leave me anonymous feedback](https://www.admonymous.co/adamgordonbell) or [📧 Email me](mailto:adam@corecursive.com) or [💬 DM me](https://twitter.com/adamgordonbell) or just [📰 get my newsletter](https://newsletter.corecursive.com/).
+
 
 - [CoRecursive Podcast](https://corecursive.com/)
 
