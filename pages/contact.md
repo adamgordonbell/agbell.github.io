@@ -15,32 +15,34 @@ I am based in Peterborough, Canada but I love working with teams remotely.  If y
 
 Here are various places you can find me around the web:
 
+## Big Ones
+
 * [CoRecursive](https://corecursive.com/)
 * [Earthly](https://earthly.dev/blog/authors/adam/)
 * [Twitter](https://twitter.com/adamgordonbell)
 * [GitHub](https://github.com/adamgordonbell/)
 * [Linked In](https://www.linkedin.com/in/adamgordonbell)
 
-Social Media:
+## Social Media:
 
 * [Hacker News](https://news.ycombinator.com/user?id=adamgordonbell)
-* [Reddit](https://www.reddit.com/user/adamgordonbell)
+* [Reddit](https://www.reddit.com/user/agbell)
 * [dev.to](https://dev.to/adamgordonbell)
 * [StackOverflow](http://stackoverflow.com/users/135202/adam)
 
-Writing:
+## Writing:
 
 * [earthly](https://earthly.dev/blog/authors/adam/)
 * [medium](https://medium.com/@adamgordonbell)
 * [freecodecamp](https://www.freecodecamp.org/news/author/adam-gordon-bell/)
 * [hackernoon](https://hackernoon.com/u/adamgordonbell)
 
-Video / Talks:
+## Video / Talks:
 
 * [Earthly Youtube](https://www.youtube.com/@EarthlyTech)
 * [Adam Gordon Bell Youtube](https://www.youtube.com/@AdamGordonBell)
 
-Etc:
+## Etc:
 
 * [Exercism](https://exercism.io/profiles/agbell)
 * [Project Euler](https://projecteuler.net/profile/agbell.png)
