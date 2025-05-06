@@ -1,6 +1,7 @@
 ---
 title: "Adam Bell - Software Engineer"
 description: "This is the website for Adam Gordon Bell - developer, developer relations engineer, podcaster, and human."
+layout: "home"
 ---
 <div class="row">
 <div class="col-md-4">
@@ -8,9 +9,9 @@ description: "This is the website for Adam Gordon Bell - developer, developer re
 <center><a href="/images/profiles/IMG_1205.jpg">high resolution version</a></center>
 </div>
 <div class="col-md-8">  
-I am a software engineer who [podcasts](https://corecursive.com/) and works in developer relations at [Earthly](https://earthly.dev).  I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
+I am a software engineer who <a href="https://corecursive.com/">podcasts</a> and works in developer relations at <a href="https://earthly.dev">Earthly</a>.  I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
 
-You can [📝 leave me anonymous feedback](https://www.admonymous.co/adamgordonbell) or [📧 Email me](mailto:adam@corecursive.com) or [💬 DM me](https://twitter.com/adamgordonbell) or just [📰 get my newsletter](https://newsletter.corecursive.com/).
+You can <a href="https://www.admonymous.co/adamgordonbell">📝 leave me anonymous feedback</a> or <a href="mailto:adam@corecursive.com">📧 Email me</a> or <a href="https://twitter.com/adamgordonbell">💬 DM me</a> or just <a href="https://newsletter.corecursive.com/">📰 get my newsletter</a>.
 
 
 - [CoRecursive Podcast](https://corecursive.com/)

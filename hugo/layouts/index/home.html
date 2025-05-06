@@ -8,13 +8,10 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Adam Gordon Bell - {{ .Title }}</title>
-  
-  <!-- No custom fonts -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-  <link rel="stylesheet" type="text/css" href="/css/custom.css">
-  <!-- No custom fonts -->
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 
 </head>
 
@@ -34,42 +31,12 @@
 
   <div class="container">
     <div class="blog-header">
-      <h1 class="blog-title">Hey, this is my blog</h1>
-      <p class="lead blog-description">It is somewhat abandoned.</p>
+      <h1 class="blog-title">Hello!</h1>
+      <p class="lead blog-description">{{ .Description }}</p>
     </div>
     <div class="row">
-      <div class="col-sm-8 blog-main">
-        {{ block "main" . }}{{ end }}
-      </div>
-
-      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-        <div class="sidebar-module sidebar-module-inset">
-          <h4>About</h4>
-          <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
-        </div>
-        <div class="sidebar-module">
-          <h4>Elsewhere</h4>
-          <ol class="list-unstyled">
-            <li>
-              <a href="https://corecursive.com">Adam's Podcast</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
-            </li>
-            <li>
-              <a href="https://github.com/adamgordonbell/">GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
-            </li>
-            <li>
-              <a href="/contact/">More</a>
-            </li>
-          </ol>
-        </div>
-        <div class="sidebar-module">
-          <a href="/index.xml">RSS</a>
-        </div>
+      <div class="col-sm-12 blog-main">
+        {{ .Content }}
       </div>
     </div>
   </div>
@@ -80,8 +47,6 @@
       <a href="https://gohugo.io/">Hugo</a>
     </p>
   </footer>
-
-  <!-- No font loading script -->
 
   <!-- google analytics -->
   <script>

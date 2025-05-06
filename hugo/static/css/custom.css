@@ -1,0 +1,29 @@
+/* Simple, clean styling for better readability */
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Make sure content is readable */
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Ensure container is properly sized */
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Basic spacing improvements */
+p, li, blockquote {
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    margin-bottom: 60px;
+}

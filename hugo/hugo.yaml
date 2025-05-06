@@ -1,4 +1,4 @@
-baseURL: https://agbell.github.io/
+baseURL: https://adamgordonbell.com/
 languageCode: en-us
 title: Cascade of Insights
 theme: cascadeofinsights
@@ -7,6 +7,16 @@ theme: cascadeofinsights
 section:
   post:
     path: blog
+
+# Set permalinks to maintain the same URL structure
+permalinks:
+  blog: /blog/:filename/
+
+# Allow raw HTML in markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 params:
   description: "Personal blog of Adam Bell"

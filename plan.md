@@ -31,6 +31,13 @@ This document outlines the plan to migrate the site from Hakyll (Haskell-based) 
 - [x] Update deployment process (removing CircleCI dependency, adding GitHub Actions build)
 - [x] Configure blog to be under /blog/ path
 - [x] Ensure top-level page matches the original Hakyll content
+- [x] Fix image rendering by enabling raw HTML in markdown content
+- [x] Fix home page layout to match original Hakyll site (remove sidebar from home page)
+- [x] Fix Markdown links not rendering inside HTML content by converting to HTML links
+- [x] Update baseURL to use adamgordonbell.com instead of agbell.github.io
+- [x] Configure blog permalinks to maintain consistent URL structure
+- [x] Add custom CSS to better match original Hakyll styling and font sizes
+- [x] Simplify font handling by removing custom fonts and font loading scripts
 
 ## Notes
 - Hakyll dependencies are complex and running the Hakyll site is not necessary
