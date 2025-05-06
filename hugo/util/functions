@@ -56,9 +56,10 @@ build() {
 
 publish() { # Deploy to GitHub Pages
     echo "The site is now deployed via GitHub Actions."
-    echo "To deploy manually:"
+    echo "Deployment process:"
     echo "1. Push changes to the master branch"
-    echo "2. GitHub Actions will build and deploy automatically"
+    echo "2. GitHub Actions will build and deploy automatically using the GitHub Pages service"
+    echo "3. No separate branch is needed - deployment happens directly from the workflow"
     echo ""
     echo "To build locally and preview:"
     build
