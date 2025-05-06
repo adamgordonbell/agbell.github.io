@@ -1,0 +1,27 @@
+baseURL: https://agbell.github.io/
+languageCode: en-us
+title: Cascade of Insights
+theme: cascadeofinsights
+
+params:
+  description: "Personal blog of Adam Bell"
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss+xml"
+    baseName: "rss"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Articles
+      url: /articles/
+      weight: 2
+    - name: Bio
+      url: /bio/
+      weight: 3
+    - name: Contact
+      url: /contact/
+      weight: 4

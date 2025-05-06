@@ -16,13 +16,15 @@ This document outlines the plan to migrate the site from Hakyll (Haskell-based) 
 - Use the existing HTML output as a reference without needing to run the Hakyll site
 
 ## Tasks
-- [ ] Create a "hakyll" subfolder and move all Hakyll-specific files there (preserving CNAME and this plan file at root)
-- [ ] Create a "hugo" folder with a fresh Hugo installation
-- [ ] Create new utility functions for Hugo (similar to current util/functions but for Hugo)
-- [ ] Set up basic Hugo site structure with minimal theme
+- [x] Create a "hakyll" subfolder and move all Hakyll-specific files there (preserving CNAME and this plan file at root)
+- [x] Create a "hugo" folder with a fresh Hugo installation
+- [x] Create new utility functions for Hugo (similar to current util/functions but for Hugo)
+- [x] Set up basic Hugo site structure with minimal theme
 - [ ] Port templates from Hakyll to Hugo format
 - [ ] Migrate content (posts, pages) to Hugo
 - [ ] Port CSS and styling
+- [x] Set up images directory in Hugo static folder
+- [x] Update .gitignore for both Hakyll and Hugo
 - [ ] Configure tags, pagination, and other features in Hugo
 - [ ] Test the site locally
 - [ ] Update deployment process (removing CircleCI dependency, adding gha build)
