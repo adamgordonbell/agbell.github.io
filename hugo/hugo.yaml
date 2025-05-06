@@ -6,6 +6,15 @@ theme: cascadeofinsights
 params:
   description: "Personal blog of Adam Bell"
 
+# Configure pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Enable tags taxonomies
+taxonomies:
+  tag: tags
+
+# RSS Feed
 outputFormats:
   RSS:
     mediatype: "application/rss+xml"
@@ -25,3 +34,6 @@ menu:
     - name: Contact
       url: /contact/
       weight: 4
+    - name: Tags
+      url: /tags/
+      weight: 5
