@@ -29,6 +29,8 @@ This document outlines the plan to migrate the site from Hakyll (Haskell-based) 
 - [x] Test the site locally
 - [x] Add background mode to Hugo server with log file and status check
 - [x] Update deployment process (removing CircleCI dependency, adding GitHub Actions build)
+- [x] Configure blog to be under /blog/ path
+- [x] Ensure top-level page matches the original Hakyll content
 
 ## Notes
 - Hakyll dependencies are complex and running the Hakyll site is not necessary
