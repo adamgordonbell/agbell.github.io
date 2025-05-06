@@ -25,11 +25,11 @@ This document outlines the plan to migrate the site from Hakyll (Haskell-based) 
 - [ ] Port CSS and styling
 - [ ] Configure tags, pagination, and other features in Hugo
 - [ ] Test the site locally
-- [ ] Update deployment process (removing CircleCI dependency)
+- [ ] Update deployment process (removing CircleCI dependency, adding gha build)
 
 ## Notes
 - Hakyll dependencies are complex and running the Hakyll site is not necessary
-- We can use the HTML output as reference for porting
+- We can use the markdown input as reference for porting ( or find rendered output in master git branch )
 - The current util/functions is Hakyll-specific and will be moved to the hakyll subfolder
 - New Hugo-specific utility functions will be created
-- CircleCI will not be used for the new setup
+- CircleCI will not be used for the new setup, a github actions build that supports hosting result on github static pages will be used instead.
