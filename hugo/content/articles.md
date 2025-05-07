@@ -1,5 +1,6 @@
 ---
 title: "Articles"
+title_short: "Articles"
 url: "/articles/"
 description: "Here is a collection of things I have written"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Biography"
+title_short: "Bio"
 url: "/bio/"
 description: "When asked for a biography, I send people here"
 ---

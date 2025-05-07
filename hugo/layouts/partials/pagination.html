@@ -1,0 +1,10 @@
+<nav>
+  <ul class="pager">
+    {{ if .HasPrev }}
+    <li><a href="{{ .Prev.URL }}">Previous</a></li>
+    {{ end }}
+    {{ if .HasNext }}
+    <li><a href="{{ .Next.URL }}">Next</a></li>
+    {{ end }}
+  </ul>
+</nav>

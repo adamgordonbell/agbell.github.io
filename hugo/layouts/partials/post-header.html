@@ -1,0 +1,11 @@
+<h2 class="blog-post-title">{{ if .IsPage }}{{ .Title }}{{ else }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ end }}</h2>
+<p class="blog-post-meta">
+  <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+  {{ with .Params.tags }}
+  - <span class="tags">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+  </span>
+  {{ end }}
+</p>

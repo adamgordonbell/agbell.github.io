@@ -1,0 +1,4 @@
+<div class="blog-header">
+  <h1 class="blog-title">{{ if .Params.title_short }}{{ .Params.title_short }}{{ else }}{{ if .Title }}{{ .Title }}{{ else }}Hello!{{ end }}{{ end }}</h1>
+  <p class="lead blog-description">{{ .Description }}</p>
+</div>

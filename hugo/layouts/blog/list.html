@@ -5,35 +5,8 @@
 {{ $paginator := .Paginate .Pages }}
 
 {{ range $paginator.Pages }}
-<div class="blog-post">
-  <h2 class="blog-post-title">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-    {{ with .Params.tags }}
-    - <span class="tags">
-      {{ range . }}
-      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-      {{ end }}
-    </span>
-    {{ end }}
-  </p>
-  {{ .Summary }}
-  {{ if .Truncated }}
-  <a href="{{ .Permalink }}">Read more...</a>
-  {{ end }}
-</div>
+  {{ partial "post-summary.html" . }}
 {{ end }}
 
-<nav>
-  <ul class="pager">
-    {{ if $paginator.HasPrev }}
-    <li><a href="{{ $paginator.Prev.URL }}">Previous</a></li>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <li><a href="{{ $paginator.Next.URL }}">Next</a></li>
-    {{ end }}
-  </ul>
-</nav>
+{{ partial "pagination.html" $paginator }}
 {{ end }}

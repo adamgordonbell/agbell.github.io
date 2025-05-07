@@ -2,24 +2,6 @@
 <h1>Tag: {{ .Title }}</h1>
 
 {{ range .Pages }}
-<div class="blog-post">
-  <h2 class="blog-post-title">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </h2>
-  <p class="blog-post-meta">
-    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-    {{ with .Params.tags }}
-    - <span class="tags">
-      {{ range . }}
-      <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-      {{ end }}
-    </span>
-    {{ end }}
-  </p>
-  {{ .Summary }}
-  {{ if .Truncated }}
-  <a href="{{ .Permalink }}">Read more...</a>
-  {{ end }}
-</div>
+  {{ partial "post-summary.html" . }}
 {{ end }}
 {{ end }}

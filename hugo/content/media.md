@@ -1,5 +1,6 @@
 ---
 title: "Media"
+title_short: "Media"
 url: "/media/"
 description: "This is a list of works of media in which I am featured in some way"
 ---
