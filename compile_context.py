@@ -124,6 +124,25 @@ def get_files_in_order():
                     result.append(filepath)
                     break
     
+    # Include general content pages (excluding blogs)
+    content_dir = os.path.join(HUGO_DIR, 'content')
+    if os.path.exists(content_dir):
+        # First include files directly in the content folder
+        for file in sorted(os.listdir(content_dir)):
+            filepath = os.path.join(content_dir, file)
+            if os.path.isfile(filepath) and should_include(filepath):
+                result.append(filepath)
+        
+        # Then include non-blog subdirectories entirely
+        for item in sorted(os.listdir(content_dir)):
+            item_path = os.path.join(content_dir, item)
+            if os.path.isdir(item_path) and item != 'blog':
+                for root, _, files in os.walk(item_path):
+                    for file in sorted(files):
+                        filepath = os.path.join(root, file)
+                        if should_include(filepath):
+                            result.append(filepath)
+    
     # Include just one blog post as an example
     blog_found = False
     blog_dir = os.path.join(HUGO_DIR, 'content/blog')

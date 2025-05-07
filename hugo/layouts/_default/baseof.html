@@ -1,3 +1,4 @@
+<!-- ./hugo/layouts/_default/baseof.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,39 +12,54 @@
   <div class="container">
     {{ partial "page-title.html" . }}
     <div class="row">
-      <div class="col-sm-8 blog-main">
-        {{ block "main" . }}{{ end }}
-      </div>
+      {{/* Determine if we should show the sidebar */}}
+      {{ $isBlogSection := eq .Section "blog" }}
+      {{ $isTaxonomyList := eq .Kind "taxonomy" }} {{/* e.g. /tags/ */}}
+      {{ $isTaxonomyTerm := eq .Kind "term" }}   {{/* e.g. /tags/csharp/ */}}
+      {{ $showSidebar := or $isBlogSection $isTaxonomyList $isTaxonomyTerm }}
 
-      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-        <div class="sidebar-module sidebar-module-inset">
-          <h4>About</h4>
-          <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+      {{ if $showSidebar }}
+        {{/* Layout WITH sidebar for blog and taxonomy pages */}}
+        <div class="col-sm-8 blog-main">
+          {{ block "main" . }}{{ end }}
         </div>
-        <div class="sidebar-module">
-          <h4>Elsewhere</h4>
-          <ol class="list-unstyled">
-            <li>
-              <a href="https://corecursive.com">Adam's Podcast</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
-            </li>
-            <li>
-              <a href="https://github.com/adamgordonbell/">GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
-            </li>
-            <li>
-              <a href="/contact/">More</a>
-            </li>
-          </ol>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      {{ else }}
+        {{/* Layout WITHOUT sidebar for other pages (Contact, Bio, Home, etc.) */}}
+        {{/* Using col-md-8 col-md-offset-2 to center the content with a similar width to blog posts */}}
+        {{/* Or you could use col-sm-10 col-sm-offset-1 for a bit wider content, or col-sm-12 for full width */}}
+        <div class="col-md-8 col-md-offset-2 main-content-full-width"> {{/* Changed class name for clarity */}}
+          {{ block "main" . }}{{ end }}
         </div>
-        <div class="sidebar-module">
-          <a href="/index.xml">RSS</a>
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 
