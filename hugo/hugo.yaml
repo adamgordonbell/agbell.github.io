@@ -20,6 +20,10 @@ markup:
 
 params:
   description: "Personal blog of Adam Bell"
+  sections:
+    blog:
+      title_short: "Hey, this is my blog"
+      description: "It is somewhat abandoned."
 
 # Configure pagination
 paginate: 10

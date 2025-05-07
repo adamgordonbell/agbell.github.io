@@ -1,4 +1,12 @@
 <div class="blog-header">
-  <h1 class="blog-title">{{ if .Params.title_short }}{{ .Params.title_short }}{{ else }}{{ if .Title }}{{ .Title }}{{ else }}Hello!{{ end }}{{ end }}</h1>
-  <p class="lead blog-description">{{ .Description }}</p>
+  {{ if eq .Type "blog" }}
+    <h1 class="blog-title">{{ site.Params.sections.blog.title_short }}</h1>
+    <p class="lead blog-description">{{ site.Params.sections.blog.description }}</p>
+  {{ else if .Params.title_short }}
+    <h1 class="blog-title">{{ .Params.title_short }}</h1>
+    <p class="lead blog-description">{{ .Description }}</p>
+  {{ else }}
+    <h1 class="blog-title">{{ if .Title }}{{ .Title }}{{ else }}Hello!{{ end }}</h1>
+    <p class="lead blog-description">{{ .Description }}</p>
+  {{ end }}
 </div>
