@@ -1,8 +1,20 @@
 <footer class="blog-footer">
-  <p>
-    Site made with
-    <a href="https://gohugo.io/">Hugo</a>
-  </p>
+  <div class="container text-center">
+    <div class="newsletter-container">
+      <p class="newsletter-text">Sign up to my monthly newsletter to be notified when I write new things, have new podcast episodes or other fun stuff to share.</p>
+      <form action="https://newsletter.corecursive.com/add_subscriber" method="post" accept-charset="utf-8" class="newsletter-form">
+        <div class="form-inline justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+        </div>
+      </form>
+    </div>
+    <p class="site-info">
+      Site made with <a href="https://gohugo.io/">Hugo</a>
+    </p>
+  </div>
 </footer>
 
 <!-- google analytics -->
