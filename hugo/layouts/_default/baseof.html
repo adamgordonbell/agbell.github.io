@@ -18,9 +18,9 @@
       {{ $isTaxonomyTerm := eq .Kind "term" }}   {{/* e.g. /tags/csharp/ */}}
       {{ $showSidebar := or $isBlogSection $isTaxonomyList $isTaxonomyTerm }}
 
+      <div class="col-sm-12 blog-main">
       {{ if $showSidebar }}
         {{/* Layout WITH sidebar for blog and taxonomy pages */}}
-        <div class="col-sm-12 blog-main">
         <div class="col-sm-8 blog-main">
           {{ block "main" . }}{{ end }}
         </div>
@@ -53,15 +53,15 @@
             <a href="/index.xml">RSS</a>
           </div>
         </aside>
-      </div>
       {{ else }}
         {{/* Layout WITHOUT sidebar for other pages (Contact, Bio, Home, etc.) */}}
         {{/* Using col-md-8 col-md-offset-2 to center the content with a similar width to blog posts */}}
         {{/* Or you could use col-sm-10 col-sm-offset-1 for a bit wider content, or col-sm-12 for full width */}}
-        <div class="col-md-8 col-md-offset-2 main-content-full-width"> {{/* Changed class name for clarity */}}
+        <div class="main-content-full-width"> {{/* Changed class name for clarity */}}
           {{ block "main" . }}{{ end }}
         </div>
       {{ end }}
+      </div>
     </div>
   </div>
 
