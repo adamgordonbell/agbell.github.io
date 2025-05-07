@@ -1,6 +1,6 @@
 <div class="blog-header">
   {{ if eq .Type "blog" }}
-    <h1 class="blog-title">{{ site.Params.sections.blog.title_short }}</h1>
+    <h1 class="blog-title"><a href="/blog/">{{ site.Params.sections.blog.title_short }}</a></h1>
     <p class="lead blog-description">{{ site.Params.sections.blog.description }}</p>
   {{ else if .Params.title_short }}
     <h1 class="blog-title">{{ .Params.title_short }}</h1>
