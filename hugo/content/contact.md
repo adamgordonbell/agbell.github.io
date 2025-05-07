@@ -1,6 +1,6 @@
 ---
 title: "Contact Me"
-title_short: "Contact"
+title_short: "Hit me up"
 url: "/contact/"
 description: "Email and places I have or do hangout"
 ---

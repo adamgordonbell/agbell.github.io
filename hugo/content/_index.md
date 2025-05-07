@@ -2,7 +2,6 @@
 title: "Adam Bell - Software Engineer"
 title_short: "Hello!"
 description: "This is the website for Adam Gordon Bell - developer, developer relations engineer, podcaster, and human."
-layout: "home"
 ---
 <div class="row">
 <div class="col-md-4">

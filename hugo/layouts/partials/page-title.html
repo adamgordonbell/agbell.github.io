@@ -11,8 +11,8 @@
     <p class="lead blog-description">{{ .Description }}</p> <!-- Uses the page's .Description -->
   {{ else if eq .Kind "home" }}
     <!-- This is for the HOME PAGE -->
-    <h1 class="blog-title">{{ .Title }}</h1> <!-- Site title -->
-    <p class="lead blog-description">{{ site.Params.description }}</p> <!-- Site description -->
+    <h1 class="blog-title">{{ .Params.title_short | default .Title }}</h1> <!-- Site title -->
+    <p class="lead blog-description">{{ .Params.description | default site.Params.description }}</p> <!-- Site description -->
   {{ else }}
     <!-- Fallback for other list pages like taxonomies (e.g., /tags/some-tag/) -->
     <h1 class="blog-title">{{ .Title }}</h1>
