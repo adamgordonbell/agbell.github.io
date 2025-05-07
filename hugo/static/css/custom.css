@@ -1,14 +1,14 @@
 /* Simple, clean styling for better readability */
 body {
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     color: #555;
 }
 
 /* Make sure content is readable */
 .blog-main {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 /* Basic spacing improvements */
-p, li, blockquote {
+p {
     margin-bottom: 20px;
 }
 
