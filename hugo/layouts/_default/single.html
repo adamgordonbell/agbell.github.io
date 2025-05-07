@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="blog-post">
-  {{ partial "post-header.html" . }}
+  <!-- The main <h1> for the post title is handled by "page-title.html" via "baseof.html" -->
+  {{ partial "_post-meta.html" . }}
   {{ .Content }}
 
   {{ partial "disqus.html" . }}

@@ -1,12 +1,21 @@
+<!-- ./hugo/layouts/partials/page-title.html -->
 <div class="blog-header">
-  {{ if eq .Type "blog" }}
-    <h1 class="blog-title"><a href="/blog/">{{ site.Params.sections.blog.title_short }}</a></h1>
-    <p class="lead blog-description">{{ site.Params.sections.blog.description }}</p>
-  {{ else if .Params.title_short }}
-    <h1 class="blog-title">{{ .Params.title_short }}</h1>
-    <p class="lead blog-description">{{ .Description }}</p>
+  {{ if and (eq .Type "blog") (eq .Kind "section") }}
+    <!-- This is for the BLOG SECTION LISTING page (e.g., /blog/) -->
+    <h1 class="blog-title"><a href="{{ .Permalink }}">{{ site.Params.sections.blog.title_short | default .Title }}</a></h1>
+    <p class="lead blog-description">{{ site.Params.sections.blog.description | default .Params.description }}</p>
+  {{ else if .IsPage }}
+    <!-- This is for ANY SINGLE PAGE, including individual blog posts, /bio/, /contact/, etc. -->
+    <!-- The title_short param can be used for any page if desired, otherwise it uses the page's .Title -->
+    <h1 class="blog-title">{{ .Params.title_short | default .Title }}</h1> <!-- Not linked for single pages -->
+    <p class="lead blog-description">{{ .Description }}</p> <!-- Uses the page's .Description -->
+  {{ else if eq .Kind "home" }}
+    <!-- This is for the HOME PAGE -->
+    <h1 class="blog-title">{{ .Title }}</h1> <!-- Site title -->
+    <p class="lead blog-description">{{ site.Params.description }}</p> <!-- Site description -->
   {{ else }}
-    <h1 class="blog-title">{{ if .Title }}{{ .Title }}{{ else }}Hello!{{ end }}</h1>
+    <!-- Fallback for other list pages like taxonomies (e.g., /tags/some-tag/) -->
+    <h1 class="blog-title">{{ .Title }}</h1>
     <p class="lead blog-description">{{ .Description }}</p>
   {{ end }}
 </div>

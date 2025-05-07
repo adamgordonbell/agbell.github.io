@@ -1,10 +1,9 @@
-{{ if eq .Layout "single" }}{{ partial "page-title.html" . }}{{ else }}{{ partial "post-title.html" . }}{{ end }}
 <p class="blog-post-meta">
   <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
   {{ with .Params.tags }}
   - <span class="tags">
     {{ range . }}
-    <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+    <a href="{{ site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   </span>
   {{ end }}
