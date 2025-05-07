@@ -20,6 +20,7 @@
 
       {{ if $showSidebar }}
         {{/* Layout WITH sidebar for blog and taxonomy pages */}}
+        <div class="col-sm-12 blog-main">
         <div class="col-sm-8 blog-main">
           {{ block "main" . }}{{ end }}
         </div>
@@ -52,6 +53,7 @@
             <a href="/index.xml">RSS</a>
           </div>
         </aside>
+      </div>
       {{ else }}
         {{/* Layout WITHOUT sidebar for other pages (Contact, Bio, Home, etc.) */}}
         {{/* Using col-md-8 col-md-offset-2 to center the content with a similar width to blog posts */}}

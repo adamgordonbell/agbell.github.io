@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Redirects map: old URLs to new URLs
+    var redirects = {
+      '/blog/': '/posts/',
+      // Add more redirects as needed
+    };
+
+    var path = window.location.pathname;
+    
+    // Check if this path needs to be redirected
+    for (var oldPath in redirects) {
+      if (path.startsWith(oldPath)) {
+        var newPath = path.replace(oldPath, redirects[oldPath]);
+        window.location.href = newPath;
+        document.write('Redirecting to ' + newPath + '...');
+        break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Page Not Found</h1>
+  <p>The page you requested could not be found. If you are not redirected automatically, please <a href="/">click here</a> to go to the homepage.</p>
+</body>
+</html>

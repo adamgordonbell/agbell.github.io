@@ -8,15 +8,8 @@ body {
 
 /* Make sure content is readable */
 .blog-main {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
-}
-
-/* Ensure container is properly sized */
-@media (min-width: 1200px) {
-    .container {
-        width: 970px;
-    }
 }
 
 /* Basic spacing improvements */

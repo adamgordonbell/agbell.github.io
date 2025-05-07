@@ -10,7 +10,7 @@ section:
 
 # Set permalinks to maintain the same URL structure
 permalinks:
-  blog: /blog/:filename/
+  blog: /posts/:filename.html
 
 # Allow raw HTML in markdown
 markup:
@@ -54,7 +54,7 @@ menu:
       url: /media/
       weight: 4
     - name: Blog
-      url: /blog/
+      url: /posts/
       weight: 5
     - name: Contact
       url: /contact/
