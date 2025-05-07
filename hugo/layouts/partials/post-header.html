@@ -1,4 +1,4 @@
-<h2 class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+{{ if eq .Layout "single" }}{{ partial "page-title.html" . }}{{ else }}{{ partial "post-title.html" . }}{{ end }}
 <p class="blog-post-meta">
   <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
   {{ with .Params.tags }}
