@@ -1,4 +1,4 @@
-# Cascade Of Insights
+# Adam Gordon Bell's Website
 
 This is my blog. [Find it here](https://agbell.github.io)
 

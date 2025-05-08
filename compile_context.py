@@ -45,7 +45,7 @@ def get_files_in_order():
         result.append(config_file)
     
     # Include theme configuration
-    theme_config = os.path.join(HUGO_DIR, 'themes/cascadeofinsights/theme.toml')
+    theme_config = os.path.join(HUGO_DIR, 'themes/adamgordonbell/theme.toml')
     if os.path.exists(theme_config):
         result.append(theme_config)
     
@@ -115,7 +115,7 @@ def get_files_in_order():
                 break  # Just include one JS file
     
     # Also check theme assets
-    theme_css = os.path.join(HUGO_DIR, 'themes/cascadeofinsights/assets/css')
+    theme_css = os.path.join(HUGO_DIR, 'themes/adamgordonbell/assets/css')
     if os.path.exists(theme_css):
         for file in sorted(os.listdir(theme_css)):
             if file == 'main.css':
