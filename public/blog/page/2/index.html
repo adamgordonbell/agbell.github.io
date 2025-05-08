@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1746662002">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    
+<div class="blog-header">
+  
+    
+    <h1 class="blog-title"><a href="http://localhost:1313/blog/">Hey, this is my blog</a></h1>
+    <p class="lead blog-description">It is somewhat abandoned.</p>
+  
+</div>
+    <div class="row">
+      
+      
+       
+         
+      
+
+      <div class="col-sm-12 blog-main">
+      
+        
+        <div class="col-sm-8 blog-main">
+          
+
+
+
+
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/">Scala Slick Group</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">August 4, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/scala">scala</a>
+    
+    <a href="http://localhost:1313/tags/slick">slick</a>
+    
+  </span>
+  
+</p>
+  <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">val</span> join <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">for</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">(</span>f<span style="color:#f92672">,</span>b<span style="color:#f92672">)</span> <span style="color:#66d9ef">&lt;-</span>
+</span></span><span style="display:flex;"><span>                  foo<span style="color:#f92672">.</span>filter<span style="color:#f92672">(...)</span> on  innerJoin
+</span></span><span style="display:flex;"><span>                  bar on <span style="color:#f92672">(...)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span> <span style="color:#66d9ef">yield</span> <span style="color:#f92672">(</span>o<span style="color:#f92672">,</span>i<span style="color:#f92672">,</span>s<span style="color:#f92672">)</span>
+</span></span></code></pre></div>
+  
+  <a href="http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/">Hakyll and CircleCi</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">July 31, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/blog">blog</a>
+    
+    <a href="http://localhost:1313/tags/hakyll">hakyll</a>
+    
+    <a href="http://localhost:1313/tags/ci">ci</a>
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+  </span>
+  
+</p>
+  <p>This blog was on tumblr, which was easy to setup and post and such.  However, I spend like 8 hours a day with a text editor open and a git in terminal window.</p>
+  
+  <a href="http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-01-14-lazy-evaluation.html/">Lazy Evaluation In Haskell</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">January 14, 2015</span>
+  
+</p>
+  <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em></p>
+  
+  <a href="http://localhost:1313/posts/2015-01-14-lazy-evaluation.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2014-03-15-incrementing.html/">Incrementing</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">March 15, 2014</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/paul-graham">paul-graham</a>
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+  </span>
+  
+</p>
+  <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.</p>
+  
+  <a href="http://localhost:1313/posts/2014-03-15-incrementing.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2014-02-20-bluetooth-thinkpad-w520.html/">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">February 20, 2014</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/thinkpad">thinkpad</a>
+    
+    <a href="http://localhost:1313/tags/bluetooth">bluetooth</a>
+    
+  </span>
+  
+</p>
+  
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/">Truly Ergonomic Keyboard</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">November 28, 2013</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/keyboard">keyboard</a>
+    
+  </span>
+  
+</p>
+  <p><img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="keyboard"></p>
+  
+  <a href="http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/">Emacs Client on Windows 8</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">October 28, 2013</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/emacs">emacs</a>
+    
+    <a href="http://localhost:1313/tags/windows">windows</a>
+    
+  </span>
+  
+</p>
+  <p>Problem:</p>
+<p>I want to use emacs like I use notepadd++ on windows.</p>
+  
+  <a href="http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-11-09-euler19.html/">Project Euler #19 in haskell and by hand</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">November 9, 2012</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/euler">euler</a>
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+  </span>
+  
+</p>
+  <blockquote>
+<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
+<p><a href="http://projecteuler.net/problem=19">http://projecteuler.net/problem=19</a></p>
+</blockquote>
+  
+  <a href="http://localhost:1313/posts/2012-11-09-euler19.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/">Functor is to Lens as Applicative is to Biplate</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">October 15, 2012</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+    <a href="http://localhost:1313/tags/haskell-is-hard">haskell-is-hard</a>
+    
+  </span>
+  
+</p>
+  <p>“Functor is to Lens as Applicative is to Biplate”</p>
+<ul>
+<li><em><a href="http://front.math.ucdavis.edu/1103.2841">http://front.math.ucdavis.edu/1103.2841</a></em></li>
+</ul>
+<p>Haskell, the language with seemingly endless new concepts to learn about</p>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-09-15-euler11.html/">Project Euler #11 in haskell</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">September 15, 2012</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/euler">euler</a>
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+  </span>
+  
+</p>
+  <blockquote>
+<p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img src="http://projecteuler.net/images/symbol_times.gif" alt="×"><span>20 grid?</span></p>
+<p><a href="http://projecteuler.net/problem=11">http://projecteuler.net/problem=11</a></p>
+</blockquote>
+  
+  <a href="http://localhost:1313/posts/2012-09-15-euler11.html/">Read more...</a>
+  
+</div>
+
+
+<nav>
+  <ul class="pager">
+    
+    <li><a href="/blog/">Previous</a></li>
+    
+    
+    <li><a href="/blog/page/3/">Next</a></li>
+    
+  </ul>
+</nav>
+
+<h2>Tags</h2>
+<div class="tag-cloud">
+  
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  
+    
+      
+      <a href="/tags/c%23/" style="font-size: 250%">
+        C# (13)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/euler/" style="font-size: 213%">
+        Euler (8)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/haskell/" style="font-size: 195%">
+        Haskell (6)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/attribute-based-caching/" style="font-size: 174%">
+        Attribute-Based-Caching (4)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/scala/" style="font-size: 161%">
+        Scala (3)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/git/" style="font-size: 146%">
+        Git (2)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/keyboard/" style="font-size: 146%">
+        Keyboard (2)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/merging/" style="font-size: 146%">
+        Merging (2)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/slick/" style="font-size: 146%">
+        Slick (2)
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+        </div>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <div class="container text-center">
+    <div class="newsletter-container">
+      <p class="newsletter-text">Sign up to my monthly newsletter to be notified when I write new things, have new podcast episodes or other fun stuff to share.</p>
+      <form action="https://newsletter.corecursive.com/add_subscriber" method="post" accept-charset="utf-8" class="newsletter-form">
+        <div class="form-inline justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+        </div>
+      </form>
+    </div>
+    <p class="site-info">
+      Site made with <a href="https://gohugo.io/">Hugo</a>
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

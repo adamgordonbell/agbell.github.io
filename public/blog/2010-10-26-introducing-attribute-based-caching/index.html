@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Introducing Attribute Based Caching</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="blog-header">
+  
+    <h1 class="blog-title"><a href="/blog/">Hey, this is my blog</a></h1>
+    <p class="lead blog-description">It is somewhat abandoned.</p>
+  
+</div>
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">October 26, 2010</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/c">c#</a>
+    
+    <a href="http://localhost:1313/tags/attribute-based-caching">attribute-based-caching</a>
+    
+  </span>
+  
+</p>
+  <blockquote>
+<p>“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”</p>
+</blockquote>
+<p>I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing <a href="http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/" title="caching">caching</a> with postsharp.  However, none handled cache invalidation in a nice declarative way.  </p>
+<p>I have released a caching library that uses <a href="http://www.sharpcrafters.com" title="Postsharp">postsharp</a> on codeplex.</p>
+<p><a href="http://cache.codeplex.com/" title="http://cache.codeplex.com/"></a><strong><a href="http://cache.codeplex.com/">http://cache.codeplex.com/</a></strong></p>
+<p>It has some neat attribute based cache invalidation features and can use an in-memory cache or velocity.</p>
+<p>(Options include In-process and Out-Of-Process and Off. Out-Of-Process uses Microsoft ApplicationServer.Caching)</p>
+<ul>
+<li>Declarative Caching &amp; Declarative Cache Invalidation ( use method name or configurable “GroupName” plus method parameters to cache &amp; trigger cache invalidation)</li>
+</ul>
+<h3 id="simple-example-no-invalidation">Simple Example( No invalidation)</h3>
+<blockquote>
+<p>[Cache.Cacheable] //this method now cached, will only be called once per guid<br>
+public SomeExpensiveObject GetExpensiveObject(Guid userId)<br>
+{<br>
+..<br>
+}</p>
+</blockquote>
+<h3 id="full-featured-example">Full Featured Example</h3>
+<blockquote>
+<pre><span>using</span> System;  
+<span>using</span> System.Collections.Generic;  
+<span>using</span> System.Linq;  
+<span>using</span> System.Text;  
+<span>using</span> CacheAspect.Attributes;  
+
+<span>namespace</span> TestCache  
+{  
+    <span>class</span> <span>UserRepository</span>  
+    {  
+        <span>//Get All Users is cached in Key = "GetAllUsers"</span>  
+        [<span>Cache</span>.<span>Cacheable</span>(<span>"GetAllUsers"</span>)]
+        <span>List</span><<span>User</span>> GetAllUsers()  
+        {  
+            ...  
+        }  
+
+        <span>//GetUserById is cached using "GetUserById" + ID parameter</span>  
+        [<span>Cache</span>.<span>Cacheable</span>(<span>"GetUserById"</span>)]  
+        <span>User</span> GetUserById(<span>int</span> Id)  
+        {  
+            ...  
+        }  
+
+        <span>//Add user invalidates "GetAllUsers" cache key (User parameter is ignored)</span>  
+        [<span>Cache</span>.<span>TriggerInvalidation</span>(<span>"GetAllUsers"</span>, <span>CacheSettings</span>.IgnoreParameters)]  
+        <span>void</span> AddUser(<span>User</span> user)  
+        {  
+
+        }  
+
+        <span>//Delete user invalidates both GetAllUsers & GetUserById</span>  
+        <span>//The user parameters Id property is used to build Key for "GetUserById"+ Id  Key</span>  
+        <span>//this is done using a bit reflection</span>  
+        [<span>Cache</span>.<span>TriggerInvalidation</span>(<span>"GetAllUsers"</span>, <span>CacheSettings</span>.IgnoreParameters)]  
+        [<span>Cache</span>.<span>TriggerInvalidation</span>(<span>"GetUserById"</span>, <span>CacheSettings</span>.UseId)]  
+        <span>void</span> DeleteUser(<span>User</span> user)  
+        {  
+            ...  
+        }  
+
+    }  
+}  
+</pre>
+</blockquote>
+<p><a href="http://cache.codeplex.com/SourceControl/changeset/view/1505#25143" title="example">http://cache.codeplex.com/SourceControl/changeset/view/1505#25143</a> <span> </span></p>
+<p>This example shows how an expensive object (user in this case) might be cached at the repository level.  It shows how attributes can be used to clear from the cache stale objects based on add update and delete changes in a declarative fashion.</p>
+<p>Please excuse the empty method bodies for now.  I will have a better sample project put together at some point.</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+      </div>
+
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About</h4>
+          <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+        </div>
+        <div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li>
+              <a href="https://corecursive.com">Adam's Podcast</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+            </li>
+            <li>
+              <a href="https://github.com/adamgordonbell/">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+            </li>
+            <li>
+              <a href="/contact/">More</a>
+            </li>
+          </ol>
+        </div>
+        <div class="sidebar-module">
+          <a href="/index.xml">RSS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <p>
+    Site made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </p>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

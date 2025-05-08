@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Cascade of Insights</title>
+    <link>http://localhost:1313/tags/books/</link>
+    <description>Recent content in Books on Cascade of Insights</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/books/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fitness Books</title>
+      <link>http://localhost:1313/posts/2015-10-21-fitness-books.html/</link>
+      <pubDate>Wed, 21 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2015-10-21-fitness-books.html/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve read a lot of fitness biographies over the last little while.  Here is a quick list.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

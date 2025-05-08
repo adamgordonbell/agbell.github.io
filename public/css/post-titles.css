@@ -1,0 +1,23 @@
+/* Make sure the blog post titles are clickable */
+.blog-post-title a {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.blog-post-title a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+/* For debugging */
+.blog-post-title:after {
+  content: " ";
+}
+
+.blog-post-title a:after {
+  content: " 🔗"; /* Link icon for visual feedback */
+  font-size: 14px;
+  opacity: 0.5;
+}

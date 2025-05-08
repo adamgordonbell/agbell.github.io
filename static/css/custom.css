@@ -1,0 +1,52 @@
+/* Simple, clean styling for better readability */
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Make sure content is readable */
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Basic spacing improvements */
+p {
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    margin-bottom: 60px;
+}
+
+/* Footer styling with newsletter */
+.blog-footer {
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.newsletter-container {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.newsletter-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    margin-bottom: 30px;
+}
+
+.site-info {
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+}

@@ -1,0 +1,67 @@
+#! /bin/bash
+# shellcheck disable=SC2207 # Arrays are a pain in bash 3
+
+echo "functions assume they are run from repo root"
+echo "run \"list\" for a list of helpers"
+
+### Internal
+INIT_LOCATION="$0"
+
+list() { # List available functions
+    echo "Available functions:"
+    echo "  start     - Start Hugo server in background"
+    echo "  status    - Check Hugo server status"
+    echo "  stop      - Stop Hugo server"
+    echo "  build     - Build the site locally"
+    echo "  publish   - Show deployment information"
+    echo "  new_post  - Create a new blog post"
+    echo "  list      - Show this help"
+}
+
+pause(){
+   echo "Press enter to continue.  Ctrl-C to bail."
+   read -p ""
+}
+
+## External
+
+start() # Start on localhost:1313 in background
+{
+    hugo server -D > /tmp/hugo-server.log 2>&1 &
+    echo "Hugo server started in background. Check status with 'source ./util/functions && status'"
+    echo "Server logs at /tmp/hugo-server.log"
+}
+
+status() # Check status of Hugo server
+{
+    if pgrep -f "hugo server" > /dev/null; then
+        echo "Hugo server is running"
+        echo "Recent log entries:"
+        tail -n 10 /tmp/hugo-server.log
+        local PORT=$(grep -o "http://localhost:[0-9]\+" /tmp/hugo-server.log | tail -n 1 | cut -d":" -f3)
+        echo "\nSite available at http://localhost:$PORT/"
+    else
+        echo "Hugo server is not running"
+    fi
+}
+
+stop() # Stop Hugo server
+{
+    pkill -f "hugo server" && echo "Hugo server stopped" || echo "No Hugo server running"
+}
+
+build() {
+    hugo --minify
+}
+
+publish() { # Deploy to GitHub Pages
+    echo "The site is now deployed via GitHub Actions."
+    echo "Deployment process:"
+    echo "1. Push changes to the master branch"
+    echo "2. GitHub Actions will build and deploy automatically using the GitHub Pages service"
+    echo "3. No separate branch is needed - deployment happens directly from the workflow"
+    echo ""
+    echo "To build locally and preview:"
+    build
+    echo "Site built in public/"
+}

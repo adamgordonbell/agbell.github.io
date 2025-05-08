@@ -1,0 +1,10 @@
+/* Custom styles for blog title links */
+.blog-header .blog-title a {
+  color: #333 !important; /* Same as normal h1 color */
+  text-decoration: none !important;
+}
+
+.blog-header .blog-title a:hover {
+  text-decoration: underline !important;
+  color: #23527c !important; /* Bootstrap default link hover color */
+}

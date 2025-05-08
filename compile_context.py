@@ -5,7 +5,7 @@ import glob
 from pathlib import Path
 
 # Configuration
-HUGO_DIR = './hugo'
+HUGO_DIR = '.'
 OUTPUT_FILE = '/Users/adam/sandbox/prompts-context/context/adamgordonbell.content.md'
 
 # File types to include

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    
+    var redirects = {
+      '/blog/': '/posts/',
+      
+    };
+
+    var path = window.location.pathname;
+    
+    
+    for (var oldPath in redirects) {
+      if (path.startsWith(oldPath)) {
+        var newPath = path.replace(oldPath, redirects[oldPath]);
+        window.location.href = newPath;
+        document.write('Redirecting to ' + newPath + '...');
+        break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Page Not Found</h1>
+  <p>The page you requested could not be found. If you are not redirected automatically, please <a href="/">click here</a> to go to the homepage.</p>
+</body>
+</html>

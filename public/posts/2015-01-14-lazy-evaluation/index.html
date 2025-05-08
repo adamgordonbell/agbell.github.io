@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Lazy Evaluation In Haskell</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    
+<div class="blog-header">
+  
+    
+    
+    <h1 class="blog-title">Lazy Evaluation In Haskell</h1> 
+    <p class="lead blog-description"></p> 
+  
+</div>
+    <div class="row">
+      
+      
+       
+         
+      
+
+      
+        
+        <div class="col-sm-8 blog-main">
+          
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">January 14, 2015</span>
+  
+</p>
+  <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em></p>
+<p>Summary of Laziness:</p>
+<p>Lazy is good when:</p>
+<ul>
+<li>You are not going to use all the results</li>
+<li>Because you are going to filter some things out at a later stage</li>
+</ul>
+<p>Strict is good otherwise.<br>
+Hence:</p>
+<ul>
+<li>foldl’ for spine-strict results (Int, Map, …),</li>
+<li>foldr for spine-lazy results (mostly just [a]),</li>
+<li>Never use foldl</li>
+</ul>
+<p>The key insight for me has been understanding that lazy evaluation means that functions take in a pointer to a thunk as arguments and then return a thunk as a value. Only looking inside those thunks inputs (via pattern matching or IO) actually forces anything.</p>
+<p>This level of indirection improves composability, you can generate than reduce in a more modular fashion with only some constant overhead for holding on to thunks. The paper “why functional programming matters” has a great explanation of this.</p>
+<p>This all works because whenever you throw something away with <em>i.e. f (a,</em>) = a, the pointer to the thunk, that was never evaluated, and all the evaluations that follow from can get garbage collected away.</p>
+<p>This how foldr can short-circuit on some lazy list, if a condition of f that is passed in doesn’t care about the rest of the list, then we are done.</p>
+<p><span>Links:</span></p>
+<ul>
+<li><a href="http://blog.ezyang.com/category/haskell/haskell-heap/">Ez Yang : how the heap works</a></li>
+<li><a href="http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html">http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html</a></li>
+<li><a href="http://www.haskell.org/haskellwiki/Performance/Strictness">http://www.haskell.org/haskellwiki/Performance/Strictness</a></li>
+<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness">http://en.wikibooks.org/wiki/Haskell/Laziness</a></li>
+<li><a href="http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis">http://en.wikibooks.org/wiki/Haskell/Laziness#Black-box_strictness_analysis</a></li>
+</ul>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+        </div>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <p>
+    Site made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </p>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

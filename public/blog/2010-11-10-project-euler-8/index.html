@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Project Euler 8 in C#</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="blog-header">
+  
+    <h1 class="blog-title"><a href="/blog/">Hey, this is my blog</a></h1>
+    <p class="lead blog-description">It is somewhat abandoned.</p>
+  
+</div>
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">November 10, 2010</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/euler">euler</a>
+    
+    <a href="http://localhost:1313/tags/c">c#</a>
+    
+  </span>
+  
+</p>
+  <p>Discover the largest product of five consecutive digits in the 1000-digit number.</p>
+<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=8">http://projecteuler.net/index.php?section=problems&amp;id=8</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">[TestClass]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Problem8</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [TestMethod]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Answer()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> Consecutive5s =
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">from</span> a <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>To(<span style="color:#ae81ff">999</span> - <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">select</span> <span style="color:#66d9ef">new</span>
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    sum = ConsecutiveFive(a)
+</span></span><span style="display:flex;"><span>                        .Select(x =&gt; Convert.ToInt32(x))
+</span></span><span style="display:flex;"><span>                        .Product(),
+</span></span><span style="display:flex;"><span>                    numbers = ConsecutiveFive(a)
+</span></span><span style="display:flex;"><span>                };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> max = Consecutive5s.First(x =&gt; x.sum == Consecutive5s.Max(y =&gt; y.sum));
+</span></span><span style="display:flex;"><span>            Console.WriteLine(max.sum);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> IEnumerable&lt;Char&gt; ConsecutiveFive(<span style="color:#66d9ef">int</span> start)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> numbers
+</span></span><span style="display:flex;"><span>                        .AsEnumerable()
+</span></span><span style="display:flex;"><span>                        .Skip(start)
+</span></span><span style="display:flex;"><span>                        .Take(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> numbers = <span style="color:#e6db74">&#34;7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> Product(<span style="color:#66d9ef">this</span> IEnumerable&lt;<span style="color:#66d9ef">int</span>&gt; source)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> source.Aggregate&lt;<span style="color:#66d9ef">int</span>&gt;((x, y) =&gt; x * y);
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+      </div>
+
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About</h4>
+          <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+        </div>
+        <div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li>
+              <a href="https://corecursive.com">Adam's Podcast</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+            </li>
+            <li>
+              <a href="https://github.com/adamgordonbell/">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+            </li>
+            <li>
+              <a href="/contact/">More</a>
+            </li>
+          </ol>
+        </div>
+        <div class="sidebar-module">
+          <a href="/index.xml">RSS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <p>
+    Site made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </p>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

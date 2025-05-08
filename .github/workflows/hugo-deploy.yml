@@ -34,14 +34,13 @@ jobs:
 
       - name: Build
         run: |
-          cd hugo
           hugo --minify
 
       - name: Upload Pages artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./hugo/public
+          path: ./public
 
   deploy:
     environment:

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postsharp on Cascade of Insights</title>
+    <link>http://localhost:1313/tags/postsharp/</link>
+    <description>Recent content in Postsharp on Cascade of Insights</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Jul 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/postsharp/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ReturnOnException Aspect (postsharp)</title>
+      <link>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</link>
+      <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</guid>
+      <description>&lt;p&gt;This comes in handy sometimes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

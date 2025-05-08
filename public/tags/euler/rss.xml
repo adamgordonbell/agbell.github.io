@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Euler on Cascade of Insights</title>
+    <link>http://localhost:1313/tags/euler/</link>
+    <description>Recent content in Euler on Cascade of Insights</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/euler/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Euler #19 in haskell and by hand</title>
+      <link>http://localhost:1313/posts/2012-11-09-euler19.html/</link>
+      <pubDate>Fri, 09 Nov 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012-11-09-euler19.html/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=19&#34;&gt;http://projecteuler.net/problem=19&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler #11 in haskell</title>
+      <link>http://localhost:1313/posts/2012-09-15-euler11.html/</link>
+      <pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012-09-15-euler11.html/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20&lt;/span&gt;&lt;img src=&#34;http://projecteuler.net/images/symbol_times.gif&#34; alt=&#34;×&#34;&gt;&lt;span&gt;20 grid?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=11&#34;&gt;http://projecteuler.net/problem=11&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler #24 in c#</title>
+      <link>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</guid>
+      <description>&lt;p&gt;A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:&lt;/p&gt;&#xA;&lt;p&gt;012   021   102   120   201   210&lt;/p&gt;&#xA;&lt;p&gt;What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler 8 in C#</title>
+      <link>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</link>
+      <pubDate>Wed, 10 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</guid>
+      <description>&lt;p&gt;Discover the largest product of five consecutive digits in the 1000-digit number.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler 3 in c#</title>
+      <link>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</link>
+      <pubDate>Tue, 12 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Problem 3: What is the largest prime factor of the number 600851475143 ?&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34; title=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With enough extension methods we can make 3 really simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;600851475143.LargestPrimeFactor()&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Where:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler #9</title>
+      <link>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</link>
+      <pubDate>Thu, 07 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</guid>
+      <description>&lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler #5</title>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</link>
+      <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</guid>
+      <description>&lt;p&gt;Here is my solution to the following project Euler Problem:&lt;/p&gt;&#xA;&lt;p&gt;2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.&lt;/p&gt;&#xA;&lt;p&gt;What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Euler #6</title>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</link>
+      <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</guid>
+      <description>&lt;p&gt;Ok, this one is stupidly simple:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;var squaredsum = Math.Pow(1.To(100).Sum(), 2);&#xA;var sumedsquare = 1.To(100).Select(x =&amp;gt; x * x).Sum();&#xA;Console.WriteLine(squaredsum - sumedsquare);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

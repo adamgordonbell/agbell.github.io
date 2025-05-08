@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Graham’s scan algorithm for the convex hull</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1746662002">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    
+<div class="blog-header">
+  
+    
+    
+    <h1 class="blog-title">Graham’s scan algorithm for the convex hull</h1> 
+    <p class="lead blog-description"></p> 
+  
+</div>
+    <div class="row">
+      
+      
+       
+         
+      
+
+      <div class="col-sm-12 blog-main">
+      
+        
+        <div class="col-sm-8 blog-main">
+          
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">August 30, 2012</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
+    
+  </span>
+  
+</p>
+  <p><span>Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a</span> <a href="http://en.wikipedia.org/wiki/Convex_hull">convex hull</a><span>. is, and how the</span> <a href="http://en.wikipedia.org/wiki/Graham_scan">Graham scan algorithm</a> <span>should work, on</span> <a href="http://en.wikipedia.org/">Wikipedia</a></p>
+<p><a href="http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html">http://book.realworldhaskell.org/read/defining-types-streamlining-functions.html</a></p>
+<pre>{- - Implementation of the Graham scanÂ¹ to find the convex hullÂ² of - some given two dimensional points. - The 12th exercise of the chapter 3 in the Real World Haskell bookÂ³. - - [1] : [http://en.wikipedia.org/wiki/Graham_scan](http://en.wikipedia.org/wiki/Graham_scan) - [2] : [http://en.wikipedia.org/wiki/Convex_hull](http://en.wikipedia.org/wiki/Convex_hull) - [3] : [http://book.realworldhaskell.org/](http://book.realworldhaskell.org/) - -} data Direction = Clockwise | CounterClockwise | Straight deriving (Eq, Show) data Point = Point Double Double deriving (Eq, Show) grahamScan :: [Point] -> [Point] grahamScan = combineList . tripleList combineList :: [(Point, Point, Point)] -> [Point] combineList x = map (\(_, y,_) -> y) x --select p (first element) and then sort rest putting p at front and back of list sortCombine :: [Point] -> [Point] sortCombine x = list ++ ((head list):[]) where list = sortSlope (sortPoint x) -- sort list of points by y then x -- head of list is P - starting element sortPoint :: [Point] -> [Point] sortPoint x = sortBy (\ (Point x1 y1) (Point x2 y2) -> (compare y1 y2) `mappend` (compare x1 x2)) x --slope of a line slope :: Point -> Point -> Double slope (Point x1 y1) (Point x2 y2) = y1 - y2 / x1 - x2 --sort by slope of line formed from p to all other elements and leave p at front sortSlope :: [Point] -> [Point] sortSlope (x:xs) = x : sortBy (\ i j -> (compare (slope x i) (slope x j))) xs --we triple the list so we can look at previous and next for each element and eliminate it if it is clockwise tripleList :: [Point] -> [(Point, Point, Point)] tripleList x = (p,p,p) : (filter grahamScanFilter (zip3 list (tail list) (tail (tail list)))) where list = sortCombine x p = head (sortPoint x) grahamScanFilter (x, y, z) = direction x y z == CounterClockwise -- get direction - cribbed from wikipedia pseudocode direction (Point x1 y1) (Point x2 y2) (Point x3 y3) = if ccw > 0 then CounterClockwise else if ccw < 0 then Clockwise else Straight where ccw = (x2 - x1) *(y3 - y1) - (y2 - y1)* (x3 - x1) </pre>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+        </div>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <div class="container text-center">
+    <div class="newsletter-container">
+      <p class="newsletter-text">Sign up to my monthly newsletter to be notified when I write new things, have new podcast episodes or other fun stuff to share.</p>
+      <form action="https://newsletter.corecursive.com/add_subscriber" method="post" accept-charset="utf-8" class="newsletter-form">
+        <div class="form-inline justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+        </div>
+      </form>
+    </div>
+    <p class="site-info">
+      Site made with <a href="https://gohugo.io/">Hugo</a>
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

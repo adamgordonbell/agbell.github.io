@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Emacs Client on Windows 8</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="blog-header">
+  
+    <h1 class="blog-title"><a href="/blog/">Hey, this is my blog</a></h1>
+    <p class="lead blog-description">It is somewhat abandoned.</p>
+  
+</div>
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+        
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">October 28, 2013</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/emacs">emacs</a>
+    
+    <a href="http://localhost:1313/tags/windows">windows</a>
+    
+  </span>
+  
+</p>
+  <p>Problem:</p>
+<p>I want to use emacs like I use notepadd++ on windows.</p>
+<p><span>That is:</span></p>
+<ul>
+<li>Right click menu item to “edit with Emacs”</li>
+<li>Associate file types with emacs (like .org)</li>
+<li>Have only one emacs open at a time</li>
+</ul>
+<p>Here are the steps I took:</p>
+<ol>
+<li>
+<p>Create the context menu like this (<a href="http://www.emacswiki.org/emacs/MsWindowsGlobalContextMenu">global_context_emacs.reg</a>) :</p>
+<pre tabindex="0"><code>REGEDIT4
+[HKEY_CLASSES_ROOT\*\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\openwemacs]
+@=&#34;&amp;GNU Emacs&#34;
+# The above value appears in the global context menu, # i.e., when you right click on a file.
+# (The &#39;&amp;&#39; makes the next character a shortcut.) &#34;Icon&#34;=&#34;C:\\Program Files\\Emacs\\bin\\emacs.exe,0&#34;
+# The above uses the icon of the Emacs exe for the context # and should match the path used for the command below.
+# The ,0 selects the main icon. [HKEY_CLASSES_ROOT\*\shell\openwemacs\command]
+@=&#34;C:\\Program Files\\Emacs\\bin\\runemacs.exe \&#34;%1\&#34;&#34;
+# The above has to point to where you install Emacs  
+</code></pre></li>
+<li>
+<p><span>Create a batch file called runclientw.bat and compile to exe and associate file types as needed. See <a href="http://robert-adesam.blogspot.ca/2011/01/emacsclient-setup-on-windows-7-starter.html">here</a></span></p>
+</li>
+</ol>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+      </div>
+
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About</h4>
+          <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+        </div>
+        <div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li>
+              <a href="https://corecursive.com">Adam's Podcast</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+            </li>
+            <li>
+              <a href="https://github.com/adamgordonbell/">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+            </li>
+            <li>
+              <a href="/contact/">More</a>
+            </li>
+          </ol>
+        </div>
+        <div class="sidebar-module">
+          <a href="/index.xml">RSS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <p>
+    Site made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </p>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - Modifier Keys in the Home Row</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    
+<div class="blog-header">
+  
+    
+    
+    <h1 class="blog-title">Modifier Keys in the Home Row</h1> 
+    <p class="lead blog-description"></p> 
+  
+</div>
+    <div class="row">
+      
+      
+       
+         
+      
+
+      
+        
+        <div class="col-sm-8 blog-main">
+          
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">August 22, 2016</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/keyboard">keyboard</a>
+    
+    <a href="http://localhost:1313/tags/ergodox">ergodox</a>
+    
+  </span>
+  
+</p>
+  <p><img src="/images/keyboard-layout_ergodox.png" alt="ergodox">
+With today&rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.</p>
+<p>I don&rsquo;t like having to leave the home row on the keyboard enter commands like CTRL-S or even CTRL-ALT-Left Arrow.  Using the tmk firmware or ( the qmk fork) I am able to have my keys function as normal when pressed, but as a modifier when held down.</p>
+<h2 id="dual-role-keyshttpsenwikipediaorgwikimodifier_keydual-role_keys"><a href="https://en.wikipedia.org/wiki/Modifier_key#Dual-role_keys">Dual-role keys:</a></h2>
+<pre tabindex="0"><code>
+It is possible to use (with some utility software) one same key both as a normal key and as a modifier.
+
+For example, you can use the space bar both as a normal Space bar and as a Shift. Intuitively, it&#39;ll be a Space when you want a whitespace, and a Shift when you want it to act as a shift. I.e. when you simply press and release it, it is the usual space, but when you press other keys, say X, Y and Z, while holding down the space, then they will be treated as ⇧ Shift plus X, Y and Z.
+
+The above example is known as &#34;SandS&#34;, standing for &#34;Space and Shift&#34; in Japan. But any number of any combinations are possible.
+
+To press shift+space in the previous example, you need in addition to a space/shift dual role key, one of (a) another space/shift key, (b) a usual shift, or (c) a usual space key.
+-- Wikipedia
+</code></pre><p>In my keymap, D and K when held down act as Ctrl, L and S do the same for Alt.  Shift is placed under A and ;.  Additionally, F or J, when held down, active a layer which is shown on the center right of the keys in the image above.  My Escape key also acts as the windows key if held down.  It sounds complicated, but the muscle memory takes over after an hour or two and it just feels fast and simple.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://github.com/agbell/tmk_keyboard/blob/cub_layout/keyboard/ergodox/keymap_adam.h">My keymap for the ergodox keyboard</a></li>
+<li><a href="https://github.com/tmk/tmk_keyboard">TMK firmware</a></li>
+<li><a href="https://github.com/jackhumbert/qmk_firmware">QMK firmware</a></li>
+</ul>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'cascadeofinsightsadamgbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+        </div>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <p>
+    Site made with
+    <a href="https://gohugo.io/">Hugo</a>
+  </p>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>
