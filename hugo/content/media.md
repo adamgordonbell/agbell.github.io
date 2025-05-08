@@ -3,13 +3,10 @@ title: "Media"
 title_short: "Media"
 url: "/media/"
 description: "This is a list of works of media in which I am featured in some way"
+type: "profile"
+image: "/images/profiles/IMG_1206_web.jpg"
+high_res_image: "/images/profiles/IMG_1206.jpg"
 ---
-<div class="row">
-<div class="col-md-4">
-<img src="/images/profiles/IMG_1206_web.jpg" height="400px" width="300px" alt="Adam Bell"><br/>
-<center><a href="/images/profiles/IMG_1206.jpg">high resolution version</a></center>
-</div>
-<div class="col-md-8">
 
 This list is way out of date.
 
@@ -90,6 +87,3 @@ This list is way out of date.
     > Have you heard the one about the developer who built granular permissions to a critical app, only to have the Ops person grant admin access to everyone? Or the Dev that chose to use an open source module with known vulns that undermined the network security because it was easier…
     >
     > Collaboration and communication between software developers and other IT professionals is critical to securing systems. In this session, our panel of experts will share tips and tricks to help you implement and run a successful DevOps program.
-
- </div>
- </div>

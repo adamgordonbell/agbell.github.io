@@ -3,15 +3,10 @@ title: "Biography"
 title_short: "Bio"
 url: "/bio/"
 description: "When asked for a biography, I send people here"
+type: "profile"
+image: "/images/profiles/IMG_1177_web_cropped2.jpg"
+high_res_image: "/images/profiles/IMG_1177_cropped.jpg"
 ---
-<div class="row">
-<div class="col-md-6">
-<img src="/images/profiles/IMG_1177_web.jpg" height="550px" width="500px" alt="Adam Gordon Bell"><br/>
-<center><a href="/images/profiles/IMG_1177_cropped.jpg">hi res</a></center>
-</div>
-<div class="col-md-6">
-
-## Bio
 
 Adam Gordon Bell has spent 15+ years as a software developer at various software companies. He now works in Developer Relations at a [Dev Tool start-up](https://earthly.dev/), where he gets to work on his passion: **communicating with and teaching software developers**.
 
@@ -36,6 +31,3 @@ Throughout his career, Adam has consistently demonstrated an ability to innovate
 ## Resume
 
 You can find something like a resume on [Linked In](https://www.linkedin.com/in/adamgordonbell) or contact [adam@corecursive.com](mailto:adam@corecursive.com)
-
- </div>
- </div>

@@ -3,13 +3,10 @@ title: "Articles"
 title_short: "Articles"
 url: "/articles/"
 description: "Here is a collection of things I have written"
+type: "profile"
+image: "/images/profiles/IMG_1206_web.jpg"
+high_res_image: "/images/profiles/IMG_1206.jpg"
 ---
-<div class="row">
-<div class="col-md-4">
-<img src="/images/profiles/IMG_1206_web.jpg" height="400px" width="300px" alt="Adam Bell"><br/>
-<center><a href="/images/profiles/IMG_1206.jpg">high resolution version</a></center>
-</div>
-<div class="col-md-8">
 
 - [INTERCAL, YAML, And Other Horrible Programming Languages](https://earthly.dev/blog/intercal-yaml-and-other-horrible-programming-languages/)
 
@@ -28,6 +25,3 @@ description: "Here is a collection of things I have written"
     >  TimSort is fast, but why and can we beat it?
 
 - Find more on [earthly](https://earthly.dev/blog/authors/adam/), [dev.to](https://dev.to/adamgordonbell), [freecodecamp](https://www.freecodecamp.org/news/author/adam-gordon-bell/), [medium](https://medium.com/@adamgordonbell) and [hackernoon](https://hackernoon.com/u/adamgordonbell).
-
- </div>
- </div>
