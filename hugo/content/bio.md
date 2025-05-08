@@ -27,6 +27,7 @@ As a founding team member at PathFive (2014-2017), he played a crucial role in p
 
 Throughout his career, Adam has consistently demonstrated an ability to innovate, lead, and inspire. His dedication to the field of software development is evident not only in his technical achievements but also in his ability to foster community engagement and educate fellow developers.
 
+
 ## Resume
 
 You can find something like a resume on [Linked In](https://www.linkedin.com/in/adamgordonbell) or contact [adam@corecursive.com](mailto:adam@corecursive.com)
