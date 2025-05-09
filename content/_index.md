@@ -6,10 +6,7 @@ type: "profile"
 image: "/images/profiles/IMG_1205_web.jpg"
 high_res_image: "/images/profiles/IMG_1205.jpg"
 ---
-I am a software engineer who <a href="https://corecursive.com/">podcasts</a> and works in developer relations at <a href="https://earthly.dev">Earthly</a>.  I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
-
-You can <a href="https://www.admonymous.co/adamgordonbell">📝 leave me anonymous feedback</a> or <a href="mailto:adam@corecursive.com">📧 Email me</a> or <a href="https://twitter.com/adamgordonbell">💬 DM me</a> or just <a href="https://newsletter.corecursive.com/">📰 get my newsletter</a>.
-
+I am a software engineer who [podcasts](https://corecursive.com/) and works in developer relations at [Pulumi](https://www.pulumi.com/adam). I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
 
 - [CoRecursive Podcast](https://corecursive.com/)
 

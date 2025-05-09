@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css?1746665714">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1746792636">
 <link rel="stylesheet" type="text/css" href="/css/blog-title.css">
 <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 </head>
@@ -55,6 +55,109 @@
 
 
 
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/">Bitcoin Transactions</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">November 4, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/prediction">prediction</a>
+    
+    <a href="http://localhost:1313/tags/good-judgement-project">good-judgement-project</a>
+    
+    <a href="http://localhost:1313/tags/bitcoin">bitcoin</a>
+    
+  </span>
+  
+</p>
+  <p>What will be the average number of Bitcoin transactions per day in the first week of June 2016?</p>
+  
+  <a href="http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-10-21-fitness-books.html/">Fitness Books</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">October 21, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/fitness">fitness</a>
+    
+    <a href="http://localhost:1313/tags/books">books</a>
+    
+  </span>
+  
+</p>
+  <p>I&rsquo;ve read a lot of fitness biographies over the last little while.  Here is a quick list.</p>
+  
+  <a href="http://localhost:1313/posts/2015-10-21-fitness-books.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/">More Scala Groups And Tuples</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">August 19, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/scala">scala</a>
+    
+    <a href="http://localhost:1313/tags/slick">slick</a>
+    
+    <a href="http://localhost:1313/tags/tuples">tuples</a>
+    
+  </span>
+  
+</p>
+  <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them.  Here I have a list of 4-tuples and I want to group the second tuple by the first.  <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> shapeless._
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> syntax.std.tuple._
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> poly._
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">GroupLists</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> group1TwoExtra<span style="color:#f92672">[</span><span style="color:#66d9ef">A</span>,<span style="color:#66d9ef">B</span>,<span style="color:#66d9ef">C</span>,<span style="color:#66d9ef">D</span><span style="color:#f92672">](</span>t <span style="color:#66d9ef">:</span> <span style="color:#66d9ef">List</span><span style="color:#f92672">[(</span><span style="color:#66d9ef">A</span>,<span style="color:#66d9ef">B</span>,<span style="color:#66d9ef">C</span>,<span style="color:#66d9ef">D</span><span style="color:#f92672">)])</span> <span style="color:#66d9ef">:</span> <span style="color:#66d9ef">List</span><span style="color:#f92672">[(</span><span style="color:#66d9ef">A</span>,<span style="color:#66d9ef">List</span><span style="color:#f92672">[</span><span style="color:#66d9ef">B</span><span style="color:#f92672">]</span>,<span style="color:#66d9ef">C</span>,<span style="color:#66d9ef">D</span><span style="color:#f92672">)]</span> <span style="color:#66d9ef">=</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">val</span> map <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">LinkedHashMap</span><span style="color:#f92672">[</span><span style="color:#66d9ef">A</span>, <span style="color:#66d9ef">LinkedHashSet</span><span style="color:#f92672">[</span><span style="color:#66d9ef">B</span><span style="color:#f92672">]]()</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">val</span> mapOther <span style="color:#66d9ef">=</span> scala<span style="color:#f92672">.</span>collection<span style="color:#f92672">.</span>mutable<span style="color:#f92672">.</span><span style="color:#a6e22e">Map</span><span style="color:#f92672">[</span><span style="color:#66d9ef">A</span>,<span style="color:#f92672">(</span><span style="color:#66d9ef">C</span>,<span style="color:#66d9ef">D</span><span style="color:#f92672">)]()</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>i <span style="color:#66d9ef">&lt;-</span> t<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> key <span style="color:#66d9ef">=</span> i<span style="color:#f92672">.</span>head
+</span></span><span style="display:flex;"><span>        map<span style="color:#f92672">(</span>key<span style="color:#f92672">)</span> <span style="color:#66d9ef">=</span> map<span style="color:#f92672">.</span>lift<span style="color:#f92672">(</span>key<span style="color:#f92672">).</span>getOrElse<span style="color:#f92672">(</span><span style="color:#a6e22e">LinkedHashSet</span><span style="color:#f92672">[</span><span style="color:#66d9ef">B</span><span style="color:#f92672">]())</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">.</span>drop<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">).</span>head
+</span></span><span style="display:flex;"><span>        mapOther <span style="color:#f92672">+=</span> <span style="color:#f92672">(</span>key <span style="color:#f92672">-&gt;</span> i<span style="color:#f92672">.</span>drop<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>      map<span style="color:#f92672">.</span>map<span style="color:#f92672">(</span>b <span style="color:#66d9ef">=&gt;</span> <span style="color:#f92672">(</span>b<span style="color:#f92672">.</span>_1<span style="color:#f92672">,</span> b<span style="color:#f92672">.</span>_2<span style="color:#f92672">.</span>toList<span style="color:#f92672">)</span> <span style="color:#f92672">++</span> mapOther<span style="color:#f92672">(</span>b<span style="color:#f92672">.</span>_1<span style="color:#f92672">)).</span>toList
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+  
+  <a href="http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/">Mixed Metaphors</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">August 11, 2015</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/humor">humor</a>
+    
+    <a href="http://localhost:1313/tags/presentation">presentation</a>
+    
+  </span>
+  
+</p>
+  <p>Here I&rsquo;m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing</p>
+<ul>
+<li>I wouldn&rsquo;t eat that with a ten foot pole</li>
+</ul>
+  
+  <a href="http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/">Read more...</a>
+  
+</div>
 
   <div class="blog-post">
   <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/">Scala Slick Group</a></h2>
@@ -171,95 +274,6 @@
   <p><img src="http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg" alt="keyboard"></p>
   
   <a href="http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/">Emacs Client on Windows 8</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">October 28, 2013</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:1313/tags/emacs">emacs</a>
-    
-    <a href="http://localhost:1313/tags/windows">windows</a>
-    
-  </span>
-  
-</p>
-  <p>Problem:</p>
-<p>I want to use emacs like I use notepadd++ on windows.</p>
-  
-  <a href="http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-11-09-euler19.html/">Project Euler #19 in haskell and by hand</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">November 9, 2012</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:1313/tags/euler">euler</a>
-    
-    <a href="http://localhost:1313/tags/haskell">haskell</a>
-    
-  </span>
-  
-</p>
-  <blockquote>
-<p><span>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</span></p>
-<p><a href="http://projecteuler.net/problem=19">http://projecteuler.net/problem=19</a></p>
-</blockquote>
-  
-  <a href="http://localhost:1313/posts/2012-11-09-euler19.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/">Functor is to Lens as Applicative is to Biplate</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">October 15, 2012</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:1313/tags/haskell">haskell</a>
-    
-    <a href="http://localhost:1313/tags/haskell-is-hard">haskell-is-hard</a>
-    
-  </span>
-  
-</p>
-  <p>“Functor is to Lens as Applicative is to Biplate”</p>
-<ul>
-<li><em><a href="http://front.math.ucdavis.edu/1103.2841">http://front.math.ucdavis.edu/1103.2841</a></em></li>
-</ul>
-<p>Haskell, the language with seemingly endless new concepts to learn about</p>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2012-09-15-euler11.html/">Project Euler #11 in haskell</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">September 15, 2012</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:1313/tags/euler">euler</a>
-    
-    <a href="http://localhost:1313/tags/haskell">haskell</a>
-    
-  </span>
-  
-</p>
-  <blockquote>
-<p><span>What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20</span><img src="http://projecteuler.net/images/symbol_times.gif" alt="×"><span>20 grid?</span></p>
-<p><a href="http://projecteuler.net/problem=11">http://projecteuler.net/problem=11</a></p>
-</blockquote>
-  
-  <a href="http://localhost:1313/posts/2012-09-15-euler11.html/">Read more...</a>
   
 </div>
 
@@ -391,6 +405,8 @@
   
     
   
+    
+  
   
   
     
@@ -418,6 +434,13 @@
       
       <a href="/tags/attribute-based-caching/" style="font-size: 174%">
         Attribute-Based-Caching (4)
+      </a>
+    
+  
+    
+      
+      <a href="/tags/media/" style="font-size: 174%">
+        Media (4)
       </a>
     
   
