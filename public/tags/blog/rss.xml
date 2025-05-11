@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>http://localhost:49398/tags/blog/</link>
     <description>Recent content in Blog on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/blog/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hakyll and CircleCi</title>
-      <link>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</link>
+      <link>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</link>
       <pubDate>Fri, 31 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</guid>
+      <guid>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</guid>
       <description>&lt;p&gt;This blog was on tumblr, which was easy to setup and post and such.  However, I spend like 8 hours a day with a text editor open and a git in terminal window.&lt;/p&gt;</description>
     </item>
   </channel>

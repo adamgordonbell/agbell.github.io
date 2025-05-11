@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paul-Graham on </title>
+    <link>//localhost:1313/tags/paul-graham/</link>
+    <description>Recent content in Paul-Graham on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/paul-graham/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Incrementing</title>
+      <link>//localhost:1313/blog/2014-03-15-incrementing/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2014-03-15-incrementing/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;http://www.paulgraham.com/icad.html&#34;&gt;an old essay&lt;/a&gt;, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

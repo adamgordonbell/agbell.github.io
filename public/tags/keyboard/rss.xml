@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keyboard on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/keyboard/</link>
+    <link>http://localhost:49398/tags/keyboard/</link>
     <description>Recent content in Keyboard on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/keyboard/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/keyboard/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modifier Keys in the Home Row</title>
-      <link>http://localhost:1313/posts/2016-08-22-modifier-keys-in-the-home-row.html/</link>
+      <link>http://localhost:49398/posts/2016-08-22-modifier-keys-in-the-home-row.html/</link>
       <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2016-08-22-modifier-keys-in-the-home-row.html/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/keyboard-layout_ergodox.png&#34; alt=&#34;ergodox&#34;&gt;&#xA;With today&amp;rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.&lt;/p&gt;</description>
+      <guid>http://localhost:49398/posts/2016-08-22-modifier-keys-in-the-home-row.html/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:49398/images/keyboard-layout_ergodox.png&#34; alt=&#34;ergodox&#34;&gt;&#xA;With today&amp;rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Truly Ergonomic Keyboard</title>
-      <link>http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/</link>
+      <link>http://localhost:49398/posts/2013-11-28-truly-ergonomic-keyboard.html/</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/</guid>
+      <guid>http://localhost:49398/posts/2013-11-28-truly-ergonomic-keyboard.html/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg&#34; alt=&#34;keyboard&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

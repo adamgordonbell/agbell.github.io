@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NakedObjectsFramework on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/nakedobjectsframework/</link>
+    <link>http://localhost:49398/tags/nakedobjectsframework/</link>
     <description>Recent content in NakedObjectsFramework on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Oct 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nakedobjectsframework/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/nakedobjectsframework/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Naked Objects MVC - exposing a repository method as a get</title>
-      <link>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</link>
+      <link>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</link>
       <pubDate>Sat, 09 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</guid>
+      <guid>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</guid>
       <description>&lt;p&gt;If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.&lt;/p&gt;</description>
     </item>
   </channel>

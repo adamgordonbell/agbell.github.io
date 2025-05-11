@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on </title>
+    <link>//localhost:1313/tags/data/</link>
+    <description>Recent content in Data on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Mar 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Incrementing</title>
+      <link>//localhost:1313/blog/2011-03-27-tags-tag-groups-tag-hierachies/</link>
+      <pubDate>Sun, 27 Mar 2011 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2011-03-27-tags-tag-groups-tag-hierachies/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

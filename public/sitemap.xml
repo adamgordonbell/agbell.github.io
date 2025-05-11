@@ -2,324 +2,324 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:49398/</loc>
     <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:49398/blog/</loc>
     <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/media/</loc>
+    <loc>http://localhost:49398/tags/media/</loc>
     <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2024-08-06-software-misadventures.html/</loc>
+    <loc>http://localhost:49398/posts/2024-08-06-software-misadventures.html/</loc>
     <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:49398/tags/</loc>
     <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2024-05-10-somewhat-more-like-completely.html/</loc>
+    <loc>http://localhost:49398/posts/2024-05-10-somewhat-more-like-completely.html/</loc>
     <lastmod>2024-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blue/</loc>
+    <loc>http://localhost:49398/tags/blue/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/green/</loc>
+    <loc>http://localhost:49398/tags/green/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-3/</loc>
+    <loc>http://localhost:49398/posts/post-3/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/red/</loc>
+    <loc>http://localhost:49398/tags/red/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:49398/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2019-04-28-a-geek-leader.html/</loc>
+    <loc>http://localhost:49398/posts/2019-04-28-a-geek-leader.html/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2019-04-28-lucid-programming.html/</loc>
+    <loc>http://localhost:49398/posts/2019-04-28-lucid-programming.html/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2019-04-20-scala-in-the-city.html/</loc>
+    <loc>http://localhost:49398/posts/2019-04-20-scala-in-the-city.html/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ergodox/</loc>
+    <loc>http://localhost:49398/tags/ergodox/</loc>
     <lastmod>2016-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/keyboard/</loc>
+    <loc>http://localhost:49398/tags/keyboard/</loc>
     <lastmod>2016-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2016-08-22-modifier-keys-in-the-home-row.html/</loc>
+    <loc>http://localhost:49398/posts/2016-08-22-modifier-keys-in-the-home-row.html/</loc>
     <lastmod>2016-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2016-08-21-a-better-3-way-merge.html/</loc>
+    <loc>http://localhost:49398/posts/2016-08-21-a-better-3-way-merge.html/</loc>
     <lastmod>2016-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
+    <loc>http://localhost:49398/tags/git/</loc>
     <lastmod>2016-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/merging/</loc>
+    <loc>http://localhost:49398/tags/merging/</loc>
     <lastmod>2016-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/scala/</loc>
+    <loc>http://localhost:49398/tags/scala/</loc>
     <lastmod>2016-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2016-06-16-merging-and-conflict-resolution.html/</loc>
+    <loc>http://localhost:49398/posts/2016-06-16-merging-and-conflict-resolution.html/</loc>
     <lastmod>2016-06-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cte/</loc>
+    <loc>http://localhost:49398/tags/cte/</loc>
     <lastmod>2016-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/postgres/</loc>
+    <loc>http://localhost:49398/tags/postgres/</loc>
     <lastmod>2016-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/</loc>
+    <loc>http://localhost:49398/posts/2016-04-20-postgres-update-with-join.html/</loc>
     <lastmod>2016-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/update/</loc>
+    <loc>http://localhost:49398/tags/update/</loc>
     <lastmod>2016-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nix/</loc>
+    <loc>http://localhost:49398/tags/nix/</loc>
     <lastmod>2016-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nixos/</loc>
+    <loc>http://localhost:49398/tags/nixos/</loc>
     <lastmod>2016-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</loc>
+    <loc>http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</loc>
     <lastmod>2016-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bitcoin/</loc>
+    <loc>http://localhost:49398/tags/bitcoin/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/</loc>
+    <loc>http://localhost:49398/posts/2015-11-04-bitcoin-transactions-volume.html/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/good-judgement-project/</loc>
+    <loc>http://localhost:49398/tags/good-judgement-project/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/prediction/</loc>
+    <loc>http://localhost:49398/tags/prediction/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/books/</loc>
+    <loc>http://localhost:49398/tags/books/</loc>
     <lastmod>2015-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fitness/</loc>
+    <loc>http://localhost:49398/tags/fitness/</loc>
     <lastmod>2015-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-10-21-fitness-books.html/</loc>
+    <loc>http://localhost:49398/posts/2015-10-21-fitness-books.html/</loc>
     <lastmod>2015-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/</loc>
+    <loc>http://localhost:49398/posts/2015-08-19-more-scala-groups-and-tuples.html/</loc>
     <lastmod>2015-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/slick/</loc>
+    <loc>http://localhost:49398/tags/slick/</loc>
     <lastmod>2015-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tuples/</loc>
+    <loc>http://localhost:49398/tags/tuples/</loc>
     <lastmod>2015-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/humor/</loc>
+    <loc>http://localhost:49398/tags/humor/</loc>
     <lastmod>2015-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/</loc>
+    <loc>http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/</loc>
     <lastmod>2015-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/presentation/</loc>
+    <loc>http://localhost:49398/tags/presentation/</loc>
     <lastmod>2015-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/</loc>
+    <loc>http://localhost:49398/posts/2015-08-04-scala-slick-group-joins.html/</loc>
     <lastmod>2015-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>http://localhost:49398/tags/blog/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ci/</loc>
+    <loc>http://localhost:49398/tags/ci/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hakyll/</loc>
+    <loc>http://localhost:49398/tags/hakyll/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</loc>
+    <loc>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/haskell/</loc>
+    <loc>http://localhost:49398/tags/haskell/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2015-01-14-lazy-evaluation.html/</loc>
+    <loc>http://localhost:49398/posts/2015-01-14-lazy-evaluation.html/</loc>
     <lastmod>2015-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2014-03-15-incrementing.html/</loc>
+    <loc>http://localhost:49398/posts/2014-03-15-incrementing.html/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/paul-graham/</loc>
+    <loc>http://localhost:49398/tags/paul-graham/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bluetooth/</loc>
+    <loc>http://localhost:49398/tags/bluetooth/</loc>
     <lastmod>2014-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2014-02-20-bluetooth-thinkpad-w520.html/</loc>
+    <loc>http://localhost:49398/posts/2014-02-20-bluetooth-thinkpad-w520.html/</loc>
     <lastmod>2014-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thinkpad/</loc>
+    <loc>http://localhost:49398/tags/thinkpad/</loc>
     <lastmod>2014-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/</loc>
+    <loc>http://localhost:49398/posts/2013-11-28-truly-ergonomic-keyboard.html/</loc>
     <lastmod>2013-11-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/emacs/</loc>
+    <loc>http://localhost:49398/tags/emacs/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/</loc>
+    <loc>http://localhost:49398/posts/2013-10-28-emacs-client-on-windows.html/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
+    <loc>http://localhost:49398/tags/windows/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/euler/</loc>
+    <loc>http://localhost:49398/tags/euler/</loc>
     <lastmod>2012-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-11-09-euler19.html/</loc>
+    <loc>http://localhost:49398/posts/2012-11-09-euler19.html/</loc>
     <lastmod>2012-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/</loc>
+    <loc>http://localhost:49398/posts/2012-10-15-functor-is-to-lens-as.html/</loc>
     <lastmod>2012-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/haskell-is-hard/</loc>
+    <loc>http://localhost:49398/tags/haskell-is-hard/</loc>
     <lastmod>2012-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-09-15-euler11.html/</loc>
+    <loc>http://localhost:49398/posts/2012-09-15-euler11.html/</loc>
     <lastmod>2012-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-08-30-grahams-scan.html/</loc>
+    <loc>http://localhost:49398/posts/2012-08-30-grahams-scan.html/</loc>
     <lastmod>2012-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wordpress/</loc>
+    <loc>http://localhost:49398/tags/wordpress/</loc>
     <lastmod>2012-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-07-15-wordpress.html/</loc>
+    <loc>http://localhost:49398/posts/2012-07-15-wordpress.html/</loc>
     <lastmod>2012-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/c%23/</loc>
+    <loc>http://localhost:49398/tags/c%23/</loc>
     <lastmod>2012-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/clojure/</loc>
+    <loc>http://localhost:49398/tags/clojure/</loc>
     <lastmod>2012-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-07-06-clojure-problems.html/</loc>
+    <loc>http://localhost:49398/posts/2012-07-06-clojure-problems.html/</loc>
     <lastmod>2012-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2012-06-15-creeping-determinism.html/</loc>
+    <loc>http://localhost:49398/posts/2012-06-15-creeping-determinism.html/</loc>
     <lastmod>2012-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/essay/</loc>
+    <loc>http://localhost:49398/tags/essay/</loc>
     <lastmod>2012-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aop/</loc>
+    <loc>http://localhost:49398/tags/aop/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-07-05-code-generators-suck.html/</loc>
+    <loc>http://localhost:49398/posts/2011-07-05-code-generators-suck.html/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/postsharp/</loc>
+    <loc>http://localhost:49398/tags/postsharp/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</loc>
+    <loc>http://localhost:49398/posts/2011-07-05-return-on-execption.html/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wssf/</loc>
+    <loc>http://localhost:49398/tags/wssf/</loc>
     <lastmod>2011-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-04-12-infoq.html/</loc>
+    <loc>http://localhost:49398/posts/2011-04-12-infoq.html/</loc>
     <lastmod>2011-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/attribute-based-caching/</loc>
+    <loc>http://localhost:49398/tags/attribute-based-caching/</loc>
     <lastmod>2011-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/faq/</loc>
+    <loc>http://localhost:49398/tags/faq/</loc>
     <lastmod>2011-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-04-10-aop-faq.html/</loc>
+    <loc>http://localhost:49398/posts/2011-04-10-aop-faq.html/</loc>
     <lastmod>2011-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data/</loc>
+    <loc>http://localhost:49398/tags/data/</loc>
     <lastmod>2011-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</loc>
+    <loc>http://localhost:49398/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</loc>
     <lastmod>2011-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tags/</loc>
+    <loc>http://localhost:49398/tags/tags/</loc>
     <lastmod>2011-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</loc>
+    <loc>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</loc>
     <lastmod>2011-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/release/</loc>
+    <loc>http://localhost:49398/tags/release/</loc>
     <lastmod>2011-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-12-05-enterprise-software-authorization.html/</loc>
+    <loc>http://localhost:49398/posts/2010-12-05-enterprise-software-authorization.html/</loc>
     <lastmod>2010-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/field-level-authorization/</loc>
+    <loc>http://localhost:49398/tags/field-level-authorization/</loc>
     <lastmod>2010-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/row-level-authorization/</loc>
+    <loc>http://localhost:49398/tags/row-level-authorization/</loc>
     <lastmod>2010-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/antlr/</loc>
+    <loc>http://localhost:49398/tags/antlr/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/f%23/</loc>
+    <loc>http://localhost:49398/tags/f%23/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nparsec/</loc>
+    <loc>http://localhost:49398/tags/nparsec/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parsec/</loc>
+    <loc>http://localhost:49398/tags/parsec/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parser/</loc>
+    <loc>http://localhost:49398/tags/parser/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-11-20-parser-combinators-csharp.html/</loc>
+    <loc>http://localhost:49398/posts/2010-11-20-parser-combinators-csharp.html/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parser-combinator/</loc>
+    <loc>http://localhost:49398/tags/parser-combinator/</loc>
     <lastmod>2010-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</loc>
+    <loc>http://localhost:49398/posts/2010-11-11-project-euler-24-in-c.html/</loc>
     <lastmod>2010-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</loc>
+    <loc>http://localhost:49398/posts/2010-11-10-project-euler-8.html/</loc>
     <lastmod>2010-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</loc>
     <lastmod>2010-10-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-12-project-euler-3.html/</loc>
     <lastmod>2010-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</loc>
     <lastmod>2010-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nakedobjectsframework/</loc>
+    <loc>http://localhost:49398/tags/nakedobjectsframework/</loc>
     <lastmod>2010-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-07-project-euler-9.html/</loc>
     <lastmod>2010-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-06-project-euler-5.html/</loc>
     <lastmod>2010-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</loc>
+    <loc>http://localhost:49398/posts/2010-10-06-project-euler-6.html/</loc>
     <lastmod>2010-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/</loc>
+    <loc>http://localhost:49398/articles/</loc>
   </url><url>
-    <loc>http://localhost:1313/bio/</loc>
+    <loc>http://localhost:49398/bio/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>http://localhost:49398/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/media/</loc>
+    <loc>http://localhost:49398/media/</loc>
   </url>
 </urlset>

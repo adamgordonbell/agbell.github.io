@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Humor on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/humor/</link>
+    <link>http://localhost:49398/tags/humor/</link>
     <description>Recent content in Humor on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Aug 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/humor/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/humor/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixed Metaphors</title>
-      <link>http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/</link>
+      <link>http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/</link>
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/</guid>
+      <guid>http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/</guid>
       <description>&lt;p&gt;Here I&amp;rsquo;m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I wouldn&amp;rsquo;t eat that with a ten foot pole&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

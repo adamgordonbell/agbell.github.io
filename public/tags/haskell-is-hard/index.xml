@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haskell-Is-Hard on </title>
+    <link>//localhost:1313/tags/haskell-is-hard/</link>
+    <description>Recent content in Haskell-Is-Hard on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Oct 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/haskell-is-hard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Functor is to Lens as Applicative is to Biplate</title>
+      <link>//localhost:1313/blog/2012-10-15-functor-is-to-lens-as/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2012-10-15-functor-is-to-lens-as/</guid>
+      <description>&lt;p&gt;“Functor is to Lens as Applicative is to Biplate”&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://front.math.ucdavis.edu/1103.2841&#34;&gt;http://front.math.ucdavis.edu/1103.2841&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Haskell, the language with seemingly endless new concepts to learn about&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

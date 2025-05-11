@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Update on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/update/</link>
+    <link>http://localhost:49398/tags/update/</link>
     <description>Recent content in Update on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/update/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/update/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Postgres Update With Join</title>
-      <link>http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/</link>
+      <link>http://localhost:49398/posts/2016-04-20-postgres-update-with-join.html/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/</guid>
+      <guid>http://localhost:49398/posts/2016-04-20-postgres-update-with-join.html/</guid>
       <description>&lt;p&gt;How to perform and update with a join using CTE&amp;rsquo;s in postgres&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;in a cte, write a select that returns the update to values, and the join on conditions&lt;/li&gt;&#xA;&lt;li&gt;join on that in the update&lt;/li&gt;&#xA;&lt;li&gt;Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

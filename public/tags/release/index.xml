@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Release on </title>
+    <link>//localhost:1313/tags/release/</link>
+    <description>Recent content in Release on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/release/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attribute Based Caching 1.2 Released</title>
+      <link>//localhost:1313/blog/2011-01-29-aop-12-release/</link>
+      <pubDate>Sat, 29 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2011-01-29-aop-12-release/</guid>
+      <description>&lt;p&gt;Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.&lt;/p&gt;&#xA;&lt;p&gt;Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cache-12&#34;&gt;Cache 1.2&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Essay on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/essay/</link>
+    <link>http://localhost:49398/tags/essay/</link>
     <description>Recent content in Essay on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Jun 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/essay/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/essay/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creeping Determinism</title>
-      <link>http://localhost:1313/posts/2012-06-15-creeping-determinism.html/</link>
+      <link>http://localhost:49398/posts/2012-06-15-creeping-determinism.html/</link>
       <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2012-06-15-creeping-determinism.html/</guid>
+      <guid>http://localhost:49398/posts/2012-06-15-creeping-determinism.html/</guid>
       <description>&lt;p&gt;Let’s say that you won the lottery. That would be great, wouldn’t it?&lt;/p&gt;</description>
     </item>
   </channel>

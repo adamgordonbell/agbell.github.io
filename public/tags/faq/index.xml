@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faq on </title>
+    <link>//localhost:1313/tags/faq/</link>
+    <description>Recent content in Faq on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Apr 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/faq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Question&#39;:&#39; Caching and postsharp is not working in my project?</title>
+      <link>//localhost:1313/blog/2011-04-10-aop-faq/</link>
+      <pubDate>Sun, 10 Apr 2011 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2011-04-10-aop-faq/</guid>
+      <description>&lt;p&gt;You have made a project using attribute based caching, but the cache isn’t being hit?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

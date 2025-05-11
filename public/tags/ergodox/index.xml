@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ergodox on </title>
+    <link>//localhost:1313/tags/ergodox/</link>
+    <description>Recent content in Ergodox on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/ergodox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modifier Keys in the Home Row</title>
+      <link>//localhost:1313/blog/2016-08-22-modifier-keys-in-the-home-row/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/2016-08-22-modifier-keys-in-the-home-row/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/keyboard-layout_ergodox.png&#34; alt=&#34;ergodox&#34;&gt;&#xA;With today&amp;rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

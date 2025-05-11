@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Adam Gordon Bell</title>
-    <link>http://localhost:1313/tags/wordpress/</link>
+    <link>http://localhost:49398/tags/wordpress/</link>
     <description>Recent content in Wordpress on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/wordpress/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49398/tags/wordpress/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WordPress Force “View all posts in %s” for categories</title>
-      <link>http://localhost:1313/posts/2012-07-15-wordpress.html/</link>
+      <link>http://localhost:49398/posts/2012-07-15-wordpress.html/</link>
       <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2012-07-15-wordpress.html/</guid>
+      <guid>http://localhost:49398/posts/2012-07-15-wordpress.html/</guid>
       <description>&lt;p&gt;Force categories list not to use category descritption use this:&lt;/p&gt;</description>
     </item>
   </channel>
