@@ -6,7 +6,7 @@ type: "profile"
 image: "/images/profiles/IMG_1205_web.jpg"
 high_res_image: "/images/profiles/IMG_1205.jpg"
 ---
-I am a software engineer who [podcasts](https://corecursive.com/) and works in developer relations at [Pulumi](https://www.pulumi.com/adam). I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
+I am a software engineer who [podcasts](https://corecursive.com/) and works as a Community Engineer at [Pulumi](https://www.pulumi.com/adam). I love building software, I love creating content for developers, and learning new things.  I am based in Peterborough, Canada.  
 
 - [CoRecursive Podcast](https://corecursive.com/)
 
