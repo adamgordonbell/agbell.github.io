@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haskell on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/haskell/</link>
+    <link>http://localhost:1313/tags/haskell/</link>
     <description>Recent content in Haskell on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/haskell/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/haskell/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hakyll and CircleCi</title>
-      <link>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</link>
+      <link>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</link>
       <pubDate>Fri, 31 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</guid>
+      <guid>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</guid>
       <description>&lt;p&gt;This blog was on tumblr, which was easy to setup and post and such.  However, I spend like 8 hours a day with a text editor open and a git in terminal window.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Incrementing</title>
-      <link>http://localhost:49398/posts/2014-03-15-incrementing.html/</link>
+      <link>http://localhost:1313/posts/2014-03-15-incrementing.html/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2014-03-15-incrementing.html/</guid>
+      <guid>http://localhost:1313/posts/2014-03-15-incrementing.html/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;http://www.paulgraham.com/icad.html&#34;&gt;an old essay&lt;/a&gt;, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #19 in haskell and by hand</title>
-      <link>http://localhost:49398/posts/2012-11-09-euler19.html/</link>
+      <link>http://localhost:1313/posts/2012-11-09-euler19.html/</link>
       <pubDate>Fri, 09 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-11-09-euler19.html/</guid>
+      <guid>http://localhost:1313/posts/2012-11-09-euler19.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=19&#34;&gt;http://projecteuler.net/problem=19&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Functor is to Lens as Applicative is to Biplate</title>
-      <link>http://localhost:49398/posts/2012-10-15-functor-is-to-lens-as.html/</link>
+      <link>http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/</link>
       <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-10-15-functor-is-to-lens-as.html/</guid>
+      <guid>http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/</guid>
       <description>&lt;p&gt;“Functor is to Lens as Applicative is to Biplate”&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://front.math.ucdavis.edu/1103.2841&#34;&gt;http://front.math.ucdavis.edu/1103.2841&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Haskell, the language with seemingly endless new concepts to learn about&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #11 in haskell</title>
-      <link>http://localhost:49398/posts/2012-09-15-euler11.html/</link>
+      <link>http://localhost:1313/posts/2012-09-15-euler11.html/</link>
       <pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-09-15-euler11.html/</guid>
+      <guid>http://localhost:1313/posts/2012-09-15-euler11.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20&lt;/span&gt;&lt;img src=&#34;http://projecteuler.net/images/symbol_times.gif&#34; alt=&#34;×&#34;&gt;&lt;span&gt;20 grid?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=11&#34;&gt;http://projecteuler.net/problem=11&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Graham’s scan algorithm for the convex hull</title>
-      <link>http://localhost:49398/posts/2012-08-30-grahams-scan.html/</link>
+      <link>http://localhost:1313/posts/2012-08-30-grahams-scan.html/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-08-30-grahams-scan.html/</guid>
+      <guid>http://localhost:1313/posts/2012-08-30-grahams-scan.html/</guid>
       <description>&lt;p&gt;&lt;span&gt;Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Convex_hull&#34;&gt;convex hull&lt;/a&gt;&lt;span&gt;. is, and how the&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Graham_scan&#34;&gt;Graham scan algorithm&lt;/a&gt; &lt;span&gt;should work, on&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

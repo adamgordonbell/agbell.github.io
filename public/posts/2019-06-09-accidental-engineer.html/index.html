@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adam Gordon Bell - The Accidental Engineer Interview</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1762627503">
+<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+</head>
+
+<body>
+  <div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="/">Home</a>
+      <a class="blog-nav-item" href="/bio/">Biography</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/contact/">Contact</a>
+      <a class="blog-nav-item" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</div>
+
+  <div class="container">
+    
+<div class="blog-header">
+  
+    
+    
+    <h1 class="blog-title">The Accidental Engineer Interview</h1> 
+    <p class="lead blog-description"></p> 
+  
+</div>
+    <div class="row">
+      
+      
+       
+         
+      
+
+      <div class="col-sm-12 blog-main">
+      
+        
+        <div class="col-sm-8 blog-main">
+          
+<div class="blog-post">
+  
+  <p class="blog-post-meta">
+  <span class="date">June 9, 2019</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/media">media</a>
+    
+  </span>
+  
+</p>
+  <p>I was interviewed on <a href="https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/">The Accidental Engineer</a> Podcast. Here is a machine generated transcript.</p>
+<p>Max:<br>
+Welcome all. Max of The Accidental Engineer here. Today, we have the pleasure of being joined by Adam Gordon-Bell. Welcome, Adam.</p>
+<p>Adam:<br>
+Thank you. I&rsquo;m glad to be here.</p>
+<p>Max:<br>
+For our audience that don&rsquo;t know, Adam hosts a similar podcast called Co-Recursive. For our audience that may not have heard it yet—and for those who have—maybe, Adam, can you give your own synopsis of the subject matter that you cover in Co-Recursive?</p>
+<p>Adam:<br>
+Yeah, so Co-Recursive is a software development podcast where I do an interview on each episode, usually focused on a piece of technology or a topic. I get an expert to explain to me how it works, and we&rsquo;re not afraid to get into the weeds of the specifics. It’s great for me to be able to learn from these experts, and I hope that the people who listen get to learn along with me.</p>
+<p>Max:<br>
+And in Adam&rsquo;s day job, Adam is a team lead of several products at Tenable, the international software security company. For our audience that are curious about the kinds of subject matter that you deal with in your day-to-day role, what types of technologies are you using on the job?</p>
+<p>Adam:<br>
+Yeah, so I work on application security, which is about securing applications—as opposed to network security, which is more like firewalls and such. The product I work on the most is container security. We scan Docker images. We analyze them statically, looking for software vulnerabilities, so that we can inform developers—for example, “Hey, this new library you upgraded to in Python actually has a network-facing vulnerability. Maybe you don&rsquo;t want to ship that.”</p>
+<p>Max:<br>
+This is super contemporaneous. What was the news event that happened a couple weeks ago that illuminated for the world just how insecure public Docker images are?</p>
+<p>Adam:<br>
+Yeah, there was Alpine. I&rsquo;m not sure if this is exactly what you&rsquo;re thinking of, but there is an Alpine Linux distribution that&rsquo;s commonly used for containers because it&rsquo;s very small and stripped down. There was a vulnerability where you could use a null password to run as root, and it affected a wide range of versions.</p>
+<p>When this news came out, we had to quickly add a check for it. It lit up the board for a lot of customers—we had to let them know, “You need to fix this.”</p>
+<p>Max:<br>
+Yeah, Docker adoption has been huge. I mean, in my previous few roles, I’ve witnessed the turning point in its popularity and adoption. The way I’ve seen it adopted often starts in development, then testing, then staging environments, and finally gets rolled out in production. Security is certainly top of mind in this flow, but running Docker on your laptop is a really popular use case. What’s your take on using Docker for local development?</p>
+<p>Adam:<br>
+Yeah, it depends exactly what you&rsquo;re doing. My team has tried various approaches. You&rsquo;re right that Docker became popular from the bottom up: if you wanted to try a piece of software or a new database, they&rsquo;d often have a Docker image. You could pull it down and start playing around with it—and I think that&rsquo;s a great use of Docker.</p>
+<p>Where it gets more challenging is if you&rsquo;re developing an application and want to develop it inside a Docker container on your local environment. The development cycle depends. If you&rsquo;re on a Linux computer, the overhead of Docker is small. But I&rsquo;m on a MacBook Pro—and most of my team is as well—and same goes for Windows. Docker runs inside an invisible VM.</p>
+<p>If you&rsquo;re trying to do things like hot code reloading or incremental compiling, every time you save it needs to sync over to the Docker image where all your dependencies live. That can be painful. We’ve tried that various ways, and my take is that Docker isn&rsquo;t quite there yet for developing inside of a container if you&rsquo;re not in a Linux environment.</p>
+<p>Max:<br>
+To step back for a moment for audience members who might be wondering why you’d even need Docker on your MacBook—which already runs a Linux-like OS—it’s really for minimizing the delta between dev and production environments. The more similar the two are, the more realistic your development will be—and the more likely you’ll catch problems before they occur in production.</p>
+<p>Or if something bad happens in production, you can reproduce the problem more accurately on your laptop.</p>
+<p>Predating Docker, though, you mentioned VMs. For folks who haven’t used a VM—or at least not knowingly—what is it, and how is it different from Docker?</p>
+<p>Adam:<br>
+Yeah, so a VM is a virtual machine. A VM runs an entire operating system stack in software. There is hardware support to make that faster, but it’s still pretty heavyweight.</p>
+<p>In the past, to match the production environment, I’ve had to run a Linux VM on my MacBook. Now, Docker improves on this by sharing the kernel rather than spinning up an entirely separate operating system instance.</p>
+<p>Docker was originally designed for Linux. So to run Docker on a MacBook (or Windows), Docker actually runs a VM behind the scenes. When you start up multiple containers, they all share that kernel, which is better than running five separate full VMs—but it still has overhead.</p>
+<p>If your host OS is Linux, the overhead is basically negligible.</p>
+<p>Max:<br>
+So yeah, when you install Docker for Mac or Windows, it’s really Docker on top of Linux on top of Mac or Windows—it’s not Docker running natively on those platforms.</p>
+<p>Before the existence of Docker for Mac or Windows, people used to very explicitly boot up and configure VMs manually to run Docker inside of them. It was a mess.</p>
+<p>Thanks to Docker being a well-financed startup, we’ve come a long way. Docker&rsquo;s taking the world by storm in production where that business use case is really compelling. But like we said earlier, reproducing what&rsquo;s happening in production when you&rsquo;re on different environments is a problem that Docker helps with.</p>
+<p>Adam:<br>
+Yeah, and the metaphor of Docker “containers” is nice. It comes from shipping containers—standardized packaging for moving things around. That analogy applies well to application containers: your software and dependencies are neatly packaged and immutable. If it runs in that container locally, it’ll run the same in production.</p>
+<p>Max:<br>
+For sure. I want to highlight something else: you work remotely from Canada as a full-time employee of a U.S. business. One topic I’d love to cover is how you handle full-time remoteness, especially as a manager of full-time remote employees.</p>
+<p>What&rsquo;s that like, and what are some of the tactics you use—for both recruiting and managing?</p>
+<p>Adam:<br>
+Yeah, good question. I’ve been remote at a couple of companies. I live in a smaller place. My background is, I had a previous boss I liked who switched jobs and wanted me to come work with him, but I didn’t want to move. He said, “Let’s try remote.”</p>
+<p>Working from home, I just remember thinking a week in: this is great, I don&rsquo;t think I’ll go back to an office. Now, that’s me—it depends on your personality. But I really enjoy the autonomy. There are trade-offs, it may not be for everyone, but I think remote work is great.</p>
+<p>Max:<br>
+Fair. So when it comes to communication—when you&rsquo;re working remotely, how do you maintain optimal collaboration with your coworkers or teams that report to you?</p>
+<p>Adam:<br>
+Slack is the big one—or your chat app of choice. But the cultural aspect is probably more important. I used to be the only remote guy on a team—that can be isolating. Now I work on a distributed team with people in various places. We all embrace asynchronous communication, and it works.</p>
+<p>But if you&rsquo;re the only remote one, that’s harder. You need buy-in from the whole team.</p>
+<p>Max:<br>
+So let’s say you&rsquo;re evaluating job offers—one from a partially distributed company and one from a fully remote one. Do you think it’s important to prioritize one over the other?</p>
+<p>Adam:<br>
+Yeah, I mean, no one is bringing me posh catered lunches here at home—so there’s a consideration, right?</p>
+<p>I was talking to someone who was having ribs at work, while I was eating a microwave burrito.</p>
+<p>Still, I think people should try working on a distributed team. You may find it’s not for you, but there’s value in the forced communication clarity. I wouldn&rsquo;t say remote is better or worse than in-person—it’s just different, with different trade-offs.</p>
+<p>Max:<br>
+Agreed. One of the interesting things I’ve noticed about working remotely is that all your communication has an audit trail. You can scroll Slack, Git, your email—there’s often a better paper trail than you have in face-to-face conversations.</p>
+<p>What’s crisis management like in a remote setting?</p>
+<p>Adam:<br>
+Yeah, so our team manages apps that are part of a larger microservice architecture. We use PagerDuty and respond to incidents together. We use a tool called Blameless that integrates with Slack. When someone declares an incident, they become the incident commander and pull in folks as needed.</p>
+<p>It creates this camaraderie—even if a metric just goes haywire but isn’t actually tied to customer issues. There’s this sense of, “We’re all in this together. Let’s jump in and figure it out.”</p>
+<p>Max:<br>
+Makes sense. Do you feel like fully distributed teams are better equipped for incident response due to the culture and tooling around documenting everything?</p>
+<p>Adam:<br>
+Yeah, I think so. You get in the habit of clear logging and communication. Even if the issue turns out to be minor, everyone&rsquo;s ready to pitch in. That shared experience builds connection.</p>
+<p>Max:<br>
+Do you have any parting advice for people starting their first remote job?</p>
+<p>Adam:<br>
+Yes—try to meet with your team in-person a few times a year if you can, even for planning. It’s less about work and more about building relationships.</p>
+<p>There are also tools like CoffeeTime, which randomly pairs coworkers for virtual coffee chats. We use that, and it’s a nice way to connect.</p>
+<p>Honestly, even in office environments, people sometimes just wear noise-canceling headphones and Slack all day. A lot of the same principles apply whether you’re remote or not.</p>
+<p>Max:<br>
+That&rsquo;s true. We&rsquo;ll include links to some of these tools—CoffeeTime, Blameless, etc.—in the show notes.</p>
+<p>For teams that rely on Google Hangouts or Zoom, it really helps maintain interaction.</p>
+<p>Do you have any exciting technologies or programming languages you’d like to plug before we wrap?</p>
+<p>Adam:<br>
+Sure. My team works in Scala—a functional programming-leaning JVM language. My podcast also covers languages like Rust and Haskell. I lean towards functional programming and using types to build better software.</p>
+<p>Even using TypeScript over JavaScript is a step in that direction—it’s worth exploring.</p>
+<p>Max:<br>
+We&rsquo;ll throw links in the show notes for Scala, Rust, etc. Honestly, I&rsquo;ve never written a line of Rust and need to check it out myself.</p>
+<p>Adam:<br>
+It&rsquo;s super interesting, yeah.</p>
+<p>Max:<br>
+I encourage our audience to go check out Co-Recursive, Adam’s podcast. Adam, thank you for coming on.</p>
+<p>Adam:<br>
+Thank you very much. It was great.</p>
+<p>Max:<br>
+For more, visit us on iTunes or our website at theaccidentalengineer.com.</p>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+  var disqus_shortname = 'adamgordonbell';
+
+   
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+    rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+        </div>
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="https://corecursive.com">Adam's Podcast</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
+              </li>
+              <li>
+                <a href="https://github.com/adamgordonbell/">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
+              </li>
+              <li>
+                <a href="/contact/">More</a>
+              </li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <a href="/index.xml">RSS</a>
+          </div>
+        </aside>
+      
+      </div>
+    </div>
+  </div>
+
+  <footer class="blog-footer">
+  <div class="container text-center">
+    <div class="newsletter-container">
+      <p class="newsletter-text" style="font-size: 1.2em; font-weight: 500; margin-bottom: 1em; color: #222;">Sign up to my monthly newsletter to be notified when I write new things, have new podcast episodes or other fun stuff to share.</p>
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.convertkit.com/forms/2082075/subscriptions" class="seva-form formkit-form" method="post"
+        data-sv-form="2082075" data-uid="99a50e1951" data-format="inline" data-version="5"
+        data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;}}}"
+        min-width="400 500 600 700 800" style="background-color: transparent; border-radius: 4px;">
+        <div class="formkit-background" style="background: transparent;"></div>
+        <div data-style="minimal">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <div class="formkit-field"><input class="formkit-input styled-input" name="email_address" aria-label="Email Address"
+                placeholder="Email Address" required type="email"></div>
+            <button data-element="submit" class="formkit-submit styled-btn">
+              <div class="formkit-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div><span>Subscribe</span>
+            </button>
+          </div>
+        </div>
+        <style>
+          .formkit-form[data-uid="99a50e1951"] * { box-sizing: border-box; }
+          .formkit-form[data-uid="99a50e1951"] { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+          .formkit-form[data-uid="99a50e1951"] .formkit-fields { display: flex; flex-wrap: wrap; margin: 0 auto 0 auto; justify-content: center; align-items: flex-end; }
+          .formkit-form[data-uid="99a50e1951"] .formkit-field { min-width: 220px; margin: 0 10px 0 0; flex: 1 0 auto; }
+          .formkit-form[data-uid="99a50e1951"] .styled-btn { padding: 0.6em 2em; background: #0056b3; color: #fff; border-radius: 4px; border: none; font-size: 1em; font-weight: 600; transition: background 0.2s; width: auto; min-width: 120px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+          .formkit-form[data-uid="99a50e1951"] .styled-btn:hover { background: #003d80; }
+          .formkit-form[data-uid="99a50e1951"] .styled-input { background: #fff; font-size: 1em; padding: 0.6em 1em; border: 1px solid #e3e3e3; border-radius: 4px; color: #222; width: 250px; max-width: 100%; }
+        </style>
+      </form>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wssf on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/wssf/</link>
+    <link>http://localhost:1313/tags/wssf/</link>
     <description>Recent content in Wssf on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Jul 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/wssf/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/wssf/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Generators, You Suck. Well, some of you do.</title>
-      <link>http://localhost:49398/posts/2011-07-05-code-generators-suck.html/</link>
+      <link>http://localhost:1313/posts/2011-07-05-code-generators-suck.html/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-07-05-code-generators-suck.html/</guid>
+      <guid>http://localhost:1313/posts/2011-07-05-code-generators-suck.html/</guid>
       <description>&lt;p&gt;The scaffolding style code generators that generate out a good starting point from which standard coding takes over, those are very useful.&lt;/p&gt;&#xA;&lt;p&gt;The Microsoft brand “design surface” based code generators (TableAdapters,&lt;a href=&#34;http://servicefactory.codeplex.com&#34;&gt;WSSF&lt;/a&gt;) where the uml diagram of a class needs to be edited, rather than the actual class, those are more harm than good. if fact they slow development way down.&lt;/p&gt;&#xA;&lt;p&gt;The design surface itself, is not necessarily a bad concept. it is just a GUI over top of a XML document. Just don’t use it to generate repetitive code. If code is repetitive, factor it out until its DRY. Don’t break out the code generators.&lt;/p&gt;</description>
     </item>
   </channel>

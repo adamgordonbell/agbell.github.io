@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nixos on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/nixos/</link>
+    <link>http://localhost:1313/tags/nixos/</link>
     <description>Recent content in Nixos on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Mar 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/nixos/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/nixos/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Custom Packages in NixOs Configuration File</title>
-      <link>http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</link>
+      <link>http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</link>
       <pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</guid>
+      <guid>http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</guid>
       <description>&lt;p&gt;Here is a problem we encountered with NixOS:&lt;/p&gt;&#xA;&lt;p&gt;The nix-channel we were on didn&amp;rsquo;t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.&lt;/p&gt;</description>
     </item>
   </channel>

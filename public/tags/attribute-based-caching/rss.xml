@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Attribute-Based-Caching on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/attribute-based-caching/</link>
+    <link>http://localhost:1313/tags/attribute-based-caching/</link>
     <description>Recent content in Attribute-Based-Caching on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Apr 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/attribute-based-caching/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/attribute-based-caching/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attribute Based Caching Project Covered in infoQs</title>
-      <link>http://localhost:49398/posts/2011-04-12-infoq.html/</link>
+      <link>http://localhost:1313/posts/2011-04-12-infoq.html/</link>
       <pubDate>Tue, 12 Apr 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-04-12-infoq.html/</guid>
+      <guid>http://localhost:1313/posts/2011-04-12-infoq.html/</guid>
       <description>&lt;p&gt;David Cookery did a short write up of my AOP caching framework on infoQ. As a result downloads and usage have spiked.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Question&#39;:&#39; Caching and postsharp is not working in my project?</title>
-      <link>http://localhost:49398/posts/2011-04-10-aop-faq.html/</link>
+      <link>http://localhost:1313/posts/2011-04-10-aop-faq.html/</link>
       <pubDate>Sun, 10 Apr 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-04-10-aop-faq.html/</guid>
+      <guid>http://localhost:1313/posts/2011-04-10-aop-faq.html/</guid>
       <description>&lt;p&gt;You have made a project using attribute based caching, but the cache isn’t being hit?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attribute Based Caching 1.2 Released</title>
-      <link>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</link>
+      <link>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</link>
       <pubDate>Sat, 29 Jan 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</guid>
+      <guid>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</guid>
       <description>&lt;p&gt;Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.&lt;/p&gt;&#xA;&lt;p&gt;Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cache-12&#34;&gt;Cache 1.2&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Introducing Attribute Based Caching</title>
-      <link>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
+      <link>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
       <pubDate>Tue, 26 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing &lt;a href=&#34;http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/&#34; title=&#34;caching&#34;&gt;caching&lt;/a&gt; with postsharp.  However, none handled cache invalidation in a nice declarative way.  &lt;/p&gt;</description>
     </item>
   </channel>

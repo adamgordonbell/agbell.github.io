@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/c%23/</link>
+    <link>http://localhost:1313/tags/c%23/</link>
     <description>Recent content in C# on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/c%23/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/c%23/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Problems Clojure thinks I have with C#</title>
-      <link>http://localhost:49398/posts/2012-07-06-clojure-problems.html/</link>
+      <link>http://localhost:1313/posts/2012-07-06-clojure-problems.html/</link>
       <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-07-06-clojure-problems.html/</guid>
+      <guid>http://localhost:1313/posts/2012-07-06-clojure-problems.html/</guid>
       <description>&lt;p&gt;I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ReturnOnException Aspect (postsharp)</title>
-      <link>http://localhost:49398/posts/2011-07-05-return-on-execption.html/</link>
+      <link>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-07-05-return-on-execption.html/</guid>
+      <guid>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</guid>
       <description>&lt;p&gt;This comes in handy sometimes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attribute Based Caching Project Covered in infoQs</title>
-      <link>http://localhost:49398/posts/2011-04-12-infoq.html/</link>
+      <link>http://localhost:1313/posts/2011-04-12-infoq.html/</link>
       <pubDate>Tue, 12 Apr 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-04-12-infoq.html/</guid>
+      <guid>http://localhost:1313/posts/2011-04-12-infoq.html/</guid>
       <description>&lt;p&gt;David Cookery did a short write up of my AOP caching framework on infoQ. As a result downloads and usage have spiked.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attribute Based Caching 1.2 Released</title>
-      <link>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</link>
+      <link>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</link>
       <pubDate>Sat, 29 Jan 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</guid>
+      <guid>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</guid>
       <description>&lt;p&gt;Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.&lt;/p&gt;&#xA;&lt;p&gt;Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cache-12&#34;&gt;Cache 1.2&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Parser Combinators in C#</title>
-      <link>http://localhost:49398/posts/2010-11-20-parser-combinators-csharp.html/</link>
+      <link>http://localhost:1313/posts/2010-11-20-parser-combinators-csharp.html/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-20-parser-combinators-csharp.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-20-parser-combinators-csharp.html/</guid>
       <description>&lt;p&gt;Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #24 in c#</title>
-      <link>http://localhost:49398/posts/2010-11-11-project-euler-24-in-c.html/</link>
+      <link>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</link>
       <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-11-project-euler-24-in-c.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</guid>
       <description>&lt;p&gt;A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:&lt;/p&gt;&#xA;&lt;p&gt;012   021   102   120   201   210&lt;/p&gt;&#xA;&lt;p&gt;What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler 8 in C#</title>
-      <link>http://localhost:49398/posts/2010-11-10-project-euler-8.html/</link>
+      <link>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</link>
       <pubDate>Wed, 10 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-10-project-euler-8.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</guid>
       <description>&lt;p&gt;Discover the largest product of five consecutive digits in the 1000-digit number.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introducing Attribute Based Caching</title>
-      <link>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
+      <link>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
       <pubDate>Tue, 26 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing &lt;a href=&#34;http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/&#34; title=&#34;caching&#34;&gt;caching&lt;/a&gt; with postsharp.  However, none handled cache invalidation in a nice declarative way.  &lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler 3 in c#</title>
-      <link>http://localhost:49398/posts/2010-10-12-project-euler-3.html/</link>
+      <link>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</link>
       <pubDate>Tue, 12 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-12-project-euler-3.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Problem 3: What is the largest prime factor of the number 600851475143 ?&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34; title=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With enough extension methods we can make 3 really simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;600851475143.LargestPrimeFactor()&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Where:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Naked Objects MVC - exposing a repository method as a get</title>
-      <link>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</link>
+      <link>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</link>
       <pubDate>Sat, 09 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</guid>
       <description>&lt;p&gt;If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #9</title>
-      <link>http://localhost:49398/posts/2010-10-07-project-euler-9.html/</link>
+      <link>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</link>
       <pubDate>Thu, 07 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-07-project-euler-9.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</guid>
       <description>&lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #5</title>
-      <link>http://localhost:49398/posts/2010-10-06-project-euler-5.html/</link>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</link>
       <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-06-project-euler-5.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</guid>
       <description>&lt;p&gt;Here is my solution to the following project Euler Problem:&lt;/p&gt;&#xA;&lt;p&gt;2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.&lt;/p&gt;&#xA;&lt;p&gt;What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #6</title>
-      <link>http://localhost:49398/posts/2010-10-06-project-euler-6.html/</link>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</link>
       <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-06-project-euler-6.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</guid>
       <description>&lt;p&gt;Ok, this one is stupidly simple:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;var squaredsum = Math.Pow(1.To(100).Sum(), 2);&#xA;var sumedsquare = 1.To(100).Select(x =&amp;gt; x * x).Sum();&#xA;Console.WriteLine(squaredsum - sumedsquare);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>

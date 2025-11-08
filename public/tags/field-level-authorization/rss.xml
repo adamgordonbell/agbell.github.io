@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Field-Level-Authorization on Adam Gordon Bell</title>
-    <link>http://localhost:49398/tags/field-level-authorization/</link>
+    <link>http://localhost:1313/tags/field-level-authorization/</link>
     <description>Recent content in Field-Level-Authorization on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Dec 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/tags/field-level-authorization/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/field-level-authorization/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enterprise Software Authorization / Security</title>
-      <link>http://localhost:49398/posts/2010-12-05-enterprise-software-authorization.html/</link>
+      <link>http://localhost:1313/posts/2010-12-05-enterprise-software-authorization.html/</link>
       <pubDate>Sun, 05 Dec 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-12-05-enterprise-software-authorization.html/</guid>
+      <guid>http://localhost:1313/posts/2010-12-05-enterprise-software-authorization.html/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png&#34; alt=&#34;lock&#34;&gt;&lt;strong&gt;Security Thoughts:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There are generally three types of authorization in enterprise applications:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;strong&gt;Role based security&lt;/strong&gt; &lt;strong&gt;-&lt;/strong&gt; Which actions can a user do - aka role-based access control&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;strong&gt;Entity level security&lt;/strong&gt; - A user can only perform an Action on certain objects/data - aka row level security&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Field level security&lt;/strong&gt; - A user can see or edit only certain fields of an entity – &lt;em&gt;(this is really fine grained and usually a bad idea)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
   </channel>

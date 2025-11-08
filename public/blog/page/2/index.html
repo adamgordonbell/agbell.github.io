@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49398&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css?1746995893">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1762628812">
 <link rel="stylesheet" type="text/css" href="/css/blog-title.css">
 <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 </head>
@@ -35,7 +35,7 @@
 <div class="blog-header">
   
     
-    <h1 class="blog-title"><a href="http://localhost:49398/blog/">Hey, this is my blog</a></h1>
+    <h1 class="blog-title"><a href="http://localhost:1313/blog/">Hey, this is my blog</a></h1>
     <p class="lead blog-description">It is somewhat abandoned.</p>
   
 </div>
@@ -57,15 +57,84 @@
 
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/">Using Custom Packages in NixOs Configuration File</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2016-08-21-a-better-3-way-merge.html/">A Better 3-way merge?</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">August 21, 2016</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/git">git</a>
+    
+    <a href="http://localhost:1313/tags/merging">merging</a>
+    
+    <a href="http://localhost:1313/tags/scala">scala</a>
+    
+  </span>
+  
+</p>
+  <p>3-way merge works great for code merges in the majority of cases.  Can we do better, however.  Can we decrease the number of places where a manual conflict resolution is required.  I would say, yes we can, if we know more about the syntax of the file in question.</p>
+  
+  <a href="http://localhost:1313/posts/2016-08-21-a-better-3-way-merge.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2016-06-16-merging-and-conflict-resolution.html/">Git Custom Merge Drivers</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">June 16, 2016</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/git">git</a>
+    
+    <a href="http://localhost:1313/tags/merging">merging</a>
+    
+  </span>
+  
+</p>
+  <p>Git merge drivers.</p>
+  
+  <a href="http://localhost:1313/posts/2016-06-16-merging-and-conflict-resolution.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/">Postgres Update With Join</a></h2>
+  <p class="blog-post-meta">
+  <span class="date">April 20, 2016</span>
+  
+  - <span class="tags">
+    
+    <a href="http://localhost:1313/tags/postgres">postgres</a>
+    
+    <a href="http://localhost:1313/tags/cte">cte</a>
+    
+    <a href="http://localhost:1313/tags/update">update</a>
+    
+  </span>
+  
+</p>
+  <p>How to perform and update with a join using CTE&rsquo;s in postgres</p>
+<ul>
+<li>in a cte, write a select that returns the update to values, and the join on conditions</li>
+<li>join on that in the update</li>
+<li>Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run</li>
+</ul>
+  
+  <a href="http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/">Read more...</a>
+  
+</div>
+
+  <div class="blog-post">
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/">Using Custom Packages in NixOs Configuration File</a></h2>
   <p class="blog-post-meta">
   <span class="date">March 26, 2016</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/nix">nix</a>
+    <a href="http://localhost:1313/tags/nix">nix</a>
     
-    <a href="http://localhost:49398/tags/nixos">nixos</a>
+    <a href="http://localhost:1313/tags/nixos">nixos</a>
     
   </span>
   
@@ -73,64 +142,64 @@
   <p>Here is a problem we encountered with NixOS:</p>
 <p>The nix-channel we were on didn&rsquo;t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.</p>
   
-  <a href="http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-11-04-bitcoin-transactions-volume.html/">Bitcoin Transactions</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/">Bitcoin Transactions</a></h2>
   <p class="blog-post-meta">
   <span class="date">November 4, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/prediction">prediction</a>
+    <a href="http://localhost:1313/tags/prediction">prediction</a>
     
-    <a href="http://localhost:49398/tags/good-judgement-project">good-judgement-project</a>
+    <a href="http://localhost:1313/tags/good-judgement-project">good-judgement-project</a>
     
-    <a href="http://localhost:49398/tags/bitcoin">bitcoin</a>
+    <a href="http://localhost:1313/tags/bitcoin">bitcoin</a>
     
   </span>
   
 </p>
   <p>What will be the average number of Bitcoin transactions per day in the first week of June 2016?</p>
   
-  <a href="http://localhost:49398/posts/2015-11-04-bitcoin-transactions-volume.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-10-21-fitness-books.html/">Fitness Books</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-10-21-fitness-books.html/">Fitness Books</a></h2>
   <p class="blog-post-meta">
   <span class="date">October 21, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/fitness">fitness</a>
+    <a href="http://localhost:1313/tags/fitness">fitness</a>
     
-    <a href="http://localhost:49398/tags/books">books</a>
+    <a href="http://localhost:1313/tags/books">books</a>
     
   </span>
   
 </p>
   <p>I&rsquo;ve read a lot of fitness biographies over the last little while.  Here is a quick list.</p>
   
-  <a href="http://localhost:49398/posts/2015-10-21-fitness-books.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2015-10-21-fitness-books.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-08-19-more-scala-groups-and-tuples.html/">More Scala Groups And Tuples</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/">More Scala Groups And Tuples</a></h2>
   <p class="blog-post-meta">
   <span class="date">August 19, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/scala">scala</a>
+    <a href="http://localhost:1313/tags/scala">scala</a>
     
-    <a href="http://localhost:49398/tags/slick">slick</a>
+    <a href="http://localhost:1313/tags/slick">slick</a>
     
-    <a href="http://localhost:49398/tags/tuples">tuples</a>
+    <a href="http://localhost:1313/tags/tuples">tuples</a>
     
   </span>
   
@@ -153,20 +222,20 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
 </span></span></code></pre></div>
   
-  <a href="http://localhost:49398/posts/2015-08-19-more-scala-groups-and-tuples.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/">Mixed Metaphors</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/">Mixed Metaphors</a></h2>
   <p class="blog-post-meta">
   <span class="date">August 11, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/humor">humor</a>
+    <a href="http://localhost:1313/tags/humor">humor</a>
     
-    <a href="http://localhost:49398/tags/presentation">presentation</a>
+    <a href="http://localhost:1313/tags/presentation">presentation</a>
     
   </span>
   
@@ -176,20 +245,20 @@
 <li>I wouldn&rsquo;t eat that with a ten foot pole</li>
 </ul>
   
-  <a href="http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-08-04-scala-slick-group-joins.html/">Scala Slick Group</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/">Scala Slick Group</a></h2>
   <p class="blog-post-meta">
   <span class="date">August 4, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/scala">scala</a>
+    <a href="http://localhost:1313/tags/scala">scala</a>
     
-    <a href="http://localhost:49398/tags/slick">slick</a>
+    <a href="http://localhost:1313/tags/slick">slick</a>
     
   </span>
   
@@ -202,81 +271,31 @@
 </span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span> <span style="color:#66d9ef">yield</span> <span style="color:#f92672">(</span>o<span style="color:#f92672">,</span>i<span style="color:#f92672">,</span>s<span style="color:#f92672">)</span>
 </span></span></code></pre></div>
   
-  <a href="http://localhost:49398/posts/2015-08-04-scala-slick-group-joins.html/">Read more...</a>
+  <a href="http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/">Read more...</a>
   
 </div>
 
   <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/">Hakyll and CircleCi</a></h2>
+  <h2 class="blog-post-title"><a href="http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/">Hakyll and CircleCi</a></h2>
   <p class="blog-post-meta">
   <span class="date">July 31, 2015</span>
   
   - <span class="tags">
     
-    <a href="http://localhost:49398/tags/blog">blog</a>
+    <a href="http://localhost:1313/tags/blog">blog</a>
     
-    <a href="http://localhost:49398/tags/hakyll">hakyll</a>
+    <a href="http://localhost:1313/tags/hakyll">hakyll</a>
     
-    <a href="http://localhost:49398/tags/ci">ci</a>
+    <a href="http://localhost:1313/tags/ci">ci</a>
     
-    <a href="http://localhost:49398/tags/haskell">haskell</a>
+    <a href="http://localhost:1313/tags/haskell">haskell</a>
     
   </span>
   
 </p>
   <p>This blog was on tumblr, which was easy to setup and post and such.  However, I spend like 8 hours a day with a text editor open and a git in terminal window.</p>
   
-  <a href="http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2015-01-14-lazy-evaluation.html/">Lazy Evaluation In Haskell</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">January 14, 2015</span>
-  
-</p>
-  <p><em>This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.</em></p>
-  
-  <a href="http://localhost:49398/posts/2015-01-14-lazy-evaluation.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2014-03-15-incrementing.html/">Incrementing</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">March 15, 2014</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:49398/tags/paul-graham">paul-graham</a>
-    
-    <a href="http://localhost:49398/tags/haskell">haskell</a>
-    
-  </span>
-  
-</p>
-  <p>In <a href="http://www.paulgraham.com/icad.html">an old essay</a>, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.</p>
-  
-  <a href="http://localhost:49398/posts/2014-03-15-incrementing.html/">Read more...</a>
-  
-</div>
-
-  <div class="blog-post">
-  <h2 class="blog-post-title"><a href="http://localhost:49398/posts/2014-02-20-bluetooth-thinkpad-w520.html/">How to get bluetooth working in windows 8 / 8.1 on various thinkpads</a></h2>
-  <p class="blog-post-meta">
-  <span class="date">February 20, 2014</span>
-  
-  - <span class="tags">
-    
-    <a href="http://localhost:49398/tags/thinkpad">thinkpad</a>
-    
-    <a href="http://localhost:49398/tags/bluetooth">bluetooth</a>
-    
-  </span>
-  
-</p>
-  
+  <a href="http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/">Read more...</a>
   
 </div>
 
@@ -410,6 +429,8 @@
   
     
   
+    
+  
   
   
     
@@ -435,6 +456,13 @@
   
     
       
+      <a href="/tags/media/" style="font-size: 195%">
+        Media (6)
+      </a>
+    
+  
+    
+      
       <a href="/tags/attribute-based-caching/" style="font-size: 174%">
         Attribute-Based-Caching (4)
       </a>
@@ -442,15 +470,15 @@
   
     
       
-      <a href="/tags/media/" style="font-size: 174%">
-        Media (4)
+      <a href="/tags/scala/" style="font-size: 161%">
+        Scala (3)
       </a>
     
   
     
       
-      <a href="/tags/scala/" style="font-size: 161%">
-        Scala (3)
+      <a href="/tags/books/" style="font-size: 146%">
+        Books (2)
       </a>
     
   

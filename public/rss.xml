@@ -2,360 +2,381 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adam Bell - Software Engineer on Adam Gordon Bell</title>
-    <link>http://localhost:49398/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Adam Bell - Software Engineer on Adam Gordon Bell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49398/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I Struggled to Finish a Beautifully Written Book</title>
+      <link>http://localhost:1313/posts/2025-11-08-beautifully-written-book.html/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-11-08-beautifully-written-book.html/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;All life is suffering. Well, duh, Jolie would remember thinking, the one time Roshi Steve ever stooped to bullet-point the noble truths of Buddhism. Her phone, secure in its cubby, was more or less a snuff film of the world&amp;rsquo;s entangled miseries: bread lines, forever wars, the beehives gone silent, the coral reefs bleached white. Yet there at the zendo to which she&amp;rsquo;d been sneaking off each Thursday the spring of her seventh-grade year, wisdom wasn&amp;rsquo;t supposed to come in such pithy little nuggets. So it was only later, toward the end of April, that she would realize this First Noble Truth had been the through-line all along.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Software Misadventures Podcast</title>
-      <link>http://localhost:49398/posts/2024-08-06-software-misadventures.html/</link>
+      <link>http://localhost:1313/posts/2024-08-06-software-misadventures.html/</link>
       <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2024-08-06-software-misadventures.html/</guid>
+      <guid>http://localhost:1313/posts/2024-08-06-software-misadventures.html/</guid>
       <description>&lt;p&gt;I was interviewed for the Software Misadventures Podcast.&lt;/p&gt;&#xA;&lt;p&gt;Below is a machine generated transcription.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/KummzuErxOE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
       <title>Interview with Adam Gordon Bell: The Art of Technical Storytelling</title>
-      <link>http://localhost:49398/posts/2024-05-10-earthly-writing.html/</link>
+      <link>http://localhost:1313/posts/2024-05-10-earthly-writing.html/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2024-05-10-earthly-writing.html/</guid>
+      <guid>http://localhost:1313/posts/2024-05-10-earthly-writing.html/</guid>
       <description>&lt;p&gt;I was interviewed by Sarah for a podcast.&lt;/p&gt;&#xA;&lt;p&gt;Below is a machine generated transcription.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Sarah Chen interviews Adam Gordon Bell about his successful content creation strategies during his time at Earthly Technologies.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sarah Chen:&lt;/strong&gt; Adam, your articles consistently made it to the front page of Hacker News during your time at Earthly, with pieces like &amp;ldquo;We built the fastest CI and it failed&amp;rdquo; and &amp;ldquo;Don&amp;rsquo;t Feed the Thought Leaders&amp;rdquo; generating hundreds of points. What was your approach to selecting topics that would resonate with the developer community?&lt;/p&gt;</description>
     </item>
     <item>
       <title>From GeoCities to Haskell: Chronicles of an Abandoned Blog</title>
-      <link>http://localhost:49398/posts/2024-05-10-somewhat-more-like-completely.html/</link>
+      <link>http://localhost:1313/posts/2024-05-10-somewhat-more-like-completely.html/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2024-05-10-somewhat-more-like-completely.html/</guid>
+      <guid>http://localhost:1313/posts/2024-05-10-somewhat-more-like-completely.html/</guid>
       <description>&lt;p&gt;For years, this blog has said at the top, in the header, &amp;ldquo;This is my blog. It&amp;rsquo;s somewhat abandoned.&amp;rdquo; It&amp;rsquo;s more than just abandoned, though. Here is the story.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 3</title>
-      <link>http://localhost:49398/posts/post-3/</link>
+      <link>http://localhost:1313/posts/post-3/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>http://localhost:49398/posts/post-3/</guid>
+      <guid>http://localhost:1313/posts/post-3/</guid>
       <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>The Accidental Engineer Interview</title>
+      <link>http://localhost:1313/posts/2019-06-09-accidental-engineer.html/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019-06-09-accidental-engineer.html/</guid>
+      <description>&lt;p&gt;I was interviewed on &lt;a href=&#34;https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/&#34;&gt;The Accidental Engineer&lt;/a&gt; Podcast. Here is a machine generated transcript.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>A Geek Leader Interview</title>
-      <link>http://localhost:49398/posts/2019-04-28-a-geek-leader.html/</link>
+      <link>http://localhost:1313/posts/2019-04-28-a-geek-leader.html/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2019-04-28-a-geek-leader.html/</guid>
+      <guid>http://localhost:1313/posts/2019-04-28-a-geek-leader.html/</guid>
       <description>&lt;p&gt;I was interviewed on &lt;a href=&#34;https://www.ageekleader.com/agl-102-corecursive-with-adam-gordon-bell/&#34;&gt;&amp;ldquo;A Geek Leader&amp;rdquo;&lt;/a&gt; Podcast. Here is a machine generated transcript.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lucid Programming Interview</title>
-      <link>http://localhost:49398/posts/2019-04-28-lucid-programming.html/</link>
+      <link>http://localhost:1313/posts/2019-04-28-lucid-programming.html/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2019-04-28-lucid-programming.html/</guid>
+      <guid>http://localhost:1313/posts/2019-04-28-lucid-programming.html/</guid>
       <description>&lt;p&gt;I was interviewed for the Lucid Programming Podcast.&lt;/p&gt;&#xA;&lt;p&gt;Below is a machine generated transcription.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/C0PuCgQrxZU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
+      <title>Programming Throwdown</title>
+      <link>http://localhost:1313/posts/2019-04-28-lucid-programming-copy.html/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019-04-28-lucid-programming-copy.html/</guid>
+      <description>&lt;p&gt;I was interviewed for the &lt;a href=&#34;https://www.programmingthrowdown.com/episodes/episode-91-functional-programming-with/&#34;&gt;programming throwdown podcast&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Below is a machine generated transcription.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Signify Q&amp;A With Adam Gordon Bell</title>
-      <link>http://localhost:49398/posts/2019-04-20-scala-in-the-city.html/</link>
+      <link>http://localhost:1313/posts/2019-04-20-scala-in-the-city.html/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2019-04-20-scala-in-the-city.html/</guid>
+      <guid>http://localhost:1313/posts/2019-04-20-scala-in-the-city.html/</guid>
       <description>&lt;p&gt;I was interviewed for by Signify Technolgies for Scala in the City.&lt;/p&gt;&#xA;&lt;p&gt;Below is a machine generated transcription.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/LexbSEexZh8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
       <title>Modifier Keys in the Home Row</title>
-      <link>http://localhost:49398/posts/2016-08-22-modifier-keys-in-the-home-row.html/</link>
+      <link>http://localhost:1313/posts/2016-08-22-modifier-keys-in-the-home-row.html/</link>
       <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-08-22-modifier-keys-in-the-home-row.html/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:49398/images/keyboard-layout_ergodox.png&#34; alt=&#34;ergodox&#34;&gt;&#xA;With today&amp;rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/2016-08-22-modifier-keys-in-the-home-row.html/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/keyboard-layout_ergodox.png&#34; alt=&#34;ergodox&#34;&gt;&#xA;With today&amp;rsquo;s opensource keyboard firmware, it is possible to use dual role keys to have all modifier keys in your home row.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Better 3-way merge?</title>
-      <link>http://localhost:49398/posts/2016-08-21-a-better-3-way-merge.html/</link>
+      <link>http://localhost:1313/posts/2016-08-21-a-better-3-way-merge.html/</link>
       <pubDate>Sun, 21 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-08-21-a-better-3-way-merge.html/</guid>
+      <guid>http://localhost:1313/posts/2016-08-21-a-better-3-way-merge.html/</guid>
       <description>&lt;p&gt;3-way merge works great for code merges in the majority of cases.  Can we do better, however.  Can we decrease the number of places where a manual conflict resolution is required.  I would say, yes we can, if we know more about the syntax of the file in question.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git Custom Merge Drivers</title>
-      <link>http://localhost:49398/posts/2016-06-16-merging-and-conflict-resolution.html/</link>
+      <link>http://localhost:1313/posts/2016-06-16-merging-and-conflict-resolution.html/</link>
       <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-06-16-merging-and-conflict-resolution.html/</guid>
+      <guid>http://localhost:1313/posts/2016-06-16-merging-and-conflict-resolution.html/</guid>
       <description>&lt;p&gt;Git merge drivers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Postgres Update With Join</title>
-      <link>http://localhost:49398/posts/2016-04-20-postgres-update-with-join.html/</link>
+      <link>http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-04-20-postgres-update-with-join.html/</guid>
+      <guid>http://localhost:1313/posts/2016-04-20-postgres-update-with-join.html/</guid>
       <description>&lt;p&gt;How to perform and update with a join using CTE&amp;rsquo;s in postgres&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;in a cte, write a select that returns the update to values, and the join on conditions&lt;/li&gt;&#xA;&lt;li&gt;join on that in the update&lt;/li&gt;&#xA;&lt;li&gt;Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Using Custom Packages in NixOs Configuration File</title>
-      <link>http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</link>
+      <link>http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</link>
       <pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</guid>
+      <guid>http://localhost:1313/posts/2016-03-26-using-custom-packages-in-nixos-configuration-file.html/</guid>
       <description>&lt;p&gt;Here is a problem we encountered with NixOS:&lt;/p&gt;&#xA;&lt;p&gt;The nix-channel we were on didn&amp;rsquo;t have the latest version of something we needed. This happened recently when my coworker upgraded to Postgres 9.5 from 9.4 but the PostGIS version in nixpkgs hadn’t been updated to a 9.5 compatible version.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bitcoin Transactions</title>
-      <link>http://localhost:49398/posts/2015-11-04-bitcoin-transactions-volume.html/</link>
+      <link>http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/</link>
       <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-11-04-bitcoin-transactions-volume.html/</guid>
+      <guid>http://localhost:1313/posts/2015-11-04-bitcoin-transactions-volume.html/</guid>
       <description>&lt;p&gt;What will be the average number of Bitcoin transactions per day in the first week of June 2016?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fitness Books</title>
-      <link>http://localhost:49398/posts/2015-10-21-fitness-books.html/</link>
+      <link>http://localhost:1313/posts/2015-10-21-fitness-books.html/</link>
       <pubDate>Wed, 21 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-10-21-fitness-books.html/</guid>
+      <guid>http://localhost:1313/posts/2015-10-21-fitness-books.html/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve read a lot of fitness biographies over the last little while.  Here is a quick list.&lt;/p&gt;</description>
     </item>
     <item>
       <title>More Scala Groups And Tuples</title>
-      <link>http://localhost:49398/posts/2015-08-19-more-scala-groups-and-tuples.html/</link>
+      <link>http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/</link>
       <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-08-19-more-scala-groups-and-tuples.html/</guid>
+      <guid>http://localhost:1313/posts/2015-08-19-more-scala-groups-and-tuples.html/</guid>
       <description>&lt;p&gt;Continuing from &lt;a href=&#34;http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html&#34;&gt;here&lt;/a&gt;, I have lists of tuples and I want to group them.  Here I have a list of 4-tuples and I want to group the second tuple by the first.  &lt;em&gt;The fact that I need to do this probably represents some greater problem, but that is a story for another time&lt;/em&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; shapeless._&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; syntax.std.tuple._&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;import&lt;/span&gt; poly._&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;object&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;GroupLists&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; group1TwoExtra&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;B&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;](&lt;/span&gt;t &lt;span style=&#34;color:#66d9ef&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;B&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)])&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;List&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)]&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;val&lt;/span&gt; map &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;LinkedHashMap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;LinkedHashSet&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]]()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;val&lt;/span&gt; mapOther &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; scala&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;collection&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mutable&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Map&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;C&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)]()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;i &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;lt;-&lt;/span&gt; t&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;val&lt;/span&gt; key &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        map&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;key&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lift&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;key&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;getOrElse&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LinkedHashSet&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]())&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;head&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mapOther &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;key &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;map&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;b &lt;span style=&#34;color:#66d9ef&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;b&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_1&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; b&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;toList&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt; mapOther&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;b&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_1&lt;span style=&#34;color:#f92672&#34;&gt;)).&lt;/span&gt;toList&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Mixed Metaphors</title>
-      <link>http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/</link>
+      <link>http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/</link>
       <pubDate>Tue, 11 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-08-11-mixed-metaphors.html/</guid>
+      <guid>http://localhost:1313/posts/2015-08-11-mixed-metaphors.html/</guid>
       <description>&lt;p&gt;Here I&amp;rsquo;m collecting some mixed metaphors that I thought were funny. Hopefully for use in a presentation about comedy I am doing&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I wouldn&amp;rsquo;t eat that with a ten foot pole&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Scala Slick Group</title>
-      <link>http://localhost:49398/posts/2015-08-04-scala-slick-group-joins.html/</link>
+      <link>http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/</link>
       <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-08-04-scala-slick-group-joins.html/</guid>
+      <guid>http://localhost:1313/posts/2015-08-04-scala-slick-group-joins.html/</guid>
       <description>&lt;p&gt;In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;val&lt;/span&gt; join &lt;span style=&#34;color:#66d9ef&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;f&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;b&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;lt;-&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  foo&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;filter&lt;span style=&#34;color:#f92672&#34;&gt;(...)&lt;/span&gt; on  innerJoin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  bar on &lt;span style=&#34;color:#f92672&#34;&gt;(...)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;yield&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;o&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Hakyll and CircleCi</title>
-      <link>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</link>
+      <link>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</link>
       <pubDate>Fri, 31 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-07-31-hakyll-and-circleci.html/</guid>
+      <guid>http://localhost:1313/posts/2015-07-31-hakyll-and-circleci.html/</guid>
       <description>&lt;p&gt;This blog was on tumblr, which was easy to setup and post and such.  However, I spend like 8 hours a day with a text editor open and a git in terminal window.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lazy Evaluation In Haskell</title>
-      <link>http://localhost:49398/posts/2015-01-14-lazy-evaluation.html/</link>
+      <link>http://localhost:1313/posts/2015-01-14-lazy-evaluation.html/</link>
       <pubDate>Wed, 14 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2015-01-14-lazy-evaluation.html/</guid>
+      <guid>http://localhost:1313/posts/2015-01-14-lazy-evaluation.html/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post is a work in progress and represents my getting to understand how laziness works in haskell and how it affects performance.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Incrementing</title>
-      <link>http://localhost:49398/posts/2014-03-15-incrementing.html/</link>
+      <link>http://localhost:1313/posts/2014-03-15-incrementing.html/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2014-03-15-incrementing.html/</guid>
+      <guid>http://localhost:1313/posts/2014-03-15-incrementing.html/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;http://www.paulgraham.com/icad.html&#34;&gt;an old essay&lt;/a&gt;, Paul Graham, talks about how some languages are more succinct and therefore they are more powerful. In fact, some programming languages can say things that you can’t easily say in others. Maybe you can’t say them at all. Its a good essay overall, you should read it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to get bluetooth working in windows 8 / 8.1 on various thinkpads</title>
-      <link>http://localhost:49398/posts/2014-02-20-bluetooth-thinkpad-w520.html/</link>
+      <link>http://localhost:1313/posts/2014-02-20-bluetooth-thinkpad-w520.html/</link>
       <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2014-02-20-bluetooth-thinkpad-w520.html/</guid>
+      <guid>http://localhost:1313/posts/2014-02-20-bluetooth-thinkpad-w520.html/</guid>
       <description></description>
     </item>
     <item>
       <title>Truly Ergonomic Keyboard</title>
-      <link>http://localhost:49398/posts/2013-11-28-truly-ergonomic-keyboard.html/</link>
+      <link>http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2013-11-28-truly-ergonomic-keyboard.html/</guid>
+      <guid>http://localhost:1313/posts/2013-11-28-truly-ergonomic-keyboard.html/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://40.media.tumblr.com/33a4ee15af3bce76dafa18a526b9d383/tumblr_mwz6ecK0jE1qe4yfuo1_500.jpg&#34; alt=&#34;keyboard&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs Client on Windows 8</title>
-      <link>http://localhost:49398/posts/2013-10-28-emacs-client-on-windows.html/</link>
+      <link>http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2013-10-28-emacs-client-on-windows.html/</guid>
+      <guid>http://localhost:1313/posts/2013-10-28-emacs-client-on-windows.html/</guid>
       <description>&lt;p&gt;Problem:&lt;/p&gt;&#xA;&lt;p&gt;I want to use emacs like I use notepadd++ on windows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #19 in haskell and by hand</title>
-      <link>http://localhost:49398/posts/2012-11-09-euler19.html/</link>
+      <link>http://localhost:1313/posts/2012-11-09-euler19.html/</link>
       <pubDate>Fri, 09 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-11-09-euler19.html/</guid>
+      <guid>http://localhost:1313/posts/2012-11-09-euler19.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=19&#34;&gt;http://projecteuler.net/problem=19&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Functor is to Lens as Applicative is to Biplate</title>
-      <link>http://localhost:49398/posts/2012-10-15-functor-is-to-lens-as.html/</link>
+      <link>http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/</link>
       <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-10-15-functor-is-to-lens-as.html/</guid>
+      <guid>http://localhost:1313/posts/2012-10-15-functor-is-to-lens-as.html/</guid>
       <description>&lt;p&gt;“Functor is to Lens as Applicative is to Biplate”&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://front.math.ucdavis.edu/1103.2841&#34;&gt;http://front.math.ucdavis.edu/1103.2841&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Haskell, the language with seemingly endless new concepts to learn about&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #11 in haskell</title>
-      <link>http://localhost:49398/posts/2012-09-15-euler11.html/</link>
+      <link>http://localhost:1313/posts/2012-09-15-euler11.html/</link>
       <pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-09-15-euler11.html/</guid>
+      <guid>http://localhost:1313/posts/2012-09-15-euler11.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;span&gt;What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20&lt;/span&gt;&lt;img src=&#34;http://projecteuler.net/images/symbol_times.gif&#34; alt=&#34;×&#34;&gt;&lt;span&gt;20 grid?&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/problem=11&#34;&gt;http://projecteuler.net/problem=11&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Graham’s scan algorithm for the convex hull</title>
-      <link>http://localhost:49398/posts/2012-08-30-grahams-scan.html/</link>
+      <link>http://localhost:1313/posts/2012-08-30-grahams-scan.html/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-08-30-grahams-scan.html/</guid>
+      <guid>http://localhost:1313/posts/2012-08-30-grahams-scan.html/</guid>
       <description>&lt;p&gt;&lt;span&gt;Using the code from the preceding three exercises, implement Graham’s scan algorithm for the convex hull of a set of 2D points. You can find good description of what a&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Convex_hull&#34;&gt;convex hull&lt;/a&gt;&lt;span&gt;. is, and how the&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Graham_scan&#34;&gt;Graham scan algorithm&lt;/a&gt; &lt;span&gt;should work, on&lt;/span&gt; &lt;a href=&#34;http://en.wikipedia.org/&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>WordPress Force “View all posts in %s” for categories</title>
-      <link>http://localhost:49398/posts/2012-07-15-wordpress.html/</link>
+      <link>http://localhost:1313/posts/2012-07-15-wordpress.html/</link>
       <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-07-15-wordpress.html/</guid>
+      <guid>http://localhost:1313/posts/2012-07-15-wordpress.html/</guid>
       <description>&lt;p&gt;Force categories list not to use category descritption use this:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problems Clojure thinks I have with C#</title>
-      <link>http://localhost:49398/posts/2012-07-06-clojure-problems.html/</link>
+      <link>http://localhost:1313/posts/2012-07-06-clojure-problems.html/</link>
       <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-07-06-clojure-problems.html/</guid>
+      <guid>http://localhost:1313/posts/2012-07-06-clojure-problems.html/</guid>
       <description>&lt;p&gt;I am reading “Joy Of Clojure”. It seems like a good book, but it keeps telling me about these problems I have which I don’t percieve as problems.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creeping Determinism</title>
-      <link>http://localhost:49398/posts/2012-06-15-creeping-determinism.html/</link>
+      <link>http://localhost:1313/posts/2012-06-15-creeping-determinism.html/</link>
       <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2012-06-15-creeping-determinism.html/</guid>
+      <guid>http://localhost:1313/posts/2012-06-15-creeping-determinism.html/</guid>
       <description>&lt;p&gt;Let’s say that you won the lottery. That would be great, wouldn’t it?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Code Generators, You Suck. Well, some of you do.</title>
-      <link>http://localhost:49398/posts/2011-07-05-code-generators-suck.html/</link>
+      <link>http://localhost:1313/posts/2011-07-05-code-generators-suck.html/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-07-05-code-generators-suck.html/</guid>
+      <guid>http://localhost:1313/posts/2011-07-05-code-generators-suck.html/</guid>
       <description>&lt;p&gt;The scaffolding style code generators that generate out a good starting point from which standard coding takes over, those are very useful.&lt;/p&gt;&#xA;&lt;p&gt;The Microsoft brand “design surface” based code generators (TableAdapters,&lt;a href=&#34;http://servicefactory.codeplex.com&#34;&gt;WSSF&lt;/a&gt;) where the uml diagram of a class needs to be edited, rather than the actual class, those are more harm than good. if fact they slow development way down.&lt;/p&gt;&#xA;&lt;p&gt;The design surface itself, is not necessarily a bad concept. it is just a GUI over top of a XML document. Just don’t use it to generate repetitive code. If code is repetitive, factor it out until its DRY. Don’t break out the code generators.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ReturnOnException Aspect (postsharp)</title>
-      <link>http://localhost:49398/posts/2011-07-05-return-on-execption.html/</link>
+      <link>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</link>
       <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-07-05-return-on-execption.html/</guid>
+      <guid>http://localhost:1313/posts/2011-07-05-return-on-execption.html/</guid>
       <description>&lt;p&gt;This comes in handy sometimes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attribute Based Caching Project Covered in infoQs</title>
-      <link>http://localhost:49398/posts/2011-04-12-infoq.html/</link>
+      <link>http://localhost:1313/posts/2011-04-12-infoq.html/</link>
       <pubDate>Tue, 12 Apr 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-04-12-infoq.html/</guid>
+      <guid>http://localhost:1313/posts/2011-04-12-infoq.html/</guid>
       <description>&lt;p&gt;David Cookery did a short write up of my AOP caching framework on infoQ. As a result downloads and usage have spiked.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Question&#39;:&#39; Caching and postsharp is not working in my project?</title>
-      <link>http://localhost:49398/posts/2011-04-10-aop-faq.html/</link>
+      <link>http://localhost:1313/posts/2011-04-10-aop-faq.html/</link>
       <pubDate>Sun, 10 Apr 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-04-10-aop-faq.html/</guid>
+      <guid>http://localhost:1313/posts/2011-04-10-aop-faq.html/</guid>
       <description>&lt;p&gt;You have made a project using attribute based caching, but the cache isn’t being hit?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Incrementing</title>
-      <link>http://localhost:49398/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</link>
+      <link>http://localhost:1313/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</link>
       <pubDate>Sun, 27 Mar 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</guid>
+      <guid>http://localhost:1313/posts/2011-03-27-tags-tag-groups-tag-hierachies.html/</guid>
       <description>&lt;p&gt;&lt;em&gt;Generic Hierarchical Meta data is cool! There are many ways to implement it with a standard relational database. Most of them are considered anti-patterns, but sometimes we need to optimize for flexibility, not raw database performance. Here are some of my notes on the subject:&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attribute Based Caching 1.2 Released</title>
-      <link>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</link>
+      <link>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</link>
       <pubDate>Sat, 29 Jan 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2011-01-29-aop-12-release.html/</guid>
+      <guid>http://localhost:1313/posts/2011-01-29-aop-12-release.html/</guid>
       <description>&lt;p&gt;Attribute Based Caching 1.2 has been Released. It’s still the .net only caching library that has declarative cache invalidation.&lt;/p&gt;&#xA;&lt;p&gt;Attribute Based Caching 1.1 had almost 100 downloads! Release 1.2 contains some small improvements like disk based cache and a time-to-live setting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cache-12&#34;&gt;Cache 1.2&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Enterprise Software Authorization / Security</title>
-      <link>http://localhost:49398/posts/2010-12-05-enterprise-software-authorization.html/</link>
+      <link>http://localhost:1313/posts/2010-12-05-enterprise-software-authorization.html/</link>
       <pubDate>Sun, 05 Dec 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-12-05-enterprise-software-authorization.html/</guid>
+      <guid>http://localhost:1313/posts/2010-12-05-enterprise-software-authorization.html/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_lcz5n7fN1g1qdwslz.png&#34; alt=&#34;lock&#34;&gt;&lt;strong&gt;Security Thoughts:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There are generally three types of authorization in enterprise applications:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;strong&gt;Role based security&lt;/strong&gt; &lt;strong&gt;-&lt;/strong&gt; Which actions can a user do - aka role-based access control&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;strong&gt;Entity level security&lt;/strong&gt; - A user can only perform an Action on certain objects/data - aka row level security&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Field level security&lt;/strong&gt; - A user can see or edit only certain fields of an entity – &lt;em&gt;(this is really fine grained and usually a bad idea)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>Parser Combinators in C#</title>
-      <link>http://localhost:49398/posts/2010-11-20-parser-combinators-csharp.html/</link>
+      <link>http://localhost:1313/posts/2010-11-20-parser-combinators-csharp.html/</link>
       <pubDate>Sat, 20 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-20-parser-combinators-csharp.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-20-parser-combinators-csharp.html/</guid>
       <description>&lt;p&gt;Haskell has parsec, f# has fparsec. I went searching for a good option for creating parsers in c#.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #24 in c#</title>
-      <link>http://localhost:49398/posts/2010-11-11-project-euler-24-in-c.html/</link>
+      <link>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</link>
       <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-11-project-euler-24-in-c.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-11-project-euler-24-in-c.html/</guid>
       <description>&lt;p&gt;A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:&lt;/p&gt;&#xA;&lt;p&gt;012   021   102   120   201   210&lt;/p&gt;&#xA;&lt;p&gt;What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler 8 in C#</title>
-      <link>http://localhost:49398/posts/2010-11-10-project-euler-8.html/</link>
+      <link>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</link>
       <pubDate>Wed, 10 Nov 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-11-10-project-euler-8.html/</guid>
+      <guid>http://localhost:1313/posts/2010-11-10-project-euler-8.html/</guid>
       <description>&lt;p&gt;Discover the largest product of five consecutive digits in the 1000-digit number.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=8&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introducing Attribute Based Caching</title>
-      <link>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
+      <link>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</link>
       <pubDate>Tue, 26 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-26-introducing-attribute-based-caching.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing &lt;a href=&#34;http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/&#34; title=&#34;caching&#34;&gt;caching&lt;/a&gt; with postsharp.  However, none handled cache invalidation in a nice declarative way.  &lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler 3 in c#</title>
-      <link>http://localhost:49398/posts/2010-10-12-project-euler-3.html/</link>
+      <link>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</link>
       <pubDate>Tue, 12 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-12-project-euler-3.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-12-project-euler-3.html/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Problem 3: What is the largest prime factor of the number 600851475143 ?&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34; title=&#34;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&#34;&gt;http://projecteuler.net/index.php?section=problems&amp;amp;id=3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With enough extension methods we can make 3 really simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;600851475143.LargestPrimeFactor()&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Where:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Naked Objects MVC - exposing a repository method as a get</title>
-      <link>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</link>
+      <link>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</link>
       <pubDate>Sat, 09 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-09-naked-objects-mvc.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-09-naked-objects-mvc.html/</guid>
       <description>&lt;p&gt;If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #9</title>
-      <link>http://localhost:49398/posts/2010-10-07-project-euler-9.html/</link>
+      <link>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</link>
       <pubDate>Thu, 07 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-07-project-euler-9.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-07-project-euler-9.html/</guid>
       <description>&lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #5</title>
-      <link>http://localhost:49398/posts/2010-10-06-project-euler-5.html/</link>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</link>
       <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-06-project-euler-5.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-5.html/</guid>
       <description>&lt;p&gt;Here is my solution to the following project Euler Problem:&lt;/p&gt;&#xA;&lt;p&gt;2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.&lt;/p&gt;&#xA;&lt;p&gt;What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project Euler #6</title>
-      <link>http://localhost:49398/posts/2010-10-06-project-euler-6.html/</link>
+      <link>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</link>
       <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/posts/2010-10-06-project-euler-6.html/</guid>
+      <guid>http://localhost:1313/posts/2010-10-06-project-euler-6.html/</guid>
       <description>&lt;p&gt;Ok, this one is stupidly simple:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;var squaredsum = Math.Pow(1.To(100).Sum(), 2);&#xA;var sumedsquare = 1.To(100).Select(x =&amp;gt; x * x).Sum();&#xA;Console.WriteLine(squaredsum - sumedsquare);&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Articles</title>
-      <link>http://localhost:49398/articles/</link>
+      <link>http://localhost:1313/articles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/articles/</guid>
+      <guid>http://localhost:1313/articles/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://earthly.dev/blog/intercal-yaml-and-other-horrible-programming-languages/&#34;&gt;INTERCAL, YAML, And Other Horrible Programming Languages&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A fun rant I wrote about YAML&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://earthly.dev/blog/brown-green-language/&#34;&gt;Green Vs Brown Programming Languages&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;What makes programming languages popular&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://earthly.dev/blog/thought-leaders/&#34;&gt;Don&amp;rsquo;t Feed The Thought Leaders&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t listen to people who give you non-contigent advice&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://earthly.dev/blog/python-timsort-merge/&#34;&gt;Beating TimSort at Merging&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;TimSort is fast, but why and can we beat it?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Find more on &lt;a href=&#34;https://earthly.dev/blog/authors/adam/&#34;&gt;earthly&lt;/a&gt;, &lt;a href=&#34;https://dev.to/adamgordonbell&#34;&gt;dev.to&lt;/a&gt;, &lt;a href=&#34;https://www.freecodecamp.org/news/author/adam-gordon-bell/&#34;&gt;freecodecamp&lt;/a&gt;, &lt;a href=&#34;https://medium.com/@adamgordonbell&#34;&gt;medium&lt;/a&gt; and &lt;a href=&#34;https://hackernoon.com/u/adamgordonbell&#34;&gt;hackernoon&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Biography</title>
-      <link>http://localhost:49398/bio/</link>
+      <link>http://localhost:1313/bio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/bio/</guid>
+      <guid>http://localhost:1313/bio/</guid>
       <description>&lt;p&gt;Adam Gordon Bell is a software developer and Community Engineer at &lt;a href=&#34;https://www.pulumi.com/&#34;&gt;Pulumi&lt;/a&gt;, where he focuses on his passion: &lt;strong&gt;communicating with and teaching software developers&lt;/strong&gt;. With experience spanning startups to enterprise software companies, Adam brings both technical depth and storytelling to the developer community.&lt;/p&gt;&#xA;&lt;p&gt;Adam hosts the &lt;a href=&#34;https://corecursive.com/&#34;&gt;CoRecursive Podcast&lt;/a&gt;, exploring the stories behind software development through engaging interviews and narrative episodes.&lt;/p&gt;&#xA;&lt;p&gt;Based in Canada and working remotely since 2011, Adam combines hands-on technical expertise with a gift for making complex concepts accessible. Say hello on Twitter at &lt;a href=&#34;https://twitter.com/adamgordonbell&#34;&gt;@adamgordonbell&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact Me</title>
-      <link>http://localhost:49398/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>&lt;p&gt;Hi, You can call me Adam.&lt;/p&gt;&#xA;&lt;p&gt;I am based in Peterborough, Canada but I love working with teams remotely.  If you want to chat, email me at &lt;strong&gt;&lt;a href=&#34;mailto:adam@corecursive.com&#34;&gt;adam@corecursive.com&lt;/a&gt;&lt;/strong&gt; or DM me on twitter.&lt;/p&gt;&#xA;&lt;p&gt;Here are various places you can find me around the web:&lt;/p&gt;&#xA;&lt;h2 id=&#34;big-ones&#34;&gt;Big Ones&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://corecursive.com/&#34;&gt;CoRecursive&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://earthly.dev/blog/authors/adam/&#34;&gt;Earthly&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://twitter.com/adamgordonbell&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/adamgordonbell/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/adamgordonbell&#34;&gt;Linked In&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;social-media&#34;&gt;Social Media:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com/user?id=adamgordonbell&#34;&gt;Hacker News&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/user/agbell&#34;&gt;Reddit&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dev.to/adamgordonbell&#34;&gt;dev.to&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/users/135202/adam&#34;&gt;StackOverflow&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;writing&#34;&gt;Writing:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://earthly.dev/blog/authors/adam/&#34;&gt;earthly&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://medium.com/@adamgordonbell&#34;&gt;medium&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.freecodecamp.org/news/author/adam-gordon-bell/&#34;&gt;freecodecamp&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://hackernoon.com/u/adamgordonbell&#34;&gt;hackernoon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;video--talks&#34;&gt;Video / Talks:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/@EarthlyTech&#34;&gt;Earthly Youtube&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/@AdamGordonBell&#34;&gt;Adam Gordon Bell Youtube&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;etc&#34;&gt;Etc:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://exercism.io/profiles/agbell&#34;&gt;Exercism&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://projecteuler.net/profile/agbell.png&#34;&gt;Project Euler&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.vimgolf.com/adamgbell&#34;&gt;Vim Golf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/AdamGordonBell&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Media</title>
-      <link>http://localhost:49398/media/</link>
+      <link>http://localhost:1313/media/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49398/media/</guid>
+      <guid>http://localhost:1313/media/</guid>
       <description>&lt;p&gt;This list is way out of date.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hosting&#34;&gt;Hosting&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://corecursive.com/&#34;&gt;Corecursive Podcast - Host&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Adam is the host of the corecusive podcast, a popular podcast about software engineering.  Some popular episodes include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://corecursive.com/021-gods-programming-language-with-philip-wadler/&#34;&gt;God’s Programming Language With Philip Wadler&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://corecursive.com/024-software-as-a-reflection-of-values-with-bryan-cantrill/&#34;&gt;Software as a Reflection of Values With Bryan Cantrill&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://corecursive.com/030-rethinking-databases-with-jon-gjengset/&#34;&gt;Rethinking databases with Jon Gjengset&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.se-radio.net/team/adam-gordon-bell/&#34;&gt;Software Engineering Radio&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Adam is a host on the seradio podcast.  Software Engineering Radio is a podcast targeted at the professional software developer. The goal is to be a lasting educational resource.&lt;/p&gt;</description>
     </item>
   </channel>
