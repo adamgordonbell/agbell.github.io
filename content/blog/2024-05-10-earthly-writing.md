@@ -8,13 +8,13 @@ I was interviewed by Sarah for a podcast.
 
 Below is a machine generated transcription.
 
-*Sarah Chen interviews Adam Gordon Bell about his successful content creation strategies during his time at Earthly Technologies.*
+*Sarah interviews Adam Gordon Bell about his successful content creation strategies during his time at Earthly Technologies.*
 
-**Sarah Chen:** Adam, your articles consistently made it to the front page of Hacker News during your time at Earthly, with pieces like "We built the fastest CI and it failed" and "Don't Feed the Thought Leaders" generating hundreds of points. What was your approach to selecting topics that would resonate with the developer community?
+**Sarah:** Adam, your articles consistently made it to the front page of Hacker News during your time at Earthly, with pieces like "We built the fastest CI and it failed" and "Don't Feed the Thought Leaders" generating hundreds of points. What was your approach to selecting topics that would resonate with the developer community?
 
 **Adam Gordon Bell:** Hi Sarah, I should clarify that I didn't actually write "We built the fastest CI and it failed" - that was by Vlad. But yes, "Don't Feed the Thought Leaders" was one of my early successes at Earthly. It's kind of a complicated story how I ended up being able to spend so much time doing writing as part of my job, but it was a fantastic experience.
 
-**Sarah Chen:** I apologize for the misattribution! You're right, "We built the fastest CI and it failed" was Vlad's piece, not yours.
+**Sarah:** I apologize for the misattribution! You're right, "We built the fastest CI and it failed" was Vlad's piece, not yours.
 
 Yes, I'd absolutely love to hear the full backstory of how you ended up being able to dedicate significant time to writing as part of your role at Earthly.
 
@@ -40,7 +40,7 @@ It's kind of an insane piece of writing for an early corporate blog if you think
 
 This became a pattern that I used quite a bit—a title that seems inflammatory but actually means something else. That was one of the early successes, and by success, I mean it did very well on Hacker News and Reddit and even appeared in a couple of newsletters. We just needed people to know we existed. The article did have a point about YAML being a really bad idea for programming tasks, but in a way, it was just a piece of creative writing. I think that kind of set the formula.
 
-**Sarah Chen:** That's fascinating! So Mitch Weiner's simple content advice completely shifted your strategy.
+**Sarah:** That's fascinating! So Mitch Weiner's simple content advice completely shifted your strategy.
 
 After finding this initial success, how did you decide which topics to tackle next? Was there a system you developed for identifying what would resonate with the developer community?
 
@@ -56,7 +56,7 @@ Among other things I was doing at the company—answering people's questions, tr
 
 To a certain extent, that became my thing—try to write these posts that would do well on Hacker News, aim to have one on Hacker News a month. That was set as a goal for me. It worked better in the earlier days and got harder later on, but it was a lot of fun.
 
-**Sarah Chen:** I'm curious about your actual writing process. Once you had a topic like "Green vs. Brown Programming Languages," how did you approach the research and drafting? Did you have a specific method that helped you consistently produce content that resonated with developers?
+**Sarah:** I'm curious about your actual writing process. Once you had a topic like "Green vs. Brown Programming Languages," how did you approach the research and drafting? Did you have a specific method that helped you consistently produce content that resonated with developers?
 
 **Adam Gordon Bell:** I would write in a markdown file, and hopefully during the writing process, it would flow out nicely. Then there would be the editing process where I would read back through. I spent a lot of time reading books with writing tips and tricks and trying to apply them. I would also use Grammarly a lot. I found it a challenge how much I didn't know about writing.
 
@@ -66,19 +66,19 @@ Much more time was spent editing these articles—reading it back, making change
 
 This was before there were really solid LLMs that could criticize your work, which I tend to use nowadays. They can be quite helpful, acting like Cory did before to a certain extent.
 
-**Sarah Chen:** It's fascinating to hear about your editing process. Given that your writing often had little direct connection to Earthly's product, how did the company measure the success of these articles? Was there a way you tracked whether this exposure translated to business results?
+**Sarah:** It's fascinating to hear about your editing process. Given that your writing often had little direct connection to Earthly's product, how did the company measure the success of these articles? Was there a way you tracked whether this exposure translated to business results?
 
 **Adam Gordon Bell:** We had analytics so we could measure visits to the homepage and track signups. With one of those earlier posts, which I think was "Don't Feed the Thought Leaders," we ended up getting direct emails from at least one enterprise who was interested in using our product. They had read the blog post, wondered what Earthly was, then clicked around and investigated. So we were able to actually see the results in people emailing us occasionally, which was pretty cool.
 
 Another big thing that started to happen was that the links we got based on that exposure helped us rank better for everything we did on Google. We started to get quite a bit of Google search traffic. And people had just heard of Earthly, that we existed and were a build tool. So the impact was definitely there.
 
-**Sarah Chen:** That's really valuable insight into how content translated to business outcomes. Among all your successful pieces during your time at Earthly, which one do you think had the biggest impact, and what did you learn from that particular article's success?
+**Sarah:** That's really valuable insight into how content translated to business outcomes. Among all your successful pieces during your time at Earthly, which one do you think had the biggest impact, and what did you learn from that particular article's success?
 
 **Adam Gordon Bell:** I wrote a blog post on "When to Use Bazel." Bazel was one of our big competitors and really part of the inspiration for why Earthly was built. To write an article about Bazel, which was quite complex, I used some of my podcast interviewing experience to find a bunch of people who were familiar with Bazel, who had taken on big project migrations, and interviewed them.
 
 I think I interviewed about six people and then extracted all this interview-style advice from them about when to use it and when not to use it. That, I think, was a very accurate portrayal of Bazel, but also showed that it's a complex tool to use and not a fit for a lot of cases. That was kind of the message we wanted to get out there. So I think that was pretty impactful, but again, not in a direct way.
 
-**Sarah Chen:** That's a clever approach - using your interviewing skills to create balanced, authoritative content about a competitor. As your time at Earthly progressed, how did your content strategy evolve? Were there ways you had to adapt your approach as the company grew or as you gained more experience?
+**Sarah:** That's a clever approach - using your interviewing skills to create balanced, authoritative content about a competitor. As your time at Earthly progressed, how did your content strategy evolve? Were there ways you had to adapt your approach as the company grew or as you gained more experience?
 
 **Adam Gordon Bell:** Eventually, we tried to get more specific about converting people to be Earthly users. We tried lots of experiments to get people to convert more. I don't think we ever really figured out some sort of secret sauce to get people from blog visitor to converting.
 
@@ -86,7 +86,7 @@ Internal team content worked really well though. Just talking about how we built
 
 I don't think it works as well now, but we also did a lot of work on outsourcing. We hired a full-time editor, brought in external writers, and had them focus on content that would do well in Google. That really brought us a lot of Google traffic. But that's a totally different type of content that's more straight tutorial-focused. That was towards the end of my time at Earthly.
 
-**Sarah Chen:** Looking back at your time at Earthly, what do you think is the most counterintuitive lesson you learned about technical content creation that other developer advocates or technical writers might be surprised by?
+**Sarah:** Looking back at your time at Earthly, what do you think is the most counterintuitive lesson you learned about technical content creation that other developer advocates or technical writers might be surprised by?
 
 **Adam Gordon Bell:** What seems to be really lacking is focusing on being interesting, entertaining, and informative without triggering people's feeling that this is just marketing content for your new product.
 
@@ -96,6 +96,6 @@ But it feels like people throw away those instincts when it's time to publish so
 
 Sometimes I feel like that type of broader educational entertaining content—there's no reason it can't be done by individuals within organizations. It doesn't all have to be PR announcements about new features.
 
-**Sarah Chen:** That's a powerful insight. It seems like your success came from treating the corporate blog more like a personal engineering blog, focusing on being interesting, entertaining, and informative rather than purely promotional.
+**Sarah:** That's a powerful insight. It seems like your success came from treating the corporate blog more like a personal engineering blog, focusing on being interesting, entertaining, and informative rather than purely promotional.
 
 *[This concludes part one of our interview with Adam Gordon Bell. Join us for part two where we'll explore Adam's transition to Pulumi and how his content creation approach has evolved in his new role.]*
