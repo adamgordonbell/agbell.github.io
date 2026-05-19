@@ -24,10 +24,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} — Adam Gordon Bell</title>
+  {{/* Zach Holman font pairing: Fira Sans (display/UI) + Lora (body serif). */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Extend Tailwind with our font stack so utility classes work as expected. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Fira Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['Lora', 'ui-serif', 'Georgia', 'serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    /* Zach-styled defaults: Fira Sans body, slate-800 text, sky-50 page tint */
+    html { background-color: #f0f9ff; /* sky-50 */ }
+    body {
+      font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 300;
+      color: #1e293b; /* slate-800 */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Lora reserved for long-form prose inside the editorial expansion */
+    details.timeline-more > div { font-family: 'Lora', ui-serif, Georgia, serif; font-size: 0.95rem; line-height: 1.6; }
+    /* Indigo accent on links instead of DaisyUI primary */
+    a.link, a.link-primary, a.link-hover:hover { color: #818cf8 /* indigo-400 */; }
+    a.link-hover { color: inherit; }
+    a.link-hover:hover { color: #6366f1 /* indigo-500 */; text-decoration: underline; }
 
     /* ---- Visual (zig-zag) mode — default ---- */
     /* Show only the card on the side dictated by data-side. Default to right. */
@@ -81,6 +113,45 @@
       white-space: nowrap;
     }
 
+    /* Filter chips — Zach-styled small pills, slate by default, dark when active */
+    .filter-chip {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      border: 1px solid #cbd5e1; /* slate-300 */
+      background: #fff;
+      color: #475569; /* slate-600 */
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+    .filter-chip:hover { border-color: #64748b; color: #0f172a; }
+    .filter-chip.is-active {
+      background: #1e293b; /* slate-800 */
+      border-color: #1e293b;
+      color: #fff;
+    }
+
+    /* Soften DaisyUI's timeline-box: white card on sky-50 bg, slate border, subtle shadow */
+    .timeline-box {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important; /* slate-200 */
+      border-radius: 6px !important;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+      padding: 1rem 1.25rem !important;
+    }
+
+    /* Year markers — Zach-style small caps text instead of bold badge */
+    ul.timeline > li.year-marker .badge {
+      background: transparent !important;
+      color: #94a3b8 /* slate-400 */ !important;
+      border: 1px solid #cbd5e1 !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.1em !important;
+      font-size: 0.75rem !important;
+    }
+
     /* Inline `⌄ more` / `⌃ less` toggle */
     details.timeline-more > summary::-webkit-details-marker { display: none; }
     details.timeline-more > summary .less-label { display: none; }
@@ -91,61 +162,99 @@
     details.timeline-more p:last-child { margin-bottom: 0; }
 
     /* ---- Compact mode — body.compact ---- */
-    /* All cards on the right (no zig-zag). Era rail hidden. Year markers
-       become small inline tags. Tighter padding. */
+    /* Real list / table-row mode: era rail hidden, timeline track hidden,
+       each item collapses to a single horizontal row.
+       Compact-row markup is hidden in visual mode, shown in compact. */
+    .compact-row { display: none; }
+
     body.compact .timeline-wrap { padding-left: 0; }
     body.compact .era-rail { display: none; }
-    /* Override the zig-zag rules: always show the right (end) card. */
-    body.compact ul.timeline > li[data-type] .card-start { display: none !important; }
-    body.compact ul.timeline > li[data-type] .card-end   { display: block !important; }
-    body.compact ul.timeline > li[data-type] .timeline-end { max-width: none; }
-    /* Year markers become small tags on the side */
-    body.compact ul.timeline > li.year-marker .timeline-middle .badge {
-      font-size: 0.625rem;
-      padding: 0.125rem 0.5rem;
+    /* Hide both card partials and the dot in compact */
+    body.compact ul.timeline > li[data-type] .timeline-box,
+    body.compact ul.timeline > li[data-type] .timeline-middle,
+    body.compact ul.timeline > li[data-type] > hr { display: none !important; }
+    /* Reset the li to a plain block container */
+    body.compact ul.timeline > li[data-type] {
+      display: block;
+      grid-template-columns: none;
+      padding: 0;
     }
-    body.compact .timeline-box { padding: 0.75rem 1rem; }
+    /* Show the row */
+    body.compact ul.timeline > li[data-type] .compact-row {
+      display: grid;
+      grid-template-columns: 5.5rem 5rem 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e2e8f0; /* slate-200 */
+    }
+    /* Year markers in compact: small-caps left-aligned heading */
+    body.compact ul.timeline > li.year-marker {
+      display: block;
+      grid-template-columns: none;
+      padding: 1.5rem 0 0.25rem;
+    }
+    body.compact ul.timeline > li.year-marker > hr { display: none; }
+    body.compact ul.timeline > li.year-marker .timeline-middle {
+      display: block;
+      position: static;
+    }
+    body.compact ul.timeline > li.year-marker .badge {
+      background: transparent !important;
+      color: #475569 !important; /* slate-600 */
+      border: none !important;
+      padding: 0 !important;
+      font-size: 0.7rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.15em !important;
+      display: inline-block;
+    }
 
     /* Toggle button look */
     .view-toggle { font-size: 0.75rem; }
   </style>
 </head>
-<body class="bg-base-100 text-base-content">
+<body>
 
   {{ $scopeTypes := .Params.scope_types | default slice }}
   {{ $hasScope := gt (len $scopeTypes) 0 }}
 
-  <div class="navbar bg-base-200 px-4">
-    <a href="/" class="btn btn-ghost text-xl">Adam Gordon Bell</a>
-    <div class="ml-auto flex gap-2 text-sm items-center">
-      <a href="/bio/" class="btn btn-ghost btn-sm">Bio</a>
-      <a href="/speaking/" class="btn btn-ghost btn-sm">Speaking</a>
-      <a href="/articles/" class="btn btn-ghost btn-sm">Articles</a>
-      <a href="/media/" class="btn btn-ghost btn-sm">Media</a>
-      <a href="/timeline/" class="btn btn-ghost btn-sm">Timeline</a>
-      <button id="view-toggle" class="btn btn-outline btn-sm view-toggle" title="Toggle view">
-        <span class="visual-label">Compact view</span>
-        <span class="compact-label">Visual view</span>
+  {{/* Top nav — Zach-styled: bg-sky-50 to match page, indigo accent on logo,
+       slate small caps for menu, subtle hover. */}}
+  <header class="border-b border-slate-200/70">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center gap-6">
+      <a href="/" class="text-xl font-semibold tracking-tight text-indigo-500 hover:text-indigo-600">Adam Gordon Bell</a>
+      <nav class="ml-auto flex gap-5 text-xs font-medium uppercase tracking-wider text-slate-500">
+        <a href="/bio/" class="hover:text-slate-900">Bio</a>
+        <a href="/speaking/" class="hover:text-slate-900">Speaking</a>
+        <a href="/articles/" class="hover:text-slate-900">Articles</a>
+        <a href="/media/" class="hover:text-slate-900">Media</a>
+        <a href="/timeline/" class="hover:text-slate-900">Timeline</a>
+        <a href="/blog/" class="hover:text-slate-900">Blog</a>
+      </nav>
+      <button id="view-toggle" class="ml-4 text-xs font-medium uppercase tracking-wider text-slate-500 hover:text-slate-900 border border-slate-300 rounded px-2 py-1" title="Toggle view">
+        <span class="visual-label">Compact</span>
+        <span class="compact-label">Visual</span>
       </button>
     </div>
-  </div>
+  </header>
 
-  <div class="max-w-5xl mx-auto px-6 py-10">
-    <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
-    {{ with .Description }}<p class="text-base-content/70 mb-6">{{ . }}</p>{{ end }}
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mb-3">{{ .Title }}</h1>
+    {{ with .Description }}<p class="text-base text-slate-600 mb-8 max-w-2xl leading-relaxed">{{ . }}</p>{{ end }}
 
     {{ if $hasScope }}
-      <div class="mb-8 text-sm">
-        <a href="/timeline/" class="link link-primary">View the full timeline →</a>
+      <div class="mb-10 text-sm">
+        <a href="/timeline/" class="text-indigo-500 hover:text-indigo-600 hover:underline font-medium">View the full timeline →</a>
       </div>
     {{ else }}
-      <div class="flex flex-wrap gap-2 mb-8" id="filters">
-        <button class="btn btn-sm btn-active" data-filter="all">All</button>
-        <button class="btn btn-sm" data-filter="talk">Talks</button>
-        <button class="btn btn-sm" data-filter="article">Articles</button>
-        <button class="btn btn-sm" data-filter="podcast">Podcasts</button>
-        <button class="btn btn-sm" data-filter="workshop">Workshops</button>
-        <button class="btn btn-sm" data-filter="media">Media</button>
+      <div class="flex flex-wrap gap-2 mb-10" id="filters">
+        <button class="filter-chip is-active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="talk">Talks</button>
+        <button class="filter-chip" data-filter="article">Articles</button>
+        <button class="filter-chip" data-filter="podcast">Podcasts</button>
+        <button class="filter-chip" data-filter="workshop">Workshops</button>
+        <button class="filter-chip" data-filter="media">Media</button>
       </div>
     {{ end }}
 
@@ -197,6 +306,22 @@
           {{ if eq .type "workshop" }}{{ $color = "bg-green-500" }}{{ end }}
 
           <li data-type="{{ .type }}" data-era="{{ $era }}">
+            {{/* Compact-mode row — hidden in visual mode via CSS. */}}
+            <div class="compact-row">
+              <time class="font-mono text-xs text-slate-500 whitespace-nowrap">{{ dateFormat "Jan 2006" .date }}</time>
+              <span class="text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded text-white {{ $color }} text-center">{{ .type }}</span>
+              <span class="text-sm">
+                <span class="font-semibold text-slate-900">
+                  {{ if .url }}<a href="{{ .url }}" class="hover:text-indigo-500">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                </span>
+                {{ with .venue }}<span class="text-slate-500"> — {{ . }}</span>{{ end }}
+                {{ with .with }}<span class="text-slate-500"> · with {{ . }}</span>{{ end }}
+                {{ if .upcoming }}<span class="text-amber-600 text-[10px] uppercase tracking-wider font-bold ml-2">upcoming</span>{{ end }}
+              </span>
+              <span class="text-xs uppercase tracking-wider font-medium whitespace-nowrap">
+                {{ with .video_url }}<a href="{{ . }}" class="text-indigo-500 hover:underline">▶ Video</a>{{ end }}
+              </span>
+            </div>
             <hr class="bg-base-300"/>
             {{ partial "timeline-card.html" (dict "e" . "color" $color "align" "start" "side" "card-start") }}
             <div class="timeline-middle">
@@ -248,7 +373,7 @@
 
     function applyFilter(f) {
       if (!VALID.includes(f)) f = 'all';
-      buttons.forEach(b => b.classList.toggle('btn-active', b.dataset.filter === f));
+      buttons.forEach(b => b.classList.toggle('is-active', b.dataset.filter === f));
       let n = 0;
       items.forEach(li => {
         const matchesFilter = (f === 'all' || li.dataset.type === f);
