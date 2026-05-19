@@ -335,6 +335,24 @@
     </div>
   </div>
 
+  {{/* Footer — small, always-on, so filtered/empty pages don't end in dead air */}}
+  <footer class="border-t border-slate-200/70 mt-20">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-wrap gap-6 items-baseline text-sm text-slate-600">
+      <div class="flex-1 min-w-[260px] leading-relaxed">
+        <span class="font-semibold text-slate-900">Adam Gordon Bell</span> · Community Engineer at
+        <a href="https://www.pulumi.com" class="text-indigo-500 hover:underline">Pulumi</a> · Creator of
+        <a href="https://corecursive.com" class="text-indigo-500 hover:underline">CoRecursive</a>.
+      </div>
+      <div class="flex gap-5 text-xs uppercase tracking-wider font-medium text-slate-500">
+        <a href="https://bsky.app/profile/adamgordonbell.com" class="hover:text-slate-900">Bluesky</a>
+        <a href="https://github.com/adamgordonbell" class="hover:text-slate-900">GitHub</a>
+        <a href="https://www.linkedin.com/in/adamgordonbell" class="hover:text-slate-900">LinkedIn</a>
+        <a href="/index.xml" class="hover:text-slate-900">RSS</a>
+        <a href="/contact/" class="hover:text-slate-900">Contact</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
     const VALID = ['all','talk','article','podcast','workshop','media'];
     const SCOPE_TYPES = {{ if $hasScope }}{{ jsonify $scopeTypes | safeJS }}{{ else }}null{{ end }};
