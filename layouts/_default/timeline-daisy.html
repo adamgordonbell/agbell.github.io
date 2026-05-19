@@ -73,6 +73,13 @@
     }
     ul.timeline > li[data-type] .timeline-start { justify-self: end; }
     ul.timeline > li[data-type] .timeline-end   { justify-self: start; }
+    /* Force ALL hr elements into the center column so the spine line is
+       single, not duplicated to the left when the start-side card is
+       display:none and auto-placement drops the first hr into col 1. */
+    ul.timeline > li[data-type] > hr {
+      grid-column-start: 2 !important;
+      grid-column-end: 3 !important;
+    }
 
     /* Show only the card on the side dictated by data-side. */
     ul.timeline > li[data-type] .card-start { display: none; }
