@@ -5,7 +5,7 @@ default:
     @just --list
 
 # Start Hugo server in background on localhost:1313
-start:
+start: sync-data
     @hugo server -D > /tmp/hugo-server.log 2>&1 &
     @echo "Hugo server started in background"
     @echo "Server logs at /tmp/hugo-server.log"
@@ -30,8 +30,13 @@ status:
 stop:
     @pkill -f "hugo server" && echo "Hugo server stopped" || echo "No Hugo server running"
 
+# Sync accomplishments data file from PARA source-of-truth
+sync-data:
+    @cp ~/para/projects/personal-site/accomplishments.yaml data/accomplishments.yaml
+    @echo "Synced accomplishments.yaml from ~/para/projects/personal-site/"
+
 # Build the site locally
-build:
+build: sync-data
     hugo --minify
 
 # Show deployment information

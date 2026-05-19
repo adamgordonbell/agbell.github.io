@@ -1,0 +1,556 @@
+# Adam Gordon Bell — accomplishments data file
+#
+# Source of truth. Copied to ~/sandbox/agbell.github.io/data/accomplishments.yaml
+# via `just sync-data` (Hugo does not follow symlinks for data/).
+#
+# Schema:
+#   title         (str)   required
+#   type          (str)   talk | article | podcast | workshop | media | blog
+#   date          (date)  YYYY-MM-DD (use first of month if day unknown)
+#   venue         (str)   conference / publication / podcast name
+#   location      (str)   optional — for talks
+#   url           (str)   canonical link
+#   video_url     (str)   optional — direct video link
+#   slides_url    (str)   optional — slides / deck link
+#   description   (str)   one-line summary (always shown on the card)
+#   long          (str)   markdown editorial expansion (revealed by `⌄ more`)
+#   format        (str)   "45 min", "60 min", "Workshop", "Long-form", "Hosting", …
+#   with          (str)   guest name (podcasts) or co-author / co-speaker
+#   reception     (str)   "800+ attendees", "HN front page", quoted feedback, etc.
+#   thumbnail     (str)   optional — image path (used by some card variants)
+#   notable       (bool)  true = surfaces on homepage / highlights
+#   tags          (list)  free-form tags
+#   upcoming      (bool)  true = accepted but not yet given (talks)
+#
+# Convention: `notable` defaults to false. Adam sets true during Phase 3 audit.
+
+# Employment / role eras — render as range overlays on the timeline.
+# start_date inclusive; omit end_date for "present".
+eras:
+  - name: Pulumi
+    role: Community Engineer
+    start_date: 2024-11-01
+    end_date:
+    url: https://www.pulumi.com/adam
+    color: "#7c3aed"   # purple-600
+  - name: Earthly
+    role: Director of Developer Relations
+    start_date: 2020-08-01
+    end_date: 2023-12-31
+    url: https://earthly.dev
+    color: "#d97706"   # amber-600
+  - name: Tenable
+    role: Software Engineer (Cloud Security)
+    start_date: 2017-01-01
+    end_date: 2020-07-31
+    url: https://www.tenable.com
+    color: "#059669"   # emerald-600
+
+items:
+
+  # ---------------------------------------------------------------------------
+  # TALKS — past
+  # ---------------------------------------------------------------------------
+
+  - title: "When AI Agents Meet Production Infrastructure"
+    type: talk
+    date: 2026-03-07
+    venue: "SCaLE 23x"
+    location: "Pasadena, CA"
+    url: https://www.socallinuxexpo.org/scale/23x/presentations/when-ai-agents-meet-production-infrastructure
+    video_url:
+    slides_url:
+    format: "45 min"
+    reception: "800+ attendees · Open Source AI track"
+    description: "Failure modes when AI agents touch real infrastructure — and the reliability patterns that keep them safe."
+    long: |
+      The agent industry has spent two years building autonomy and one year
+      patching the surprises that came with it. This talk takes the audience
+      through three production-grade failure modes — runaway tool loops,
+      blast-radius miscalibration, and trust-boundary drift — and walks through
+      the structural fixes (policy-as-code, IaC review gates, tighter scopes)
+      that actually hold up. Built from real systems, not demos.
+    notable: false
+    tags: [ai, agents, infrastructure]
+    upcoming: false
+
+  - title: "I Built an AI Running Coach"
+    type: talk
+    date: 2026-03-07
+    venue: "SCaLE 23x"
+    location: "Pasadena, CA"
+    url: https://www.socallinuxexpo.org/scale/23x/presentations/i-built-ai-running-coach
+    video_url:
+    slides_url:
+    format: "45 min"
+    reception: "FOSS@Home track"
+    description: "A serverless AI architecture, built around a personal project — an AI coach that remembers your training."
+    notable: false
+    tags: [ai, serverless, python]
+    upcoming: false
+
+  - title: "When AI Agents Meet Production Infrastructure"
+    type: talk
+    date: 2025-10-01
+    venue: "MCP Academy"
+    location: "Online"
+    url:
+    video_url:
+    format: "Online"
+    description: "Online edition of the SCaLE talk on AI agent safety."
+    notable: false
+    tags: [ai, agents]
+    upcoming: false
+
+  - title: "Build Your Own Container Runtime with chroot"
+    type: talk
+    date: 2023-03-09
+    venue: "SCaLE 20x"
+    location: "Pasadena, CA"
+    url: https://www.socallinuxexpo.org/scale/20x
+    video_url: https://www.youtube.com/watch?v=89ESCBzM-3Q
+    slides_url:
+    format: "45 min"
+    description: "Walking through how Linux namespaces and cgroups enable containerization, by building a runtime from scratch."
+    long: |
+      Containers feel magical until you build one. This talk strips the magic
+      off the magic — `chroot`, `unshare`, `cgroups`, layered filesystems — and
+      reconstructs a tiny runtime live, so the audience leaves with a mental
+      model of what Docker is actually doing under the hood.
+    notable: false
+    tags: [containers, linux]
+    upcoming: false
+
+  - title: "Beating Timsort"
+    type: talk
+    date: 2023-02-22
+    venue: "ConFoo"
+    location: "Montreal, QC"
+    url: https://confoo.ca/en/2023/session/beating-timsort
+    video_url:
+    slides_url:
+    format: "45 min"
+    reception: "1,000+ attendees"
+    description: "Python's Timsort merge logic — and where it can be beaten."
+    notable: false
+    tags: [python, performance]
+    upcoming: false
+
+  # ---------------------------------------------------------------------------
+  # TALKS — upcoming (accepted, not yet given)
+  # ---------------------------------------------------------------------------
+
+  - title: "Building Action-Taking AI Agents: Reliability Lessons from Real Systems"
+    type: talk
+    date: 2026-06-03
+    venue: "MLCon San Diego"
+    location: "San Diego, CA"
+    url: https://mlconference.ai/
+    video_url:
+    format: "45 min"
+    description: "Building AI agents that take real actions, and the reliability patterns that keep them safe."
+    notable: false
+    tags: [ai, agents, ml]
+    upcoming: true
+
+  - title: "Demystifying the Magic: Let's Build an Infrastructure-as-Code Tool from Scratch"
+    type: talk
+    date: 2026-09-10
+    venue: "KCDC"
+    location: "Kansas City, MO"
+    url: https://www.kcdc.info/
+    video_url:
+    format: "50 min · Breakout"
+    description: "Build a minimal IaC tool from scratch to demystify how Pulumi / Terraform / CDK actually work."
+    notable: false
+    tags: [iac, infrastructure]
+    upcoming: true
+
+  # ---------------------------------------------------------------------------
+  # PODCAST — CoRecursive hosting + notable episodes
+  # ---------------------------------------------------------------------------
+
+  - title: "CoRecursive Podcast — Host"
+    type: podcast
+    date: 2018-01-01
+    venue: "CoRecursive"
+    url: https://corecursive.com/
+    video_url:
+    format: "Hosting since 2018"
+    reception: "Several million downloads · 100+ episodes"
+    description: "Creator and host since 2018. Long-form interviews with the people behind the code."
+    long: |
+      Started as a side project in early 2018 to interview the engineers who
+      built the systems the rest of us rely on — Chef, SQLite, PowerShell,
+      Noria, and dozens more. The format is long-form story-led conversation,
+      edited tight: each episode is a single arc, not a panel chat. Several
+      million downloads later it's still the work I'm proudest of.
+    notable: false
+    tags: [podcast, hosting]
+    upcoming: false
+
+  - title: "The Untold Story of SQLite"
+    type: podcast
+    date: 2021-04-26
+    venue: "CoRecursive"
+    url: https://corecursive.com/066-sqlite-with-richard-hipp/
+    video_url:
+    format: "Episode"
+    with: "Richard Hipp"
+    description: "Richard Hipp on how SQLite became core infrastructure for the world."
+    notable: false
+    tags: [podcast, sqlite]
+    upcoming: false
+
+  - title: "Building PowerShell"
+    type: podcast
+    date: 2022-07-25
+    venue: "CoRecursive"
+    url: https://corecursive.com/building-powershell-with-jeffrey-snover/
+    video_url:
+    format: "Episode"
+    with: "Jeffrey Snover"
+    description: "Jeffrey Snover on building PowerShell and transforming Windows system administration."
+    notable: false
+    tags: [podcast, powershell]
+    upcoming: false
+
+  - title: "Configuring Identity"
+    type: podcast
+    date: 2022-04-25
+    venue: "CoRecursive"
+    url: https://corecursive.com/configuring-identity-adam-jacob/
+    video_url:
+    format: "Episode"
+    with: "Adam Jacob (creator of Chef)"
+    description: "Adam Jacob on creating Chef and the identity crisis of going from sysadmin to startup CTO."
+    notable: false
+    tags: [podcast, devops, chef]
+    upcoming: false
+
+  - title: "God's Programming Language"
+    type: podcast
+    date: 2018-12-01
+    venue: "CoRecursive"
+    url: https://corecursive.com/021-gods-programming-language-with-philip-wadler/
+    video_url:
+    format: "Episode"
+    with: "Philip Wadler"
+    description: "Philip Wadler on Haskell, lambda calculus, and the languages of computation."
+    notable: false
+    tags: [podcast, haskell, languages]
+    upcoming: false
+
+  - title: "Software as a Reflection of Values"
+    type: podcast
+    date: 2019-02-01
+    venue: "CoRecursive"
+    url: https://corecursive.com/024-software-as-a-reflection-of-values-with-bryan-cantrill/
+    video_url:
+    format: "Episode"
+    with: "Bryan Cantrill"
+    description: "Bryan Cantrill on values in software design and engineering culture."
+    notable: false
+    tags: [podcast, culture]
+    upcoming: false
+
+  - title: "Rethinking Databases"
+    type: podcast
+    date: 2019-05-01
+    venue: "CoRecursive"
+    url: https://corecursive.com/030-rethinking-databases-with-jon-gjengset/
+    video_url:
+    format: "Episode"
+    with: "Jon Gjengset"
+    description: "Jon Gjengset on Noria and rethinking database design from first principles."
+    notable: false
+    tags: [podcast, databases]
+    upcoming: false
+
+  # ---------------------------------------------------------------------------
+  # PODCAST — guest hosting / appearances
+  # ---------------------------------------------------------------------------
+
+  - title: "Software Engineering Radio — Host"
+    type: podcast
+    date: 2020-01-01
+    venue: "IEEE SE Radio"
+    url: https://www.se-radio.net/team/adam-gordon-bell/
+    video_url:
+    format: "Hosting"
+    description: "Host on IEEE's Software Engineering Radio."
+    notable: false
+    tags: [podcast, hosting]
+    upcoming: false
+
+  - title: "Software Engineering Daily — Guest Host"
+    type: media
+    date: 2017-10-16
+    venue: "Software Engineering Daily"
+    url: https://softwareengineeringdaily.com/2017/10/16/scala-native-with-denys-shabalin/
+    video_url:
+    format: "Guest host"
+    description: "Guest host on SEDaily. Episodes on Scala Native, incident response, functional programming."
+    notable: false
+    tags: [podcast, guest-host]
+    upcoming: false
+
+  - title: "Collecting Solutions"
+    type: media
+    date: 2019-01-01
+    venue: "Developer On Fire"
+    url: https://developeronfire.com/podcast/episode-424-adam-gordon-bell-collecting-solutions
+    video_url:
+    format: "Interview"
+    with: "Dave Rael"
+    description: "Dave Rael interviews Adam on learning, podcasting, and delivering value."
+    notable: false
+    tags: [interview]
+    upcoming: false
+
+  - title: "Functional Programming"
+    type: media
+    date: 2019-01-01
+    venue: "6 Figure Developer"
+    url: https://6figuredev.com/podcast/episode-094-functional-programming-with-adam-gordon-bell/
+    video_url: https://www.youtube.com/watch?v=q1BElpbIyxA
+    format: "Interview"
+    description: "Interview on functional programming and Scala."
+    notable: false
+    tags: [interview, functional-programming]
+    upcoming: false
+
+  - title: "Functional Programming"
+    type: media
+    date: 2019-06-01
+    venue: "Programming Throwdown"
+    url: https://www.programmingthrowdown.com/2019/06/episode-91-functional-programming-with.html
+    video_url:
+    format: "Interview"
+    with: "Patrick Wheeler & Jason Gauci"
+    description: "Patrick Wheeler and Jason Gauci interview Adam on functional programming basics."
+    notable: false
+    tags: [interview, functional-programming]
+    upcoming: false
+
+  - title: "An Insight Into CoRecursive"
+    type: media
+    date: 2019-05-01
+    venue: "Signify Technologies"
+    url: https://www.signifytechnology.com/blog/2019/05/an-insight-into-the-journey-of-corecursive-podcast-creator-adam-gordon-bell
+    video_url:
+    format: "Interview"
+    description: "Interview on the journey of the CoRecursive Podcast."
+    notable: false
+    tags: [interview, podcast]
+    upcoming: false
+
+  - title: "Docker, Telecommute & Podcasting"
+    type: media
+    date: 2020-01-01
+    venue: "The Accidental Engineer"
+    url: https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/
+    video_url:
+    format: "Interview"
+    description: "Interview on remote engineering work, incident response, and Docker adoption."
+    notable: false
+    tags: [interview, remote-work]
+    upcoming: false
+
+  - title: "Remote Working"
+    type: media
+    date: 2020-01-01
+    venue: "COAP Podcast"
+    url: https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/
+    video_url:
+    format: "Interview"
+    with: "Dave & Woody"
+    description: "Dave and Woody interview Adam on organizational impediments to remote work."
+    notable: false
+    tags: [interview, remote-work]
+    upcoming: false
+
+  - title: "A Geek Leader — CoRecursive Episode"
+    type: media
+    date: 2019-01-01
+    venue: "A Geek Leader"
+    url: https://www.ageekleader.com/agl-102-corecursive-with-adam-gordon-bell/
+    video_url:
+    format: "Interview"
+    with: "John Rouda"
+    description: "John Rouda interviews Adam on learning and perspective-taking."
+    notable: false
+    tags: [interview]
+    upcoming: false
+
+  - title: "Bullet Journaling & Remote Work"
+    type: media
+    date: 2019-01-01
+    venue: "Lucid Programming"
+    url: https://www.youtube.com/watch?v=C0PuCgQrxZU
+    video_url: https://www.youtube.com/watch?v=C0PuCgQrxZU
+    format: "Interview"
+    description: "Interview on bullet journaling, remote work, and developer productivity."
+    notable: false
+    tags: [interview, productivity]
+    upcoming: false
+
+  # ---------------------------------------------------------------------------
+  # ARTICLES — long-form technical writing
+  # ---------------------------------------------------------------------------
+
+  - title: "Understanding AWK"
+    type: article
+    date: 2021-03-10
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/awk-examples/
+    video_url:
+    format: "Long-form tutorial"
+    reception: "Hacker News front page"
+    description: "A comprehensive guide to AWK that became a go-to reference."
+    long: |
+      AWK has a reputation as a fossil — a thing from the 70s that lurks in
+      `.bashrc` files. This piece takes it seriously as a programming language
+      and walks through enough of the model — fields, records, patterns,
+      associative arrays — that the reader can actually reach for it next time
+      they're tempted by Python for a one-liner. Ended up as one of the most-
+      shared AWK references on the internet.
+    notable: false
+    tags: [awk, tutorial, hn-front-page]
+    upcoming: false
+
+  - title: "AWK with CSV Files"
+    type: article
+    date: 2021-06-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/awk-csv/
+    video_url:
+    format: "Tutorial"
+    description: "Follow-up tutorial on processing CSV files with AWK."
+    notable: false
+    tags: [awk, tutorial]
+    upcoming: false
+
+  - title: "An Introduction to JQ"
+    type: article
+    date: 2021-08-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/jq-select/
+    video_url:
+    format: "Long-form tutorial"
+    reception: "Hacker News front page"
+    description: "Demystifying JSON processing at the command line."
+    notable: false
+    tags: [jq, tutorial, hn-front-page]
+    upcoming: false
+
+  - title: "INTERCAL, YAML, And Other Horrible Programming Languages"
+    type: article
+    date: 2021-09-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/intercal-yaml-and-other-horrible-programming-languages/
+    video_url:
+    format: "Essay"
+    reception: "Hacker News front page · sparked industry debate"
+    description: "Viral piece arguing YAML-as-DSL is the new INTERCAL."
+    long: |
+      The argument: if you have conditionals, loops, and references, you have
+      a programming language — and YAML is a hostile one. The piece used
+      INTERCAL as a foil to make the case that configuration formats are
+      becoming programming languages by accident, and badly. It hit the HN
+      front page, got picked up across the industry, and started an actual
+      conversation about why we keep choosing YAML for things that need real
+      logic. Pulumi's existence is part of the answer.
+    notable: false
+    tags: [yaml, opinion, hn-front-page]
+    upcoming: false
+
+  - title: "Don't Feed the Thought Leaders"
+    type: article
+    date: 2022-01-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/thought-leaders/
+    video_url:
+    format: "Essay"
+    reception: "Hacker News front page"
+    description: "On non-contingent advice and why to ignore most of it."
+    notable: false
+    tags: [opinion, hn-front-page]
+    upcoming: false
+
+  - title: "Green vs. Brown Programming Languages"
+    type: article
+    date: 2022-03-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/brown-green-language/
+    video_url:
+    format: "Data analysis"
+    description: "What makes programming languages popular — greenfield vs maintenance work."
+    notable: false
+    tags: [languages, data]
+    upcoming: false
+
+  - title: "Beating TimSort at Merging"
+    type: article
+    date: 2022-06-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/python-timsort-merge/
+    video_url:
+    format: "Long-form"
+    description: "Companion piece to the ConFoo talk — where Python's Timsort merge logic can be beaten."
+    notable: false
+    tags: [python, performance]
+    upcoming: false
+
+  - title: "We Built the Fastest CI and It Failed"
+    type: article
+    date: 2023-01-01
+    venue: "Earthly Blog"
+    url: https://earthly.dev/blog/
+    video_url:
+    format: "Postmortem"
+    reception: "Hacker News front page"
+    description: "Postmortem on building a fast CI product that didn't find its market."
+    notable: false
+    tags: [ci, retrospective, hn-front-page]
+    upcoming: false
+
+  - title: "A Peek Into Docker Images"
+    type: article
+    date: 2020-01-01
+    venue: "Tenable Tech Blog"
+    url: https://medium.com/tenable-techblog/a-peek-into-docker-images-b4d6b2362eb
+    video_url:
+    format: "Tutorial"
+    description: "How Docker images are actually structured — layers and metadata."
+    notable: false
+    tags: [docker, containers]
+    upcoming: false
+
+  # ---------------------------------------------------------------------------
+  # WORKSHOPS / WORK VIDEOS
+  # ---------------------------------------------------------------------------
+
+  - title: "Pulumi — Interview / Demo"
+    type: workshop
+    date: 2025-01-01
+    venue: "Pulumi"
+    url: https://www.youtube.com/watch?v=9KMIpOofv0s
+    video_url: https://www.youtube.com/watch?v=9KMIpOofv0s
+    format: "Demo / interview"
+    description: "Recorded Pulumi demo / interview."
+    notable: false
+    tags: [pulumi, demo]
+    upcoming: false
+
+  - title: "Pulumi — Recorded Workshop"
+    type: workshop
+    date: 2025-01-01
+    venue: "Pulumi"
+    url: https://www.youtube.com/watch?v=ttUVmRPAzCo
+    video_url: https://www.youtube.com/watch?v=ttUVmRPAzCo
+    format: "Workshop"
+    description: "Recorded Pulumi workshop covering IaC fundamentals."
+    notable: false
+    tags: [pulumi, workshop]
+    upcoming: false

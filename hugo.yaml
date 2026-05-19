@@ -10,7 +10,7 @@ section:
 
 # Set permalinks to maintain the same URL structure
 permalinks:
-  blog: /posts/:filename.html
+  blog: /posts/:contentbasename.html
 
 # Allow raw HTML in markdown
 markup:
@@ -22,8 +22,8 @@ params:
   description: "Personal blog of Adam Bell"
   sections:
     blog:
-      title_short: "Hey, this is my blog"
-      description: "It is somewhat abandoned."
+      title_short: "Blog"
+      description: "Older posts and notes."
 
 # Configure pagination
 paginate: 10
@@ -44,21 +44,27 @@ menu:
     - name: Home
       url: /
       weight: 1
-    - name: Articles
-      url: /articles/
-      weight: 2
     - name: Bio
       url: /bio/
+      weight: 2
+    - name: Speaking
+      url: /speaking/
       weight: 3
+    - name: Articles
+      url: /articles/
+      weight: 4
     - name: Media
       url: /media/
-      weight: 4
+      weight: 5
+    - name: Timeline
+      url: /timeline/
+      weight: 6
     - name: Blog
       url: /posts/
-      weight: 5
+      weight: 7
     - name: Contact
       url: /contact/
-      weight: 6
+      weight: 8
     - name: Tags
       url: /tags/
-      weight: 7
+      weight: 9

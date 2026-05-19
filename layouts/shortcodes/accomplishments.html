@@ -1,0 +1,80 @@
+{{/*
+  accomplishments shortcode
+
+  Renders entries from data/accomplishments.yaml as a reverse-chron list.
+
+  Params:
+    type       (str, optional)  filter by type (talk | article | podcast | workshop | media)
+                                accepts a comma-separated list: type="podcast,media"
+    notable    (bool, optional) if "true", only show entries with notable: true
+    upcoming   (str, optional)  "only" | "exclude" | "" — for type=talk, filter on upcoming flag
+    tag        (str, optional)  filter to entries containing this tag
+    limit      (int, optional)  cap number of entries shown
+*/}}
+
+{{ $items := .Site.Data.accomplishments.items }}
+
+{{/* type filter — supports comma-separated list */}}
+{{ with .Get "type" }}
+  {{ $wanted := split . "," }}
+  {{ $items = where $items "type" "in" $wanted }}
+{{ end }}
+
+{{/* notable filter */}}
+{{ if eq (.Get "notable") "true" }}
+  {{ $items = where $items "notable" true }}
+{{ end }}
+
+{{/* upcoming filter for talks */}}
+{{ with .Get "upcoming" }}
+  {{ if eq . "only" }}
+    {{ $items = where $items "upcoming" true }}
+  {{ else if eq . "exclude" }}
+    {{ $items = where $items "upcoming" "!=" true }}
+  {{ end }}
+{{ end }}
+
+{{/* tag filter */}}
+{{ with .Get "tag" }}
+  {{ $tag := . }}
+  {{ $items = where $items "tags" "intersect" (slice $tag) }}
+{{ end }}
+
+{{/* reverse-chron: upcoming first (descending date), then past (descending date) */}}
+{{ $upcoming := where $items "upcoming" true }}
+{{ $past := where $items "upcoming" "!=" true }}
+{{ $upcoming = sort $upcoming "date" "asc" }}
+{{ $past = sort $past "date" "desc" }}
+{{ $items = append $past $upcoming }}
+{{ $items = sort $items "date" "desc" }}
+
+{{/* limit */}}
+{{ with .Get "limit" }}
+  {{ $items = first (int .) $items }}
+{{ end }}
+
+<ul class="accomplishments-list">
+  {{ range $items }}
+    <li class="accomplishment {{ if .upcoming }}upcoming{{ end }}">
+      <p>
+        <span class="badge badge-{{ .type }}">{{ .type }}</span>
+        {{ if .url }}
+          <strong><a href="{{ .url }}">{{ .title }}</a></strong>
+        {{ else }}
+          <strong>{{ .title }}</strong>
+        {{ end }}
+        {{ if .upcoming }} <em>(upcoming)</em>{{ end }}
+        <br/>
+        <span class="meta">
+          {{ with .venue }}{{ . }}{{ end }}
+          {{ with .location }} &middot; {{ . }}{{ end }}
+          {{ with .date }} &middot; {{ dateFormat "Jan 2006" . }}{{ end }}
+          {{ if .video_url }} &middot; <a href="{{ .video_url }}">video</a>{{ end }}
+        </span>
+      </p>
+      {{ with .description }}
+        <blockquote>{{ . }}</blockquote>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

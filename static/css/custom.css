@@ -50,3 +50,45 @@ p {
     color: #999;
     margin-top: 20px;
 }
+/* Accomplishments list (data-driven pages) */
+.accomplishments-list {
+    list-style: none;
+    padding-left: 0;
+}
+.accomplishments-list .accomplishment {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+.accomplishments-list .meta {
+    color: #888;
+    font-size: 0.9em;
+}
+.accomplishments-list blockquote {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+    border-left: 3px solid #ddd;
+    padding: 0.2em 0.8em;
+}
+
+/* Type badges */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.badge-talk     { background: #c0392b; }  /* red */
+.badge-article  { background: #2980b9; }  /* blue */
+.badge-podcast  { background: #8e44ad; }  /* purple */
+.badge-workshop { background: #27ae60; }  /* green */
+.badge-media    { background: #7f8c8d; }  /* gray */

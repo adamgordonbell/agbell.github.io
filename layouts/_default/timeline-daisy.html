@@ -1,0 +1,314 @@
+{{/*
+  Daisy vertical timeline — standalone DaisyUI/Tailwind page.
+
+  Used by /timeline/, /speaking/, /articles/, /media/. Renders a self-contained
+  HTML doc with its own nav (does NOT inherit the site's Bootstrap baseof).
+  Treat these four URLs as a preview of the next-generation site.
+
+  Frontmatter knobs:
+    scope_types  (list)  Optional. e.g. ["talk"] or ["podcast","media"].
+                         When set, filter chips are hidden and only items of
+                         those types are visible.
+
+  Features:
+    - Alternating sides recomputed dynamically (filtering keeps zig-zag)
+    - Year markers inside the timeline
+    - Era ribbons in a left rail, JS-sized to span the visible date range
+    - URL hash drives the filter on unscoped pages (#talk, #article, …)
+    - Compact toggle in the navbar — flips body.compact class, persisted in
+      localStorage, sitewide across all four pages
+*/}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — Adam Gordon Bell</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+    /* ---- Visual (zig-zag) mode — default ---- */
+    /* Show only the card on the side dictated by data-side. Default to right. */
+    ul.timeline > li[data-type] .card-start { display: none; }
+    ul.timeline > li[data-type][data-side="left"]  .card-start { display: block; }
+    ul.timeline > li[data-type][data-side="left"]  .card-end   { display: none; }
+    ul.timeline > li[data-type][data-side="right"] .card-start { display: none; }
+    ul.timeline > li[data-type][data-side="right"] .card-end   { display: block; }
+
+    /* Era rail on the left of the timeline */
+    .timeline-wrap { position: relative; padding-left: 84px; }
+    .era-rail {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 64px;
+      bottom: 0;
+      pointer-events: none;
+    }
+    .era-ribbon {
+      position: absolute;
+      left: 0;
+      width: 56px;
+      border-radius: 8px;
+      color: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0;
+      pointer-events: auto;
+      transition: top 0.2s ease, height 0.2s ease, opacity 0.15s ease;
+    }
+    .era-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 4px 0;
+    }
+    .era-dates {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: ui-monospace, monospace;
+      font-size: 0.6rem;
+      opacity: 0.8;
+      padding: 4px 0;
+      white-space: nowrap;
+    }
+
+    /* Inline `⌄ more` / `⌃ less` toggle */
+    details.timeline-more > summary::-webkit-details-marker { display: none; }
+    details.timeline-more > summary .less-label { display: none; }
+    details.timeline-more[open] > summary .more-label { display: none; }
+    details.timeline-more[open] > summary .less-label { display: inline; }
+    details.timeline-more p { margin: 0.5em 0; }
+    details.timeline-more p:first-child { margin-top: 0; }
+    details.timeline-more p:last-child { margin-bottom: 0; }
+
+    /* ---- Compact mode — body.compact ---- */
+    /* All cards on the right (no zig-zag). Era rail hidden. Year markers
+       become small inline tags. Tighter padding. */
+    body.compact .timeline-wrap { padding-left: 0; }
+    body.compact .era-rail { display: none; }
+    /* Override the zig-zag rules: always show the right (end) card. */
+    body.compact ul.timeline > li[data-type] .card-start { display: none !important; }
+    body.compact ul.timeline > li[data-type] .card-end   { display: block !important; }
+    body.compact ul.timeline > li[data-type] .timeline-end { max-width: none; }
+    /* Year markers become small tags on the side */
+    body.compact ul.timeline > li.year-marker .timeline-middle .badge {
+      font-size: 0.625rem;
+      padding: 0.125rem 0.5rem;
+    }
+    body.compact .timeline-box { padding: 0.75rem 1rem; }
+
+    /* Toggle button look */
+    .view-toggle { font-size: 0.75rem; }
+  </style>
+</head>
+<body class="bg-base-100 text-base-content">
+
+  {{ $scopeTypes := .Params.scope_types | default slice }}
+  {{ $hasScope := gt (len $scopeTypes) 0 }}
+
+  <div class="navbar bg-base-200 px-4">
+    <a href="/" class="btn btn-ghost text-xl">Adam Gordon Bell</a>
+    <div class="ml-auto flex gap-2 text-sm items-center">
+      <a href="/bio/" class="btn btn-ghost btn-sm">Bio</a>
+      <a href="/speaking/" class="btn btn-ghost btn-sm">Speaking</a>
+      <a href="/articles/" class="btn btn-ghost btn-sm">Articles</a>
+      <a href="/media/" class="btn btn-ghost btn-sm">Media</a>
+      <a href="/timeline/" class="btn btn-ghost btn-sm">Timeline</a>
+      <button id="view-toggle" class="btn btn-outline btn-sm view-toggle" title="Toggle view">
+        <span class="visual-label">Compact view</span>
+        <span class="compact-label">Visual view</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="text-base-content/70 mb-6">{{ . }}</p>{{ end }}
+
+    {{ if $hasScope }}
+      <div class="mb-8 text-sm">
+        <a href="/timeline/" class="link link-primary">View the full timeline →</a>
+      </div>
+    {{ else }}
+      <div class="flex flex-wrap gap-2 mb-8" id="filters">
+        <button class="btn btn-sm btn-active" data-filter="all">All</button>
+        <button class="btn btn-sm" data-filter="talk">Talks</button>
+        <button class="btn btn-sm" data-filter="article">Articles</button>
+        <button class="btn btn-sm" data-filter="podcast">Podcasts</button>
+        <button class="btn btn-sm" data-filter="workshop">Workshops</button>
+        <button class="btn btn-sm" data-filter="media">Media</button>
+      </div>
+    {{ end }}
+
+    {{ $items := .Site.Data.accomplishments.items }}
+    {{ $eras := .Site.Data.accomplishments.eras }}
+    {{ $sorted := sort $items "date" "desc" }}
+
+    <div class="timeline-wrap">
+      <div class="era-rail" id="era-rail">
+        {{ range $eras }}
+          <a href="{{ .url }}" class="era-ribbon" data-era-name="{{ .name }}"
+             style="background-color: {{ .color }};">
+            <span class="era-label">{{ .name }}</span>
+            <span class="era-dates">
+              {{ dateFormat "2006" .start_date }}–{{ if .end_date }}{{ dateFormat "2006" .end_date }}{{ else }}now{{ end }}
+            </span>
+          </a>
+        {{ end }}
+      </div>
+
+      <ul class="timeline timeline-vertical">
+        {{ $.Scratch.Set "prevYear" "" }}
+        {{ range $i, $e := $sorted }}
+          {{ $thisYear := dateFormat "2006" .date }}
+          {{ $prevYear := $.Scratch.Get "prevYear" }}
+
+          {{ $era := "" }}
+          {{ range $eras }}
+            {{ $startOK := le .start_date $e.date }}
+            {{ $endOK := or (not .end_date) (ge .end_date $e.date) }}
+            {{ if and $startOK $endOK }}{{ $era = .name }}{{ end }}
+          {{ end }}
+
+          {{ if ne $thisYear $prevYear }}
+            <li class="year-marker">
+              {{ if gt $i 0 }}<hr class="bg-base-300"/>{{ end }}
+              <div class="timeline-middle">
+                <div class="badge badge-neutral badge-lg font-mono font-bold px-4">{{ $thisYear }}</div>
+              </div>
+              <hr class="bg-base-300"/>
+            </li>
+            {{ $.Scratch.Set "prevYear" $thisYear }}
+          {{ end }}
+
+          {{ $color := "bg-gray-500" }}
+          {{ if eq .type "talk" }}{{ $color = "bg-red-500" }}{{ end }}
+          {{ if eq .type "article" }}{{ $color = "bg-blue-500" }}{{ end }}
+          {{ if eq .type "podcast" }}{{ $color = "bg-purple-500" }}{{ end }}
+          {{ if eq .type "workshop" }}{{ $color = "bg-green-500" }}{{ end }}
+
+          <li data-type="{{ .type }}" data-era="{{ $era }}">
+            <hr class="bg-base-300"/>
+            {{ partial "timeline-card.html" (dict "e" . "color" $color "align" "start" "side" "card-start") }}
+            <div class="timeline-middle">
+              <div class="w-4 h-4 rounded-full {{ $color }} ring-4 ring-base-100"></div>
+            </div>
+            {{ partial "timeline-card.html" (dict "e" . "color" $color "align" "end" "side" "card-end") }}
+            <hr class="bg-base-300"/>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const VALID = ['all','talk','article','podcast','workshop','media'];
+    const SCOPE_TYPES = {{ if $hasScope }}{{ jsonify $scopeTypes | safeJS }}{{ else }}null{{ end }};
+    const buttons = document.querySelectorAll('#filters button');
+    const items = document.querySelectorAll('ul.timeline > li[data-type]');
+    const yearMarkers = document.querySelectorAll('ul.timeline > li.year-marker');
+    const rail = document.getElementById('era-rail');
+    const ribbons = document.querySelectorAll('.era-ribbon');
+    const viewToggle = document.getElementById('view-toggle');
+
+    function inScope(li) {
+      return SCOPE_TYPES === null || SCOPE_TYPES.includes(li.dataset.type);
+    }
+
+    function layoutEras() {
+      if (!rail) return;
+      if (document.body.classList.contains('compact')) return;  /* rail is hidden */
+      const railRect = rail.getBoundingClientRect();
+      ribbons.forEach(ribbon => {
+        const era = ribbon.dataset.eraName;
+        const matching = Array.from(document.querySelectorAll(`ul.timeline > li[data-era="${era}"]`))
+          .filter(li => li.style.display !== 'none');
+        if (matching.length === 0) {
+          ribbon.style.opacity = '0';
+          ribbon.style.pointerEvents = 'none';
+          return;
+        }
+        const first = matching[0].getBoundingClientRect();
+        const last  = matching[matching.length - 1].getBoundingClientRect();
+        ribbon.style.top = (first.top - railRect.top) + 'px';
+        ribbon.style.height = (last.bottom - first.top) + 'px';
+        ribbon.style.opacity = '1';
+        ribbon.style.pointerEvents = 'auto';
+      });
+    }
+
+    function applyFilter(f) {
+      if (!VALID.includes(f)) f = 'all';
+      buttons.forEach(b => b.classList.toggle('btn-active', b.dataset.filter === f));
+      let n = 0;
+      items.forEach(li => {
+        const matchesFilter = (f === 'all' || li.dataset.type === f);
+        const visible = inScope(li) && matchesFilter;
+        li.style.display = visible ? '' : 'none';
+        if (visible) {
+          li.dataset.side = (n % 2 === 0) ? 'right' : 'left';
+          n++;
+        }
+      });
+      yearMarkers.forEach(m => {
+        let next = m.nextElementSibling;
+        let anyVisible = false;
+        while (next && !next.classList.contains('year-marker')) {
+          if (next.dataset.type && next.style.display !== 'none') { anyVisible = true; break; }
+          next = next.nextElementSibling;
+        }
+        m.style.display = anyVisible ? '' : 'none';
+      });
+      if (SCOPE_TYPES === null) {
+        const hash = f === 'all' ? '' : '#' + f;
+        if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
+      }
+      requestAnimationFrame(layoutEras);
+    }
+
+    /* ---- View toggle (compact ↔ visual) ---- */
+    function setView(mode) {
+      const compact = mode === 'compact';
+      document.body.classList.toggle('compact', compact);
+      try { localStorage.setItem('compactView', compact ? '1' : '0'); } catch (e) {}
+      /* Hide visual-only label in compact mode and vice versa */
+      const visualLabel = viewToggle.querySelector('.visual-label');
+      const compactLabel = viewToggle.querySelector('.compact-label');
+      if (visualLabel)  visualLabel.style.display  = compact ? 'none'   : 'inline';
+      if (compactLabel) compactLabel.style.display = compact ? 'inline' : 'none';
+      requestAnimationFrame(layoutEras);
+    }
+    /* Load persisted preference */
+    try {
+      if (localStorage.getItem('compactView') === '1') setView('compact');
+      else setView('visual');
+    } catch (e) { setView('visual'); }
+    viewToggle.addEventListener('click', () => {
+      setView(document.body.classList.contains('compact') ? 'visual' : 'compact');
+    });
+
+    /* ---- Filter wiring ---- */
+    buttons.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter)));
+    window.addEventListener('hashchange', () => {
+      if (SCOPE_TYPES === null) applyFilter(location.hash.replace('#','') || 'all');
+    });
+    window.addEventListener('resize', () => requestAnimationFrame(layoutEras));
+    window.addEventListener('load', () => requestAnimationFrame(layoutEras));
+
+    document.querySelectorAll('details.timeline-more').forEach(d => {
+      d.addEventListener('toggle', () => requestAnimationFrame(layoutEras));
+    });
+
+    applyFilter(SCOPE_TYPES === null ? (location.hash.replace('#','') || 'all') : 'all');
+  </script>
+</body>
+</html>

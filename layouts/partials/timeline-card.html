@@ -1,0 +1,86 @@
+{{/*
+  Timeline card partial — title-led hierarchy.
+
+  Params (dict):
+    e      — the accomplishment entry
+    color  — tailwind bg-* class for the type chip (bg-red-500, etc.)
+    align  — "end" (right side, left-aligned) or "start" (left side, right-aligned)
+    side   — "card-end" or "card-start" — the wrapper class controlling visibility
+
+  Content order (always vertical, alignment flips):
+    1. TITLE (largest)
+    2. venue · location (secondary)
+    3. meta line: date · format · with X · type chip · upcoming
+    4. reception (italic, only if present)
+    5. description (always shown)
+    6. ⌄ more disclosure → long (only if present)
+    7. action links: video · slides
+*/}}
+{{ $e := .e }}
+{{ $color := .color }}
+{{ $align := .align }}
+{{ $side := .side }}
+{{ $isStart := eq $align "start" }}
+
+<div class="{{ $side }} timeline-{{ $align }} timeline-box max-w-md {{ if $isStart }}text-end{{ end }}">
+
+  {{/* 1. TITLE — leading, largest */}}
+  <div class="text-lg font-bold leading-snug">
+    {{ if $e.url }}<a href="{{ $e.url }}" class="link link-hover">{{ $e.title }}</a>{{ else }}{{ $e.title }}{{ end }}
+  </div>
+
+  {{/* 2. venue · location */}}
+  {{ if or $e.venue $e.location }}
+  <div class="text-sm text-base-content/75 mt-1">
+    {{ with $e.venue }}<span class="font-medium">{{ . }}</span>{{ end }}
+    {{ with $e.location }} · {{ . }}{{ end }}
+  </div>
+  {{ end }}
+
+  {{/* 3. meta line: date · format · with · type chip · upcoming */}}
+  <div class="flex items-center gap-2 flex-wrap mt-1.5 text-xs text-base-content/60 {{ if $isStart }}justify-end{{ end }}">
+    {{ if $isStart }}
+      {{ if $e.upcoming }}<span class="badge badge-warning badge-xs">upcoming</span>{{ end }}
+      <span class="text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded text-white {{ $color }}">{{ $e.type }}</span>
+      {{ with $e.with }}<span>with {{ . }}</span> · {{ end }}
+      {{ with $e.format }}<span>{{ . }}</span> · {{ end }}
+      <time class="font-mono">{{ dateFormat "Jan 2006" $e.date }}</time>
+    {{ else }}
+      <time class="font-mono">{{ dateFormat "Jan 2006" $e.date }}</time>
+      {{ with $e.format }} · <span>{{ . }}</span>{{ end }}
+      {{ with $e.with }} · <span>with {{ . }}</span>{{ end }}
+      <span class="text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded text-white {{ $color }} ml-1">{{ $e.type }}</span>
+      {{ if $e.upcoming }}<span class="badge badge-warning badge-xs">upcoming</span>{{ end }}
+    {{ end }}
+  </div>
+
+  {{/* 4. reception — italic credential line */}}
+  {{ with $e.reception }}
+  <div class="text-xs italic text-base-content/70 mt-1.5">✨ {{ . }}</div>
+  {{ end }}
+
+  {{/* 5. description */}}
+  {{ with $e.description }}
+  <p class="text-sm mt-2 text-base-content/85">{{ . }}</p>
+  {{ end }}
+
+  {{/* 6. expandable long form */}}
+  {{ with $e.long }}
+  <details class="mt-2 timeline-more">
+    <summary class="cursor-pointer text-xs text-primary hover:underline list-none select-none">
+      <span class="more-label">⌄ more</span>
+      <span class="less-label">⌃ less</span>
+    </summary>
+    <div class="mt-2 text-sm leading-relaxed text-base-content/85 {{ if $isStart }}text-end{{ end }}">{{ . | markdownify }}</div>
+  </details>
+  {{ end }}
+
+  {{/* 7. action links */}}
+  {{ if or $e.video_url $e.slides_url }}
+  <div class="flex gap-3 mt-2 text-sm {{ if $isStart }}justify-end{{ end }}">
+    {{ with $e.video_url }}<a href="{{ . }}" class="link link-primary">▶ video</a>{{ end }}
+    {{ with $e.slides_url }}<a href="{{ . }}" class="link link-primary">slides</a>{{ end }}
+  </div>
+  {{ end }}
+
+</div>
