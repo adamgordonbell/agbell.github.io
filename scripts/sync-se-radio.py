@@ -26,7 +26,13 @@ from pathlib import Path
 SEARCH_BASE = "https://se-radio.net"
 QUERY = "Adam Gordon Bell"
 MAX_PAGES = 5
-OUT_PATH = Path(__file__).resolve().parents[1] / "data" / "se_radio.json"
+TARGET = "podcasts.yaml"
+SOURCE = "se-radio"
+TYPE = "podcast"
+ROLE = "host"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
 
 # Sidebar "latest episodes" injection — same on every search page. These get
 # filtered out by appearing on every page.
@@ -171,10 +177,16 @@ def main() -> int:
             if it:
                 items.append(it)
 
-    items.sort(key=lambda x: x["date"], reverse=True)
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(items)} SE Radio episodes to {OUT_PATH}")
+    new = [
+        make_item(
+            type_=TYPE, role=ROLE, source=SOURCE,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"), description=it.get("description"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
+    print(f"  → {added} new, {skipped} already in {TARGET}")
     return 0
 
 

@@ -59,9 +59,9 @@ sync-se-radio:
 sync-se-daily:
     @python3 scripts/sync-se-daily.py
 
-# Pull EarthlyTech YouTube videos → data/youtube_earthly.json (~40s, frozen channel)
+# Pull EarthlyTech YouTube videos → data/videos.yaml (additive, frozen channel)
 sync-youtube-earthly:
-    @python3 scripts/sync-youtube.py --channel @EarthlyTech --out data/youtube_earthly.json
+    @python3 scripts/sync-youtube.py --channel @EarthlyTech --source youtube-earthly
 
 # Pull PulumiTV videos featuring Adam.
 # Auto-detects videos with "Adam Gordon Bell" in description; merges with

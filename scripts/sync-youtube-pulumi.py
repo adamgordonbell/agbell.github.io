@@ -26,7 +26,12 @@ from pathlib import Path
 CHANNEL_URL = "https://www.youtube.com/@PulumiTV/videos"
 ADAM_START = "20241101"  # YYYYMMDD — only videos this date or newer
 PICKS_PATH = Path(__file__).resolve().parents[1] / "config" / "youtube-pulumi-picks.txt"
-OUT_PATH = Path(__file__).resolve().parents[1] / "data" / "youtube_pulumi.json"
+TARGET = "videos.yaml"
+SOURCE = "youtube-pulumi"
+TYPE = "video"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
 
 
 def read_picks() -> set[str]:
@@ -133,11 +138,19 @@ def main() -> int:
         if norm:
             items.append(norm)
 
-    items.sort(key=lambda x: x["date"], reverse=True)
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
+    new = [
+        make_item(
+            type_=TYPE, source=SOURCE,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"),
+            description=it.get("description"),
+            duration=it.get("duration"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
     print(
-        f"Wrote {len(items)} videos to {OUT_PATH} "
+        f"  → {added} new, {skipped} already in {TARGET} "
         f"({auto_count} auto-matched, {pick_count} from picks)",
         file=sys.stderr,
     )

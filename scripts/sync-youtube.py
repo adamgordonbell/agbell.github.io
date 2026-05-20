@@ -97,11 +97,18 @@ def normalize(raw: dict) -> dict | None:
     }
 
 
+TARGET = "videos.yaml"
+TYPE = "video"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--channel", help="YouTube channel handle, e.g. @EarthlyTech")
     ap.add_argument("--ids-file", help="File with one YouTube video ID per line")
-    ap.add_argument("--out", required=True, help="Output JSON path")
+    ap.add_argument("--source", required=True, help="Source ID, e.g. youtube-earthly")
     args = ap.parse_args()
 
     if not args.channel and not args.ids_file:
@@ -129,11 +136,18 @@ def main() -> int:
             seen.add(norm["slug"])
             items.append(norm)
 
-    items.sort(key=lambda x: x["date"], reverse=True)
-    out = Path(args.out)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(items)} videos to {out}", file=sys.stderr)
+    new = [
+        make_item(
+            type_=TYPE, source=args.source,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"),
+            description=it.get("description"),
+            duration=it.get("duration"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
+    print(f"  → {added} new, {skipped} already in {TARGET}", file=sys.stderr)
     return 0
 
 

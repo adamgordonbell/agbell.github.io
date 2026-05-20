@@ -20,7 +20,12 @@ from pathlib import Path
 
 DOCS_REPO = Path("~/sandbox/docs").expanduser()
 BLOG_DIR = DOCS_REPO / "content" / "blog"
-OUT_PATH = Path(__file__).resolve().parents[1] / "data" / "pulumi_blog.json"
+TARGET = "writing.yaml"
+SOURCE = "pulumi-blog"
+TYPE = "article"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
 AUTHOR_SLUG = "adam-gordon-bell"
 PUBLIC_BASE = "https://www.pulumi.com/blog"
 
@@ -105,10 +110,16 @@ def main() -> int:
             "description": fm.get("meta_desc") or "",
         })
 
-    items.sort(key=lambda x: x["date"], reverse=True)
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(items)} Pulumi blog posts to {OUT_PATH}")
+    new = [
+        make_item(
+            type_=TYPE, source=SOURCE,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"), description=it.get("description"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
+    print(f"  → {added} new, {skipped} already in {TARGET}")
     return 0
 
 

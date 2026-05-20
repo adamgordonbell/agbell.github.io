@@ -20,7 +20,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 TAG_URL = "https://softwareengineeringdaily.com/tag/adam-gordon-bell/"
-OUT_PATH = Path(__file__).resolve().parents[1] / "data" / "se_daily.json"
+TARGET = "podcasts.yaml"
+SOURCE = "se-daily"
+TYPE = "podcast"
+ROLE = "guest"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
 
 POST_URL_RE = re.compile(
     r"https://softwareengineeringdaily\.com/\d{4}/\d{2}/\d{2}/[a-z0-9-]+/?"
@@ -104,10 +110,16 @@ def main() -> int:
             it = fut.result()
             if it:
                 items.append(it)
-    items.sort(key=lambda x: x["date"], reverse=True)
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(items)} episodes to {OUT_PATH}")
+    new = [
+        make_item(
+            type_=TYPE, role=ROLE, source=SOURCE,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"), description=it.get("description"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
+    print(f"  → {added} new, {skipped} already in {TARGET}")
     return 0
 
 

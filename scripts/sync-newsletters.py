@@ -19,7 +19,12 @@ from datetime import datetime
 from pathlib import Path
 
 API_URL = "https://newsletter.corecursive.com/profile/fetch-posts?page=1&per_page=500"
-OUT_PATH = Path(__file__).resolve().parents[1] / "data" / "newsletters.json"
+TARGET = "writing.yaml"
+SOURCE = "corecursive-newsletter"
+TYPE = "newsletter"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_yaml_sync import make_item, merge_and_save  # noqa: E402
 
 
 def http_get_json(url: str) -> dict:
@@ -89,10 +94,16 @@ def main() -> int:
             "description": clean_intro(p.get("introContent") or ""),
         })
 
-    items.sort(key=lambda x: x["date"], reverse=True)
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
-    print(f"Wrote {len(items)} newsletters to {OUT_PATH}")
+    new = [
+        make_item(
+            type_=TYPE, source=SOURCE,
+            title=it["title"], url=it["url"], date=it["date"],
+            slug=it.get("slug"), description=it.get("description"),
+        )
+        for it in items
+    ]
+    added, skipped = merge_and_save(TARGET, new)
+    print(f"  → {added} new, {skipped} already in {TARGET}")
     return 0
 
 
