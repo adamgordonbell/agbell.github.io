@@ -1,17 +1,17 @@
-<h2>Tags</h2>
-<div class="tag-cloud">
+<h2 class="text-xs uppercase tracking-wider font-semibold text-slate-900 mb-3">Tags</h2>
+<div class="flex flex-wrap gap-x-3 gap-y-2 leading-snug">
   {{ $maxCount := 1 }}
   {{ range .Site.Taxonomies.tags }}
     {{ if gt .Count $maxCount }}
       {{ $maxCount = .Count }}
     {{ end }}
   {{ end }}
-  
+
   {{ range .Site.Taxonomies.tags.ByCount }}
     {{ if gt .Count 1 }}
       {{ $size := add 80 (mul 170 (math.Sqrt (div (float .Count) (float $maxCount)))) }}
-      <a href="{{ .Page.RelPermalink }}" style="font-size: {{ $size | int }}%">
-        {{ .Page.Title }} ({{ .Count }})
+      <a href="{{ .Page.RelPermalink }}" class="text-rose hover:opacity-70 hover:underline" style="font-size: {{ $size | int }}%">
+        {{ .Page.Title }} <span class="text-slate-400">({{ .Count }})</span>
       </a>
     {{ end }}
   {{ end }}

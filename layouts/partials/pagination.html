@@ -1,10 +1,14 @@
-<nav>
-  <ul class="pager">
-    {{ if .HasPrev }}
-    <li><a href="{{ .Prev.URL }}">Previous</a></li>
-    {{ end }}
-    {{ if .HasNext }}
-    <li><a href="{{ .Next.URL }}">Next</a></li>
-    {{ end }}
+<nav class="mt-10 pt-6 border-t border-slate-200">
+  <ul class="flex justify-between text-sm">
+    <li>
+      {{ if .HasPrev }}
+        <a href="{{ .Prev.URL }}" class="text-rose hover:underline">← Previous</a>
+      {{ end }}
+    </li>
+    <li>
+      {{ if .HasNext }}
+        <a href="{{ .Next.URL }}" class="text-rose hover:underline">Next →</a>
+      {{ end }}
+    </li>
   </ul>
 </nav>

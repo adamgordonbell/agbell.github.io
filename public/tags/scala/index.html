@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css?1762627442">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1779226398">
 <link rel="stylesheet" type="text/css" href="/css/blog-title.css">
 <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 </head>
@@ -22,8 +22,10 @@
     <nav class="blog-nav">
       <a class="blog-nav-item" href="/">Home</a>
       <a class="blog-nav-item" href="/bio/">Biography</a>
-      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/speaking/">Speaking</a>
       <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/timeline/">Timeline</a>
       <a class="blog-nav-item" href="/contact/">Contact</a>
       <a class="blog-nav-item" href="/blog/">Blog</a>
     </nav>
@@ -93,7 +95,7 @@
   
 </p>
   <p>Continuing from <a href="http://cascadeofinsights.com/posts/2015-08-04-scala-slick-group-joins.html">here</a>, I have lists of tuples and I want to group them.  Here I have a list of 4-tuples and I want to group the second tuple by the first.  <em>The fact that I need to do this probably represents some greater problem, but that is a story for another time</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> shapeless._
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> shapeless._
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> syntax.std.tuple._
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> poly._
 </span></span><span style="display:flex;"><span>
@@ -129,7 +131,7 @@
   
 </p>
   <p>In slick, if each foo has many bars and I need to retrive several foos and associtated bars I will do something like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">val</span> join <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">for</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">val</span> join <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">for</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>     <span style="color:#f92672">(</span>f<span style="color:#f92672">,</span>b<span style="color:#f92672">)</span> <span style="color:#66d9ef">&lt;-</span>
 </span></span><span style="display:flex;"><span>                  foo<span style="color:#f92672">.</span>filter<span style="color:#f92672">(...)</span> on  innerJoin
 </span></span><span style="display:flex;"><span>                  bar on <span style="color:#f92672">(...)</span>

@@ -336,5 +336,9 @@
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
     <loc>http://localhost:1313/media/</loc>
+  </url><url>
+    <loc>http://localhost:1313/speaking/</loc>
+  </url><url>
+    <loc>http://localhost:1313/timeline/</loc>
   </url>
 </urlset>

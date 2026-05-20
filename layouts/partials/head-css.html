@@ -1,6 +1,106 @@
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css?{{ now.Unix }}">
-<link rel="stylesheet" type="text/css" href="/css/blog-title.css">
-<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
+{{/* Tailwind + DaisyUI + Maggie-Appleton-styled fonts.
+     Body = Lora serif, near-black on warm-gray cream.
+     Display serif = EB Garamond (loaded but optional).
+     Fira Sans kept for nav/chips/small-caps UI bits.
+     Burgundy link color instead of indigo. */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Fira Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['Lora', 'ui-serif', 'Georgia', 'serif'],
+          display: ['EB Garamond', 'Lora', 'ui-serif', 'Georgia', 'serif'],
+          mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        },
+        colors: {
+          ink: '#353534',     /* near-black body text */
+          paper: '#f6f5f1',   /* warm-gray cream */
+          rose: '#5f023e',    /* deep burgundy link color */
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { background-color: #f6f5f1; /* paper */ }
+  body {
+    font-family: 'Lora', ui-serif, Georgia, serif;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #353534;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Headings get the editorial display serif */
+  h1, h2, h3, h4 {
+    font-family: 'EB Garamond', 'Lora', ui-serif, Georgia, serif;
+    color: #1a1a19;
+    letter-spacing: -0.005em;
+  }
+  /* Default link color in prose: deep burgundy.
+     Nav / chip links opt out via Tailwind utilities (text-slate-*, text-rose). */
+  a { color: #5f023e; }
+
+  /* Blog post body — Lora prose, generous reading typography */
+  .prose-body {
+    font-family: 'Lora', ui-serif, Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #353534;
+  }
+  .prose-body h1, .prose-body h2, .prose-body h3, .prose-body h4 {
+    font-family: 'EB Garamond', 'Lora', ui-serif, Georgia, serif;
+    font-weight: 600;
+    color: #1a1a19;
+    letter-spacing: -0.005em;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+  }
+  .prose-body h1 { font-size: 2.25rem; }
+  .prose-body h2 { font-size: 1.75rem; }
+  .prose-body h3 { font-size: 1.35rem; }
+  .prose-body p { margin: 1em 0; }
+  .prose-body a {
+    color: #5f023e;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(95, 2, 62, 0.35);
+  }
+  .prose-body a:hover { text-decoration-color: #5f023e; }
+  .prose-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+    background: #ece9df;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+  .prose-body pre {
+    background: #1a1a19;
+    color: #ece9df;
+    padding: 1.25em;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 1.25em 0;
+  }
+  .prose-body pre code { background: transparent; padding: 0; }
+  .prose-body blockquote {
+    border-left: 3px solid #5f023e;
+    padding-left: 1rem;
+    color: #4a4a48;
+    font-style: italic;
+    margin: 1em 0;
+  }
+  .prose-body ul, .prose-body ol { padding-left: 1.5rem; margin: 1em 0; }
+  .prose-body li { margin: 0.4em 0; }
+  .prose-body img { max-width: 100%; border-radius: 4px; margin: 1.25em 0; }
+</style>

@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-blog.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css?1762627503">
+<link rel="stylesheet" type="text/css" href="/css/custom.css?1779226398">
 <link rel="stylesheet" type="text/css" href="/css/blog-title.css">
 <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Fjalla+One">
 </head>
@@ -22,8 +22,10 @@
     <nav class="blog-nav">
       <a class="blog-nav-item" href="/">Home</a>
       <a class="blog-nav-item" href="/bio/">Biography</a>
-      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/speaking/">Speaking</a>
       <a class="blog-nav-item" href="/articles/">Articles</a>
+      <a class="blog-nav-item" href="/media/">Media</a>
+      <a class="blog-nav-item" href="/timeline/">Timeline</a>
       <a class="blog-nav-item" href="/contact/">Contact</a>
       <a class="blog-nav-item" href="/blog/">Blog</a>
     </nav>
@@ -75,14 +77,14 @@
 <li>Test: Optionally write a select that tests your results and wrap it all in a rolled back transaction to test run</li>
 </ul>
 <h3 id="writing-and-testing-the-select-as-a-cte">Writing and testing the select as a cte</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> replacement <span style="color:#66d9ef">as</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> replacement <span style="color:#66d9ef">as</span> (
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> value, condtion1, condtion2 <span style="color:#66d9ef">from</span> somewhere
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">where</span> x<span style="color:#f92672">=</span> something
 </span></span><span style="display:flex;"><span> )
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> replacement
 </span></span></code></pre></div><p><em>The cte might seem verbose, but I&rsquo;m going to need it later, and it helps my sql stay organized</em></p>
 <h3 id="testing-the-select-as-an-update-without-applying-changes">Testing the select as an update, without applying changes</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> replacement <span style="color:#66d9ef">as</span> (
@@ -97,13 +99,13 @@
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> shortname.condtion2 <span style="color:#f92672">=</span> replacement.condition2;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Test query for manually confirming the results look like what you were expecting
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> value, condition1, condition2 <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;LongName&#34;</span> shortname
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> value, condition1, condition2 <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;LongName&#34;</span> shortname
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> x<span style="color:#f92672">=</span>something
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">ROLLBACK</span>;
 </span></span></code></pre></div><p>If the select result looks good, you can run it without the transaction to update.</p>
 <h3 id="run-it">Run it</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> replacement <span style="color:#66d9ef">as</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> replacement <span style="color:#66d9ef">as</span> (
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> value, condtion1, condtion2 <span style="color:#66d9ef">from</span> somewhere
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">where</span> x<span style="color:#f92672">=</span> something
 </span></span><span style="display:flex;"><span> )

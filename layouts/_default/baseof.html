@@ -1,71 +1,60 @@
-<!-- ./hugo/layouts/_default/baseof.html -->
+{{/* Site-wide base layout — Tailwind/DaisyUI. */}}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   {{ partial "head.html" . }}
+  {{ block "extra_head" . }}{{ end }}
 </head>
-
-<body>
+<body class="min-h-screen flex flex-col">
   {{ partial "nav.html" . }}
 
-  <div class="container">
-    {{ partial "page-title.html" . }}
-    <div class="row">
-      {{/* Determine if we should show the sidebar */}}
-      {{ $isBlogSection := eq .Section "blog" }}
-      {{ $isTaxonomyList := eq .Kind "taxonomy" }} {{/* e.g. /tags/ */}}
-      {{ $isTaxonomyTerm := eq .Kind "term" }}   {{/* e.g. /tags/csharp/ */}}
-      {{ $showSidebar := or $isBlogSection $isTaxonomyList $isTaxonomyTerm }}
-
-      <div class="col-sm-12 blog-main">
-      {{ if $showSidebar }}
-        {{/* Layout WITH sidebar for blog and taxonomy pages */}}
-        <div class="col-sm-8 blog-main">
-          {{ block "main" . }}{{ end }}
-        </div>
-        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Adam Gordon Bell says stuff. Software building stuff mainly.</p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li>
-                <a href="https://corecursive.com">Adam's Podcast</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/adamgordonbell">@adamgordonbell</a>
-              </li>
-              <li>
-                <a href="https://github.com/adamgordonbell/">GitHub</a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/adamgordonbell">Linked In</a>
-              </li>
-              <li>
-                <a href="/contact/">More</a>
-              </li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <a href="/index.xml">RSS</a>
-          </div>
-        </aside>
-      {{ else }}
-        {{/* Layout WITHOUT sidebar for other pages (Contact, Bio, Home, etc.) */}}
-        {{/* Using col-md-8 col-md-offset-2 to center the content with a similar width to blog posts */}}
-        {{/* Or you could use col-sm-10 col-sm-offset-1 for a bit wider content, or col-sm-12 for full width */}}
-        <div class="main-content-full-width"> {{/* Changed class name for clarity */}}
-          {{ block "main" . }}{{ end }}
-        </div>
-      {{ end }}
+  <main class="flex-1">
+    {{/* Title band: lighter cream stripe so H1 feels like a header, not loose */}}
+    <div class="bg-[#fbfaf3] border-b border-[#e7e3d6]">
+      <div class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+        {{ partial "page-title.html" . }}
       </div>
     </div>
-  </div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      {{/* Sidebar layout for /blog/ and taxonomy pages, single column elsewhere. */}}
+      {{ $isBlogSection := eq .Section "blog" }}
+      {{ $isTaxonomyList := eq .Kind "taxonomy" }}
+      {{ $isTaxonomyTerm := eq .Kind "term" }}
+      {{ $showSidebar := or $isBlogSection $isTaxonomyList $isTaxonomyTerm }}
+
+      {{ if $showSidebar }}
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-10">
+          <div>
+            {{ block "main" . }}{{ end }}
+          </div>
+          <aside class="text-sm text-[#4a4a48] space-y-4">
+            <div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4">
+              <h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">About</h4>
+              <p class="font-serif leading-relaxed">Adam Gordon Bell says stuff. Software building stuff mainly.</p>
+            </div>
+            <div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4">
+              <h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">Elsewhere</h4>
+              <ul class="space-y-1 font-serif">
+                <li><a href="https://corecursive.com" class="text-rose hover:underline">CoRecursive</a></li>
+                <li><a href="https://bsky.app/profile/adamgordonbell.com" class="text-rose hover:underline">Bluesky</a></li>
+                <li><a href="https://github.com/adamgordonbell" class="text-rose hover:underline">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/adamgordonbell" class="text-rose hover:underline">LinkedIn</a></li>
+                <li><a href="/contact/" class="text-rose hover:underline">Contact</a></li>
+              </ul>
+            </div>
+            <div class="px-4">
+              <a href="/index.xml" class="font-sans text-xs uppercase tracking-wider font-semibold text-[#4a4a48] hover:text-rose">RSS</a>
+            </div>
+          </aside>
+        </div>
+      {{ else }}
+        {{ block "main" . }}{{ end }}
+      {{ end }}
+    </div>
+  </main>
 
   {{ partial "footer.html" . }}
+  {{ block "extra_body_end" . }}{{ end }}
 </body>
-
 </html>

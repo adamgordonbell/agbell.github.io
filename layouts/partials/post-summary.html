@@ -1,8 +1,12 @@
-<div class="blog-post">
-  <h2 class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="{{ .Permalink }}" class="hover:text-rose">{{ .Title }}</a>
+  </h2>
   {{ partial "_post-meta.html" . }}
-  {{ .Summary }}
-  {{ if .Truncated }}
-  <a href="{{ .Permalink }}">Read more...</a>
-  {{ end }}
-</div>
+  <div class="prose-body">
+    {{ .Summary }}
+    {{ if .Truncated }}
+      <p><a href="{{ .Permalink }}" class="text-rose hover:underline">Read more →</a></p>
+    {{ end }}
+  </div>
+</article>

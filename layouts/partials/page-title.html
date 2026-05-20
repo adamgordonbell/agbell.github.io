@@ -1,21 +1,22 @@
-<!-- ./hugo/layouts/partials/page-title.html -->
-<div class="blog-header">
+{{/* Page title block — Maggie Appleton aesthetic.
+     Display serif (EB Garamond) at very large size, regular weight,
+     near-black on cream. Description in Lora body. */}}
+<div class="mb-10">
   {{ if and (eq .Type "blog") (eq .Kind "section") }}
-    <!-- This is for the BLOG SECTION LISTING page (e.g., /blog/) -->
-    <h1 class="blog-title"><a href="{{ .Permalink }}">{{ site.Params.sections.blog.title_short | default .Title }}</a></h1>
-    <p class="lead blog-description">{{ site.Params.sections.blog.description | default .Params.description }}</p>
+    <h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]">
+      <a href="{{ .Permalink }}" class="hover:text-rose">{{ site.Params.sections.blog.title_short | default .Title }}</a>
+    </h1>
+    <p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">
+      {{ site.Params.sections.blog.description | default .Params.description }}
+    </p>
   {{ else if .IsPage }}
-    <!-- This is for ANY SINGLE PAGE, including individual blog posts, /bio/, /contact/, etc. -->
-    <!-- The title_short param can be used for any page if desired, otherwise it uses the page's .Title -->
-    <h1 class="blog-title">{{ .Params.title_short | default .Title }}</h1> <!-- Not linked for single pages -->
-    <p class="lead blog-description">{{ .Description }}</p> <!-- Uses the page's .Description -->
+    <h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]">{{ .Params.title_short | default .Title }}</h1>
+    {{ with .Description }}<p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">{{ . }}</p>{{ end }}
   {{ else if eq .Kind "home" }}
-    <!-- This is for the HOME PAGE -->
-    <h1 class="blog-title">{{ .Params.title_short | default .Title }}</h1> <!-- Site title -->
-    <p class="lead blog-description">{{ .Params.description | default site.Params.description }}</p> <!-- Site description -->
+    <h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]">{{ .Params.title_short | default .Title }}</h1>
+    <p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">{{ .Params.description | default site.Params.description }}</p>
   {{ else }}
-    <!-- Fallback for other list pages like taxonomies (e.g., /tags/some-tag/) -->
-    <h1 class="blog-title">{{ .Title }}</h1>
-    <p class="lead blog-description">{{ .Description }}</p>
+    <h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]">{{ .Title }}</h1>
+    {{ with .Description }}<p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">{{ . }}</p>{{ end }}
   {{ end }}
 </div>

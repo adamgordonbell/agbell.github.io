@@ -1,32 +1,43 @@
+{{/* Profile layout (used by /bio/, /contact/, /speaking-old/, etc when
+     type: profile). Image left, content right. Tailwind. */}}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   {{ partial "head.html" . }}
+  {{ block "extra_head" . }}{{ end }}
 </head>
-
-<body>
+<body class="min-h-screen flex flex-col">
   {{ partial "nav.html" . }}
 
-  <div class="container">
-    {{ partial "page-title.html" . }}
-    <div class="row">
-      <div class="col-md-4">
-        {{ if .Params.image }}
-        <img src="{{ .Params.image }}" height="400px" width="300px" alt="Adam Gordon Bell">
-        <br/>
-        {{ if .Params.high_res_image }}
-        <center><a href="{{ .Params.high_res_image }}">high resolution version</a></center>
-        {{ end }}
-        {{ end }}
-      </div>
-      <div class="col-md-8">  
-        {{ .Content }}
+  <main class="flex-1">
+    <div class="bg-[#fbfaf3] border-b border-[#e7e3d6]">
+      <div class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+        {{ partial "page-title.html" . }}
       </div>
     </div>
-  </div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      {{ if .Params.image }}
+        <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10">
+          <div>
+            <img src="{{ .Params.image }}" alt="Adam Gordon Bell" class="rounded shadow w-full">
+            {{ if .Params.high_res_image }}
+              <p class="mt-2 text-center text-xs"><a href="{{ .Params.high_res_image }}" class="text-rose hover:underline">High-resolution version</a></p>
+            {{ end }}
+          </div>
+          <div class="prose-body">
+            {{ .Content }}
+          </div>
+        </div>
+      {{ else }}
+        <div class="prose-body max-w-3xl">
+          {{ .Content }}
+        </div>
+      {{ end }}
+    </div>
+  </main>
 
   {{ partial "footer.html" . }}
+  {{ block "extra_body_end" . }}{{ end }}
 </body>
-
 </html>

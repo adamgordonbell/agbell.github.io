@@ -1,10 +1,9 @@
-<p class="blog-post-meta">
-  <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+<p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>{{ .Date.Format "January 2, 2006" }}</span>
   {{ with .Params.tags }}
-  - <span class="tags">
+    <span class="text-slate-300">·</span>
     {{ range . }}
-    <a href="{{ site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+      <a href="{{ site.BaseURL }}tags/{{ . | urlize }}" class="text-rose hover:opacity-70 normal-case tracking-normal">{{ . }}</a>
     {{ end }}
-  </span>
   {{ end }}
 </p>
