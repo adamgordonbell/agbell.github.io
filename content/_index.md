@@ -11,9 +11,9 @@ I'm a software engineer based in Peterborough, Canada. I work as a Community Eng
 
 - [CoRecursive Podcast](https://corecursive.com/) — long-form interviews with the people behind the code (SQLite, PowerShell, Chef, and more).
 - [Speaking](/speaking/) — conference talks given and upcoming.
-- [Articles](/articles/) — long-form technical writing, including widely-read guides on AWK and JQ.
-- [Media](/media/) — guest appearances and interviews.
-- [Blog](/blog/) — older posts.
+- [Writing](/writing/) — articles, blog posts, and newsletter issues. Includes widely-read guides on AWK and JQ.
+- [Podcasts](/podcasts/) — hosted episodes and guest appearances.
+- [Videos](/videos/) — workshops and conference recordings.
 - [Email](mailto:adam@corecursive.com) — get in touch.
 
 ## Recent

@@ -222,7 +222,7 @@
   </div>
 {{ end }}
 
-{{ $eras := (index .Site.Data "accomplishments").eras }}
+{{ $eras := .Site.Data.eras.eras }}
 
 {{/* Read the 4 type-keyed yamls — each item already carries `type` (and
      `role` for podcasts). Sync scripts append, hand edits persist. */}}

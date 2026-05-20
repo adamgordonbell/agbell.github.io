@@ -1,0 +1,22 @@
+# Employment / role eras — rendered as range overlays on the timeline.
+# start_date inclusive; omit end_date for "present".
+
+eras:
+- name: Pulumi
+  role: Community Engineer
+  start_date: 2024-11-01
+  end_date: null
+  url: https://www.pulumi.com/adam
+  color: '#7c3aed'
+- name: Earthly
+  role: Director of Developer Relations
+  start_date: 2020-08-01
+  end_date: 2023-12-31
+  url: https://earthly.dev
+  color: '#d97706'
+- name: Tenable
+  role: Software Engineer (Cloud Security)
+  start_date: 2017-01-01
+  end_date: 2020-07-31
+  url: https://www.tenable.com
+  color: '#059669'

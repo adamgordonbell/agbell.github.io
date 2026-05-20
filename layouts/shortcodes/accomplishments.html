@@ -12,7 +12,15 @@
     limit      (int, optional)  cap number of entries shown
 */}}
 
-{{ $items := .Site.Data.accomplishments.items }}
+{{/* Concatenate the 4 type-keyed yamls. */}}
+{{ $items := slice }}
+{{ range slice "talks" "podcasts" "writing" "videos" }}
+  {{ with (index $.Site.Data .) }}
+    {{ range .items }}
+      {{ $items = $items | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{/* type filter — supports comma-separated list */}}
 {{ with .Get "type" }}
