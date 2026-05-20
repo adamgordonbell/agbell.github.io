@@ -1,0 +1,1123 @@
+# Writing — auto-managed by sync scripts + hand edits.
+# Sync is ADDITIVE: scripts only add items whose slug/url isn't already present.
+# Hand-edit titles, descriptions, types, etc. directly — they persist.
+# Schema: type, role?, title, date, url, slug?, description?, venue?, ...
+
+items:
+- type: article
+  title: Ten More Things You Can Do With Pulumi Neo
+  date: '2026-05-19'
+  url: https://www.pulumi.com/blog/10-more-things-you-can-do-with-neo/
+  slug: 10-more-things-you-can-do-with-neo
+  description: 'Ten more platform-engineering workflows you can hand to Pulumi Neo: deployments, tickets, incident triage, IAM, migration, and continuous ops.'
+  source: pulumi-blog
+- type: article
+  title: 'CDKTF is deprecated: What''s next for your team?'
+  date: '2025-12-18'
+  url: https://www.pulumi.com/blog/cdktf-is-deprecated-whats-next-for-your-team/
+  slug: cdktf-is-deprecated-whats-next-for-your-team
+  description: The deprecation of CDKTF has left many without a clear path forward. This post presents the alternatives and shows what it's like to move from CDKTF to Pulumi.
+  source: pulumi-blog
+- type: article
+  title: AWS built an integrated AI Agent training pipeline and they want you to rent it
+  date: '2025-12-10'
+  url: https://www.pulumi.com/blog/aws-reinvent-2025-roundup/
+  slug: aws-reinvent-2025-roundup
+  description: At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for.
+  source: pulumi-blog
+- type: article
+  title: How to Implement Robust Security Guardrails Using Policy as Code
+  date: '2025-09-30'
+  url: https://www.pulumi.com/blog/deployment-guardrails-with-policy-as-code/
+  slug: deployment-guardrails-with-policy-as-code
+  description: Implement deployment guardrails with Pulumi CrossGuard to create safe self-service infrastructure balancing developer autonomy and control.
+  source: pulumi-blog
+- type: article
+  title: Three Ways to Do Developer Experience (DX)
+  date: '2025-07-15'
+  url: https://earthly.dev/blog/dx-three-ways/
+  slug: dx-three-ways
+  description: Learn about the importance of Developer Experience (DX) and how it can impact different roles within an organization. Discover how Alice, Bob, and ...
+  source: earthly-blog
+- type: article
+  title: 'Governance as an Enabler: Scaling Safely and Confidently'
+  date: '2025-06-17'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-7/
+  slug: platform-engineering-pillars-7
+  description: Transform governance from manual bureaucracy into an automated enabler by embedding policy-as-code, RBAC, and automated controls directly into your platform.
+  source: pulumi-blog
+- type: article
+  title: Observability as a Developer Superpower
+  date: '2025-06-10'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-6/
+  slug: platform-engineering-pillars-6
+  description: Transform observability into a developer superpower with unified visibility, AI-powered insights, and actionable alerts embedded in your platform.
+  source: pulumi-blog
+- type: article
+  title: From Configuration Chaos to Programming Languages
+  date: '2025-06-03'
+  url: https://www.pulumi.com/blog/config-chaos-to-programming-languages/
+  slug: config-chaos-to-programming-languages
+  description: Learn how to transform infrastructure management from configuration chaos to programming languages using effective change management strategies.
+  source: pulumi-blog
+- type: article
+  title: Platform Engineering Buffet at SEITENBAU
+  date: '2025-05-27'
+  url: https://www.pulumi.com/blog/platform-engineering-buffet/
+  slug: platform-engineering-buffet
+  description: How SEITENBAU built a flexible platform serving 20+ independent projects with Pulumi's buffet approach, offering reusable components teams can mix and match.
+  source: pulumi-blog
+- type: article
+  title: 'Platform Engineering: Evolution or Rebranding?'
+  date: '2025-05-12'
+  url: https://www.pulumi.com/blog/platform-eng-rebrand/
+  slug: platform-eng-rebrand
+  description: Is platform engineering a genuine evolution of DevOps or just a rebrand? We explore both perspectives on this industry trend.
+  source: pulumi-blog
+- type: newsletter
+  title: The 2 Sigma Problem
+  date: '2025-05-02'
+  url: https://newsletter.corecursive.com/posts/the-2-sigma-problem
+  slug: the-2-sigma-problem
+  description: 'Do you recognize this man? Well, he has some things to teach us about learning in the latest episode: https://corecursive.com/the-power-of-context/ Todays'' podcast episode is about how
+    to learn hard things. Guest Steve Krouse ( not pictured ) was a struggling student when he…'
+  source: corecursive-newsletter
+- type: article
+  title: 'Security as an Enabler: Building Trust into Your Platform'
+  date: '2025-04-11'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-5/
+  slug: platform-engineering-pillars-5
+  description: Learn how security can enable innovation by embedding guardrails directly into your platform.
+  source: pulumi-blog
+- type: newsletter
+  title: The IDL Graph
+  date: '2025-04-02'
+  url: https://newsletter.corecursive.com/posts/the-idl-graph
+  slug: the-idl-graph
+  description: 'I have a new podcast episode out about this graph: I know that doesn''t sound exciting, but it actually is! https://corecursive.com/briffa-sep98-e/ That is a famous climate change graph
+    that caused a lot of controversy, with newspapers and news shows accusing scientists of fraud…'
+  source: corecursive-newsletter
+- type: article
+  title: 'Improve Developer Experience: Increase Dev Productivity with Internal Developer Platforms'
+  date: '2025-03-13'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-4/
+  slug: platform-engineering-pillars-4
+  description: Learn how to boost developer experience, productivity, and velocity with an internal developer platform using service catalogs, templates, and CI/CD.
+  source: pulumi-blog
+- type: article
+  title: 'Self-Service Infrastructure: From Tickets to Tools'
+  date: '2025-03-06'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-3/
+  slug: platform-engineering-pillars-3
+  description: Unlock developer productivity with self-service infrastructure through modular abstraction and intent-based specifications for your internal developer platform.
+  source: pulumi-blog
+- type: article
+  title: 'Provisioning: From Chaos to Control'
+  date: '2025-02-27'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-2/
+  slug: platform-engineering-pillars-2
+  description: Build a reliable infrastructure provisioning foundation with version control, automation, and golden-path templates for your internal developer platform.
+  source: pulumi-blog
+- type: article
+  title: 'Platform Pillars: Build Platforms, Not Infrastructure'
+  date: '2025-02-26'
+  url: https://www.pulumi.com/blog/platform-engineering-pillars-1/
+  slug: platform-engineering-pillars-1
+  description: Explore the essential pillars of Platform Engineering and learn how to transform infrastructure chaos into a streamlined development experience.
+  source: pulumi-blog
+- type: newsletter
+  title: Boaty McBoatface
+  date: '2025-02-03'
+  url: https://newsletter.corecursive.com/posts/boaty-mcboatface
+  slug: boaty-mcboatface
+  description: 'I have a new podcast episode is out: https://corecursive.com/one-million-checkboxes-with-nolen-royalty/ It''s at the intersection of coding, game building, art and online trolls. That is
+    to say it''s a super fun episode about building something and having it become really really…'
+  source: corecursive-newsletter
+- type: article
+  title: Host your Python app for $1.12 a month
+  date: '2025-01-29'
+  url: https://www.pulumi.com/blog/serverless-api/
+  slug: serverless-api
+  description: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay ~$1.12/month worst-case ($0 when idle).
+  source: pulumi-blog
+- type: article
+  title: Top 15 Python Tools for DevOps
+  date: '2025-01-06'
+  url: https://www.pulumi.com/blog/python-for-devops/
+  slug: python-for-devops
+  description: From quick fixes to scalable enterprise solutions—explore 15 essential Python tools for automation, monitoring, and cloud deployment.
+  source: pulumi-blog
+- type: article
+  title: AI Engineering Lessons from Building Pulumi Copilot
+  date: '2024-12-12'
+  url: https://www.pulumi.com/blog/copilot-lessons/
+  slug: copilot-lessons
+  description: Learn key engineering lessons from building Pulumi Copilot, including how to minimize LLM workload, validate outputs, and deal with hallucination.
+  source: pulumi-blog
+- type: article
+  title: '105 Ways to Run Containers: The Cloud Container Iceberg'
+  date: '2024-12-03'
+  url: https://www.pulumi.com/blog/cursed-container-iceberg/
+  slug: cursed-container-iceberg
+  description: Explore 105+ ways to run containers—from AWS to toasters to quantum computers. Discover unique OCI deployment options beyond Kubernetes and Docker.
+  source: pulumi-blog
+- type: article
+  title: 'Pulumi + uv: Fast Python Package and Project Management'
+  date: '2024-11-27'
+  url: https://www.pulumi.com/blog/python-uv-toolchain/
+  slug: python-uv-toolchain
+  description: Learn how to use uv, an ultra-fast Python package manager, now fully integrated with Pulumi
+  source: pulumi-blog
+- type: article
+  title: Fargate vs EC2
+  date: '2024-11-18'
+  url: https://www.pulumi.com/blog/fargate-vs-ec2/
+  slug: fargate-vs-ec2
+  description: Explore the differences between AWS EKS Fargate and EC2-backed clusters for your Kubernetes EKS workloads.
+  source: pulumi-blog
+- type: article
+  title: When to Use Cosmos DB
+  date: '2024-11-11'
+  url: https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/
+  slug: when-to-use-azure-cosmos-db
+  description: Discover when to use Cosmos DB and how it compares with PostgreSQL, MongoDB, Cassandra, and DynamoDB. Learn about scalability, performance, cost & use cases.
+  source: pulumi-blog
+- type: newsletter
+  title: Life is short
+  date: '2024-10-02'
+  url: https://newsletter.corecursive.com/posts/life-is-short
+  slug: life-is-short
+  description: 'It''s October, and new podcast episode is out: https://corecursive.com/from-everest-to-startups-with-yoshio-goto/ This episode is about your life. It''s about accepting that life is short
+    and using that to structure how you live. Yoshio Goto shares his story of finding what…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: A Plausible Theory of Success
+  date: '2024-07-04'
+  url: https://newsletter.corecursive.com/posts/a-plausible-theory-of-success
+  slug: a-plausible-theory-of-success
+  description: 'It''s July, and happy July 4th to my American readers. A new podcast episode is out: https://corecursive.com/building-powershell-with-jeffrey-snover/ It''s a detailed peek into the internals
+    of Microsoft and the development of Powershell. My guest is Jeffrey Snover and he has a…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: Questioning the Assumptions
+  date: '2024-06-04'
+  url: https://newsletter.corecursive.com/posts/questioning-the-assumptions
+  slug: questioning-the-assumptions
+  description: 'It''s June now, and I have a new episode out here: Hedy https://corecursive.com/hedy-with-felienne-hermans/ I''ve been telling friends and colleagues about this episode for several weeks.
+    Whenever someone asks me how the podcast is going, I jump into it: Ok, Imagine this: A…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: One Hundred Episodes
+  date: '2024-05-03'
+  url: https://newsletter.corecursive.com/posts/one-hundred-episodes
+  slug: one-hundred-episodes
+  description: 'Adam Gordon Bell May 3rd One Hundred Episodes Hello, CoRecursive newsletter subscriber, It’s May now, and I have a new episode out. But it’s just not just any episode 100, and it’s something
+    special. : 100! https://corecursive.com/coding-machines-with-don-and-krystal/ It''s a…'
+  source: corecursive-newsletter
+- type: article
+  title: 'go delve - The Golang Debugger '
+  date: '2024-04-18'
+  url: https://earthly.dev/blog/golang-dlv/
+  slug: golang-dlv
+  description: '&lt;p&gt;Delve (&lt;code&gt;dlv&lt;/code&gt;) is a CLI-based debugger for Go, tailored to the language’s concurrency model and runtime. It allows y...'
+  source: earthly-blog
+- type: newsletter
+  title: Skateboarding Meets Software
+  date: '2024-04-02'
+  url: https://newsletter.corecursive.com/posts/skateboarding-meets-software
+  slug: skateboarding-meets-software
+  description: 'Adam Gordon Bell April 2nd Skateboarding Meets Software Welcome to April and a new CoRecursive episode: Code, Kickflips and Crunch Time: Mick West''s Neversoft Journey How do you build one
+    of the most successful video games? The one that tops the charts, leads to a franchise and…'
+  source: corecursive-newsletter
+- type: article
+  title: 'The Montréal Effect: Why Programming Languages Need a Style Czar'
+  date: '2024-03-15'
+  url: https://earthly.dev/blog/language-style-czar/
+  slug: language-style-czar
+  description: '&lt;p&gt;Here is a non-realistic scenario: You are choosing the programming language for what will eventually become something large. Picture a col...'
+  source: earthly-blog
+- type: newsletter
+  title: Choosing Engineering Excellence Over Expediency
+  date: '2024-03-04'
+  url: https://newsletter.corecursive.com/posts/choosing-engineering-excellence-over-expediency
+  slug: choosing-engineering-excellence-over-expediency
+  description: 'Adam Gordon Bell March 4th Leaving LinkedIn Welcome to March and a new CoRecursive episode: Leaving LinkedIn - Choosing Engineering Excellence Over Expediency Can sustainable software development
+    and tech giant fast-paced cultures truly coexist? Imagine having to choose between…'
+  source: corecursive-newsletter
+- type: article
+  title: 'From Go to Rust: The Two Types of Readable Code'
+  date: '2024-02-14'
+  url: https://earthly.dev/blog/readability/
+  slug: readability
+  description: '&lt;p&gt;Ever looked at some code and thought, “Wow, that’s an ugly mess!”? Or maybe you picked up a new programming language and felt right at hom...'
+  source: earthly-blog
+- type: newsletter
+  title: Visual Basic and Beyond
+  date: '2024-02-02'
+  url: https://newsletter.corecursive.com/posts/visual-basic-and-beyond
+  slug: visual-basic-and-beyond
+  description: 'Adam Gordon Bell Feb 2nd Beautiful Code Welcome to February and a new CoRecursive episode: Beautiful Code - Inside Greg Wilson''s Vision for Software Design Greg Wilson has been on a decades-long
+    quest to transform how we teach and talk about software design. From getting…'
+  source: corecursive-newsletter
+- type: article
+  title: Showboaters, Maximalists and You
+  date: '2024-02-01'
+  url: https://earthly.dev/blog/showboaters/
+  slug: showboaters
+  description: '&lt;p&gt;&lt;em&gt;Following from &lt;a href=&quot;/blog/single-expression-functions&quot;&gt;Rust, Ruby, and the Art of Implicit Returns&lt;/a&gt;...'
+  source: earthly-blog
+- type: article
+  title: Rust, Ruby, and the Art of Implicit Returns
+  date: '2024-01-04'
+  url: https://earthly.dev/blog/single-expression-functions/
+  slug: single-expression-functions
+  description: This article explores the concept of implicit returns, if-expressions, match-expressions, and single-expression functions in programming languages ...
+  source: earthly-blog
+- type: newsletter
+  title: 'Resilience and Renaissance: Navigating Life''s Unexpected Turns'
+  date: '2024-01-02'
+  url: https://newsletter.corecursive.com/posts/resilience-and-renaissance-navigating-life-s-unexpected-turns
+  slug: resilience-and-renaissance-navigating-life-s-unexpected-turns
+  description: 'Adam Gordon Bell Jan 2nd Brain Injury Sparks Python Mastery Welcome to 2024 and a new CoRecursive episode: Code As A Lifeline What if your dreams were suddenly ripped away? What if your
+    talents vanished, your passions erased? That’s what happened to Jason McDonald when a…'
+  source: corecursive-newsletter
+- type: article
+  title: The Future is Rusty
+  date: '2023-12-12'
+  url: https://earthly.dev/blog/future-is-rusty/
+  slug: future-is-rusty
+  description: The article discusses the challenges of learning complex programming languages like Rust and how the use of Large Language Models (LLMs) can help b...
+  source: earthly-blog
+- type: newsletter
+  title: 'Echoes of Creation: Decoding Vue''s Genesis and the FTX Saga'
+  date: '2023-12-04'
+  url: https://newsletter.corecursive.com/posts/echoes-of-creation-decoding-vue-s-genesis-and-the-ftx-saga
+  slug: echoes-of-creation-decoding-vue-s-genesis-and-the-ftx-saga
+  description: 'Adam Gordon Bell Dec 4th Echoes of Creation: Decoding Vue''s Genesis and the FTX Saga Hey, It''s December now, and I have a new podcast episode out here: From 486 to Vue.js - Evan You''s
+    Full-Time Gamble on Open Source It''s the unlikely origin story behind Vue.js and how Evan You''s…'
+  source: corecursive-newsletter
+- type: article
+  title: Create a Python Package using Setup.py
+  date: '2023-11-07'
+  url: https://earthly.dev/blog/create-python-package/
+  slug: create-python-package
+  description: This tutorial series explains how to package and publish Python code on PyPI using setuptools and twine. It covers topics such as choosing a packag...
+  source: earthly-blog
+- type: article
+  title: Poetry Build and Publish
+  date: '2023-11-07'
+  url: https://earthly.dev/blog/poetry-publish/
+  slug: poetry-publish
+  description: This tutorial explains how to use the Poetry dependency manager and build system to package and publish Python projects. It covers the process of b...
+  source: earthly-blog
+- type: article
+  title: Python C Extension pypi Package
+  date: '2023-11-07'
+  url: https://earthly.dev/blog/python-c-extension/
+  slug: python-c-extension
+  description: This tutorial series demonstrates how to package and distribute a Python C extension using setuptools and a setup.py file. It covers the process of...
+  source: earthly-blog
+- type: newsletter
+  title: Wooden Block Puzzles and Spotify
+  date: '2023-11-02'
+  url: https://newsletter.corecursive.com/posts/wooden-block-puzzles-and-spotify
+  slug: wooden-block-puzzles-and-spotify
+  description: 'Adam Gordon Bell Nov 2nd Wooden Block Puzzles and Spotify Hello, CoRecursive newsletter subscriber, It’s November now, and I have a new episode out here: The Inside Story of Spotify''s Engineering
+    Growth It’s about Spotify, back in 2016-2018. Facing an IPO deadline, Pia Nilsson…'
+  source: corecursive-newsletter
+- type: article
+  title: Earthly On devtools.FM
+  date: '2023-10-24'
+  url: https://earthly.dev/blog/devtool-fm/
+  slug: devtool-fm
+  description: Vlad appeared on devtools.FM and discussed the challenges of go-to-market strategies in startups, emphasizing that it is often harder than the tech...
+  source: earthly-blog
+- type: newsletter
+  title: Sleep Sort
+  date: '2023-10-02'
+  url: https://newsletter.corecursive.com/posts/sleep-sort
+  slug: sleep-sort
+  description: 'Adam Gordon Bell Oct 2nd Sleep Sort Hello CoRecursive newsletter subscriber, It’s October now, and I have a new episode out here: Sloot Digital Coding System Jan Sloot claimed to have invented
+    revolutionary data compression that could fit a full movie into a tiny smart card…'
+  source: corecursive-newsletter
+- type: article
+  title: A Brief, Incomplete and Mostly Wrong Devops Glossary
+  date: '2023-09-24'
+  url: https://earthly.dev/blog/devops-glossary/
+  slug: devops-glossary
+  description: This article provides a humorous and satirical glossary of terms related to DevOps, highlighting the realities and quirks of the field. It offers a...
+  source: earthly-blog
+- type: article
+  title: Powerlevel10k
+  date: '2023-09-20'
+  url: https://earthly.dev/blog/powerline10k/
+  slug: powerline10k
+  description: Powerlevel10k is a powerful prompt customization tool for ZSH that offers speed, customization, and a helpful configuration wizard. It elevates the...
+  source: earthly-blog
+- type: newsletter
+  title: Balancing Developer Identity
+  date: '2023-09-01'
+  url: https://newsletter.corecursive.com/posts/balancing-developer-identity
+  slug: balancing-developer-identity
+  description: 'Adam Gordon Bell September 2023 Balancing Identity Hello, CoRecursive newsletter subscriber, It’s September now, and I have a new episode out here: https://corecursive.com/configuring-identity-adam-jacob/
+    It''s a look behind the scenes to the creation of Chef - the game-changing…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: Learning When to Learn
+  date: '2023-08-03'
+  url: https://newsletter.corecursive.com/posts/learning-when-to-learn
+  slug: learning-when-to-learn
+  description: 'Adam Gordon Bell August 2023 Learning When to Learn Hello, CoRecursive newsletter subscriber, It’s August now, and I have a new episode out here: The Science of Learning to Code It''s about
+    learning, and this is a topic very dear to my own heart. The episode shares some history…'
+  source: corecursive-newsletter
+- type: article
+  title: Don&#39;t Configure Control Flow
+  date: '2023-08-02'
+  url: https://earthly.dev/blog/dont-configure-control-flow/
+  slug: dont-configure-control-flow
+  description: Learn why using YAML for control flow configuration can lead to complex and hard-to-understand code, and why it&#39;s better to use existing progra...
+  source: earthly-blog
+- type: article
+  title: Mining Meaningful Methods from Large Language Models
+  date: '2023-07-14'
+  url: https://earthly.dev/blog/build-transpose/
+  slug: build-transpose
+  description: Learn strategies for working with LLMs, such managing context, framing the problem, thinking outloud and more in this newbs&#39;s guide to applying...
+  source: earthly-blog
+- type: newsletter
+  title: Passion and Focus
+  date: '2023-07-03'
+  url: https://newsletter.corecursive.com/posts/passion-and-focus
+  slug: passion-and-focus
+  description: 'Adam Gordon Bell July 3rd Passion and Focus Hello, CoRecursive newsletter subscriber, It''s July now, and I have a new episode out here: https://corecursive.com/a-dark-room-with-amir-rajan/
+    Amir is amazing. I identify with his early struggles – his struggles working with people…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: Waiting for Marv
+  date: '2023-06-02'
+  url: https://newsletter.corecursive.com/posts/waiting-for-marv
+  slug: waiting-for-marv
+  description: 'Adam Gordon Bell June 1st Waiting for Marv Quiting Stack Overflow It''s June now, and I have a new episode out here: https://corecursive.com/stack-overflow/ The episode is the story of the
+    longest-tenured employee at Stack Overflow, Ben Dumke-von der Ehe. He became an early…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: Learning to Learn
+  date: '2023-05-02'
+  url: https://newsletter.corecursive.com/posts/learning-to-learn
+  slug: learning-to-learn
+  description: 'Adam Gordon Bell May 2nth Learning to Learn From Project Management to Data Compression Innovator It''s May now, and I have a new episode out here: https://corecursive.com/data-compression-yann--collet/
+    Yann Collet became interested in programming and discovered his passion for…'
+  source: corecursive-newsletter
+- type: article
+  title: Misaligned Incentives in Dev Tool Businesses
+  date: '2023-04-26'
+  url: https://earthly.dev/blog/misaligned-incentives/
+  slug: misaligned-incentives
+  description: Discover the hidden pitfalls of dev tool businesses and how misaligned incentives can lead to bloated software and unsatisfied users. Learn how Ear...
+  source: earthly-blog
+- type: article
+  title: To Understand Pants, Understand Bazel&#39;s History
+  date: '2023-04-07'
+  url: https://earthly.dev/blog/pants-build/
+  slug: pants-build
+  description: This article explores the history of the build system Pants, from its early days at Google to its current version, Pants V2. It delves into the cha...
+  source: earthly-blog
+- type: newsletter
+  title: Be Like Ken
+  date: '2023-04-03'
+  url: https://newsletter.corecursive.com/posts/be-like-ken
+  slug: be-like-ken
+  description: Adam Gordon Bell April 3rd Be Like Ken Hello, CoRecursive newsletter subscriber! April is here! March has been a challenging month for me. My dad is in the hospital, and I'm heading out on
+    a road trip to visit him shortly. Some months are tougher than others. Doug Crockford But…
+  source: corecursive-newsletter
+- type: newsletter
+  title: Shades of Grey Personal Truths
+  date: '2023-03-02'
+  url: https://newsletter.corecursive.com/posts/shades-of-grey-personal-truths
+  slug: shades-of-grey-personal-truths
+  description: 'Adam Gordon Bell March 2nd Shades of Grey Personal Truths ↓ Hello, CoRecursive newsletter subscriber, It''s March now, and I have a new episode out here: Sun''s Mobile Blunders Shai Almog
+    worked at Sun on Mobile JVMs just as phones started to turn from phones into something else.…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: Make-Believe Projects
+  date: '2023-02-02'
+  url: https://newsletter.corecursive.com/posts/make-believe-projects
+  slug: make-believe-projects
+  description: 'Hello, CoRecursive newsletter subscriber! It’s February now, and I have a new episode out here: https://corecursive.com/shipping-graphing-calculator/ It’s the story of sneaking onto the
+    Apple Campus to finish working on a project that got canceled. Each episode is only as good…'
+  source: corecursive-newsletter
+- type: article
+  title: Store VS Code `Settings.json` in Git
+  date: '2023-02-01'
+  url: https://earthly.dev/blog/vscode-git/
+  slug: vscode-git
+  description: Learn how to store your VS Code settings in Git to easily manage and share your customizations. Keep all your settings in one place and avoid break...
+  source: earthly-blog
+- type: newsletter
+  title: When Working Hard Isn't Enough
+  date: '2023-01-02'
+  url: https://newsletter.corecursive.com/posts/when-working-hard-isn-t-enough
+  slug: when-working-hard-isn-t-enough
+  description: Happy 2023 Newsletter, readers! The first episode of the year is a very special one to me. It’s an interview with long-time podcast guest and sort of neighbor Don McKay. Often times when
+    I have Don on the podcast it’s a zany light episode where we explore a tech topic in a…
+  source: corecursive-newsletter
+- type: article
+  title: We Built the Fastest CI and It Failed
+  date: '2023-01-01'
+  url: https://earthly.dev/blog/
+  venue: Earthly Blog
+  format: Postmortem
+  description: Postmortem on building a fast CI product that didn't find its market.
+  reception: Hacker News front page
+  tags:
+  - ci
+  - retrospective
+  - hn-front-page
+  source: curated
+- type: article
+  title: Monorepo Build Tools
+  date: '2022-12-15'
+  url: https://earthly.dev/blog/monorepo-tools/
+  slug: monorepo-tools
+  description: Learn about the different monorepo build tools available, including Bazel, Pants, Nx, and Earthly. Discover their features, programming language su...
+  source: earthly-blog
+- type: newsletter
+  title: From DOOM to DOOMED
+  date: '2022-12-02'
+  url: https://newsletter.corecursive.com/posts/from-doom-to-doomed
+  slug: from-doom-to-doomed
+  description: 'It''s December now, and I have a new episode: https://corecursive.com/doomed-to-fail-with-burger-becky/ My Guest, Becky Heineman, shares the story of porting DOOM to the 3DO console. I grew
+    up in this era and remember playing Wolfenstein on my home computer for hours and hours. I…'
+  source: corecursive-newsletter
+- type: article
+  title: Bullshit Software Projects
+  date: '2022-11-22'
+  url: https://earthly.dev/blog/bullshit-software-projects/
+  slug: bullshit-software-projects
+  description: Discover the frustrations and challenges faced by software developers in the world of &quot;bullshit work.&quot; From pointless projects to busy wo...
+  source: earthly-blog
+- type: article
+  title: Containers are chroot with a Marketing Budget
+  date: '2022-11-08'
+  url: https://earthly.dev/blog/chroot/
+  slug: chroot
+  description: In this article, the author explores the concept of containers and how they are essentially chrooted processes. They walk through the process of bu...
+  source: earthly-blog
+- type: newsletter
+  title: Software World Tour
+  date: '2022-11-02'
+  url: https://newsletter.corecursive.com/posts/software-world-tour
+  slug: software-world-tour
+  description: 'It''s November now, and I have a new episode out here: https://corecursive.com/software-world-tour-with-son-luong-ngoc/ The episode follows Son Luong Ngoc through his early career, starting
+    with a desire to build video games in Vietnam and shadowing him through his travels around…'
+  source: corecursive-newsletter
+- type: newsletter
+  title: The Inside Story of Android
+  date: '2022-10-03'
+  url: https://newsletter.corecursive.com/posts/the-inside-story-of-android
+  slug: the-inside-story-of-android
+  description: 'It''s October now, and I have a new episode out here: https://corecursive.com/android-with-chet-haase/ It''s about the early days of Android and it''s a story I wouldn''t usually be able
+    to share because it''s the story of the many people who worked on Android in the early days.…'
+  source: corecursive-newsletter
+- type: article
+  title: Lima VM - Linux Virtual Machines On macOS
+  date: '2022-09-22'
+  url: https://earthly.dev/blog/lima/
+  slug: lima
+  description: Learn how to set up a Linux virtual machine on your macOS with Lima, a simple and efficient tool powered by QEMU. With Lima, you can have a Linux e...
+  source: earthly-blog
+- type: article
+  title: When to use Bazel?
+  date: '2022-09-13'
+  url: https://earthly.dev/blog/bazel-build/
+  slug: bazel-build
+  description: Learn about the benefits and challenges of using Bazel, Google&#39;s open-source monorepo build system, from experts who have experience with it. D...
+  source: earthly-blog
+- type: newsletter
+  title: Prison Python
+  date: '2022-09-02'
+  url: https://newsletter.corecursive.com/posts/prison-python
+  slug: prison-python
+  description: It's September now, and I have a new episode out here. https://corecursive.com/prison-programming-with-rick-wolter/ It's an interview with Rick Wolter, and it's an interview I won't forget.
+    In a lot of ways, Rick is a perfect guest for me. He is raw and transparent and not…
+  source: corecursive-newsletter
+- type: article
+  title: Stop saying 10x developer
+  date: '2022-08-17'
+  url: https://earthly.dev/blog/stop-10x-developer/
+  slug: stop-10x-developer
+  description: In this article, the concept of the &quot;10x developer&quot; is dissected and examined. The author explores whether such developers truly exist an...
+  source: earthly-blog
+- type: article
+  title: Terraform Route53 And DNS Fun
+  date: '2022-08-02'
+  url: https://earthly.dev/blog/terraform-route53/
+  slug: terraform-route53
+  description: Learn how to fix DNS issues and import DNS records from AWS&#39;s Route53 into Terraform in this informative article by Adam. Discover the steps he...
+  source: earthly-blog
+- type: newsletter
+  title: Three Cheers for CPAN
+  date: '2022-08-01'
+  url: https://newsletter.corecursive.com/posts/three-cheers-for-cpan
+  slug: three-cheers-for-cpan
+  description: 'Hello CoRecursive subscriber, It''s August now, and I have a new episode out: This Day In History: CPAN CPAN CPAN, The Comprehensive Perl Archive Network, changed software development for
+    the better, and the story behind its creation is fascinating. The episode also touches on my…'
+  source: corecursive-newsletter
+- type: article
+  title: S3 Terraform Backend
+  date: '2022-07-21'
+  url: https://earthly.dev/blog/terraform-state-bucket/
+  slug: terraform-state-bucket
+  description: 'Learn how to store your Terraform state in an S3 bucket to avoid leaking sensitive information and manage changes made by multiple people.
+
+    '
+  source: earthly-blog
+- type: article
+  title: Terraform Import - Leaving Click Ops Behind
+  date: '2022-07-20'
+  url: https://earthly.dev/blog/terraform-lambda/
+  slug: terraform-lambda
+  description: Learn how to import existing infrastructure into Terraform and manage it as code. Follow along as the author imports resources such as AWS Lambda, ...
+  source: earthly-blog
+- type: article
+  title: The Slow March of Progress in Programming Language Tooling
+  date: '2022-07-11'
+  url: https://earthly.dev/blog/programming-language-improvements/
+  slug: programming-language-improvements
+  description: Discover how programming language tooling has evolved over time and why newer languages like Go and Rust have gained popularity due to their compre...
+  source: earthly-blog
+- type: newsletter
+  title: The origins of Eliza
+  date: '2022-07-05'
+  url: https://newsletter.corecursive.com/posts/the-origins-of-eliza
+  slug: the-origins-of-eliza
+  description: The Mystery of the Eliza Chatbot It’s July now, and I have a new episode out here. This episode is the story of Jeff Shrager, his connection with the famous chatbot Eliza, and his efforts
+    to track down the original code. Jeff is an enjoyable person to chat with, and I could tell…
+  source: corecursive-newsletter
+- type: article
+  title: Programmatic Multi Factor Auth and Time Based One Time Passwords
+  date: '2022-06-28'
+  url: https://earthly.dev/blog/multi-factor-auth/
+  slug: multi-factor-auth
+  description: Learn how to set up multi-factor authentication and generate time-based one-time passwords programmatically using MFA secret keys. Discover differe...
+  source: earthly-blog
+- type: article
+  title: Validate Your YAML (with CUE)
+  date: '2022-06-14'
+  url: https://earthly.dev/blog/yaml-validate-and-lint-cue-lang/
+  slug: yaml-validate-and-lint-cue-lang
+  description: Learn how to use Cuelang, an extension of YAML, to validate your YAML configurations and prevent runtime errors. Discover how to define types, add ...
+  source: earthly-blog
+- type: article
+  title: AWS Lambda Rest API Backend In Golang
+  date: '2022-06-13'
+  url: https://earthly.dev/blog/aws-lambda-api-proxy/
+  slug: aws-lambda-api-proxy
+  description: Learn how to run a full REST HTTP API in a single AWS Lambda using Golang. Discover the advantages of this approach and how to handle routing and r...
+  source: earthly-blog
+- type: newsletter
+  title: Why 80 columns?
+  date: '2022-06-01'
+  url: https://newsletter.corecursive.com/posts/why-80-columns
+  slug: why-80-columns
+  description: 'New Episode It''s June now, and I have a new This-Day-in-History episode out here: Why 80 columns? This episode is a peek into the world of mainframes and how idioms shape what we do as
+    programmers. It was fun for me to make, and it all started on Twitter. Let me know what you…'
+  source: corecursive-newsletter
+- type: article
+  title: Beating TimSort at Merging
+  date: '2022-06-01'
+  url: https://earthly.dev/blog/python-timsort-merge/
+  venue: Earthly Blog
+  format: Long-form
+  description: Companion piece to the ConFoo talk — where Python's Timsort merge logic can be beaten.
+  tags:
+  - python
+  - performance
+  source: curated
+- type: article
+  title: Grpc, AWS Lambdas and GoLang
+  date: '2022-05-17'
+  url: https://earthly.dev/blog/lambda-grpc/
+  slug: lambda-grpc
+  description: Learn how to combine GRPC, AWS Lambdas, and GoLang to create a powerful serverless architecture. Discover different approaches to proxying GRPC req...
+  source: earthly-blog
+- type: article
+  title: The Other Kind of Staff Software Engineer
+  date: '2022-05-12'
+  url: https://earthly.dev/blog/line-staff/
+  slug: line-staff
+  description: In this article, the author explores the differences between line and staff software engineers. They discuss the advantages and disadvantages of ea...
+  source: earthly-blog
+- type: article
+  title: AWS Lambda Golang With S3
+  date: '2022-05-04'
+  url: https://earthly.dev/blog/aws-lambda-golang/
+  slug: aws-lambda-golang
+  description: Learn how to build a Golang Lambda service in a container, hook it up to a REST API endpoint, and push and pull data from S3. This article covers t...
+  source: earthly-blog
+- type: newsletter
+  title: LISP in Space
+  date: '2022-05-02'
+  url: https://newsletter.corecursive.com/posts/lisp-in-space
+  slug: lisp-in-space
+  description: 'LISP in Space It''s May now, and I have a new episode out here. It''s the story of Ron Garret working on LISP at The Jet Propulsion Lab. He started there as part of his Comp Sci Ph.D. and
+    worked on prototypes for the first Mars Rover: Sojourner. I''m not sure what I want to share…'
+  source: corecursive-newsletter
+- type: article
+  title: Watch People Doing the Thing
+  date: '2022-04-12'
+  url: https://earthly.dev/blog/golang-streamers/
+  slug: golang-streamers
+  description: Learn how to absorb tacit knowledge and improve your programming skills by watching experienced developers code in real-time. Discover a list of po...
+  source: earthly-blog
+- type: article
+  title: Write For Us
+  date: '2022-04-05'
+  url: https://earthly.dev/blog/write-for-us/
+  slug: write-for-us
+  description: Are you passionate about software development? Write for Earthly and reach a larger audience while getting paid. With tens of thousands of monthly ...
+  source: earthly-blog
+- type: newsletter
+  title: April Fools' Is Cancelled
+  date: '2022-04-01'
+  url: https://newsletter.corecursive.com/posts/april-fools-is-cancelled
+  slug: april-fools-is-cancelled
+  description: 'It’s April now, and I have a new episode out here: https://corecursive.com/april-fools-is-cancelled/ Today being April Fools, I brought back frequent guests Don and Krystal to discuss the
+    banning of April Fools pranks from Hacker News in 2014, and from there, we explore the…'
+  source: corecursive-newsletter
+- type: article
+  title: What About A Plain Text Web
+  date: '2022-03-28'
+  url: https://earthly.dev/blog/text-mode/
+  slug: text-mode
+  description: Learn how to convert webpages into plain text documents using the Text-Mode feature on Earthly. This article explores the benefits of reading the w...
+  source: earthly-blog
+- type: article
+  title: Running Containers on AWS Lambda
+  date: '2022-03-24'
+  url: https://earthly.dev/blog/aws-lambda-docker/
+  slug: aws-lambda-docker
+  description: Learn how to run containers on AWS Lambda and leverage the scalability and cost-saving benefits of serverless computing. This article explores the ...
+  source: earthly-blog
+- type: article
+  title: Avoiding Common Protobuf&#39;s Pitfalls with Buf
+  date: '2022-03-18'
+  url: https://earthly.dev/blog/buf-protobuf/
+  slug: buf-protobuf
+  description: Learn how to avoid common pitfalls when working with Protobuf using Buf, a suite of tools that simplifies dealing with protocol buffers. Discover h...
+  source: earthly-blog
+- type: article
+  title: gRPC Gateway
+  date: '2022-03-17'
+  url: https://earthly.dev/blog/golang-grpc-gateway/
+  slug: golang-grpc-gateway
+  description: In this article, the author explores different ways to create a gRPC gateway that accepts HTTP requests and proxies them to a gRPC service. They co...
+  source: earthly-blog
+- type: article
+  title: One Way Smart Developers Make Bad Strategic Decisions
+  date: '2022-03-08'
+  url: https://earthly.dev/blog/see-state/
+  slug: see-state
+  description: Learn why top-down standardization efforts can often lead to failure and how understanding specific problems through collaboration and embedding wi...
+  source: earthly-blog
+- type: newsletter
+  title: Production Incidents and Product Management
+  date: '2022-03-02'
+  url: https://newsletter.corecursive.com/posts/production-incidents-and-product-management
+  slug: production-incidents-and-product-management
+  description: 'It’s March now, and I have a new episode out here (and in your podcast player): The Story Graph with Nadia Odunayo Here is some of the backstory. As I mentioned in the episode, my wife first
+    pointed me at The Story Graph. She is big into Bookstagram, which is the…'
+  source: corecursive-newsletter
+- type: article
+  title: Green vs. Brown Programming Languages
+  date: '2022-03-01'
+  url: https://earthly.dev/blog/brown-green-language/
+  venue: Earthly Blog
+  format: Data analysis
+  description: What makes programming languages popular — greenfield vs maintenance work.
+  tags:
+  - languages
+  - data
+  source: curated
+- type: article
+  title: Welcoming Josh Alletto as Senior Technical Content Engineer
+  date: '2022-02-24'
+  url: https://earthly.dev/blog/welcome-josh/
+  slug: welcome-josh
+  description: Meet Josh Alletto, Earthly&#39;s new Senior Technical Content Engineer. In this article, he shares his journey from literature major to coding enth...
+  source: earthly-blog
+- type: article
+  title: Golang gRPC Example
+  date: '2022-02-16'
+  url: https://earthly.dev/blog/golang-grpc-example/
+  slug: golang-grpc-example
+  description: In this article, the author explores how to build a gRPC client and server in Golang. They explain the advantages of using gRPC over REST, demonstr...
+  source: earthly-blog
+- type: article
+  title: Golang SQLite `database/sql`
+  date: '2022-02-03'
+  url: https://earthly.dev/blog/golang-sqlite/
+  slug: golang-sqlite
+  description: Learn how to use Golang&#39;s `database/sql` package to work with SQLite databases. This tutorial covers topics such as installing SQLite, creating...
+  source: earthly-blog
+- type: newsletter
+  title: Serenity OS
+  date: '2022-02-02'
+  url: https://newsletter.corecursive.com/posts/serenity-os
+  slug: serenity-os
+  description: 'It''s February now, and I have a new episode out here: https://corecursive.com/serenity-os-with-andreas-kling/ It''s a story about building an operating system, but so much more. My guest
+    was Andreas Kling. Andreas struggled with addiction and was very willing to share his…'
+  source: corecursive-newsletter
+- type: article
+  title: Command Line JSON Client In Golang
+  date: '2022-01-11'
+  url: https://earthly.dev/blog/golang-command-line/
+  slug: golang-command-line
+  description: Learn how to build a command-line JSON client in Golang to interact with a REST service for storing workout activities. The article covers topics s...
+  source: earthly-blog
+- type: newsletter
+  title: Hello 2022
+  date: '2022-01-02'
+  url: https://newsletter.corecursive.com/posts/hello-2022
+  slug: hello-2022
+  description: 'Hello newsletter subscriber, It''s 2022 now, and I have a new episode out here: https://corecursive.com/internet-is-duct-tape/ It''s a continuation of episode #68 "Quines". Don Mckay is
+    back, and so is Krystal from episode 52. The three of us discuss how the world is messy, and…'
+  source: corecursive-newsletter
+- type: article
+  title: Don't Feed the Thought Leaders
+  date: '2022-01-01'
+  url: https://earthly.dev/blog/thought-leaders/
+  venue: Earthly Blog
+  format: Essay
+  description: On non-contingent advice and why to ignore most of it.
+  reception: Hacker News front page
+  tags:
+  - opinion
+  - hn-front-page
+  source: curated
+- type: article
+  title: Building a Golang JSON HTTP Server
+  date: '2021-12-20'
+  url: https://earthly.dev/blog/golang-http/
+  slug: golang-http
+  description: Learn how to build a JSON HTTP server using Golang in this tutorial. Discover the basics of creating a Golang web service, handling HTTP requests, ...
+  source: earthly-blog
+- type: article
+  title: Printf Debugging and Srinivasa Ramanujan
+  date: '2021-12-14'
+  url: https://earthly.dev/blog/printf-debugging/
+  slug: printf-debugging
+  description: Learn why many experienced software engineers prefer printf debugging over using debuggers, and how this approach can deepen your understanding of ...
+  source: earthly-blog
+- type: newsletter
+  title: Cocoa Culture Episode and more
+  date: '2021-12-02'
+  url: https://newsletter.corecursive.com/posts/cocoa-culture-episode-and-more
+  slug: cocoa-culture-episode-and-more
+  description: 'It''s December now, and I have a new episode out here: https://corecursive.com/cocoa-culture-with-hansen-hsu/ This episode started with a question: Why are some groups so much better at
+    some things than others? It''s a big question with many possible answers, but one answer that…'
+  source: corecursive-newsletter
+- type: article
+  title: Property-Based Testing In Go
+  date: '2021-11-26'
+  url: https://earthly.dev/blog/property-based-testing/
+  slug: property-based-testing
+  description: Learn how to use property-based testing in Go to automatically generate unit tests and ensure the reliability of your code. Property-based testing ...
+  source: earthly-blog
+- type: article
+  title: Understanding Bash Variables
+  date: '2021-11-03'
+  url: https://earthly.dev/blog/bash-variables/
+  slug: bash-variables
+  description: Learn the basics of bash variables and how they work in the UNIX shell. Discover how to define and access local shell variables, work with arrays, ...
+  source: earthly-blog
+- type: newsletter
+  title: Leaving Debian
+  date: '2021-11-02'
+  url: https://newsletter.corecursive.com/posts/leaving-debian
+  slug: leaving-debian
+  description: 'It''s November now, and I have a new episode out here: https://corecursive.com/leaving-debian/ The episode is about Joey Hess and his time working on Debian. I''ve been a fan of Joey for
+    some time, and when he commented on a recent episode on hacker news, I reached out to him to…'
+  source: corecursive-newsletter
+- type: article
+  title: Bash String Manipulation
+  date: '2021-10-26'
+  url: https://earthly.dev/blog/bash-string/
+  slug: bash-string
+  description: Learn how to manipulate strings in bash with this informative tutorial. From concatenating strings to replacing parts of a string, you&#39;ll disco...
+  source: earthly-blog
+- type: article
+  title: 'Career Advice: Be Confidently Uncertain'
+  date: '2021-10-19'
+  url: https://earthly.dev/blog/confidently-uncertain/
+  slug: confidently-uncertain
+  description: Learn how to balance social confidence and epistemic confidence in order to succeed in your career. Find out why being confidently uncertain can be...
+  source: earthly-blog
+- type: newsletter
+  title: The Original Remote Developer
+  date: '2021-10-04'
+  url: https://newsletter.corecursive.com/posts/the-original-remote-developer
+  slug: the-original-remote-developer
+  description: 'It’s October now, and I have a new episode out : https://corecursive.com/066-sqlite-with-richard-hipp/ It’s the story of Paul Lutus, the Oregon hermit, who built software for the Apple II
+    from his log cabin in the woods by kerosene lantern and eventually became rich and famous.…'
+  source: corecursive-newsletter
+- type: article
+  title: Hacktoberfest 2021
+  date: '2021-09-27'
+  url: https://earthly.dev/blog/hacktoberfest-2021/
+  slug: hacktoberfest-2021
+  description: Join Earthly in celebrating Hacktoberfest 2021! Contribute to open-source projects, submit pull requests, and get a chance to win an Earthly sticke...
+  source: earthly-blog
+- type: newsletter
+  title: Computational Iceberg
+  date: '2021-09-02'
+  url: https://newsletter.corecursive.com/posts/computational-iceberg
+  slug: computational-iceberg
+  description: 'It’s September now, and I have a new episode out here: https://corecursive.com/quines-polyglot-code/ It''s a fun episode about various strange types of computation featuring my neighbour
+    Don McKay. Don''s explains varying computer errors and hacks and I cover quines and esoteric…'
+  source: corecursive-newsletter
+- type: article
+  title: INTERCAL, YAML, And Other Horrible Programming Languages
+  date: '2021-09-01'
+  url: https://earthly.dev/blog/intercal-yaml-and-other-horrible-programming-languages/
+  venue: Earthly Blog
+  format: Essay
+  description: Viral piece arguing YAML-as-DSL is the new INTERCAL.
+  long: 'The argument: if you have conditionals, loops, and references, you have
+
+    a programming language — and YAML is a hostile one. The piece used
+
+    INTERCAL as a foil to make the case that configuration formats are
+
+    becoming programming languages by accident, and badly. It hit the HN
+
+    front page, got picked up across the industry, and started an actual
+
+    conversation about why we keep choosing YAML for things that need real
+
+    logic. Pulumi''s existence is part of the answer.
+
+    '
+  reception: Hacker News front page · sparked industry debate
+  tags:
+  - yaml
+  - opinion
+  - hn-front-page
+  source: curated
+- type: article
+  title: How to Convert from JSON to CSV at The Command Line
+  date: '2021-08-12'
+  url: https://earthly.dev/blog/convert-to-from-json/
+  slug: convert-to-from-json
+  description: Learn how to convert JSON to CSV and vice versa at the command line using tools like `dasel`, `jq`, `jsonv`, and `csvtojson`. These handy command l...
+  source: earthly-blog
+- type: newsletter
+  title: Zig, Andrew Kelly and Self Funding
+  date: '2021-08-02'
+  url: https://newsletter.corecursive.com/posts/zig-andrew-kelly-and-self-funding
+  slug: zig-andrew-kelly-and-self-funding
+  description: 'Hi CoRecursive newsletter subscriber, The August episode is out and it''s really good. It''s an interview with Zig programming language creator Andrew Kelly: https://corecursive.com/067-zig-with-andrew-kelley/
+    Andrew is has been creating Zig, the programming language he always…'
+  source: corecursive-newsletter
+- type: article
+  title: An Introduction to JQ
+  date: '2021-08-01'
+  url: https://earthly.dev/blog/jq-select/
+  venue: Earthly Blog
+  format: Long-form tutorial
+  description: Demystifying JSON processing at the command line.
+  reception: Hacker News front page
+  tags:
+  - jq
+  - tutorial
+  - hn-front-page
+  source: curated
+- type: article
+  title: Idiots And Maniacs
+  date: '2021-07-30'
+  url: https://earthly.dev/blog/idiots-and-maniacs/
+  slug: idiots-and-maniacs
+  description: In this article, the author explores the concept of &quot;idiots and maniacs&quot; in software development, drawing parallels to driving in the sno...
+  source: earthly-blog
+- type: article
+  title: 6 Command Line Tools for Productive Programmers
+  date: '2021-07-23'
+  url: https://earthly.dev/blog/command-line-tools/
+  slug: command-line-tools
+  description: In this article, the author shares six command-line tools that can enhance productivity for programmers. These tools include `broot` for navigating...
+  source: earthly-blog
+- type: article
+  title: Install `matplotlib` In A Docker Container
+  date: '2021-07-16'
+  url: https://earthly.dev/blog/python-matplotlib-docker/
+  slug: python-matplotlib-docker
+  description: Learn how to install `matplotlib` in a Docker container and quickly generate graphs and visualizations. Discover the differences between installing...
+  source: earthly-blog
+- type: article
+  title: Python Concatenate Lists
+  date: '2021-07-06'
+  url: https://earthly.dev/blog/python-concatenate-lists/
+  slug: python-concatenate-lists
+  description: There are several ways to join lists in Python. In almost all situations using list1 + list2 is the way you want to concatenate lists.
+  source: earthly-blog
+- type: newsletter
+  title: SQLite and Video Cameras
+  date: '2021-07-02'
+  url: https://newsletter.corecursive.com/posts/sqlite-and-video-cameras
+  slug: sqlite-and-video-cameras
+  description: 'Hi Everyone, It''s July now, and I have a new episode out with Richard Hipp about SQLite. You can find it here: https://corecursive.com/066-sqlite-with-richard-hipp/ SQLite is public domain
+    and has a Christian blessing in place of a license agreement, so I went into the interview…'
+  source: corecursive-newsletter
+- type: article
+  title: SQL Errors and Video Cameras
+  date: '2021-06-29'
+  url: https://earthly.dev/blog/video-camera-on/
+  slug: video-camera-on
+  description: In this article, the author shares a personal experience of encountering a SQL error and how a non-verbal cue from a teammate helped them solve the...
+  source: earthly-blog
+- type: article
+  title: Linting Markdown And Documentation
+  date: '2021-06-25'
+  url: https://earthly.dev/blog/markdown-lint/
+  slug: markdown-lint
+  description: Learn how to ensure the quality of your markdown files and documentation with linting tools. Discover various tools like markdownlint, mdspell, ale...
+  source: earthly-blog
+- type: article
+  title: Git Branching Strategies and The Greek Revival
+  date: '2021-06-16'
+  url: https://earthly.dev/blog/git-branching/
+  slug: git-branching
+  description: Learn about the evolution of git branching strategies and how they have changed over time. Follow the story of Ashley, a software developer, as she...
+  source: earthly-blog
+- type: article
+  title: Incident Management Metrics and Key Performance Indicators
+  date: '2021-06-11'
+  url: https://earthly.dev/blog/incident-management-metrics/
+  slug: incident-management-metrics
+  description: Learn about the essential metrics and key performance indicators (KPIs) for incident management in software development. Discover how Mean Time Bet...
+  source: earthly-blog
+- type: article
+  title: Deployment Strategies
+  date: '2021-06-10'
+  url: https://earthly.dev/blog/deployment-strategies/
+  slug: deployment-strategies
+  description: This article explores different deployment strategies, including the recreate deployment strategy, rolling update deployment strategy, blue-green d...
+  source: earthly-blog
+- type: article
+  title: AWK with CSV Files
+  date: '2021-06-01'
+  url: https://earthly.dev/blog/awk-csv/
+  venue: Earthly Blog
+  format: Tutorial
+  description: Follow-up tutorial on processing CSV files with AWK.
+  tags:
+  - awk
+  - tutorial
+  source: curated
+- type: article
+  title: Why is JRuby Slow?
+  date: '2021-05-26'
+  url: https://earthly.dev/blog/jruby/
+  slug: jruby
+  description: In this article, the author explores why JRuby, an alternative Ruby interpreter that runs on the Java Virtual Machine (JVM), is slower than other R...
+  source: earthly-blog
+- type: article
+  title: Compiling Containers - Dockerfiles, LLVM, and BuildKit
+  date: '2021-03-17'
+  url: https://earthly.dev/blog/compiling-containers-dockerfiles-llvm-and-buildkit/
+  slug: compiling-containers-dockerfiles-llvm-and-buildkit
+  description: Learn how containers are compiled using Dockerfiles, LLVM, and BuildKit in this tutorial. Explore the phases involved in creating a container image...
+  source: earthly-blog
+- type: article
+  title: On YAML Discussions
+  date: '2021-03-12'
+  url: https://earthly.dev/blog/on-yaml-discussions/
+  slug: on-yaml-discussions
+  description: Learn about the pitfalls and discussions surrounding the use of YAML as a programming language, including the challenges of config traps, alternati...
+  source: earthly-blog
+- type: article
+  title: Understanding AWK
+  date: '2021-03-10'
+  url: https://earthly.dev/blog/awk-examples/
+  venue: Earthly Blog
+  format: Long-form tutorial
+  description: A comprehensive guide to AWK that became a go-to reference.
+  long: 'AWK has a reputation as a fossil — a thing from the 70s that lurks in
+
+    `.bashrc` files. This piece takes it seriously as a programming language
+
+    and walks through enough of the model — fields, records, patterns,
+
+    associative arrays — that the reader can actually reach for it next time
+
+    they''re tempted by Python for a one-liner. Ended up as one of the most-
+
+    shared AWK references on the internet.
+
+    '
+  reception: Hacker News front page
+  tags:
+  - awk
+  - tutorial
+  - hn-front-page
+  source: curated
+- type: article
+  title: What is Buildkit?
+  date: '2021-02-19'
+  url: https://earthly.dev/blog/what-is-buildkit-and-what-can-i-do-with-it/
+  slug: what-is-buildkit-and-what-can-i-do-with-it
+  description: Learn how to use BuildKit, an open-source project that turns Dockerfiles into Docker images. Discover its history, how to install it, and how to bu...
+  source: earthly-blog
+- type: article
+  title: How to Man in the Middle HTTPS Using mitmproxy
+  date: '2021-02-11'
+  url: https://earthly.dev/blog/mitmproxy/
+  slug: mitmproxy
+  description: Learn how to use mitmproxy, a command-line tool that acts as an HTTP and HTTPS proxy, to capture and modify network traffic. This tutorial provides...
+  source: earthly-blog
+- type: article
+  title: 5 Blogs for Scala&#39;s Birthday
+  date: '2021-01-20'
+  url: https://earthly.dev/blog/top-5-scala-blogs/
+  slug: top-5-scala-blogs
+  description: Looking for some interesting Scala blogs to celebrate Scala&#39;s birthday? Check out this list of active Scala blogs that cover a range of topics,...
+  source: earthly-blog
+- type: article
+  title: Top 3 Resources For Learning GoLang
+  date: '2021-01-15'
+  url: https://earthly.dev/blog/top-3-resources-to-learn-golang-in-2021/
+  slug: top-3-resources-to-learn-golang-in-2021
+  description: Looking to learn GoLang? Check out this article for the top 3 resources recommended by an experienced developer. From interactive tours to in-depth...
+  source: earthly-blog
+- type: article
+  title: Migrating Your Open Source Builds Off Of Travis CI
+  date: '2021-01-07'
+  url: https://earthly.dev/blog/migrating-from-travis/
+  slug: migrating-from-travis
+  description: Learn about the recent migration of open-source projects off of Travis CI and discover alternative options for hosting your builds, such as Circle ...
+  source: earthly-blog
+- type: article
+  title: Unit Testing vs Integration Testing
+  date: '2020-12-04'
+  url: https://earthly.dev/blog/unit-vs-integration/
+  slug: unit-vs-integration
+  description: Learn the differences between unit testing and integration testing and when to use each approach. Discover how unit tests focus on small, isolated ...
+  source: earthly-blog
+- type: article
+  title: Can We Build Better?
+  date: '2020-09-10'
+  url: https://earthly.dev/blog/better-builds/
+  slug: better-builds
+  description: Learn how to solve the problem of reproducible builds with Earthly, an open-source tool that encapsulates your build process in a Docker-like synta...
+  source: earthly-blog
+- type: article
+  title: A Peek Into Docker Images
+  date: '2020-01-01'
+  url: https://medium.com/tenable-techblog/a-peek-into-docker-images-b4d6b2362eb
+  venue: Tenable Tech Blog
+  format: Tutorial
+  description: How Docker images are actually structured — layers and metadata.
+  tags:
+  - docker
+  - containers
+  source: curated

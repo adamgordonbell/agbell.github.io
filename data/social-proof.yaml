@@ -1,0 +1,17 @@
+# Social proof — testimonials and press features.
+# Not timeline-based; rendered on the Bio page in two groups (Featured In / What people say).
+#
+# Schema:
+#   - kind: press
+#     publication: BBC Tech Tent
+#     url: https://...
+#     pull_quote: "..."            # optional
+#     date: 2024-06-12             # optional, not used for sorting
+#
+#   - kind: testimonial
+#     quote: "..."
+#     author: Jane Doe
+#     role: Staff Engineer, Stripe
+#     source_url: https://...      # optional
+
+items: []

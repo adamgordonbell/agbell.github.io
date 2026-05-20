@@ -1,0 +1,144 @@
+# Talks — auto-managed by sync scripts + hand edits.
+# Sync is ADDITIVE: scripts only add items whose slug/url isn't already present.
+# Hand-edit titles, descriptions, types, etc. directly — they persist.
+# Schema: type, role?, title, date, url, slug?, description?, venue?, ...
+
+items:
+- type: talk
+  title: 'Demystifying the Magic: Let''s Build an Infrastructure-as-Code Tool from Scratch'
+  date: '2026-09-10'
+  url: https://www.kcdc.info/
+  venue: KCDC
+  location: Kansas City, MO
+  format: 50 min · Breakout
+  description: Build a minimal IaC tool from scratch to demystify how Pulumi / Terraform / CDK actually work.
+  upcoming: true
+  tags:
+  - iac
+  - infrastructure
+  source: curated
+- type: talk
+  title: 'Building Action-Taking AI Agents: Reliability Lessons from Real Systems'
+  date: '2026-06-03'
+  url: https://mlconference.ai/
+  venue: MLCon San Diego
+  location: San Diego, CA
+  format: 45 min
+  description: Building AI agents that take real actions, and the reliability patterns that keep them safe.
+  upcoming: true
+  tags:
+  - ai
+  - agents
+  - ml
+  source: curated
+- type: talk
+  title: When AI Agents Meet Production Infrastructure
+  date: '2026-03-07'
+  url: https://www.socallinuxexpo.org/scale/23x/presentations/when-ai-agents-meet-production-infrastructure
+  venue: SCaLE 23x
+  location: Pasadena, CA
+  format: 45 min
+  description: Failure modes when AI agents touch real infrastructure — and the reliability patterns that keep them safe.
+  long: 'The agent industry has spent two years building autonomy and one year
+
+    patching the surprises that came with it. This talk takes the audience
+
+    through three production-grade failure modes — runaway tool loops,
+
+    blast-radius miscalibration, and trust-boundary drift — and walks through
+
+    the structural fixes (policy-as-code, IaC review gates, tighter scopes)
+
+    that actually hold up. Built from real systems, not demos.
+
+    '
+  reception: 800+ attendees · Open Source AI track
+  tags:
+  - ai
+  - agents
+  - infrastructure
+  source: curated
+- type: talk
+  title: I Built an AI Running Coach
+  date: '2026-03-07'
+  url: https://www.socallinuxexpo.org/scale/23x/presentations/i-built-ai-running-coach
+  venue: SCaLE 23x
+  location: Pasadena, CA
+  format: 45 min
+  description: A serverless AI architecture, built around a personal project — an AI coach that remembers your training.
+  reception: FOSS@Home track
+  tags:
+  - ai
+  - serverless
+  - python
+  source: curated
+- type: talk
+  title: When AI Agents Meet Production Infrastructure
+  date: '2025-10-01'
+  venue: MCP Academy
+  location: Online
+  format: Online
+  description: Online edition of the SCaLE talk on AI agent safety.
+  tags:
+  - ai
+  - agents
+  source: curated
+- type: workshop
+  title: Pulumi — Interview / Demo
+  date: '2025-01-01'
+  url: https://www.youtube.com/watch?v=9KMIpOofv0s
+  venue: Pulumi
+  format: Demo / interview
+  description: Recorded Pulumi demo / interview.
+  video_url: https://www.youtube.com/watch?v=9KMIpOofv0s
+  tags:
+  - pulumi
+  - demo
+  source: curated
+- type: workshop
+  title: Pulumi — Recorded Workshop
+  date: '2025-01-01'
+  url: https://www.youtube.com/watch?v=ttUVmRPAzCo
+  venue: Pulumi
+  format: Workshop
+  description: Recorded Pulumi workshop covering IaC fundamentals.
+  video_url: https://www.youtube.com/watch?v=ttUVmRPAzCo
+  tags:
+  - pulumi
+  - workshop
+  source: curated
+- type: talk
+  title: Build Your Own Container Runtime with chroot
+  date: '2023-03-09'
+  url: https://www.socallinuxexpo.org/scale/20x
+  venue: SCaLE 20x
+  location: Pasadena, CA
+  format: 45 min
+  description: Walking through how Linux namespaces and cgroups enable containerization, by building a runtime from scratch.
+  long: 'Containers feel magical until you build one. This talk strips the magic
+
+    off the magic — `chroot`, `unshare`, `cgroups`, layered filesystems — and
+
+    reconstructs a tiny runtime live, so the audience leaves with a mental
+
+    model of what Docker is actually doing under the hood.
+
+    '
+  video_url: https://www.youtube.com/watch?v=89ESCBzM-3Q
+  tags:
+  - containers
+  - linux
+  source: curated
+- type: talk
+  title: Beating Timsort
+  date: '2023-02-22'
+  url: https://confoo.ca/en/2023/session/beating-timsort
+  venue: ConFoo
+  location: Montreal, QC
+  format: 45 min
+  description: Python's Timsort merge logic — and where it can be beaten.
+  reception: 1,000+ attendees
+  tags:
+  - python
+  - performance
+  source: curated
