@@ -1,0 +1,8 @@
+# Manually curated PulumiTV video IDs where Adam hosts / presents / is featured
+# but isn't named in title or description (so the auto-filter would miss).
+# Get the ID from the YouTube URL: https://www.youtube.com/watch?v=<ID>
+# One ID per line. Lines starting with # are ignored.
+
+# Adam workshop "Infrastructure as Code on AWS with TypeScript" (2026-05-05)
+# Description says "Adam walks through" — confirmed presenter
+Dn6WzP-6OXQ

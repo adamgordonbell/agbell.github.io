@@ -1,0 +1,1075 @@
+{
+  "items": [
+    {
+      "title": "The Pre-Training Wall and the Treadmill After It",
+      "url": "https://corecursive.com/the-pre-training-wall-and-the-treadmill-after-it/",
+      "date": "2026-05-09",
+      "slug": "the-pre-training-wall-and-the-treadmill-after-it",
+      "description": "I've been confusing Don with frontier-lab links late at night for months. Ilya Sutskever told a NeurIPS audience that pre-training as we know it would unquestionably end. There's only one internet, and the data isn't growing. The frontier labs call this the pre-training wall. A leaked Google memo from 2023 argued they had no moat. R1 is on GitHub. Llama is on Hugging Face. OpenAI's secondary-market valuation has climbed past $850 billion. Don kept asking what, exactly, that $850 billion was buying. So he came over and we made an episode about it.",
+      "image": "https://corecursive.com/images/121/wide.png",
+      "episode_number": 121,
+      "duration": "56:10"
+    },
+    {
+      "title": "The Aging Programmer",
+      "url": "https://corecursive.com/the-aging-programmer/",
+      "date": "2026-04-02",
+      "slug": "the-aging-programmer",
+      "description": "Kate Gregory has been writing C++ for over forty years. Books, keynotes, a consulting firm she built from the ground up. At sixty-three, she's one of the most experienced programmers alive. She surveyed hundreds of software engineers about getting older. What scares you? What's changed? What have you lost? The things people feared most — memory, stamina, keeping up — weren't the real threats. The stuff that was actually breaking down was mostly fixable. A bad knee wasn't aging, it was a torn cartilage. Wrist pain disappeared when she changed how she slept. But buried in the research was something harder to fix. The single factor that predicted whether you'd age well or badly had nothing to do with your body at all. The opponent isn't aging. The opponent is the story about aging.",
+      "image": "https://corecursive.com/images/120/wide.png",
+      "episode_number": 120,
+      "duration": "41:52"
+    },
+    {
+      "title": "From Hacker News to TikTok",
+      "url": "https://corecursive.com/from-hacker-news-to-tiktok/",
+      "date": "2026-03-02",
+      "slug": "from-hacker-news-to-tiktok",
+      "description": "Corey told me about his AI cat reel problem. He found these AI-generated cat videos hilarious. Who makes these? He kept sending them to his wife. Then he tried to stop watching and he couldn’t. So I went down the rabbit hole of how social media algorithms actually work. It starts simple. Upvote, downvote, sort by time. But by 2017 Facebook has a metric that quietly reshapes what two billion people see. Then a leaked playbook lands, and a CEO takes the stand in Los Angeles. Today is an investigation into what happens when the algorithm knows you better than you know yourself.",
+      "image": "https://corecursive.com/images/119/wide.png"
+    },
+    {
+      "title": "The Universal Paperclip Clicker",
+      "url": "https://corecursive.com/paperclip-clicker/",
+      "date": "2026-02-04",
+      "slug": "paperclip-clicker",
+      "description": "Multiple VS Code windows. \"Agent stopping\" in a robot voice. A laptop stand on the treadmill so Claude can keep working while I run. The Big Rich sitting unread by the fireplace while I check if the migration's done. Somewhere along the way, I started reorganizing my life around keeping the machine spinning. Claude Code had become my universal paperclip clicker. This is me trying to figure out the difference between real work and just feeding it tickets.",
+      "image": "https://corecursive.com/images/118b/wide.png",
+      "duration": "11:05"
+    },
+    {
+      "title": "Inside Early Google",
+      "url": "https://corecursive.com/inside-early-google/",
+      "date": "2026-01-02",
+      "slug": "inside-early-google",
+      "description": "Ron Garret left JPL for a 100-person startup he’d just discovered on Usenet. Four a.m. alarms. Burbank to San Jose on Southwest. A rented room in Susan Wojcicki’s house. He expected the search engine engineering and instead he got asked to build ad serving. In Java and with JSPs and no syntax highlighting and no delimiter balancing. Launch week was a stampede and then a window on his screen fills with declines. Numbers he can’t explain. Some of them look… real. How do you even name what’s happening? This episode is about creating Google AdWords. Building the machine that prints money, while trying not to get crushed in the gears.",
+      "image": "https://corecursive.com/images/118/wide.png",
+      "episode_number": 118,
+      "duration": "37:40"
+    },
+    {
+      "title": "The Bug He Couldn't Name",
+      "url": "https://corecursive.com/debugging-yourself-with-burke-holland/",
+      "date": "2025-12-02",
+      "slug": "debugging-yourself-with-burke-holland",
+      "description": "Imagine facing a problem you can’t name, something that feels bigger than any bug you’ve ever had to fix. How do you debug your own mind when you don’t even know what’s wrong? Burke Holland’s story starts with a college party and a bad trip that leaves a deeper mark than he expects. Sleep gets harder. Fear creeps in. His life starts shrinking. School falls apart, friends drift away, and he ends up back at home trying to understand what’s happening to him. He looks for structure in the Coast Guard. Later he discovers computers and realizes he might have found the thing he’s meant to do. But the shadow that followed him out of that party doesn’t care about career paths. It shows up during college, during work, during marriage, during parenthood. Sometimes it’s quiet, sometimes it knocks him completely flat.",
+      "image": "https://corecursive.com/images/117/wide.png"
+    },
+    {
+      "title": "Godbolt's Rule",
+      "url": "https://corecursive.com/godbolt-rule-matt-godbolt/",
+      "date": "2025-11-04",
+      "slug": "godbolt-rule-matt-godbolt",
+      "description": "What do you do when your code breaks and the only fix is to dig into the runtime below? Matt Godbolt lives for that. Tile-based renderers, color-coded scanlines, zero-copy NICs—each story is a clue that leads past the abstraction to the real machine. He shares the rule that guides him: master your layer, learn the one below, and know the outline of the layer under that. Matt Godbolt's journey proves the real breakthroughs are hidden behind the abstractions where you are comfortable and familiar.",
+      "image": "https://corecursive.com/images/116/wide.png",
+      "episode_number": 116,
+      "duration": "44:13"
+    },
+    {
+      "title": "Risk Rolls Downhill",
+      "url": "https://corecursive.com/horizon-scandal-with-scott-darlington/",
+      "date": "2025-10-02",
+      "slug": "horizon-scandal-with-scott-darlington",
+      "description": "What if a software bug drained your savings, ruined your reputation, and nobody believed it wasn’t your fault? Scott Darlington took over a village post office, hoping to give his family a steady life. But the software system kept showing cash shortfalls he couldn’t explain. Each time, the Post Office told him the numbers were right and made him pay the difference out of his own pocket. Eventually it became too much and actions Scott took to protect himself lead to his arrest and public shaming. How do you build trust in systems when the people behind them refuse to admit they’re broken?",
+      "image": "https://corecursive.com/images/115/wide.png",
+      "episode_number": 115,
+      "duration": "54:58"
+    },
+    {
+      "title": "Podcast Update",
+      "url": "https://corecursive.com/podcast-update-september-2025/",
+      "date": "2025-09-02",
+      "slug": "podcast-update-september-2025",
+      "description": "A quick update from Adam about the podcast's current state, consistency challenges, and what's coming next.",
+      "image": "https://corecursive.com/images/114b/wide.png",
+      "duration": "08:52"
+    },
+    {
+      "title": "Coding in the Red-Queen Era",
+      "url": "https://corecursive.com/red-queen-coding/",
+      "date": "2025-08-06",
+      "slug": "red-queen-coding",
+      "description": "What do we risk when we let AI do the heavy lifting in our coding? Are we giving up the thinking that makes us good at what we do? And as expectations keep rising to match productivy gains, is all this speed really helping, or just making us busier? Today, let's look at the tradeoffs of coding with AI and why the hardest part might be deciding what to hold onto, and what to let go.",
+      "image": "https://corecursive.com/images/114/wide.png",
+      "episode_number": 114,
+      "duration": "42:24"
+    },
+    {
+      "title": "When AI Codes, What’s Left for me?",
+      "url": "https://corecursive.com/coding-agents/",
+      "date": "2025-07-02",
+      "slug": "coding-agents",
+      "description": "I’ve always found meaning, and a lot of strength, in building things. Now, with AI coding agents changing the way we work, it’s easy to feel threatened, like something essential might get taken away. But honestly, that creative urge can’t be replaced by any tool. In this episode, I talk about what it’s like when your identity is tied to making things, and the tools suddenly change.",
+      "image": "https://corecursive.com/images/113/wide.png",
+      "duration": "39:51"
+    },
+    {
+      "title": "Coding Through Chaos",
+      "url": "https://corecursive.com/coding-through-chaos-with-john-walker/",
+      "date": "2025-06-03",
+      "slug": "coding-through-chaos-with-john-walker",
+      "description": "What if your search for connection took you somewhere you never meant to go—almost costing you everything? John Walker grew up building computers and exploring early internet forums, always looking for a place to fit in. As a teenager, he hacked his school network and spent hours on IRC, but loneliness crept in. Drugs became a fun exploration and a social experiment. But soon, addiction pulled him into homelessness and jail. Even at his lowest, John turned to online communities. He ran IRC bots to keep recovery chatrooms safe from trolls and built scrapers to solve tough data problems at work. These technical challenges gave him a reason to keep going, even when face-to-face life felt impossible. But the real turning point came when John stopped trying to hide his differences. How do you rebuild when you feel like an outsider?",
+      "image": "https://corecursive.com/images/112/wide.png",
+      "episode_number": 112,
+      "duration": "48:06"
+    },
+    {
+      "title": "The Power of Context: Reimagining Learning",
+      "url": "https://corecursive.com/the-power-of-context/",
+      "date": "2025-05-02",
+      "slug": "the-power-of-context",
+      "description": "Have you ever found yourself in a situation where learning felt like an uphill battle? Like no matter how hard you tried, the pieces just wouldn't fall into place? Steve Krouse's story shows the power of the right learning environment. As a child, Steve felt he wasn't good at math. But everything changed with an afterschool program called IMACS. Initially skeptical, he soon embraced its creative approach, which encouraged self-paced learning. At IMACS, Steve learned to think on paper, grasping math concepts through programming languages like Logo and Scheme. This confidence moved him from remedial to advanced math, sparking a love for programming and education. Frustrated with traditional schooling, Steve dropped out of college to create engaging learning experiences for kids. His efforts led to tools like woof.js and the founding of Val Town, making programming accessible and collaborative. Join us as we explore Steve's journey, revealing how innovative educational environments can unlock potential and transform identities.",
+      "image": "https://corecursive.com/images/111/wide.png",
+      "episode_number": 111,
+      "duration": "45:06"
+    },
+    {
+      "title": "briffa_sep98_e.pro",
+      "url": "https://corecursive.com/briffa-sep98-e/",
+      "date": "2025-04-02",
+      "slug": "briffa-sep98-e",
+      "description": "Can a single line of code change the way we see science, policy, and trust? In this episode we explore the \"Climategate\" scandal that erupted from leaked emails and code snippets, fueling doubts about climate science. What starts as an investigation into accusations of fraud leads to an unexpected journey through the messy reality of data science, legacy code struggles, and the complex pressures scientists face every day. Along the way, we uncover stories of hidden errors and misunderstood phrases taken out of context, revealing a world where science, software engineering, and human complexity intertwine. This story doesn't just challenge assumptions—it shows the power and importance of transparency in science and technology. Join Adam as he digs deep into Climategate, uncovering what really happened when code got thrust into the spotlight, and what it means for trust, truth, and open science.",
+      "image": "https://corecursive.com/images/110/wide.png",
+      "episode_number": 110,
+      "duration": "57:47"
+    },
+    {
+      "title": "HATETRIS",
+      "url": "https://corecursive.com/hatetris-with-david-and-felipe/",
+      "date": "2025-03-03",
+      "slug": "hatetris-with-david-and-felipe",
+      "description": "What if a simple game became a gateway to computational breakthroughs? David Freiberg and Felipe set out on a journey to conquer Hatetris, a notoriously difficult JavaScript game. Their interest ignited when a new world record was set, showing that surpassing the game's high score was possible. Their journey was full of challenges, from building an emulator in different programming languages to tackling complex algorithms. They pushed the boundaries of what's possible but the story didn't end there. Collaborating with fellow enthusiasts, including a Japanese Tetris expert, led to further breakthroughs. By sharing insights and building on each other's work, they set a records after records. Their story highlights the power of curiosity, collaboration, and the joy of discovery.",
+      "image": "https://corecursive.com/images/109/wide.png"
+    },
+    {
+      "title": "One Million Checkboxes",
+      "url": "https://corecursive.com/one-million-checkboxes-with-nolen-royalty/",
+      "date": "2025-02-03",
+      "slug": "one-million-checkboxes-with-nolen-royalty",
+      "description": "What if internet trolls could become your greatest collaborators? Nolen Royalty discovered this unexpected truth when his simple checkbox game went viral. It began with a school email prank that crashed servers but sparked a philosophy: creative constraints breed innovation. From \"Flappy Dird\" to \"One Million Checkboxes,\" Nolen built games that turned limitations into playgrounds. But when his checkbox project became a battleground of organized chaos, Nolen faced a choice: suppress the chaos or lean into it. Discover how systematic constraints can channel creative anarchy - and why one developer now believes the best user experiences emerge when you code for controlled chaos of strangers meeting on the internet.",
+      "image": "https://corecursive.com/images/108/wide.png",
+      "episode_number": 108,
+      "duration": "52:05"
+    },
+    {
+      "title": "Leaving Stripe",
+      "url": "https://corecursive.com/leaving-stripe-with-jon-de-le-motte/",
+      "date": "2025-01-02",
+      "slug": "leaving-stripe-with-jon-de-le-motte",
+      "description": "What if the only way to improve your life was leave your dream job behind? Jon de la Motte failed his first Stripe interview, but he didn't give up. It was his dream job, a company that connected his father's work in finance with his software ambitions. At Stripe, Jon faced challenges. He joined a risky JavaScript infrastructure team and struggled to find his footing. Eventually he found his way, built a great team and then it all started to fall apart. Discover how Jon's journey reshaped his life and what it means to balance personal and professional priorities.",
+      "image": "https://corecursive.com/images/107/wide.png",
+      "episode_number": 107,
+      "duration": "51:45"
+    },
+    {
+      "title": "Inside Shopify's Layoffs",
+      "url": "https://corecursive.com/shopify-layoffs-with-allison-malloy/",
+      "date": "2024-12-02",
+      "slug": "shopify-layoffs-with-allison-malloy",
+      "description": "What if you had to break life-changing news to your team—could you handle the weight of their futures? Allison's journey from software engineer to compassionate leader at Shopify is filled with challenges and growth. It all started when her mentor was suddenly laid off, leaving her with uncertainty and guilt. This turning point taught her the importance of adaptability in the tech industry's ups and downs. When Allison faced her own layoff, she found the strength to move on to new roles, including a position at Shopify. There, she had to announce layoffs to her team, learning to lead with empathy and prioritize their well-being. Her story highlights the power of empathy and resilience in leadership. She shares how to end employment on good terms and create a supportive environment for those affected. While layoffs are tough, they can also be a place to show strength.",
+      "image": "https://corecursive.com/images/106/wide.png"
+    },
+    {
+      "title": "ReiserFS",
+      "url": "https://corecursive.com/reiserfs/",
+      "date": "2024-11-04",
+      "slug": "reiserfs",
+      "description": "Have you ever known someone whose technical brilliance was overshadowed by personal failings? This is the story of Hans Reiser, a software developer driven to create a superior Linux filesystem, but whose difficult personality got in the way. Then came the disappearance of his wife, Nina, in 2006. The investigation pointed to Reiser, ending with a murder conviction that shocked the tech world. Reiser's story is a reminder of how technical skills and personal integrity need to go hand in hand. From prison, he reflects on his mistakes, realizing the need for empathy and collaboration. His legacy, once about innovation, now serves as a cautionary tale.",
+      "image": "https://corecursive.com/images/105/wide.png"
+    },
+    {
+      "title": "From Everest to Startups",
+      "url": "https://corecursive.com/from-everest-to-startups-with-yoshio-goto/",
+      "date": "2024-10-02",
+      "slug": "from-everest-to-startups-with-yoshio-goto",
+      "description": "How do you know what matters? What goals are worth pursing? What if training to climb Everest left you certain you were on the wrong career path? . Yoshio's journey starts with disappointment in his academic path. Unsatisfied and aimless, he decides to climb Mount Everest, inspired by a childhood experience. This marks the beginning of a life-changing adventure. Join us to hear Yoshio's story of transformation, from Everest to personal loss, and how he found his true calling in coding, communication and 'being one of the wizards who can create things with their mind'.",
+      "image": "https://corecursive.com/images/104/wide.png",
+      "episode_number": 104,
+      "duration": "50:21"
+    },
+    {
+      "title": "From Code to Capital",
+      "url": "https://corecursive.com/vc-engineer-with-tim-chen/",
+      "date": "2024-09-02",
+      "slug": "vc-engineer-with-tim-chen",
+      "description": "What if your corporate job left you feeling empty, and you decided to leap into venture capital? Tim Chen, a software engineer, was disillusioned with corporate life at Microsoft. The 2008 market crash and layoffs deepened his dissatisfaction. Seeking more impactful work, Tim joined startups and contributed to open-source projects, like Kafka and Docker. Then after his own start-up, Tim found a niche bridging the gap between technical founders and venture capital. But could get into Venture Capital himself? Join me and Tim to hear his journey from a disillusioned software engineer to a successful venture capitalist, exploring the highs and lows of his unusual career move.",
+      "image": "https://corecursive.com/images/103/wide.png",
+      "episode_number": 103,
+      "duration": "46:48"
+    },
+    {
+      "title": "Navigating Corporate Giants",
+      "url": "https://corecursive.com/building-powershell-with-jeffrey-snover/",
+      "date": "2024-07-04",
+      "slug": "building-powershell-with-jeffrey-snover",
+      "description": "What if you had to fight against your company's culture to bring a revolutionary tool to life? Meet Jeffrey Snover, the Microsoft architect behind PowerShell, a command tool that transformed Windows system administration. Initially met with skepticism, Snover's idea faced resistance from a company that favored graphical interfaces. . Snover's journey began with a simple mission: To make Windows as command-line managable as UNIX systems. Despite facing pushback and navigating through company restructures, his persistence paid off. . This episode explores how Snover's relentless drive and clear vision overcame numerous obstacles, leading to a tool that is now fundamental in modern enterprise environments. Listen to how one person's determination can challenge the status quo.",
+      "image": "https://corecursive.com/images/102/wide.png",
+      "episode_number": 102,
+      "duration": "49:19"
+    },
+    {
+      "title": "From Burnout to Breakthrough",
+      "url": "https://corecursive.com/hedy-with-felienne-hermans/",
+      "date": "2024-06-04",
+      "slug": "hedy-with-felienne-hermans",
+      "description": "Can you imagine risking your career to making coding easier to learn? . Meet Felienne Hermans, a professor who did just that by stepping beyond academia to redefine coding education. Disillusioned by her research's limited impact, Felienne discovered a new calling in teaching coding to underserved students. Her journey led to the creation of Hedy, a programming language designed to dismantle language and learning barriers in coding. Confronting skepticism from her peers, Felienne's dedication to accessible coding challenged traditional academic priorities. Felienne's story is a powerful reminder of the impact one person can have by following their passion against the odds.",
+      "image": "https://corecursive.com/images/101/wide.png",
+      "episode_number": 101,
+      "duration": "52:26"
+    },
+    {
+      "title": "Coding Machines",
+      "url": "https://corecursive.com/coding-machines-with-don-and-krystal/",
+      "date": "2024-05-03",
+      "slug": "coding-machines-with-don-and-krystal",
+      "description": "What if the tools you trust were actually betraying you? Join us for a riveting story where a team of software developers discovers that their compiler is compromised. What starts as suspicion of a simple bug quickly escalates into the alarming realization. In this 100th episode celebration past show regulars Don and Krystal join Adam lend their voice to this work of fiction about the limits of trust in computing from Lawrence Kesteloot. Join us in as we peel back the layers of trust in the software we rely on daily and celebrate our 100th episode.",
+      "image": "https://corecursive.com/images/100/wide.png",
+      "episode_number": 100,
+      "duration": "48:12"
+    },
+    {
+      "title": "Code, Kickflips and Crunch Time",
+      "url": "https://corecursive.com/game-programming-with-mick-west/",
+      "date": "2024-04-02",
+      "slug": "game-programming-with-mick-west",
+      "description": "Meet Mick West, whose career began in an unusual office setup — sandwiched between a kebab shop and a phone sex hotline. From there he worked all over Manchester, making computer games for Tiertex and Ocean. Career opportunies brought him to California and to his own game dev company, Neversoft. At Neversoft, navigating team growth and tight deadlines, Mick played a key role in creating \"Tony Hawk's Pro Skater.\" This wasn't just another game; it was a huge hit and secured Mick's legacy in the gaming world. Join us as we explore Mick West's journey from a quirky start to the heights of video game innovation and beyond. Discover the resilience, adaptability, and teamwork that fueled his success and how he continues to explore new horizons. How did he tackle the technical challenges that came his way, and what can we learn from his relentless pursuit of the next big thing?",
+      "image": "https://corecursive.com/images/099/wide.png",
+      "episode_number": 99,
+      "duration": "57:09"
+    },
+    {
+      "title": "Leaving LinkedIn",
+      "url": "https://corecursive.com/leaving-linkedin-with-chris-krycho/",
+      "date": "2024-03-04",
+      "slug": "leaving-linkedin-with-chris-krycho",
+      "description": "What if your dedication to doing things right clashed with your company's fast pace? Chris Krycho faced this very question at LinkedIn. His journey was marked by challenges: from the nuances of remote work to the struggle of influencing company culture, and a critical incident that put his principles to the test against the company's push for speed. Chris's story highlights the tension between the need for innovation and the importance of project health. This all led Chris to a pivotal decision: to stay and compromise his beliefs or to leave in pursuit of work that aligned with his principles. He chose the latter. Join us as we dive into Chris's compelling story, exploring the challenges of advocating for principled engineering in a world that often prioritizes quick wins over long-term value.",
+      "image": "https://corecursive.com/images/098/wide.png",
+      "episode_number": 98,
+      "duration": "47:35"
+    },
+    {
+      "title": "Beautiful Code",
+      "url": "https://corecursive.com/beautiful-code-with-greg-wilson/",
+      "date": "2024-02-02",
+      "slug": "beautiful-code-with-greg-wilson",
+      "description": "Have you ever felt like your code could be more than just functional, that it could be beautiful? Greg Wilson didn't just ponder this; he embarked on a quest to elevate software design to an art form. From a soldering iron burn that steered him away from electrical engineering to his crusade for a shared language in software architecture, Greg's journey is a testament to the transformative power of teaching and the relentless pursuit of design excellence. In this episode, we dive into Greg's world, where the lessons of building sawhorses in carpentry shed light on the elegance of code and where the stories of software's pioneers become a roadmap for mastering design. Greg's mission has been to share his knowledge generously, to develop a language for design that can transform how we build software, and to inspire a new generation of developers to see the beauty in their craft. Join us as we explore how Greg's practical approach has empowered countless scientists and developers, and how his books have started essential conversations in the software community. It's a story of passion, perseverance, and the unyielding belief that software design can and should be as revered as any other form of architecture.",
+      "image": "https://corecursive.com/images/097/wide.png",
+      "episode_number": 97,
+      "duration": "57:20"
+    },
+    {
+      "title": "Code as a Lifeline",
+      "url": "https://corecursive.com/brain-injury-with-jason-mcdonald/",
+      "date": "2024-01-02",
+      "slug": "brain-injury-with-jason-mcdonald",
+      "description": "What if your dreams were suddenly ripped away? What if your talents vanished, your passions erased? That's what happened to Jason McDonald when a traumatic brain injury at 16 ravaged his planned destiny of becoming a doctor. Jason painfully rebuilt his identity from scratch - relearning to read, write, even speak. A serendipitous discovery of coding ignited a new passion within Jason. He dove into the world of Python, even writing a popular programming book. His is a story of the incredible resilience of the human spirit when faced with life-altering challenges. One that calls us to embrace our own vulnerabilities as gateways to growth.",
+      "image": "https://corecursive.com/images/096/wide.png",
+      "episode_number": 96,
+      "duration": "44:12"
+    },
+    {
+      "title": "From 486 to Vue.js",
+      "url": "https://corecursive.com/vue-with-evan-you/",
+      "date": "2023-12-04",
+      "slug": "vue-with-evan-you",
+      "description": "From the early days of exploring creative possibilities on a 486 computer in his childhood to developing one of today's most popular web frameworks, Evan You's journey is a tale of passion and innovation. Evan started Vue.js while working at Google, just wanting to scratch his own itch for a lightweight JavaScript framework. But soon Vue started to gain a huge following. Eventually Evan then faced a tough dilemma - should he take a leap of faith and devote himself fully to his fledgling open source project? Hear Evan's firsthand story of that key career transition. How the explosive user feedback at Vue conferences gave him confidence. But also the challenges he faced by putting himself directly in the line of fire from unhappy users. It's an inspiring journey - from a developer just trying to solve his own problems to the leader of one of today's most popular web frameworks. Hear the very human story behind Vue.js.",
+      "image": "https://corecursive.com/images/095/wide.png",
+      "episode_number": 95,
+      "duration": "46:17"
+    },
+    {
+      "title": "Platform Takes The Pain",
+      "url": "https://corecursive.com/platform-takes-the-pain/",
+      "date": "2023-11-02",
+      "slug": "platform-takes-the-pain",
+      "description": "How did Spotify scale from 10 engineers to 100s to 1000s ...without slowing down? Without becoming corporate? Facing an IPO deadline, Pia Nilsson worked with 300 teams to transform how Spotify built software. She spearheaded a movement that led them from working in silos to a unified developer platform. Hear the inside story of how Spotify's Platform teams embraced transparency and customer focus to create Backstage — now used by companies worldwide. It's an unbelievable tale of ingenuity and perseverance. Hear Spotify's secret to scaling engineering without losing speed and independence. Don't miss it!",
+      "image": "https://corecursive.com/images/094/wide.png",
+      "episode_number": 94,
+      "duration": "48:36"
+    },
+    {
+      "title": "Sloot Digital Coding System",
+      "url": "https://corecursive.com/sloot-digital-coding-system/",
+      "date": "2023-10-02",
+      "slug": "sloot-digital-coding-system",
+      "description": "Lost treasure. Conspiracy theories. Impossible tech demos. Jan Sloot claimed to have invented revolutionary data compression that could fit a full movie into a tiny smart card chip. Top executives and investors witnessed his demos and became true believers, ready to bankroll this company into the stratosphere. But was it all an elaborate illusion? Join me as I unravel the perplexing story of Jan Sloot, the eccentric Dutch TV repairman who dazzled the tech world with his compression claims. Discover the shady details and follow the bizarre twists and turns, as we try to separate fact from fiction in the puzzling case of the Sloot Digital Coding System.",
+      "image": "https://corecursive.com/images/093/wide.png",
+      "episode_number": 93,
+      "duration": "51:50"
+    },
+    {
+      "title": "Configuring Identity",
+      "url": "https://corecursive.com/configuring-identity-adam-jacob/",
+      "date": "2023-09-01",
+      "slug": "configuring-identity-adam-jacob",
+      "description": "Today we go behind the scenes at Chef - the game changing infrastructure automation tool. Adam Jacob created Chef, and it became a massively popular DevOps tool. But despite Chef's success, Adam constantly battled self-doubt and finding his footing as a leader. In this raw episode, Adam shares how the pressure of going from sysadmin to startup CTO caused an identity crisis. He opens up about the motivational speech that left him in tears, realizing his self-worth was too tied to Chef's outcomes. Adam explains his journey to separating work and self-identity. How he learned to silence the doubters, overcome imposter syndrome, and \"just do the work.\" His story shows that even those at the top face self-doubt, but you can overcome it by focusing on your craft. Join us for this episode and you'll never experience API design meetings that same way again. You’ll hopefully walk away inspired to ship your own projects no matter what and let dedication to the work forge your identity.",
+      "image": "https://corecursive.com/images/092/wide.png",
+      "episode_number": 92,
+      "duration": "42:53"
+    },
+    {
+      "title": "The Science of Learning to Code",
+      "url": "https://corecursive.com/the-science-of-learning-to-code/",
+      "date": "2023-08-02",
+      "slug": "the-science-of-learning-to-code",
+      "description": "Learning to code can feel impossible. Like facing a sheer rock wall with no ropes or harnesses. But what if there was a path up the mountain? A trail blazed smooth by master coders who went before? In this episode, we'll follow that path. We'll hear the stories of legends like Seymour Papert, who championed active, project-based learning. Of Fred Brooks, who discovered that pairing accelerates learning. And more. The research shows that with the right methods, motivation, and support, anyone can master coding's steep summit. So join me as we uncover the science behind learning to code. You'll walk away fired up, equipped with proven techniques to unlock your potential and conquer new technical skills. The climb is on!",
+      "image": "https://corecursive.com/images/091/wide.png",
+      "episode_number": 91,
+      "duration": "50:45"
+    },
+    {
+      "title": "A Dark Room - From Code Hobo to Indie Game Developer",
+      "url": "https://corecursive.com/a-dark-room-with-amir-rajan/",
+      "date": "2023-07-03",
+      "slug": "a-dark-room-with-amir-rajan",
+      "description": "Have you ever been frustrated with your job? Maybe not burnt out, but getting close to there? You used to love what you did, and it felt so creative and empowering, but then it starts to feel a bit more cookie cutter. Have you ever been frustrated with your whole life? The daily grind has taken what you love and it just doesn't feel the same anymore. Some of the magic just has slowly faded away. You don't know when it started, but it did. Today's guest is Amir Rajan. He's hard to describe. Is he a developer? Yes. An artist who sold everything that he owned for indie game development. Yes. The subject of a New Yorker profile? Yes, all of that. And also, somebody who got frustrated with his life and left everything behind.",
+      "image": "https://corecursive.com/images/090/wide.png",
+      "episode_number": 90,
+      "duration": "40:42"
+    },
+    {
+      "title": "Quitting (And Then Rejoining) Stack Overflow",
+      "url": "https://corecursive.com/stack-overflow/",
+      "date": "2023-06-02",
+      "slug": "stack-overflow",
+      "description": "Today, we meet Ben Dumke-von der Ehe, one of the early developers on the Stack Overflow team. He was on the front lines as the platform transformed how programmers worked. And he embodies the spirit of Stack Overflow: Its transparency, playfulness, and even some of its struggles to be as welcoming and friendly as it should be. But you'll see what I mean. So stick around as Ben takes us on a journey through the building of Stack Overflow. Get ready for a candid inside look at the creation of a platform that would become an essential part of the developer community and the internet as we know it.",
+      "image": "https://corecursive.com/images/089/wide.png",
+      "episode_number": 89,
+      "duration": "53:28"
+    },
+    {
+      "title": "From Project Management to Data Compression Innovator",
+      "url": "https://corecursive.com/data-compression-yann-collet/",
+      "date": "2023-05-02",
+      "slug": "data-compression-yann-collet",
+      "description": "How do you accomplish something massive over time? I've had the chance to meet with a number of exceptional software developers and it's something I always wonder about. Today, I might have an answer with the incredible story of Yann Collet. Yann was a project manager who went from being burnt out on corporate life to becoming one of the most sought-after developers in the world. What happens when you build something so impressive and valuable that it essentially becomes invisible? And how do you do that when your day job is mainly organizing spreadsheets and keeping timelines on track? Yann built LZ4 and ZStandard - two of the world's fastest compression algorithms that have transformed databases, operating systems, file systems, and much more. We'll go back in time to Yann's initial steps with programming, his game-changing discoveries along the way and how his devotion to data compression hobby led him to create something that saves billions of dollars worldwide.",
+      "image": "https://corecursive.com/images/088/wide.png"
+    },
+    {
+      "title": "JSON vs XML",
+      "url": "https://corecursive.com/json-vs-xml-douglas-crockford/",
+      "date": "2023-04-03",
+      "slug": "json-vs-xml-douglas-crockford",
+      "description": "Today's guest is Douglas Crockford. He's sharing the story of JSON, his discovery of JavaScript's good parts, and his approach to finding a simple way to build software. Also, his battles against XML, against complexity, his battles to say that there's a better way to build software. This is foundational stuff for the web, and Doug is an iconoclast.",
+      "image": "https://corecursive.com/images/087/wide.png",
+      "episode_number": 87,
+      "duration": "49:56"
+    },
+    {
+      "title": "Sun's Mobile Blunders",
+      "url": "https://corecursive.com/mobile-ui-with-shai-almog/",
+      "date": "2023-03-02",
+      "slug": "mobile-ui-with-shai-almog",
+      "description": "Shai Almog worked at Sun on Mobile JVMs just as phones started to turn from phones into something else. Sun had deep expertise in mobile development, and unique engineering-driven culture, and relationships with manufacturers and operators. And yet internal politics and the collapse of its server market made it hard to get things done. At Sun, as the mobile market changed, Shai and his friend Chen Fishbein launched a popular UI toolkit. Today Shai shares their struggles at Sun and after it to shape mobile UI development.",
+      "image": "https://corecursive.com/images/086/wide.png",
+      "episode_number": 86,
+      "duration": "51:45"
+    },
+    {
+      "title": "Shipping Graphing Calculator",
+      "url": "https://corecursive.com/shipping-graphing-calculator/",
+      "date": "2023-02-02",
+      "slug": "shipping-graphing-calculator",
+      "description": "I've been on many projects that get canceled. We're building cool stuff. We're going above and beyond, and we're excited. But the project encounters reality, shifting priorities, or budgeting constraints, and the work never goes anywhere. It always feels tragic, but then I move on. But what if I didn't let a project get canceled? What if I couldn't accept that? That is what Ron Avitzur's story is all about. He is the creator of \"Graphing Calculator,\" and he would not let it be canceled.",
+      "image": "https://corecursive.com/images/085/wide.png",
+      "episode_number": 85,
+      "duration": "46:47"
+    },
+    {
+      "title": "The Unfulfilled Engineer",
+      "url": "https://corecursive.com/initech-with-don-mckay/",
+      "date": "2023-01-02",
+      "slug": "initech-with-don-mckay",
+      "description": "Nothing good comes from being insecure about your worth, especially at your job. That's what today's episode is about. That's what today's guest is here to discuss. It's a slow burn, but if you listen to the end, I think you will value yourself more professionally. My Guest is Don Mckay. Someone longtime listeners will undoubtedly know.",
+      "image": "https://corecursive.com/images/084/wide.png",
+      "episode_number": 84,
+      "duration": "42:04"
+    },
+    {
+      "title": "DOOMed to Fail: A Horror Story",
+      "url": "https://corecursive.com/doomed-to-fail-with-burger-becky/",
+      "date": "2022-12-02",
+      "slug": "doomed-to-fail-with-burger-becky",
+      "description": "Today Rebecca Burger Becky Heineman shares the tale of porting Doom to the 3DO console under extreme conditions. There is an engine to tweak, deadlines to hit, hardware acceleration to get working, and dramatic rock anthems to record. We also learn about how game piracy led her to game development and what it was like to do game development in the mania of the mid-nineties. Finally, we close with Becky's advice on learning bare metal development skills.",
+      "image": "https://corecursive.com/images/083/wide.png",
+      "episode_number": 83,
+      "duration": "45:03"
+    },
+    {
+      "title": "Software World Tour",
+      "url": "https://corecursive.com/software-world-tour-with-son-luong-ngoc/",
+      "date": "2022-11-02",
+      "slug": "software-world-tour-with-son-luong-ngoc",
+      "description": "Today's story is from Son Luong Ngoc, who shares what it was like for him to work and live in many different countries around the world, including working for Alibaba at the Xixi campus in Hangzhou, China ([Son's photos of the Alibaba campus](#bonus-content-from-son)). It's a story of a software developer finding a place that fits them, a place that suits them.",
+      "image": "https://corecursive.com/images/082/wide.png",
+      "episode_number": 82,
+      "duration": "48:57"
+    },
+    {
+      "title": "Android's Unlikely Success",
+      "url": "https://corecursive.com/android-with-chet-haase/",
+      "date": "2022-10-03",
+      "slug": "android-with-chet-haase",
+      "description": "What could you accomplish if your teammates were all excited and determined to hit some project timelines? What is it like for a group of people to give it all they have? That's what today is about. Chet Haase from the Android team is here to share the story of the early days of Android, the mobile operating system that powers the majority of phones worldwide. We'll cover the years from 2005 to around 2011. It's a wild story.",
+      "image": "https://corecursive.com/images/081/wide.png",
+      "episode_number": 81,
+      "duration": "01:00:07"
+    },
+    {
+      "title": "From Prison To Programming",
+      "url": "https://corecursive.com/prison-programming-with-rick-wolter/",
+      "date": "2022-09-02",
+      "slug": "prison-programming-with-rick-wolter",
+      "description": "I believe that getting underrepresented groups into software development is a good thing. This is not a controversial opinion until you start talking about felons. Today's guest is Rick Wolter. He's an iOS developer who served 18 years in prison for second degree murder. Rick killed somebody and for some that's all they need to know about Rick. But today's episode is about Rick's path to redemption him, teaching himself to code in prison, smuggling in a Python interpreter, and then getting out and trying to get a job as a dev when you're a felon.",
+      "image": "https://corecursive.com/images/080/wide.png",
+      "episode_number": 80,
+      "duration": "46:37"
+    },
+    {
+      "title": "CPAN",
+      "url": "https://corecursive.com/tdih-cpan/",
+      "date": "2022-08-01",
+      "slug": "tdih-cpan",
+      "description": "CPAN was the first open-source software module repository. And on this day, Aug 1st, in 1995, CPAN was first announced to a private group of PERL users. And why does this matter? Who is still using PERL anyhow? CPAN inspired everything that would follow: npm, maven, cargo, nuget, hackage, ruby gems, python pypi and so on. If you are building things today by pulling in various packages from various open source places – and really, who isn’t – then the history of how this world came to be is important.",
+      "image": "https://corecursive.com/images/079/wide.png"
+    },
+    {
+      "title": "The History and Mystery Of Eliza",
+      "url": "https://corecursive.com/eliza-with-jeff-shrager/",
+      "date": "2022-07-05",
+      "slug": "eliza-with-jeff-shrager",
+      "description": "I recently got an email from Jeff Shrager, who said he'd been working hard to solve a mystery about some famous code. Eliza, the chatbot, was built in 1964, and she didn't answer questions like Alexa or Siri. She asked questions. She was a therapist chatbot and quickly became famous after being described in a 1964 paper. But here is the mystery. We're not sure how the original version worked. Joseph Weizenbaum never released the code. But Jeff tracked it down, and some of the things we thought we knew about Eliza turned out to be wrong.",
+      "image": "https://corecursive.com/images/078/wide.png",
+      "episode_number": 78,
+      "duration": "44:07"
+    },
+    {
+      "title": "Why still 80 columns?",
+      "url": "https://corecursive.com/why-80-columns/",
+      "date": "2022-06-01",
+      "slug": "why-80-columns",
+      "description": "On June 1st, 2014, the following question showed up on hacker news: > Why is 80 characters, the standard limit for code width. Why 80? > > Why not? 79 or 81 or even a hundred. So you probably know what happens next. People started to post their opinions and the comments and other people started to disagree. The posts spread around the internet. So that is going to be today's show: Let's answer this question. It's a question about traditions and teamwork, and how preexisting idioms shape us and help us, but sometimes restrict us.",
+      "image": "https://corecursive.com/images/077/wide.png",
+      "episode_number": 77,
+      "duration": "39:23"
+    },
+    {
+      "title": "LISP in Space",
+      "url": "https://corecursive.com/lisp-in-space-with-ron-garret/",
+      "date": "2022-05-02",
+      "slug": "lisp-in-space-with-ron-garret",
+      "description": "Have you ever had a unique approach to a problem and been excited to use it, but you're met with skepticism? Today's story: what happens if you take someone who's passionate about LISP and put them in an organization where that's just not how they write software. Today's story is about getting LISP into space. The year is 1988. The USSR still existed. Ronald Reagan was president of the United States. And Ron, under his thesis advisor, was working on a prototype for the first Mars Rover.",
+      "image": "https://corecursive.com/images/076/wide.png",
+      "episode_number": 76,
+      "duration": "38:03"
+    },
+    {
+      "title": "April Fools' Is Cancelled (2014)",
+      "url": "https://corecursive.com/april-fools-is-cancelled/",
+      "date": "2022-04-01",
+      "slug": "april-fools-is-cancelled",
+      "description": "On this day in 2014, \"lame april fools' jokes\" were banned from hacker news. Today in our first This-Day-in-History segment, I want to share some of history not just of April Fools', but of tech pranks in general, all leading up to 2014. Why were pranks and April Fools' jokes traditionally celebrated in tech? Why are they now considered lame? And is there anything we can do to save them? Those are today's questions.",
+      "image": "https://corecursive.com/images/075/wide.png",
+      "episode_number": 75,
+      "duration": "38:50"
+    },
+    {
+      "title": "The Story Graph",
+      "url": "https://corecursive.com/the-story-graph-with-nadia-odunayo/",
+      "date": "2022-03-02",
+      "slug": "the-story-graph-with-nadia-odunayo",
+      "description": "Whenever I work on a side project, I can't help but daydream of it taking off in a big way. For today's guests, something like that did happen. When Nadia started building her side project, she didn't know that it would end up spreading virally. She didn't know that it would end up competing with an Amazon product. She didn't know that keeping it up would be something that would drive her close to tears.",
+      "image": "https://corecursive.com/images/074/wide.png",
+      "episode_number": 74,
+      "duration": "48:05"
+    },
+    {
+      "title": "Serenity OS",
+      "url": "https://corecursive.com/serenity-os-with-andreas-kling/",
+      "date": "2022-02-02",
+      "slug": "serenity-os-with-andreas-kling",
+      "description": "How would you build an operating system? My answer is I wouldn't. First off, I don't know how. And the second thing is it seems like to large of a task. It took thousands of developers to build Windows XP. But actually, it is possible to build an operating system from scratch. My guest is doing it. Andreas Kling created SerenityOS starting from an empty Git repository. So today, I find out how he did it, how this is possible. But mainly today, I find out why. Why build an operating system from scratch? And it all started in the 2010s when Andreas worked at Apple.",
+      "image": "https://corecursive.com/images/073/wide.png"
+    },
+    {
+      "title": "The Internet Is Made of Duct Tape",
+      "url": "https://corecursive.com/internet-is-duct-tape/",
+      "date": "2022-01-02",
+      "slug": "internet-is-duct-tape",
+      "description": "Today, I have two of my favorite guests together: Krystal Maughan and Don McKay. We are going to be sharing strange and interesting facts about computing. I'm super pumped about this because, sometimes, I learn something new, and I'm excited about it. And I want to tell people about it. And so today is a chance for Don and Krystal and I to share some of these \"Oh, my God. Did you guys see this?\" stories.",
+      "image": "https://corecursive.com/images/072/wide.png"
+    },
+    {
+      "title": "Cocoa Culture",
+      "url": "https://corecursive.com/cocoa-culture-with-hansen-hsu/",
+      "date": "2021-12-02",
+      "slug": "cocoa-culture-with-hansen-hsu",
+      "description": "The last episode, I said I wasn't sure there was such a thing as culture, but that's not the case. Every place I've worked has been a bit different, and often those differences had huge impacts on the software we built. The team where people roll their eyes at UX feedback will not have as simple of a product as a team where the user experience is highly valued. If software performance isn't valued, the end result won't be performant. Today, I found an expert on observing developer cultures. Hansen Hsu worked on the AppKit team at Apple, and he's here to talk about this mushy concept called culture. How does it manifest? How does it affect what people build? And how can it lead to beautiful software?",
+      "image": "https://corecursive.com/images/071/wide.png"
+    },
+    {
+      "title": "Leaving Debian",
+      "url": "https://corecursive.com/leaving-debian/",
+      "date": "2021-11-02",
+      "slug": "leaving-debian",
+      "description": "Today's story is an insider view of Debian. One of the oldest Linux distributions and probably one of the longest-running volunteer-based open-source projects. Joey Hess is my guest, and he dedicated significant parts of his adult life to working on Debian. He's going to share what that was like. The good and the bad, and it's almost all good. It's a story about open source software, but it's also about community and teamwork.",
+      "image": "https://corecursive.com/images/070/wide.png"
+    },
+    {
+      "title": "The Original Remote Developer",
+      "url": "https://corecursive.com/remote-developer/",
+      "date": "2021-10-04",
+      "slug": "remote-developer",
+      "description": "Today's episode is about remote work. Well, sort of. I found someone with a different perspective on remote work and a fantastic story to share, Paul Lutus. I think that he might be the original remote software developer. He left California behind for a lower cost of living in Oregon. And from Oregon, he developed software for Apple. But the kind of surprising thing is he did this in the 1970s! And he did it so well he became rich and even briefly quite famous.",
+      "image": "https://corecursive.com/images/069/wide.png"
+    },
+    {
+      "title": "Quines, Polyglot Code and Other Fun Computations",
+      "url": "https://corecursive.com/quines-polyglot-code/",
+      "date": "2021-09-02",
+      "slug": "quines-polyglot-code",
+      "description": "Today, previous guest and my neighbor Don Mckay and I will discuss items from the endless fascinating *[Cursed Computer Iceberg Meme](https://suricrasia.online/iceberg/)*. The Iceberg is a giant list of \"the peculiarities and weirdness of computers.\" We each a select few items from the list and alternate explaining it to each other. Don's choices are varied, and mine focus on quines and esoteric coding problems. We also share some coding horror stories from our past.",
+      "image": "https://corecursive.com/images/068/wide.png"
+    },
+    {
+      "title": "Full-Time Open Source",
+      "url": "https://corecursive.com/067-zig-with-andrew-kelley/",
+      "date": "2021-08-02",
+      "slug": "067-zig-with-andrew-kelley",
+      "description": "Today’s show: How to quit your job and work on open source full time. This story has it all -- balancing side projects and full-time employment, building up enough supports to leave your job, and explaining quitting to your family and friends. And also: what do you do if your project succeeds, and then someone forks it and builds a commercial business around it? And how do you deal with hacker news feedback? And how can we improve on the C programming language? This is a fun one!",
+      "image": "https://corecursive.com/images/067/wide.png"
+    },
+    {
+      "title": "The Untold Story of SQLite",
+      "url": "https://corecursive.com/066-sqlite-with-richard-hipp/",
+      "date": "2021-07-02",
+      "slug": "066-sqlite-with-richard-hipp",
+      "description": "On today's show, I'm talking to Richard Hipp about surviving becoming core infrastructure for the world. SQLite is everywhere. It's in your web browser, it's in your phone, it's probably in your car, and it's definitely in commercial planes. It's where your iMessages and WhatsApp messages are stored, and if you do a find on your computer for *.db, you'll be amazed at how many SQLite databases you find. Today, Richard is going to share his story. It's the story of creating a small open source project and having it grow beyond your wildest ambitions. It's the story of following that success wherever it leads: From relationships with tech-giants to interesting testing procedures and more.",
+      "image": "https://corecursive.com/images/066/wide.png"
+    },
+    {
+      "title": "From Competitive Programming to APL",
+      "url": "https://corecursive.com/065-competitive-coding-with-conor-hoekstra/",
+      "date": "2021-06-02",
+      "slug": "065-competitive-coding-with-conor-hoekstra",
+      "description": "Today on the show, we have solving algorithmic programming problems. You know when you interview for a job to write CSS and they ask you to reverse a binary tree on the whiteboard using C and in constant memory space? It's that kind of thing. These problems have their roots in algorithmic programming contests. And our guest, Conor Hoekstra, is a former competitor. Conor's story started in university when he was competing in programming contests. But it's interesting how if you follow a single idea long and hard enough, you end up in exciting places like writing software for GPUs. For Conor, that idea is finding the perfect way to express the solution to a programming problem. His journey will take him into LeetCode, into getting his dream job and all the way to APL, which is one of the more unusual and obscure programming languages.",
+      "image": "https://corecursive.com/images/065/wide.png"
+    },
+    {
+      "title": "Smart Contract Rescue",
+      "url": "https://corecursive.com/064-ethereum-rescue-with-dan-robinson/",
+      "date": "2021-05-02",
+      "slug": "064-ethereum-rescue-with-dan-robinson",
+      "description": "Today I talk to Dan Robinson about trying to get someone their money back on Ethereum. He's going to be battling this murky world of blockchain high-frequency bots. Along the way, we'll learn how trades are executed on Ethereum and a bit of game theory and political philosophy. It's an entertaining peek into a world that seems like pure science fiction to me, a world where nobody's in charge, where there's no regulation, and where these forces of greed and idealism are in direct conflict with each other.",
+      "image": "https://corecursive.com/images/064/wide.png"
+    },
+    {
+      "title": "Apple 2001",
+      "url": "https://corecursive.com/063-apple-2001/",
+      "date": "2021-04-03",
+      "slug": "063-apple-2001",
+      "description": "David Shayer worked at Apple for 14 years, and he has a wild experience to share. Apple has a unique culture, and David will give us an insider view of what it was like for him at Apple during the 2000s, roughly between 2001 to 2015 when Apple transformed into the powerhouse that it is today. David worked as a Software Engineer but for the hardware organization with Apple. He worked on a few special projects at Apple: at least one of them was top secret. But he is also going to share the struggles of building file systems and working on really short timelines and having development plans upended by Steve jobs.",
+      "image": "https://corecursive.com/images/063/wide.png"
+    },
+    {
+      "title": "Video Game Programming From Scratch",
+      "url": "https://corecursive.com/062-game-programming/",
+      "date": "2021-03-01",
+      "slug": "062-game-programming",
+      "description": "I'm not really a big gamer, but lately, I've fallen down this rabbit hole into the world of Casey Muratori, and this project that he started on Twitch in 2014. He is building a video game from scratch and explaining it all as he goes along. Casey is a professional video game and game engine, creator. He has been doing it for over 30 years. His approach to development feels a little bit like it's from the 1970s. Yet, it resonates with many smart people who are learning how to truly build things and understand fundamentals from Casey. Casey has a lesson about learning and teaching for us all.",
+      "image": "https://corecursive.com/images/062/wide.png"
+    },
+    {
+      "title": "Reinforcement Learning At Facebook",
+      "url": "https://corecursive.com/061-reinforcement-learning/",
+      "date": "2021-02-01",
+      "slug": "061-reinforcement-learning",
+      "description": "If you ever wanted to learn about machine learning you could do worse than have Jason Gauci teach you. Jason has worked on YouTube recommendations. He was an early contributor to TensorFlow the open-source machine learning platform. His thesis work was cited by DeepMind. But what I find so fascinating with Jason is he recognized this problem that was being solved the wrong way and set out to find a solution to it. So that's the show today. Jason is going to share his story.",
+      "image": "https://corecursive.com/images/061/wide.png"
+    },
+    {
+      "title": "2020 Year End",
+      "url": "https://corecursive.com/060-2020-year-end/",
+      "date": "2021-01-01",
+      "slug": "060-2020-year-end",
+      "description": "Welcome to the year-end episode. Today is all the bonus questions. Often times I have questions that I want to ask guests, but they don't quite fit the overall theme of the episode. So today we're going to do a whole episode of those extra questions. I have previously recorded questions for Brian Kernighan, the creator of AWK among many other things. I have questions for Sean Allen, who works at Microsoft research, and Krystal Maughan, PHD Candidate.",
+      "image": "https://corecursive.com/images/060/wide.png"
+    },
+    {
+      "title": "Frontiers of Performance",
+      "url": "https://corecursive.com/frontiers-of-performance-with-daniel-lemire/",
+      "date": "2020-12-01",
+      "slug": "frontiers-of-performance-with-daniel-lemire",
+      "description": "Did you ever meet somebody who seemed a little bit different than the rest of the world? Maybe they question things that others wouldn't question or said things that others would never say. Daniel is a world-renowned expert on software performance, and one of the most popular open-source developers, if you measure by Github followers. Today, he's gonna share his story. It involves time at a research lab and teaching students in a new way. It will also involve upending people's assumptions about IO performance. Elon Musk And Julia Roberts will come up a little bit more than you might expect.",
+      "image": "https://corecursive.com/images/059/wide.png"
+    },
+    {
+      "title": "The Birth of UNIX",
+      "url": "https://corecursive.com/brian-kernighan-unix-bell-labs1/",
+      "date": "2020-11-01",
+      "slug": "brian-kernighan-unix-bell-labs1",
+      "description": "When you work on your computer, there are so many things you take for granted: operating systems, programming languages, they all have to come from somewhere. In the late 1960s and 1970s, that somewhere was Bell Labs, and the operating system they were building was UNIX. They were building more than just an operating system though. They were building a way to work with computers that had never existed before. In today's episode I talk to Brian Kernighan about the history of Unix.",
+      "image": "https://corecursive.com/images/058/wide.png"
+    },
+    {
+      "title": "To The Assembly",
+      "url": "https://corecursive.com/to-the-assembly/",
+      "date": "2020-10-01",
+      "slug": "to-the-assembly",
+      "description": "How do CPUs work? How do compilers work? How does high-level code get translated into machine code? Today's guest is Matt Godbolt and he knows the answers to these questions. How he became an expert in bare metal programming is an interesting story. Matt shares his origin story and the creation of compiler explorer in today's interview.",
+      "image": "https://corecursive.com/images/057/wide.png"
+    },
+    {
+      "title": "Memento Mori",
+      "url": "https://corecursive.com/memento-mori-with-kate-gregory/",
+      "date": "2020-09-01",
+      "slug": "memento-mori-with-kate-gregory",
+      "description": "Preparing our minds for the inevitable is hard. But, after facing terminal cancer, Kate Gregory recalled that facing death has many lessons to teach us. In this episode, Kate will share the lessons she learned and explain how you can apply them to your career as a software developer and live a remarkable life.",
+      "image": "https://corecursive.com/images/056/wide.png"
+    },
+    {
+      "title": "We're Teaching Functional Programming Wrong",
+      "url": "https://corecursive.com/teaching-fp-with-richard-feldman/",
+      "date": "2020-08-03",
+      "slug": "teaching-fp-with-richard-feldman",
+      "description": "Today Richard Feldman shares his story of going from javascript developer to elm developer to functional programming teacher. Along the way, Richard finds that people are teaching functional programming wrong. We are teaching it in a way that misses how most industrial software engineers learn best. Richard also delves into Elm, his approach, and how to make teaching delightful.",
+      "image": "https://corecursive.com/images/055/wide.png"
+    },
+    {
+      "title": "Software That Doesn't Suck",
+      "url": "https://corecursive.com/software-that-doesnt-suck-with-jim-blandy/",
+      "date": "2020-07-01",
+      "slug": "software-that-doesnt-suck-with-jim-blandy",
+      "description": "Software is just the tool and it should get out of your way. In this episode, Jim discusses how to build a great developer tool. It all started with: “What's the worst software that you use every day?” and led to the creation of Subversion.",
+      "image": "https://corecursive.com/images/054/wide.png"
+    },
+    {
+      "title": "Unproven Techology Case Study",
+      "url": "https://corecursive.com/055-unproven-with-sean-allen/",
+      "date": "2020-06-10",
+      "slug": "055-unproven-with-sean-allen",
+      "description": "Choosing the programming language or framework for a project can be to the success of the project. In today’s episode, Sean Allen shares a story of picking the right tool for a job. The tool he ends up picking will surprise you. His problem: make a distributed stream processing framework, something that can take a fire hose of events and perform customer's specific calculations on them but the latency needs to be less than a millisecond and the calculations might be CPU intensive. Who would need something like this? The initial use case was risk systems for Wall Street banks.",
+      "image": "https://corecursive.com/images/053/wide.png"
+    },
+    {
+      "title": "Krystal's Story",
+      "url": "https://corecursive.com/052-krystals-story/",
+      "date": "2020-05-18",
+      "slug": "052-krystals-story",
+      "description": "Things are easier to learn when you are passionate about something. A lot of great careers are built on curiosity and obsession including Krystal Maughan our guest for today's episode. Krystal will share her journey as she chased her curiosity in programming wherever it led her.",
+      "image": "https://corecursive.com/images/052/wide.png"
+    },
+    {
+      "title": "Learning a new language",
+      "url": "https://corecursive.com/051-bruce-tate-language-learning/",
+      "date": "2020-05-05",
+      "slug": "051-bruce-tate-language-learning",
+      "description": "There’s joy that can be found in language learning and pain as well. Whether you’re a beginner or an expert, there are still some things you can only discover by picking up a new language. Bruce Tate will tell us how learning new languages rekindled the spark of joy for him.",
+      "image": "https://corecursive.com/images/051/wide.png"
+    },
+    {
+      "title": "Portal Abstractions with Sam Ritchie",
+      "url": "https://corecursive.com/050-sam-ritchie-portal-abstractions-2/",
+      "date": "2020-04-17",
+      "slug": "050-sam-ritchie-portal-abstractions-2",
+      "description": "Today the story of how twitter engineers came up with a unique solution to data engineering. Adam interviews Sam about how the abstract algebra and probabilistic data structures help solve fast versus big data issues that many are struggling with. Adam talks to Sam Ritchie, a machine learning researcher. Stop in to hear Adam and Sam's conversation about portal abstractions that let you leverage work from other fields.",
+      "image": "https://corecursive.com/images/050/wide.png",
+      "with": "Sam Ritchie"
+    },
+    {
+      "title": "Loving Legacy Code with Jonathan Boccara",
+      "url": "https://corecursive.com/loving-legacy-code-with-jonathan-boccara/",
+      "date": "2020-04-03",
+      "slug": "loving-legacy-code-with-jonathan-boccara",
+      "description": "Legacy code is everywhere. I don't think I've met anyone who doesn't have to deal with legacy code in the substantial portion of his work. Our guest, Jonathan Boccara is a French C++ developer and the author of The Legacy Code Programmer's Toolbox. In this episode, Jonathan will help us understand and build the correct mindset to effectively work with legacy code by using his approach and processes.",
+      "image": "https://corecursive.com/images/049/wide.png",
+      "with": "Jonathan Boccara"
+    },
+    {
+      "title": "The Reason For Types",
+      "url": "https://corecursive.com/048-jared-forsyth-the-reason-for-types/",
+      "date": "2020-03-16",
+      "slug": "048-jared-forsyth-the-reason-for-types",
+      "description": "Adam talked to Jared Forsyth about his journey from untyped javascript to using flow and eventually reasonml.",
+      "image": "https://corecursive.com/images/048/wide.png"
+    },
+    {
+      "title": "Karl L Hughes on Conference Talks",
+      "url": "https://corecursive.com/047-karl-l-hughes-conference-talks/",
+      "date": "2020-03-02",
+      "slug": "047-karl-l-hughes-conference-talks",
+      "description": "Adam talks to Karl Hughes about his path to becoming a conference speaker and the work he has done to make it easier for others to follow in his footsteps.",
+      "image": "https://corecursive.com/images/047/wide.png"
+    },
+    {
+      "title": "Don and Adam Discuss Folds",
+      "url": "https://corecursive.com/046-don-and-adam-folds/",
+      "date": "2020-02-15",
+      "slug": "046-don-and-adam-folds",
+      "description": "Today we try a different format. Adam invites his neighbour, Don McKay, over to ask him questions. An interesting discussion on recursion, corecursion and the naming of the podcast unfolds.",
+      "image": "https://corecursive.com/images/046/wide.png"
+    },
+    {
+      "title": "David Heinemeier Hansson",
+      "url": "https://corecursive.com/045-david-heinemeier-hansson-software-contrarian/",
+      "date": "2020-02-01",
+      "slug": "045-david-heinemeier-hansson-software-contrarian",
+      "description": "David Heinemeier Hansson talks to Adam about avoiding a software monoculture. He explains why we should find a programming language that speaks to us, why ergonomics matter, and why single page apps and microservices are not for him.",
+      "image": "https://corecursive.com/images/045/wide.png"
+    },
+    {
+      "title": "React and Scala JS",
+      "url": "https://corecursive.com/044-shadaj-laddad-react-and-scala-js/",
+      "date": "2020-01-16",
+      "slug": "044-shadaj-laddad-react-and-scala-js",
+      "description": "Today Adam talks to Shadaj Laddad. What is React? Why do we need front end frameworks at all. Shadaj explains modern front end web development. He also explains why he likes to use react from scala.js and built a framework to make that easy for all.",
+      "image": "https://corecursive.com/images/044/action.png"
+    },
+    {
+      "title": "The Business Of Developer Tools",
+      "url": "https://corecursive.com/043-lee-edwards-developer-tools/",
+      "date": "2019-12-17",
+      "slug": "043-lee-edwards-developer-tools",
+      "description": "How do you build a business around tools for software engineers? Adam talks to Lee Edwards, a VC who spends a lot of time thinking about this question.",
+      "image": "https://corecursive.com/images/043/action.png"
+    },
+    {
+      "title": "Software in Context",
+      "url": "https://corecursive.com/042-zach-tellman-software-in-context/",
+      "date": "2019-12-02",
+      "slug": "042-zach-tellman-software-in-context",
+      "description": "Adam talks to Author and Clojure advocate Zach Tellman about how great software is built.",
+      "image": "https://corecursive.com/images/042/action.png"
+    },
+    {
+      "title": "Beautiful and Useless Coding",
+      "url": "https://corecursive.com/beautiful-and-useless-coding-with-allison-parrish/",
+      "date": "2019-11-16",
+      "slug": "beautiful-and-useless-coding-with-allison-parrish",
+      "description": "Generative Art involves using the tools of computation to creative ends. Adam talks to Allison Parrish about how she uses word vectors to create unique poetry. Word vectors represent a fundamentally new tool for working with text. Adam and Allison also talk about creative computer programming and building twitter bots and what makes something art.",
+      "image": "https://corecursive.com/images/041/action.png"
+    },
+    {
+      "title": "Tech Evangelism",
+      "url": "https://corecursive.com/040-tech-evangelism-with-gabriel-gonzalez/",
+      "date": "2019-11-01",
+      "slug": "040-tech-evangelism-with-gabriel-gonzalez",
+      "description": "What makes some pieces of technology take off? Why is java popular and not small talk or Haskell? Gabe is a popular blogger, a former Haskell cheerleader, and creator of the Dhall configuration language. Today we talk about marketing and tech evangelism.",
+      "image": "https://corecursive.com/images/040/action.png"
+    },
+    {
+      "title": "Language Oriented Design",
+      "url": "https://corecursive.com/039-hal-abelson-sicp/",
+      "date": "2019-10-01",
+      "slug": "039-hal-abelson-sicp",
+      "description": "Adam talks to Hal Abelson about the textbook he coauthored in 1985, The Structure and Interpretation of Computer Programs and why it is still popular and influential today.",
+      "image": "https://corecursive.com/images/039/action.png"
+    },
+    {
+      "title": "Open Source Health and Diversity",
+      "url": "https://corecursive.com/038-heather-miller-open-source/",
+      "date": "2019-09-15",
+      "slug": "038-heather-miller-open-source",
+      "description": "Heather Miller is an Assistant Professor at CMU. She is concerned that key open source projects are at risk of failure and no one is paying attention. Adam talks to her about open source, how it grows, the diversity problems it has and much more. Heather also shares some interesting stories about the early days of Scala and her ideas for increasing diversity in tech.",
+      "image": "https://corecursive.com/images/038/action.png"
+    },
+    {
+      "title": "Learning About Compilers",
+      "url": "https://corecursive.com/037-thorsten-ball-compilers/",
+      "date": "2019-09-01",
+      "slug": "037-thorsten-ball-compilers",
+      "description": "What do compilers do? What is the runtime of a language? What does it mean to compile something down to bytecode and what executes the bytecode. Throsten Ball answers these questions in this interview with Adam.",
+      "image": "https://corecursive.com/images/037/action.png"
+    },
+    {
+      "title": "Advanced Software Design",
+      "url": "https://corecursive.com/036-jimmy-koppel-advanced-software-design/",
+      "date": "2019-08-16",
+      "slug": "036-jimmy-koppel-advanced-software-design",
+      "description": "How do we create great software? What are the important skills need to properly review a PR? How do you identify assumptions of a code base and the stable contracts of a software module? Jimmy Koppel is working on his Ph.D. In the field of program synthesis at MIT. He was previously paid 100 thousand dollars to drop out of university by Peter Thiel, yet still graduated with two degrees. The most interesting, however, about Jimmy is he is working hard to teach the world how to design better software. Due to his time working on program synthesis, he developed some unique insights into what makes software good, and what makes it bad, and he spends time teaching people his insights.",
+      "image": "https://corecursive.com/images/036/action.png"
+    },
+    {
+      "title": "Category Theory",
+      "url": "https://corecursive.com/035-bartosz-milewski-category-theory/",
+      "date": "2019-08-15",
+      "slug": "035-bartosz-milewski-category-theory",
+      "description": "Today Adam talks to Bartosz Milewski. He is the author of a popular blog series, lecture series, and now book on Category Theory for programmers. The world of functional programming is rife with terminology imported from abstract algebra and Category Theory. In fact, it may be one of the most valid criticisms of functional programming is the use of Category-Theoretic terminology that can be unwelcoming to newcomers. Category theory can also be a tool to teach us to see software development in a different light and it can teach us to build better software. Bartosz is also just an interesting person, if you haven't heard of him yet, you are in for a treat.",
+      "image": "https://corecursive.com/images/035/wide.png"
+    },
+    {
+      "title": "Using TypeScript Like A Pro",
+      "url": "https://corecursive.com/034-chris-krycho-typescript/",
+      "date": "2019-07-15",
+      "slug": "034-chris-krycho-typescript",
+      "description": "How do we make javascript easier to work with? Chris Krycho has been using typescript to add types to javascript since 2016. Chris is a software developer at LinkedIn who, at his previous gig, worked on converting one of the largest Ember apps in the world to TypeScript. I was shocked by the size. Chris also loves Rust and types and is a former C and FORTRAN programmers. He hosted a podcast called the New Rustacean, which he has retired from. Today we talk about TypeScript and when you should use it. We also talk about Language Server Protocols, Rust, working with large codebases, Structural types, row polymorphism and talking code over audio.",
+      "image": "https://corecursive.com/images/034/action.png"
+    },
+    {
+      "title": "Rethinking Technological Positivism",
+      "url": "https://corecursive.com/33-cory-doctorow-digital-rights/",
+      "date": "2019-06-15",
+      "slug": "33-cory-doctorow-digital-rights",
+      "description": "Self-driving cars or armed autonomous military robots may make use of the same technologies. In a certain sense, we as software developers are helping to build and shape the future. What does the future look like and are we helping build the right one? Is technology a force for liberty or oppression. Cory Doctorow is one of my favorite authors and also a public intellectual with a keen insight into the dangers we face a society. In this interview, I ask him how to avoid ending up in a techno-totalitarian society. We also talk about Turing, DRM, data mining and monopolies.",
+      "image": "https://corecursive.com/images/033/action.png"
+    },
+    {
+      "title": "How to Build a Programming Language",
+      "url": "https://corecursive.com/032-bob-nystrom-on-building-an-interpreter/",
+      "date": "2019-05-31",
+      "slug": "032-bob-nystrom-on-building-an-interpreter",
+      "description": "Bob Nystrom is the author of Crafting Interpreters. I speak with Nystrom about building a programming language and an interpreter implementation for it. We talk about parsing, the difference between compiler and interpreters and a lot more. If you are wondering why many languages have hand-rolled parser implementations yet much content on building languages implementations focuses on parser and tokenizer generators then Bob's insights will be eye-opening. Also, if you've ever used regexes to pull strings apart into structured data, and I sure have, then Bob's perspective on the simplicity of hand-rolled parsers will certainly open up some new possibilities for you.",
+      "image": "https://corecursive.com/images/032/action.png"
+    },
+    {
+      "title": "Refinement Types",
+      "url": "https://corecursive.com/031-refinement-types-with-niki-vazou/",
+      "date": "2019-05-15",
+      "slug": "031-refinement-types-with-niki-vazou",
+      "description": "Formal verification and type systems - how do they relate? Niki Vazou is on a mission to bring better formal verification to the masses. I have done a couple of episodes about dependent types and my feeling is that dependent types are super powerful and have some conceptual simplicity ( Types are a first class concept ) but are somewhat tricky to wield in practice. Refinement types are something simpler. A refinement is a predicate that narrows the meaning of a type. What if instead of divide taking two ints, one was Int i where i != 0. This is a refinement type, a type that has been refined, the set of possible values narrowed, using simple predicates. Niki is the creator of Liquid Haskell, a system that extends Haskell to support refinements. It actually goes farther than that. She has also worked on refinement types in Ruby and explained refinement types to scala community at various conferences, but her heart lies with the Haskell community. We talk about refinement types, theorem proving, formal verification, SMT solvers, and working with GHC. This interview is also a great place to hear me asking stupid questions of a very smart person. Niki and her work are way outside my comfort bounds but hopefully my struggles to understand the topic will help make the power of refinement types approachable to a wider audience. Ruby developers, js developers, and everyone, refinement types are for you as well.",
+      "image": "https://corecursive.com/images/031/action.png"
+    },
+    {
+      "title": "Rethinking Databases",
+      "url": "https://corecursive.com/030-rethinking-databases-with-jon-gjengset/",
+      "date": "2019-04-30",
+      "slug": "030-rethinking-databases-with-jon-gjengset",
+      "description": "Can we make databases faster and remove the need for caching reads in an external cache? Can we make a distributed SQL based relational database that outperforms memcached? Jon Gjengset and the PDOS team at MIT CSAIL have done just that with Noria. Today I talk to Jon about Noria, about building a database in Rust and his efforts to teach people intermediate Rust via live coding sessions. Jon was great to talk to. He really was able to explain to me how Noria is able to do what it does and where it is in terms of maturity. The key, besides rust and evmap, is that Noria uses materialized views to do query optimization ahead of time, on write. The devil is in the details though, of course. And the details, in this case, are turning declarative SQL into a dataflow program that handles cache updates on new writes.",
+      "image": "https://corecursive.com/images/030/action.png"
+    },
+    {
+      "title": "Learning to Think",
+      "url": "https://corecursive.com/029-learn-to-think-andy-hunt/",
+      "date": "2019-04-15",
+      "slug": "029-learn-to-think-andy-hunt",
+      "description": "Andy Hunt is a celebrity in the world of software development. Or at least he is one to me. The Pragmatic Programmer is a classic book on software development book. He is an author of the agile manifesto and started the book company that has published many great books, including several by recent guests. Today I talk to Andy about how software engineers can get better at thinking and learning. How can we develop this meta-skill and how can being aware of common mistakes our brain make us more productive?",
+      "image": "https://corecursive.com/images/029/action.png"
+    },
+    {
+      "title": "Data and Scale",
+      "url": "https://corecursive.com/028-data-and-scale-with-pat-helland/",
+      "date": "2019-03-31",
+      "slug": "028-data-and-scale-with-pat-helland",
+      "description": "Pat Helland has a wealth of knowledge on building distributed data stores. He has been working on distributed data stores since 1978, when he worked on the tandem fault-tolerant database. Since then he has been involved in many distributed database projects. Here is the key thing, he is also a master at explaining the key ideas of distributed systems using simple language and practical everyday examples. Can you get married on the phone? How are messaging systems and idempotence like regional offices communicating via fax machine? These are the type of metaphor that Pat uses. Today, Pat sits down with me and teaches me about dealing with data in a distributed, fault tolerant, infinitely scaling world.",
+      "image": "https://corecursive.com/images/028/action.png"
+    },
+    {
+      "title": "Abstraction and Learning",
+      "url": "https://corecursive.com/027-abstraction-and-learning-with-runar-bjarnason/",
+      "date": "2019-03-15",
+      "slug": "027-abstraction-and-learning-with-runar-bjarnason",
+      "description": "What is abstraction? Can we have a precise definition of abstraction that, once understood, makes writing software simpler? Runar has thought a lot about abstraction and how we can choose the proper level for the software we write. In this interview, he explains these concepts using examples from the real world. Examples include SQL, effectful computing and several others areas. We also talk about how to learn and acquire the skills necessary to understand complex concepts. Concepts like highly polymorphic code and category theory. Runar also explains his latest project unison computing and how it uses the correct level of abstraction to rethink several foundation ideas in software development.",
+      "image": "https://corecursive.com/images/027/action.png"
+    },
+    {
+      "title": "Modern Systems Programming",
+      "url": "https://corecursive.com/modern-systems-programming-and-scala-native-with-richard-whaling/",
+      "date": "2019-02-22",
+      "slug": "modern-systems-programming-and-scala-native-with-richard-whaling",
+      "description": "Richard Whaling has an interesting perspective on software development. If you write software for the JVM or if you are interested in low level system programming, or even doing data heavy or network heavy IO programming then you will find this interview interesting. We discuss how to build faster software in a modern fashion by using glibc and techniques from system programming. This means using raw pointers and manual memory management but from a modern language. Richard also shares some perspectives on better utilizing the underlying operating system and how we can build better software by depending on services rather than libraries.",
+      "image": "https://corecursive.com/images/026/action.png",
+      "episode_number": 26,
+      "duration": "53:56"
+    },
+    {
+      "title": "Recreational Coding",
+      "url": "https://corecursive.com/025-burn-out-and-recreational-programming/",
+      "date": "2019-01-25",
+      "slug": "025-burn-out-and-recreational-programming",
+      "description": "A decade ago Jamis Buck was not loving his job. He was an important open source contributor. He worked for the hottest trendiest software company at the time, 37 signals, creator of ruby on rails. He was on top of the world but also he was burnt out. Today Jamis talks about how he overcame burn out. We discuss how his struggle lead him to write a book about generating mazes and another about building a ray tracer. His books are great fun, and all about recreational programming. You will learn to build things with a focus not on the latest trends in software development and not even a specific programming language. **The focus, instead, is on fun.**",
+      "image": "https://corecursive.com/images/025/action.png"
+    },
+    {
+      "title": "Software as a Reflection of Values",
+      "url": "https://corecursive.com/024-software-as-a-reflection-of-values-with-bryan-cantrill/",
+      "date": "2018-12-18",
+      "slug": "024-software-as-a-reflection-of-values-with-bryan-cantrill",
+      "description": "Which operating system is the best? Which programming language is the best? What text editor? Bryan Cantrill, CTO of Joyent says that is the wrong question. Languages, operating systems and communities have to make trade offs and they do that based on their values. So the right language is the one who's values align with you and your projects goals. This simple idea carries a lot of weight and I think has the potential to lift up technical discussions to a higher level of discourse. You will find it to be a helpful frame next time you need to make a technical decision. Bryan is also pretty excited about how the values of the rust community align with his values for system software. Also we cover Oberon, Clean and Simula, none of which I've never heard of and how IBM System/370 's Global Trace Facility doesn't hold a candle to DTrace.",
+      "image": "https://corecursive.com/images/024/action.png"
+    },
+    {
+      "title": "The Little Typer",
+      "url": "https://corecursive.com/023-little-typer-and-pie-language/",
+      "date": "2018-12-01",
+      "slug": "023-little-typer-and-pie-language",
+      "description": "You can write more correct software and even rigorous mathematical proofs. Prepare for some mind stretching. Previous guests like Edwin Brady and Stephanie Weirich have discussed some of the exciting things a dependent type system can do Miles Sabin said dependent types are surely the future. This interview is to get us ready for the future. Daniel P. Friedman is famous for his \"Little\" series of books. Little Schemer, Little prover, Little MLer and so on. These books are held in high regard. Here is a quote from Doug Crockford: _\"Little Schemer teaches one thing, a thing that is very difficult to teach, a thing that every profession programmer should know, and it does it really well. These are lessons that stick with you.\"_ The latest one is the little typer and its about types. Specifically dependent types. Dan's coauthor is David Thrane Christiansen, Idris contributor, and host of a podcast about type theory that is way over my head. Together they are going to teach us how the programming skills we already have can be used to develop rigorous mathematical proofs. Stay tuned to the end for my guide to working thru the book.",
+      "image": "https://corecursive.com/images/023/action.png"
+    },
+    {
+      "title": "Big Ball Of Mud",
+      "url": "https://corecursive.com/22-big-ball-of-mud-architecture-and-services-with-wade-waldron/",
+      "date": "2018-11-14",
+      "slug": "22-big-ball-of-mud-architecture-and-services-with-wade-waldron",
+      "description": "In 1997, researchers analyzed the actual architectures of software in the field. The horrifying results: a large portion were best described by colorful phrases like \"big ball of mud\" and \"sweep it under the rug.\" Wade Waldron talks about designing reactive applications and systems and how to avoid these anti-patterns. We also cover when a monolith is the right choice, hexagonal architecture, what to do if you're stuck with a big ball of mud and more.",
+      "image": "https://corecursive.com/images/022/action.png"
+    },
+    {
+      "title": "God's Programming Language",
+      "url": "https://corecursive.com/021-gods-programming-language-with-philip-wadler/",
+      "date": "2018-10-22",
+      "slug": "021-gods-programming-language-with-philip-wadler",
+      "description": "Professor and accomplished programming language researcher Philip Wadler believes that typed lambda calculus was discovered not invented -- part of the underpinnings of the universe itself. As a result, functional programming languages are more fundamental and deeply justified than their alternatives. We talk about this principle, which has guided his career. Phil takes us through the history of computer science from Turing to Alonzo Church. Eventually we get to what the movie Independence Day got wrong and what language a theoretical creator deity would program in.",
+      "image": "https://corecursive.com/images/021/action.png"
+    },
+    {
+      "title": "Concurrency and Functional Programming",
+      "url": "https://corecursive.com/020-concurrency-and-fp-with-riccardo-terrell/",
+      "date": "2018-10-03",
+      "slug": "020-concurrency-and-fp-with-riccardo-terrell",
+      "description": "When Riccardo Terrell hit the concurrency limitations in a jvm application, he thought back to the haskell he learned in a university course and decided to rewrite the entire thing in haskell. The immutability of the haskell solution made the concurrency bottleneck non-existent. It is no surprise that years later, his book on concurrency in .net leans heavily on functional programming constructs and the functional features of F# and C#. Today we talk about concurrency and functional programming, about F# how it compares to haskell and scala. We also chat about CPU architectures, best practises for writing distributed systems and much more. Thanks to Manning we also have some free copies of the book to give away. Leave a comment on the webpage for the episode or on twitter if you are interested and I will randomly pick from the interested parties.",
+      "image": "https://corecursive.com/images/020/action.png"
+    },
+    {
+      "title": "Test in Production",
+      "url": "https://corecursive.com/019-test-in-production-with-charity-majors/",
+      "date": "2018-08-31",
+      "slug": "019-test-in-production-with-charity-majors",
+      "description": "Today's Interview is with Charity Majors. We talk about how to make it easier to debug production issues in today's world of complicated distributed systems. A warning, There is some explicit language in this interview. I originally saw a talk by Charity where she said something like fuck your metrics and dashboards, you should test in production more. It was a pretty hyperbolic statement, but backed up with a lot of great insights. I think you'll find this interview similarly insightful. Charity and her company are probably best known for popularizing the concept that observability in the key to being able to debug issues in production.",
+      "image": "https://corecursive.com/images/019/action.png"
+    },
+    {
+      "title": "Domain Driven Design and Micro Services",
+      "url": "https://corecursive.com/018-micro-services-and-domain-driven-design-with-vaughn-vernon/",
+      "date": "2018-08-17",
+      "slug": "018-micro-services-and-domain-driven-design-with-vaughn-vernon",
+      "description": "Today I talk to Vaughn Vernon about how Domain Driven Design can help with designing micro services. The guidelines that Vaughn has developed in his work on DDD can provide guidance for where service and consistency boundaries should be drawn. We also talk about the platform he is developing for applying these DDD concepts using the actor model, [Vlingo](https://vlingo.io).",
+      "image": "https://corecursive.com/images/018/action.png"
+    },
+    {
+      "title": "Typeful Functional Streaming HTTP",
+      "url": "https://corecursive.com/017-http4s-with-ross-baker/",
+      "date": "2018-07-27",
+      "slug": "017-http4s-with-ross-baker",
+      "description": "The promise of functional programming is code that is easier to reason about, test and maintain. Referential transparency means there is no extra context to worry about, we can just focus on inputs and outputs. Examples of functional programming in the small are plentiful. Fibonacci is easy to write as a function but what about fp in the large? Http4s is a web framework written in scala that takes a pure functional approach to building http services. Ross Baker is a contributor to http4s and he explains the benefits of this approach. We also touch on the benefits of working remotely, since he and I have both been doing it for some time.",
+      "image": "https://corecursive.com/images/017/action.png"
+    },
+    {
+      "title": "Moves and Borrowing In Rust",
+      "url": "https://corecursive.com/016-moves-and-borrowing-in-rust-with-jim-blandy/",
+      "date": "2018-07-03",
+      "slug": "016-moves-and-borrowing-in-rust-with-jim-blandy",
+      "description": "The surprising thing about rust is how memory management works. Rust has the concepts of moves and borrowing. If you have heard about Rust, you may have heard people talking about the borrow checker and trying to make it happy. In this interview, Jim Blandy walks us through what these concepts mean and how they work. We also talk about how to avoid fighting with the borrow checker at all and why the conceptual model that Rust adopts, though it may seem unusual at first, is actually more representative of how computers work and therefore an easier programming model.",
+      "image": "https://corecursive.com/images/016/action.png"
+    },
+    {
+      "title": "Dependent Types in Haskell",
+      "url": "https://corecursive.com/015-dependant-types-in-haskell-with-stephanie-weirich/",
+      "date": "2018-06-13",
+      "slug": "015-dependant-types-in-haskell-with-stephanie-weirich",
+      "description": "At Strange Loop 2017, I wandered into a talk where I saw some code that deeply surprised me. The code could have been python if you squinted, passing dictionaries around, no type annotations anywhere. Yet, key lookup in the dictionary was validated at compile time. It was a compile-time error to access elements that didn't exist. Also, the dictionary was heterogeneous, the elements had different types, and it was all inferred and validated at compile time. What I was seeing was Dependent types in Haskell. In today's interview, Stephanie Weirich explains her efforts to add dependent types to Haskell and how that example worked. At Strange Loop 2017, I wandered into a talk where I saw some code that deeply surprised me. The code could have been python if you squinted, passing dictionaries around, no type annotations anywhere. Yet, key lookup in the dictionary was validated at compile time. It was a compile-time error to access elements that didn’t exist. Also, the dictionary was heterogeneous, the elements had different types, and it was all inferred and validated at compile time. What I was seeing was Dependent types in Haskell. In today’s interview, Stephanie Weirich explains her efforts to add dependent types to Haskell and how that example worked.",
+      "image": "https://corecursive.com/images/015/wide.png"
+    },
+    {
+      "title": "Microservices Architecture",
+      "url": "https://corecursive.com/014-micro-service-architectures-with-jan-machacek/",
+      "date": "2018-06-06",
+      "slug": "014-micro-service-architectures-with-jan-machacek",
+      "description": "I don't know a lot about microservices. Like how to design them and what the various caveats and anti-patterns are. I'm currently working on a project that involves decomposing a monolithic application into separate parts, integrated together using Kafka and http. Today I talk to coauthor of upcoming book, Reactive Systems Architecture : Designing and Implementing an Entire Distributed System. If you want to learn some of the hows and whys of building a distributed system, I think you'll really enjoy this interview. The insights from this conversation are already helping me.",
+      "image": "https://corecursive.com/images/014/action.png"
+    },
+    {
+      "title": "Rust And Bitter C++ Developers",
+      "url": "https://corecursive.com/013-rust-and-bitter-c-developers-with-jim-blandy/",
+      "date": "2018-05-16",
+      "slug": "013-rust-and-bitter-c-developers-with-jim-blandy",
+      "description": "Today I talk with Jim Blandy, one of the authors of Programming Rust. We talk about what problems rust is trying to solve, the unique language features and type system of rust. It includes both algebraic data types, type classes, and generics. We also touch on why it is so hard to secure code. Jim works on Firefox and his insights into the difficulty of writing secure code are super interesting.",
+      "image": "https://corecursive.com/images/013/wide.png"
+    },
+    {
+      "title": "Distributed Systems",
+      "url": "https://corecursive.com/012-erlang-and-distributed-systems-with-steven-proctor/",
+      "date": "2018-05-02",
+      "slug": "012-erlang-and-distributed-systems-with-steven-proctor",
+      "description": "Today's interview is with Steven Proctor, the host of the functional geekery podcast. We talk about distributed programming in general and specifically how erlang supports distributed computing. We also talk about things he's learned about functional programming and applying FP principles to various non FP contexts.",
+      "image": "https://corecursive.com/images/012/wide.png"
+    },
+    {
+      "title": "Graphql",
+      "url": "https://corecursive.com/011-graphql-and-sangria-with-oleg-ilyenko/",
+      "date": "2018-04-18",
+      "slug": "011-graphql-and-sangria-with-oleg-ilyenko",
+      "description": "What is GraphQL and when should you use it? Oleg Illyenko is primary creator of Sangria, a graphql implementation used by twitter, The New York Times and many other companies. We discuss the problems that graphql solves, how sangria works and the problems of api design. According to Oleg, GraphQL gives you a type system for your API.",
+      "image": "https://corecursive.com/images/011/action.png"
+    },
+    {
+      "title": "PureScript",
+      "url": "https://corecursive.com/010-purescript-and-avocados-with-justin-woo/",
+      "date": "2018-04-04",
+      "slug": "010-purescript-and-avocados-with-justin-woo",
+      "description": "Purescript is a functional programming language that compiles to JavaScript. It is a strict Haskell dialect that can run anywhere that JavaScript does. Justin Woo is a self described PureScript evangelist and enthusiast. We talk about PureScript vs Elm and working with expressive type systems. Justin also had some great metaphors about phantom types and masking tape as well as avocados and testing.",
+      "image": "https://corecursive.com/images/010/action.png"
+    },
+    {
+      "title": "Throwaway the Irrelevant",
+      "url": "https://corecursive.com/009-throw-away-the-irrelevant-with-john-a-de-goes/",
+      "date": "2018-03-21",
+      "slug": "009-throw-away-the-irrelevant-with-john-a-de-goes",
+      "description": "John De Goes and I talk flame wars, monad transformer performance, IO monad flavours, and reasoning about polymorphic type signatures. On the lighter side, we discuss how to write technical articles well and Zee vs Zed pronunciation.",
+      "image": "https://corecursive.com/images/009/action.png"
+    },
+    {
+      "title": "Generic Programming",
+      "url": "https://corecursive.com/008-generic-programming-and-shapeless-with-miles-sabin/",
+      "date": "2018-03-07",
+      "slug": "008-generic-programming-and-shapeless-with-miles-sabin",
+      "description": "When Miles Sabin applied to speak at a conference on generic programming, he bluffed a little bit. He would present on porting Simon Peytons Jone’s scrap your boilerplate functionality to Scala. Once his talk was accepted, he only had one thing left to do, implement it. Generic programming is the type of polymorphism your language does not directly support. To me this seems paradoxical, as once you implement a solution, the language, or at least a library within the language can now support it. This recursive definition and a speaking deadline led Miles to create shapeless. Years later he is still pushing the bounds on what you can do in Scala, including recently getting support for literal types added to scalac 2.13.",
+      "image": "https://corecursive.com/images/008/action.png"
+    },
+    {
+      "title": "Total Programming Using Swift",
+      "url": "https://corecursive.com/007-total-programming-using-swift-with-andre-videla/",
+      "date": "2018-02-12",
+      "slug": "007-total-programming-using-swift-with-andre-videla",
+      "description": "In simple terms, a total function is a function that produces a well defined output for all possible inputs. A total program is a program composed of only total functions. A non-total, or partial function, would be a function that can fail given certain inputs. Such as taking the head of a list, which can fail if giving an empty list and is therefore non-total. Total programming can be done in any language, however many languages make this easier. Some, going so far as to require proof of totality. In this interview Andre Videla discusses how the swift program language encourages programming in a total style. He also discusses his love of Idris, proof assistants and how his research into haskell, idris and dependant types have made him a better swift programmer.",
+      "image": "https://corecursive.com/images/007/action.png"
+    },
+    {
+      "title": "Type Driven Development and Idris",
+      "url": "https://corecursive.com/006-type-driven-development-and-idris-with-edwin-brady/",
+      "date": "2018-01-29",
+      "slug": "006-type-driven-development-and-idris-with-edwin-brady",
+      "description": "Edwin Brady is the creator of the Idris programming language and Author of the book Type-Driven Development with Idris and a computer science lecturer. The book, the language and Edwin himself all seem to be chock full of ideas for improving the way computer programming is done, by applying ideas from programming language theory. In this interview, we discuss dependent types, type holes, interactive and type-driven development, theorem provers, Curry–Howard correspondence, dependant haskell, total functional programming, British vs American spelling and much more.",
+      "image": "https://corecursive.com/images/006/wide.png"
+    },
+    {
+      "title": "Algebraic Domain Modelling using Functions",
+      "url": "https://corecursive.com/005-algebraic-domain-modelling-using-functions-with-debashish-ghosh/",
+      "date": "2018-01-22",
+      "slug": "005-algebraic-domain-modelling-using-functions-with-debashish-ghosh",
+      "description": "In object oriented languages, modeling a complex problem domain is a well understood process. Books like Domain Driven Design contain techniques for breaking down a problem domain and earlier books like the gang of four book catalogue design patterns for modeling these domains in an object oriented way. In today’s interview Debashish Ghosh explains how to model a complex problem domain in a functional paradigm. His solution focuses on modelling the behaviour of the software system rather than nouns it will contain. He also focuses on an algebraic approach to api design and discusses how abstract algebra provides tools for building better software.",
+      "image": "https://corecursive.com/images/005/wide.png"
+    },
+    {
+      "title": "Design Principles From Functional Programming",
+      "url": "https://corecursive.com/004-design-principles-from-functional-programming-with-runar-bjarnason/",
+      "date": "2018-01-10",
+      "slug": "004-design-principles-from-functional-programming-with-runar-bjarnason",
+      "description": "Runar Bjarnason has been exploring how writing in a functional style increases modularity and compositionality of software for many years. He is co-author of functional programming in scala, a book that teaches these principles in scala. It is a very challenging yet very rewarding book, sometimes referred to as simple ‘the red book’. In this interview Runar explains how writing in a functional style involves limiting side effects, avoiding exceptions and using higher order abstractions. Writing in this style places constraints on what a module in a software system may do, but by constraining modules in this way, the software modules themselves become endlessly composable.",
+      "image": "https://corecursive.com/images/004/action.png"
+    },
+    {
+      "title": "Scala at Duolingo",
+      "url": "https://corecursive.com/003-scala-at-duolingo-with-andre-kenji-horie/",
+      "date": "2018-01-07",
+      "slug": "003-scala-at-duolingo-with-andre-kenji-horie",
+      "description": "Doulingo is a language learning platform with over 200 million users. On a daily basis millions of users receive customized language lessons targeted specifically to them. These lessons are generated by a system called the session generator. In this episode, Andre talks about the reasons for the rewrite, what drove them to move to scala and the experience of moving from one technology stack to another.",
+      "image": "https://corecursive.com/images/003/wide.png"
+    },
+    {
+      "title": "Incident Response",
+      "url": "https://corecursive.com/002-incident-response-with-emil-stolarsky/",
+      "date": "2018-01-05",
+      "slug": "002-incident-response-with-emil-stolarsky",
+      "description": "As a system becomes more complex, the chance of failure increases. At a large enough scale, failures are inevitable. Incident response is the practice of preparing for and effectively recovering from these failures. In this interview Emil argues that we need to move beyond tribal knowledge and incorporate practices such as an incident command system and rigorous use of checklists. Emil suggests that we need to move beyond a mindset of - \"move fast and break things\" and toward a place of more deliberate preparation.",
+      "image": "https://corecursive.com/images/002/wide.png"
+    },
+    {
+      "title": "Scala Native",
+      "url": "https://corecursive.com/001-scala-native-with-denys-shabalin/",
+      "date": "2018-01-01",
+      "slug": "001-scala-native-with-denys-shabalin",
+      "description": "Scala is a functional and object oriented programming language built on the JVM. Scala Native takes this language, loved by many, and brings it to bare metal. Scala Native is an optimizing ahead-of-time compiler and lightweight managed runtime designed specifically for Scala. Denys Shabalin is a Research Assistant at the EPFL and the primary creator of Scala Native. In this episode, I interview Denys about the motivations behind the Scala Native project, how it was implemented and future directions. He also briefly touches on how Scala Native made cold compilation times of Scala code twice as fast. If you are interested in functional programming, compiler design, or want to learn some interesting tidbits about garbage collector design and trade offs you will like this episode.",
+      "image": "https://corecursive.com/images/001/wide.png"
+    }
+  ]
+}

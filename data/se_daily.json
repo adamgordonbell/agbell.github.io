@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "title": "Earthly Builds with Adam Gordon Bell - Software Engineering Daily",
+      "url": "https://softwareengineeringdaily.com/2022/07/01/earthly-builds-with-adam-gordon-bell/",
+      "date": "2022-07-01",
+      "slug": "earthly-builds-with-adam-gordon-bell",
+      "description": "Build automation tools automate the process of building code, including steps such as compiling, packaging binary code, and running automated tests. Because of this, build automation tools are considered a key part of a continuous delivery pipeline. Build automation tools read build scripts to define how they should perform a build. Common build scripts include"
+    },
+    {
+      "title": "Earthly and CLI Productivity with Adam Gordon Bell - Software Engineering Daily",
+      "url": "https://softwareengineeringdaily.com/2021/09/15/earthly-and-cli-productivity-with-adam-gordon-bell/",
+      "date": "2021-09-15",
+      "slug": "earthly-and-cli-productivity-with-adam-gordon-bell",
+      "description": "As developers hone their craft, becoming more productive often means learning utilities and tools at the command line.  The right combination of various parsing commands chained together through pipes can enable engineers to quickly and efficiently automate many adhoc data processing tasks. In this episode I speak with Adam Gordon Bell about some of his"
+    }
+  ]
+}
