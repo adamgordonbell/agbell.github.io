@@ -1,7 +1,7 @@
-# Writing — auto-managed by sync scripts + hand edits.
-# Sync is ADDITIVE: scripts only add items whose slug/url isn't already present.
+# writing.yaml — auto-managed by sync scripts + hand edits.
+# Sync is ADDITIVE: scripts only add items whose url isn't already present.
 # Hand-edit titles, descriptions, types, etc. directly — they persist.
-# Schema: type, role?, title, date, url, slug?, description?, venue?, ...
+# Schema: type, role?, title, date, url, slug?, description?, ...
 
 items:
 - type: article

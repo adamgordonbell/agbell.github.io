@@ -190,7 +190,7 @@
      - single-type scope    → no chips (would be a no-op) */}}
 {{ $chipTypes := slice }}
 {{ if not $hasScope }}
-  {{ $chipTypes = slice "talk" "article" "podcast" "workshop" "video" "media" "newsletter" "blog" }}
+  {{ $chipTypes = slice "talk" "article" "podcast" "workshop" "video" "newsletter" "blog" }}
 {{ else if $multiScope }}
   {{ $chipTypes = $scopeTypes }}
 {{ end }}
@@ -222,134 +222,21 @@
   </div>
 {{ end }}
 
-{{ $items := .Site.Data.accomplishments.items }}
-{{ $eras := .Site.Data.accomplishments.eras }}
+{{ $eras := (index .Site.Data "accomplishments").eras }}
 
-{{/* Build the unified timeline by merging three sources:
-     1. accomplishments.yaml — curated talks/articles/podcasts/workshops/media
-     2. CoRecursive feed cache + per-episode editorial overrides
-     3. Blog posts (Hugo content/blog/)
-
-     Dates normalized to "2006-01-02" string form for consistent sort. */}}
+{{/* Read the 4 type-keyed yamls — each item already carries `type` (and
+     `role` for podcasts). Sync scripts append, hand edits persist. */}}
 {{ $unified := slice }}
-
-{{/* Track URLs already added so the feed doesn't duplicate curated entries. */}}
-{{ $seenUrls := dict }}
-
-{{/* 1. Curated items — these always win over the feed pull. */}}
-{{ range $items }}
-  {{ $unified = $unified | append . }}
-  {{ with .url }}{{ $seenUrls = merge $seenUrls (dict . true) }}{{ end }}
-{{ end }}
-
-{{/* 2. CoRecursive episodes — base from feed cache, overrides win field-by-field.
-       Skip any URL already present in the curated list. */}}
-{{ $ccBase := .Site.Data.corecursive }}
-{{ $ccOverrides := .Site.Data.corecursive_overrides | default dict }}
-{{ if $ccBase }}
-  {{ range $ccBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $ccOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "podcast") . $override }}
-      {{ $unified = $unified | append $merged }}
+{{ range slice "talks" "podcasts" "writing" "videos" }}
+  {{ with (index $.Site.Data .) }}
+    {{ range .items }}
+      {{ $unified = $unified | append . }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{/* 3. Newsletters — base from Kit cache, overrides win field-by-field */}}
-{{ $nlBase := .Site.Data.newsletters }}
-{{ $nlOverrides := .Site.Data.newsletters_overrides | default dict }}
-{{ if $nlBase }}
-  {{ range $nlBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $nlOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "newsletter") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 4. Pulumi blog posts authored by Adam (from local docs repo) */}}
-{{ $pbBase := .Site.Data.pulumi_blog }}
-{{ $pbOverrides := .Site.Data.pulumi_blog_overrides | default dict }}
-{{ if $pbBase }}
-  {{ range $pbBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $pbOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "article" "venue" "Pulumi") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 5. Earthly blog posts authored by Adam (frozen, scraped once) */}}
-{{ $ebBase := .Site.Data.earthly_blog }}
-{{ $ebOverrides := .Site.Data.earthly_blog_overrides | default dict }}
-{{ if $ebBase }}
-  {{ range $ebBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $ebOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "article" "venue" "Earthly") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 6. SE Radio episodes hosted by Adam */}}
-{{ $srBase := .Site.Data.se_radio }}
-{{ $srOverrides := .Site.Data.se_radio_overrides | default dict }}
-{{ if $srBase }}
-  {{ range $srBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $srOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "podcast" "venue" "SE Radio") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 7. SE Daily episodes featuring Adam (as guest) → media */}}
-{{ $sdBase := .Site.Data.se_daily }}
-{{ $sdOverrides := .Site.Data.se_daily_overrides | default dict }}
-{{ if $sdBase }}
-  {{ range $sdBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $sdOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "media" "venue" "Software Engineering Daily") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 8. EarthlyTech YouTube videos */}}
-{{ $yeBase := .Site.Data.youtube_earthly }}
-{{ $yeOverrides := .Site.Data.youtube_earthly_overrides | default dict }}
-{{ if $yeBase }}
-  {{ range $yeBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $yeOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "video" "venue" "Earthly") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 9. PulumiTV YouTube videos (curated subset) */}}
-{{ $ypBase := .Site.Data.youtube_pulumi }}
-{{ $ypOverrides := .Site.Data.youtube_pulumi_overrides | default dict }}
-{{ if $ypBase }}
-  {{ range $ypBase.items }}
-    {{ if not (index $seenUrls .url) }}
-      {{ $override := index $ypOverrides .slug | default dict }}
-      {{ $merged := merge (dict "type" "video" "venue" "Pulumi") . $override }}
-      {{ $unified = $unified | append $merged }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{/* 10. Blog posts */}}
-{{ $blogPosts := where site.RegularPages "Section" "blog" }}
-{{ range $blogPosts }}
+{{/* Hugo-managed blog posts. */}}
+{{ range where site.RegularPages "Section" "blog" }}
   {{ $unified = $unified | append (dict
     "type" "blog"
     "date" (.Date.Format "2006-01-02")
@@ -439,7 +326,7 @@
 
 {{ define "extra_body_end" }}
 <script>
-  const VALID = ['all','talk','article','podcast','workshop','media','video','newsletter','blog'];
+  const VALID = ['all','talk','article','podcast','workshop','video','newsletter','blog'];
   const SCOPE_TYPES = {{ if .Params.scope_types }}{{ jsonify .Params.scope_types | safeJS }}{{ else }}null{{ end }};
   const buttons = document.querySelectorAll('#filters button');
   const items = document.querySelectorAll('ul.timeline > li[data-type]');
