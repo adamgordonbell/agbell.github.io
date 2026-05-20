@@ -27,11 +27,13 @@
           </div>
           <div class="prose-body">
             {{ .Content }}
+            {{ if .Params.show_social_proof }}{{ partial "social-proof.html" . }}{{ end }}
           </div>
         </div>
       {{ else }}
         <div class="prose-body max-w-3xl">
           {{ .Content }}
+          {{ if .Params.show_social_proof }}{{ partial "social-proof.html" . }}{{ end }}
         </div>
       {{ end }}
     </div>

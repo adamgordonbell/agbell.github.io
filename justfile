@@ -5,7 +5,7 @@ default:
     @just --list
 
 # Start Hugo server in background on localhost:1313
-start: sync-data
+start:
     @hugo server -D > /tmp/hugo-server.log 2>&1 &
     @echo "Hugo server started in background"
     @echo "Server logs at /tmp/hugo-server.log"
@@ -30,32 +30,27 @@ status:
 stop:
     @pkill -f "hugo server" && echo "Hugo server stopped" || echo "No Hugo server running"
 
-# Sync accomplishments data file from PARA source-of-truth
-sync-data:
-    @cp ~/para/projects/personal-site/accomplishments.yaml data/accomplishments.yaml
-    @echo "Synced accomplishments.yaml from ~/para/projects/personal-site/"
-
-# Pull CoRecursive episodes from corecursive.com → data/corecursive.json
+# Pull CoRecursive episodes → data/podcasts.yaml (additive)
 sync-corecursive:
     @python3 scripts/sync-corecursive.py
 
-# Pull CoRecursive newsletter posts from Kit → data/newsletters.json
+# Pull CoRecursive newsletter posts from Kit → data/writing.yaml (additive)
 sync-newsletters:
     @python3 scripts/sync-newsletters.py
 
-# Pull Pulumi blog posts by Adam from ~/sandbox/docs → data/pulumi_blog.json
+# Pull Pulumi blog posts by Adam from ~/sandbox/docs → data/writing.yaml (additive)
 sync-pulumi-blog:
     @python3 scripts/sync-pulumi-blog.py
 
-# Scrape Earthly blog posts by Adam (frozen archive) → data/earthly_blog.json
+# Scrape Earthly blog posts by Adam (frozen archive) → data/writing.yaml (additive)
 sync-earthly-blog:
     @python3 scripts/sync-earthly-blog.py
 
-# Scrape SE Radio episodes hosted by Adam → data/se_radio.json
+# Scrape SE Radio episodes hosted by Adam → data/podcasts.yaml (additive)
 sync-se-radio:
     @python3 scripts/sync-se-radio.py
 
-# Scrape SE Daily episodes featuring Adam → data/se_daily.json
+# Scrape SE Daily episodes featuring Adam → data/podcasts.yaml (additive)
 sync-se-daily:
     @python3 scripts/sync-se-daily.py
 
@@ -72,7 +67,7 @@ sync-youtube-pulumi:
 # Sync active sources only (Adam still publishes to these).
 # Frozen sources (Earthly blog/YouTube, SE Radio, SE Daily) are one-time backfills —
 # re-run their individual recipes manually if needed.
-sync: sync-data sync-corecursive sync-newsletters sync-pulumi-blog sync-youtube-pulumi
+sync: sync-corecursive sync-newsletters sync-pulumi-blog sync-youtube-pulumi
 
 # Backfill every frozen source from scratch — only need to run once.
 sync-backfill: sync-earthly-blog sync-se-radio sync-se-daily sync-youtube-earthly

@@ -4,6 +4,7 @@ title_short: "Bio"
 url: "/bio/"
 description: "When asked for a biography, I send people here"
 type: "profile"
+show_social_proof: true
 image: "/images/profiles/IMG_1177_web_cropped2.jpg"
 high_res_image: "/images/profiles/IMG_1177_cropped.jpg"
 ---
