@@ -6,6 +6,7 @@ description: "Podcast hosting (CoRecursive, SE Radio) and guest appearances on o
 layout: "timeline-daisy"
 type: "page"
 scope_types: ["podcast"]
+aliases: ["/media/"]
 image: "/images/profiles/IMG_1206_web.jpg"
 high_res_image: "/images/profiles/IMG_1206.jpg"
 ---

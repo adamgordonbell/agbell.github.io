@@ -44,17 +44,17 @@ menu:
     - name: Home
       url: /
       weight: 1
-    - name: Bio
-      url: /bio/
+    - name: About
+      url: /about/
       weight: 2
     - name: Speaking
       url: /speaking/
       weight: 3
-    - name: Articles
-      url: /articles/
+    - name: Writing
+      url: /writing/
       weight: 4
-    - name: Media
-      url: /media/
+    - name: Podcasts
+      url: /podcasts/
       weight: 5
     - name: Timeline
       url: /timeline/
@@ -62,9 +62,6 @@ menu:
     - name: Blog
       url: /posts/
       weight: 7
-    - name: Contact
-      url: /contact/
-      weight: 8
     - name: Tags
       url: /tags/
-      weight: 9
+      weight: 8

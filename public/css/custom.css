@@ -50,21 +50,21 @@ p {
     color: #999;
     margin-top: 20px;
 }
-/* Accomplishments list (data-driven pages) */
-.accomplishments-list {
+/* Recent list (homepage data-driven block) */
+.recent-list {
     list-style: none;
     padding-left: 0;
 }
-.accomplishments-list .accomplishment {
+.recent-list .recent-item {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
     border-bottom: 1px solid #eee;
 }
-.accomplishments-list .meta {
+.recent-list .meta {
     color: #888;
     font-size: 0.9em;
 }
-.accomplishments-list blockquote {
+.recent-list blockquote {
     font-size: 0.95em;
     color: #666;
     margin-top: 0.4em;

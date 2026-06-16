@@ -1,13 +1,5 @@
 {{ define "main" }}
-{{ .Content }}
-
-{{ $paginator := .Paginate .Pages }}
-
-{{ range $paginator.Pages }}
-  {{ partial "post-summary.html" . }}
-{{ end }}
-
-{{ partial "pagination.html" $paginator }}
-
-{{ partial "tag-cloud.html" . }}
+<meta http-equiv="refresh" content="0;url=/writing/">
+<script>window.location.replace("/writing/");</script>
+<p>Redirecting to <a href="/writing/">Writing</a>…</p>
 {{ end }}

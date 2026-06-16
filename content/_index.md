@@ -5,17 +5,32 @@ description: "Community Engineer at Pulumi, host of the CoRecursive podcast, con
 type: "profile"
 image: "/images/profiles/IMG_1205_web.jpg"
 high_res_image: "/images/profiles/IMG_1205.jpg"
+aliases:
+  - /contact/
 ---
 
-I'm a software engineer based in Peterborough, Canada. I work as a Community Engineer at [Pulumi](https://www.pulumi.com/adam), host the [CoRecursive podcast](https://corecursive.com/), speak at conferences, and write about developer tools.
+I'm Adam. I'm a software engineer at [Pulumi](https://www.pulumi.com/community/community-engineering/adam-gordon-bell/), I host the [CoRecursive podcast](https://corecursive.com/), and I speak at conferences when I have something worth saying. Based in Peterborough, Canada, working remotely since 2011.
 
-- [CoRecursive Podcast](https://corecursive.com/) — long-form interviews with the people behind the code (SQLite, PowerShell, Chef, and more).
-- [Speaking](/speaking/) — conference talks given and upcoming.
-- [Writing](/writing/) — articles, blog posts, and newsletter issues. Includes widely-read guides on AWK and JQ.
-- [Podcasts](/podcasts/) — hosted episodes and guest appearances.
-- [Videos](/videos/) — workshops and conference recordings.
-- [Email](mailto:adam@corecursive.com) — get in touch.
+The best way to reach me is **email** — [adam@corecursive.com](mailto:adam@corecursive.com). I read them all, though I'm sometimes slow to respond.
 
-## Recent
+If you'd rather lurk, I send a [**newsletter**](https://newsletter.corecursive.com/) every few weeks with what I'm writing, recording, and reading. Signup form is at the bottom of every page.
 
-{{< accomplishments limit="5" >}}
+Elsewhere: [GitHub](https://github.com/adamgordonbell) · [LinkedIn](https://www.linkedin.com/in/adamgordonbell) · [Bluesky](https://bsky.app/profile/adamgordonbell.com) · [Twitter](https://twitter.com/adamgordonbell) · [CoRecursive](https://corecursive.com/).
+
+{{< accomplishments upcoming="only" limit="3" heading="Upcoming" >}}
+
+## Recent Podcasts
+
+{{< accomplishments type="podcast" upcoming="exclude" limit="3" >}}
+
+## Recent Writing
+
+{{< accomplishments type="article,newsletter" upcoming="exclude" limit="3" >}}
+
+## Recent Talks
+
+{{< accomplishments type="talk,workshop" upcoming="exclude" limit="3" >}}
+
+## Recent Videos
+
+{{< accomplishments type="video" upcoming="exclude" limit="3" >}}

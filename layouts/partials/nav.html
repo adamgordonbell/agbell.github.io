@@ -1,15 +1,34 @@
 {{/* Top nav. Each section is a scoped view of /timeline/ via scope_types. */}}
 <header class="border-b border-[#e7e3d6]">
   <div class="max-w-5xl mx-auto px-6 py-5 flex items-center gap-6">
-    <a href="/" class="font-display text-2xl font-medium tracking-tight text-[#1a1a19] hover:text-rose">Adam Gordon Bell</a>
-    <nav class="ml-auto flex gap-5 text-xs font-sans font-medium uppercase tracking-wider text-[#4a4a48] flex-wrap">
-      <a href="/bio/" class="hover:text-rose">Bio</a>
+    <a href="/" class="font-display text-2xl font-medium tracking-tight text-[#1a1a19] hover:text-rose shrink-0">Adam Gordon Bell</a>
+    <nav class="ml-auto hidden sm:flex gap-5 text-xs font-sans font-medium uppercase tracking-wider text-[#4a4a48]" id="nav-links">
+      <a href="/about/" class="hover:text-rose">About</a>
       <a href="/writing/" class="hover:text-rose">Writing</a>
       <a href="/speaking/" class="hover:text-rose">Speaking</a>
       <a href="/podcasts/" class="hover:text-rose">Podcasts</a>
       <a href="/videos/" class="hover:text-rose">Videos</a>
       <a href="/timeline/" class="hover:text-rose">Everything</a>
-      <a href="/contact/" class="hover:text-rose">Contact</a>
     </nav>
+    <button class="sm:hidden ml-auto text-[#4a4a48] hover:text-rose" id="nav-toggle" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div class="sm:hidden hidden border-t border-[#e7e3d6] bg-[#faf9f4]" id="nav-mobile">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-sans font-medium uppercase tracking-wider text-[#4a4a48]">
+      <a href="/about/" class="hover:text-rose">About</a>
+      <a href="/writing/" class="hover:text-rose">Writing</a>
+      <a href="/speaking/" class="hover:text-rose">Speaking</a>
+      <a href="/podcasts/" class="hover:text-rose">Podcasts</a>
+      <a href="/videos/" class="hover:text-rose">Videos</a>
+      <a href="/timeline/" class="hover:text-rose">Everything</a>
+    </div>
   </div>
 </header>
+<script>
+  document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('nav-mobile').classList.toggle('hidden');
+  });
+</script>

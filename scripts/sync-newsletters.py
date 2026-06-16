@@ -41,26 +41,39 @@ _MONTHS = (
     "September|October|November|December|"
     "Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec"
 )
-# "Adam Gordon Bell May 2nd Hey!" / "Adam Gordon Bell July 4th Hey!"
-_BYLINE_HEY = re.compile(
-    rf"^\s*Adam Gordon Bell\s+(?:{_MONTHS})\s+\d{{1,2}}(?:st|nd|rd|th)?\s+Hey[!,]?\s*",
+# "Adam Gordon Bell May 2nd " — the byline prefix. Allow loose suffixes
+# (e.g. typoed "2nth") with \w*. Stripped first, then the title/greeting
+# that comes immediately after is stripped by _LEAD_TO_GREETING.
+_BYLINE = re.compile(
+    rf"^\s*Adam Gordon Bell\s+(?:{_MONTHS})\s+\d{{1,2}}\w*\s+",
     re.IGNORECASE,
 )
-# "Hello CoRecursive newsletter subscriber!"  / variants
+# After the byline, intros tend to read either "Hey!", or "{Title} Hello, ..."
+# or "{Title} Welcome to {month} ...". Strip everything up to and including
+# the greeting + its punctuation + an optional "CoRecursive newsletter
+# subscriber" suffix.
+_LEAD_TO_GREETING = re.compile(
+    r"^.{0,120}?\b(?:Hey|Hello|Welcome(?:\s+to)?|Hi|Happy(?:\s+\w+)?)\b[\s,!.:]*(?:CoRecursive\s+newsletter\s+subscribers?[\s,!.:]*)?",
+    re.IGNORECASE | re.DOTALL,
+)
+# Fallback: standalone "Hello CoRecursive newsletter subscribers,"
 _HELLO_SUB = re.compile(
-    r"^\s*Hello\s+CoRecursive\s+newsletter\s+subscribers?[!,.]?\s*",
+    r"^\s*Hello\s+CoRecursive\s+newsletter\s+subscribers?[!,.\s]*",
     re.IGNORECASE,
 )
-# Bare "Hey!" / "Hey," at the start of a cleaned intro
-_BARE_HEY = re.compile(r"^\s*Hey[!,]?\s+", re.IGNORECASE)
+# Fallback: bare "newsletter subscriber," at start (if byline ate the "Hello")
+_BARE_SUB = re.compile(
+    r"^\s*newsletter\s+subscribers?[,.\s]*",
+    re.IGNORECASE,
+)
 
 
 def clean_intro(raw: str, max_len: int = 280) -> str:
     s = (raw or "").strip()
-    # Strip Kit's standard byline / greeting prefixes
-    for pat in (_BYLINE_HEY, _HELLO_SUB):
-        s = pat.sub("", s, count=1)
-    s = _BARE_HEY.sub("", s, count=1)
+    s = _BYLINE.sub("", s, count=1)
+    s = _LEAD_TO_GREETING.sub("", s, count=1)
+    s = _HELLO_SUB.sub("", s, count=1)
+    s = _BARE_SUB.sub("", s, count=1)
     s = re.sub(r"\s+", " ", s).strip()
     if len(s) <= max_len:
         return s

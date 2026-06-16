@@ -958,7 +958,7 @@ items:
   role: host
   title: Software Engineering Radio — Host
   date: '2020-01-01'
-  url: https://www.se-radio.net/team/adam-gordon-bell/
+  url: https://se-radio.net/team/adam-gordon-bell/
   venue: IEEE SE Radio
   format: Hosting
   description: Host on IEEE's Software Engineering Radio.
@@ -970,7 +970,7 @@ items:
   role: guest
   title: Remote Working
   date: '2020-01-01'
-  url: https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/
+  url: https://web.archive.org/web/2025/https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/
   venue: COAP Podcast
   with: Dave & Woody
   format: Interview
@@ -1120,7 +1120,7 @@ items:
   role: guest
   title: Functional Programming
   date: '2019-06-01'
-  url: https://www.programmingthrowdown.com/2019/06/episode-91-functional-programming-with.html
+  url: https://web.archive.org/web/2023/https://www.programmingthrowdown.com/2019/06/episode-91-functional-programming-with.html
   venue: Programming Throwdown
   with: Patrick Wheeler & Jason Gauci
   format: Interview
@@ -1143,7 +1143,7 @@ items:
 - type: podcast
   role: host
   title: Jonathan Boccara on Understanding Legacy Code
-  date: '2019-05-31'
+  date: '2019-04-23'
   url: https://se-radio.net/2019/04/363-jonathan-boccara-on-understanding-legacy-code/
   slug: 363-jonathan-boccara-on-understanding-legacy-code
   description: Jonathan Boccara, author of The Legacy Code Programmer’s Toolbox discusses understanding and working with legacy code. Working with legacy code is a key skill of professional software development
@@ -1192,7 +1192,7 @@ items:
   role: guest
   title: An Insight Into CoRecursive
   date: '2019-05-01'
-  url: https://www.signifytechnology.com/blog/2019/05/an-insight-into-the-journey-of-corecursive-podcast-creator-adam-gordon-bell
+  url: https://web.archive.org/web/2023/https://www.signifytechnology.com/blog/2019/05/an-insight-into-the-journey-of-corecursive-podcast-creator-adam-gordon-bell
   venue: Signify Technologies
   format: Interview
   description: Interview on the journey of the CoRecursive Podcast.
@@ -1283,12 +1283,12 @@ items:
   source: curated
 - type: podcast
   role: guest
-  title: Functional Programming
+  title: Functional Programming with Adam Gordon Bell
   date: '2019-01-01'
   url: https://6figuredev.com/podcast/episode-094-functional-programming-with-adam-gordon-bell/
   venue: 6 Figure Developer
   format: Interview
-  description: Interview on functional programming and Scala.
+  description: Guest interview on functional programming and Scala on the 6 Figure Developer podcast.
   video_url: https://www.youtube.com/watch?v=q1BElpbIyxA
   tags:
   - interview
@@ -1599,4 +1599,18 @@ items:
   tags:
   - podcast
   - guest-host
+  source: curated
+- type: podcast
+  role: guest
+  title: Dev Tool Time with Adam Gordon Bell
+  date: '2021-10-05'
+  url: https://www.youtube.com/watch?v=oPaPhFX7SeM
+  venue: Dev Tool Time
+  format: Interview
+  description: Live show interview about developer tools and Earthly.
+  video_url: https://www.youtube.com/watch?v=oPaPhFX7SeM
+  tags:
+  - podcast
+  - interview
+  - earthly
   source: curated

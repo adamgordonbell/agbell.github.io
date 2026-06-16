@@ -1,52 +1,770 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta charset=utf-8><title>Adam Gordon Bell - Blog</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css rel=stylesheet type=text/css><script src=https://cdn.tailwindcss.com></script><script>tailwind.config={theme:{extend:{fontFamily:{sans:["Fira Sans","ui-sans-serif","system-ui","sans-serif"],serif:["Lora","ui-serif","Georgia","serif"],display:["EB Garamond","Lora","ui-serif","Georgia","serif"],mono:["ui-monospace","SFMono-Regular","Menlo","monospace"]},colors:{ink:"#353534",paper:"#f6f5f1",rose:"#5f023e"}}}}</script><style>html{background-color:#f6f5f1}body{font-family:lora,ui-serif,Georgia,serif;font-weight:400;font-size:1.0625rem;line-height:1.7;color:#353534;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1,h2,h3,h4{font-family:eb garamond,lora,ui-serif,Georgia,serif;color:#1a1a19;letter-spacing:-.005em}a{color:#5f023e}.prose-body{font-family:lora,ui-serif,Georgia,serif;font-size:1.0625rem;line-height:1.75;color:#353534}.prose-body h1,.prose-body h2,.prose-body h3,.prose-body h4{font-family:eb garamond,lora,ui-serif,Georgia,serif;font-weight:600;color:#1a1a19;letter-spacing:-.005em;margin-top:1.5em;margin-bottom:.4em}.prose-body h1{font-size:2.25rem}.prose-body h2{font-size:1.75rem}.prose-body h3{font-size:1.35rem}.prose-body p{margin:1em 0}.prose-body a{color:#5f023e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:rgba(95,2,62,.35)}.prose-body a:hover{text-decoration-color:#5f023e}.prose-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:#ece9df;padding:.1em .35em;border-radius:3px}.prose-body pre{background:#1a1a19;color:#ece9df;padding:1.25em;border-radius:4px;overflow-x:auto;font-size:.875rem;line-height:1.55;margin:1.25em 0}.prose-body pre code{background:0 0;padding:0}.prose-body blockquote{border-left:3px solid #5f023e;padding-left:1rem;color:#4a4a48;font-style:italic;margin:1em 0}.prose-body ul,.prose-body ol{padding-left:1.5rem;margin:1em 0}.prose-body li{margin:.4em 0}.prose-body img{max-width:100%;border-radius:4px;margin:1.25em 0}</style></head><body class="min-h-screen flex flex-col"><header class="border-b border-[#e7e3d6]"><div class="max-w-5xl mx-auto px-6 py-5 flex items-center gap-6"><a href=/ class="font-display text-2xl font-medium tracking-tight text-[#1a1a19] hover:text-rose">Adam Gordon Bell</a><nav class="ml-auto flex gap-5 text-xs font-sans font-medium uppercase tracking-wider text-[#4a4a48] flex-wrap"><a href=/bio/ class=hover:text-rose>Bio</a>
-<a href=/writing/ class=hover:text-rose>Writing</a>
-<a href=/speaking/ class=hover:text-rose>Speaking</a>
-<a href=/podcasts/ class=hover:text-rose>Podcasts</a>
-<a href=/videos/ class=hover:text-rose>Videos</a>
-<a href=/timeline/ class=hover:text-rose>Everything</a>
-<a href=/contact/ class=hover:text-rose>Contact</a></nav></div></header><main class=flex-1><div class="bg-[#fbfaf3] border-b border-[#e7e3d6]"><div class="max-w-5xl mx-auto px-6 pt-12 pb-8"><div class=mb-10><h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]"><a href=https://adamgordonbell.com/blog/ class=hover:text-rose>Blog</a></h1><p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">Older posts and notes.</p></div></div></div><div class="max-w-5xl mx-auto px-6 py-12"><div class="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-10"><div><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-11-11-project-euler-24-in-c.html/ class=hover:text-rose>Project Euler #24 in c#</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>November 11, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a></p><div class=prose-body><p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p><p>012   021   102   120   201   210</p><p>What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?</p><p><a href=https://adamgordonbell.com/posts/2010-11-11-project-euler-24-in-c.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-11-10-project-euler-8.html/ class=hover:text-rose>Project Euler 8 in C#</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>November 10, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a></p><div class=prose-body><p>Discover the largest product of five consecutive digits in the 1000-digit number.</p><p><a href="http://projecteuler.net/index.php?section=problems&amp;id=8">http://projecteuler.net/index.php?section=problems&amp;id=8</a></p><p><a href=https://adamgordonbell.com/posts/2010-11-10-project-euler-8.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-26-introducing-attribute-based-caching.html/ class=hover:text-rose>Introducing Attribute Based Caching</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 26, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
-<a href=https://adamgordonbell.com/tags/attribute-based-caching class="text-rose hover:opacity-70 normal-case tracking-normal">attribute-based-caching</a></p><div class=prose-body><blockquote><p>“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”</p></blockquote><p>I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing <a href=http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/ title=caching>caching</a> with postsharp.  However, none handled cache invalidation in a nice declarative way.  </p><p><a href=https://adamgordonbell.com/posts/2010-10-26-introducing-attribute-based-caching.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-12-project-euler-3.html/ class=hover:text-rose>Project Euler 3 in c#</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 12, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a></p><div class=prose-body><blockquote><p>Problem 3: What is the largest prime factor of the number 600851475143 ?</p><p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p></blockquote><p>With enough extension methods we can make 3 really simple:</p><blockquote><p>600851475143.LargestPrimeFactor()</p></blockquote><p>Where:</p><p><a href=https://adamgordonbell.com/posts/2010-10-12-project-euler-3.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-09-naked-objects-mvc.html/ class=hover:text-rose>Naked Objects MVC - exposing a repository method as a get</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 9, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
-<a href=https://adamgordonbell.com/tags/nakedobjectsframework class="text-rose hover:opacity-70 normal-case tracking-normal">NakedObjectsFramework</a></p><div class=prose-body><p>If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.</p><p><a href=https://adamgordonbell.com/posts/2010-10-09-naked-objects-mvc.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-07-project-euler-9.html/ class=hover:text-rose>Project Euler #9</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 7, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a></p><div class=prose-body><p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p><p><a href=https://adamgordonbell.com/posts/2010-10-07-project-euler-9.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-06-project-euler-5.html/ class=hover:text-rose>Project Euler #5</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 6, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a></p><div class=prose-body><p>Here is my solution to the following project Euler Problem:</p><p>2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.</p><p>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</p><p><a href=https://adamgordonbell.com/posts/2010-10-06-project-euler-5.html/ class="text-rose hover:underline">Read more →</a></p></div></article><article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]"><h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight"><a href=https://adamgordonbell.com/posts/2010-10-06-project-euler-6.html/ class=hover:text-rose>Project Euler #6</a></h2><p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1"><span>October 6, 2010</span>
-<span class=text-slate-300>·</span>
-<a href=https://adamgordonbell.com/tags/euler class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
-<a href=https://adamgordonbell.com/tags/c class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a></p><div class=prose-body><p>Ok, this one is stupidly simple:</p><pre tabindex=0><code>var squaredsum = Math.Pow(1.To(100).Sum(), 2);
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Adam Gordon Bell — Blog</title>
+<meta name="description" content="Personal blog of Adam Bell">
+<meta property="og:description" content="Personal blog of Adam Bell">
+<meta property="og:title" content="Blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1314/blog/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Fira Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          serif: ['Lora', 'ui-serif', 'Georgia', 'serif'],
+          display: ['EB Garamond', 'Lora', 'ui-serif', 'Georgia', 'serif'],
+          mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        },
+        colors: {
+          ink: '#353534',      
+          paper: '#f6f5f1',    
+          rose: '#5f023e',     
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { background-color: #f6f5f1;   }
+  body {
+    font-family: 'Lora', ui-serif, Georgia, serif;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #353534;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+   
+  h1, h2, h3, h4 {
+    font-family: 'EB Garamond', 'Lora', ui-serif, Georgia, serif;
+    color: #1a1a19;
+    letter-spacing: -0.005em;
+  }
+   
+  a { color: #5f023e; }
+
+   
+  .prose-body {
+    font-family: 'Lora', ui-serif, Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #353534;
+  }
+  .prose-body h1, .prose-body h2, .prose-body h3, .prose-body h4 {
+    font-family: 'EB Garamond', 'Lora', ui-serif, Georgia, serif;
+    font-weight: 600;
+    color: #1a1a19;
+    letter-spacing: -0.005em;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+  }
+  .prose-body h1 { font-size: 2.25rem; }
+  .prose-body h2 { font-size: 1.75rem; }
+  .prose-body h3 { font-size: 1.35rem; }
+  .prose-body p { margin: 1em 0; }
+  .prose-body a {
+    color: #5f023e;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(95, 2, 62, 0.35);
+  }
+  .prose-body a:hover { text-decoration-color: #5f023e; }
+  .prose-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+    background: #ece9df;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+  .prose-body pre {
+    background: #1a1a19;
+    color: #ece9df;
+    padding: 1.25em;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 1.25em 0;
+  }
+  .prose-body pre code { background: transparent; padding: 0; }
+  .prose-body blockquote {
+    border-left: 3px solid #5f023e;
+    padding-left: 1rem;
+    color: #4a4a48;
+    font-style: italic;
+    margin: 1em 0;
+  }
+  .prose-body ul, .prose-body ol { padding-left: 1.5rem; margin: 1em 0; }
+  .prose-body li { margin: 0.4em 0; }
+  .prose-body img { max-width: 100%; border-radius: 4px; margin: 1.25em 0; }
+</style>
+
+
+  
+</head>
+<body class="min-h-screen flex flex-col">
+  
+<header class="border-b border-[#e7e3d6]">
+  <div class="max-w-5xl mx-auto px-6 py-5 flex items-center gap-6">
+    <a href="/" class="font-display text-2xl font-medium tracking-tight text-[#1a1a19] hover:text-rose">Adam Gordon Bell</a>
+    <nav class="ml-auto flex gap-5 text-xs font-sans font-medium uppercase tracking-wider text-[#4a4a48] flex-wrap">
+      <a href="/about/" class="hover:text-rose">About</a>
+      <a href="/writing/" class="hover:text-rose">Writing</a>
+      <a href="/speaking/" class="hover:text-rose">Speaking</a>
+      <a href="/podcasts/" class="hover:text-rose">Podcasts</a>
+      <a href="/videos/" class="hover:text-rose">Videos</a>
+      <a href="/timeline/" class="hover:text-rose">Everything</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="flex-1">
+    
+    <div class="bg-[#fbfaf3] border-b border-[#e7e3d6]">
+      <div class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+        
+<div class="mb-10">
+  
+    <h1 class="font-display text-6xl md:text-7xl font-normal text-[#1a1a19] mb-4 leading-[1.05]">
+      <a href="http://localhost:1314/blog/" class="hover:text-rose">Blog</a>
+    </h1>
+    <p class="font-serif text-lg text-[#4a4a48] max-w-2xl leading-relaxed">
+      Older posts and notes.
+    </p>
+  
+</div>
+
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      
+      
+      
+      
+      
+
+      
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-10">
+          <div>
+            
+
+
+
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-11-11-project-euler-24-in-c.html/" class="hover:text-rose">Project Euler #24 in c#</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>November 11, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p>
+<p>012   021   102   120   201   210</p>
+<p>What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?</p>
+    
+      <p><a href="http://localhost:1314/posts/2010-11-11-project-euler-24-in-c.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-11-10-project-euler-8.html/" class="hover:text-rose">Project Euler 8 in C#</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>November 10, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>Discover the largest product of five consecutive digits in the 1000-digit number.</p>
+<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=8">http://projecteuler.net/index.php?section=problems&amp;id=8</a></p>
+    
+      <p><a href="http://localhost:1314/posts/2010-11-10-project-euler-8.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-26-introducing-attribute-based-caching.html/" class="hover:text-rose">Introducing Attribute Based Caching</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 26, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+      <a href="http://localhost:1314/tags/attribute-based-caching" class="text-rose hover:opacity-70 normal-case tracking-normal">attribute-based-caching</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <blockquote>
+<p>“There are only two hard problems in computer science: cache invalidation, naming things, and off-by-one errors.”</p>
+</blockquote>
+<p>I am a big fan of postsharp and its creator Gael.  There are a number of examples floating around of doing <a href="http://johnnycoder.com/blog/2009/01/16/caching-with-c-aop-and-postsharp/" title="caching">caching</a> with postsharp.  However, none handled cache invalidation in a nice declarative way.  </p>
+    
+      <p><a href="http://localhost:1314/posts/2010-10-26-introducing-attribute-based-caching.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-12-project-euler-3.html/" class="hover:text-rose">Project Euler 3 in c#</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 12, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <blockquote>
+<p>Problem 3: What is the largest prime factor of the number 600851475143 ?</p>
+<p><a href="http://projecteuler.net/index.php?section=problems&amp;id=3" title="http://projecteuler.net/index.php?section=problems&amp;id=3">http://projecteuler.net/index.php?section=problems&amp;id=3</a></p>
+</blockquote>
+<p>With enough extension methods we can make 3 really simple:</p>
+<blockquote>
+<p>600851475143.LargestPrimeFactor()</p>
+</blockquote>
+<p>Where:</p>
+    
+      <p><a href="http://localhost:1314/posts/2010-10-12-project-euler-3.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-09-naked-objects-mvc.html/" class="hover:text-rose">Naked Objects MVC - exposing a repository method as a get</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 9, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+      <a href="http://localhost:1314/tags/nakedobjectsframework" class="text-rose hover:opacity-70 normal-case tracking-normal">NakedObjectsFramework</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>If you would like to expose the results of an entity framework call as the index page or any other get based url using naked object mvc, a custom controller is required.</p>
+    
+      <p><a href="http://localhost:1314/posts/2010-10-09-naked-objects-mvc.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-07-project-euler-9.html/" class="hover:text-rose">Project Euler #9</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 7, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
+    
+      <p><a href="http://localhost:1314/posts/2010-10-07-project-euler-9.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-06-project-euler-5.html/" class="hover:text-rose">Project Euler #5</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 6, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>Here is my solution to the following project Euler Problem:</p>
+<p>2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.</p>
+<p>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</p>
+    
+      <p><a href="http://localhost:1314/posts/2010-10-06-project-euler-5.html/" class="text-rose hover:underline">Read more →</a></p>
+    
+  </div>
+</article>
+
+
+  <article class="bg-white border border-[#e7e3d6] rounded p-8 mb-6 shadow-[0_1px_2px_rgba(26,26,25,0.04)]">
+  <h2 class="font-display text-3xl font-medium text-[#1a1a19] mb-2 leading-tight">
+    <a href="http://localhost:1314/posts/2010-10-06-project-euler-6.html/" class="hover:text-rose">Project Euler #6</a>
+  </h2>
+  <p class="text-xs uppercase tracking-wider text-slate-500 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+  <span>October 6, 2010</span>
+  
+    <span class="text-slate-300">·</span>
+    
+      <a href="http://localhost:1314/tags/euler" class="text-rose hover:opacity-70 normal-case tracking-normal">euler</a>
+    
+      <a href="http://localhost:1314/tags/c" class="text-rose hover:opacity-70 normal-case tracking-normal">c#</a>
+    
+  
+</p>
+
+  <div class="prose-body">
+    <p>Ok, this one is stupidly simple:</p>
+<pre tabindex="0"><code>var squaredsum = Math.Pow(1.To(100).Sum(), 2);
 var sumedsquare = 1.To(100).Select(x =&gt; x * x).Sum();
 Console.WriteLine(squaredsum - sumedsquare);
-</code></pre></div></article><nav class="mt-10 pt-6 border-t border-slate-200"><ul class="flex justify-between text-sm"><li><a href=/blog/page/4/ class="text-rose hover:underline">← Previous</a></li><li></li></ul></nav><h2 class="text-xs uppercase tracking-wider font-semibold text-slate-900 mb-3">Tags</h2><div class="flex flex-wrap gap-x-3 gap-y-2 leading-snug"><a href=/tags/c%23/ class="text-rose hover:opacity-70 hover:underline" style=font-size:250%>C# <span class=text-slate-400>(13)</span>
-</a><a href=/tags/euler/ class="text-rose hover:opacity-70 hover:underline" style=font-size:213%>Euler <span class=text-slate-400>(8)</span>
-</a><a href=/tags/haskell/ class="text-rose hover:opacity-70 hover:underline" style=font-size:195%>Haskell <span class=text-slate-400>(6)</span>
-</a><a href=/tags/media/ class="text-rose hover:opacity-70 hover:underline" style=font-size:195%>Media <span class=text-slate-400>(6)</span>
-</a><a href=/tags/attribute-based-caching/ class="text-rose hover:opacity-70 hover:underline" style=font-size:174%>Attribute-Based-Caching <span class=text-slate-400>(4)</span>
-</a><a href=/tags/scala/ class="text-rose hover:opacity-70 hover:underline" style=font-size:161%>Scala <span class=text-slate-400>(3)</span>
-</a><a href=/tags/books/ class="text-rose hover:opacity-70 hover:underline" style=font-size:146%>Books <span class=text-slate-400>(2)</span>
-</a><a href=/tags/git/ class="text-rose hover:opacity-70 hover:underline" style=font-size:146%>Git <span class=text-slate-400>(2)</span>
-</a><a href=/tags/keyboard/ class="text-rose hover:opacity-70 hover:underline" style=font-size:146%>Keyboard <span class=text-slate-400>(2)</span>
-</a><a href=/tags/merging/ class="text-rose hover:opacity-70 hover:underline" style=font-size:146%>Merging <span class=text-slate-400>(2)</span>
-</a><a href=/tags/slick/ class="text-rose hover:opacity-70 hover:underline" style=font-size:146%>Slick <span class=text-slate-400>(2)</span></a></div></div><aside class="text-sm text-[#4a4a48] space-y-4"><div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4"><h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">About</h4><p class="font-serif leading-relaxed">Adam Gordon Bell says stuff. Software building stuff mainly.</p></div><div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4"><h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">Elsewhere</h4><ul class="space-y-1 font-serif"><li><a href=https://corecursive.com class="text-rose hover:underline">CoRecursive</a></li><li><a href=https://bsky.app/profile/adamgordonbell.com class="text-rose hover:underline">Bluesky</a></li><li><a href=https://github.com/adamgordonbell class="text-rose hover:underline">GitHub</a></li><li><a href=https://www.linkedin.com/in/adamgordonbell class="text-rose hover:underline">LinkedIn</a></li><li><a href=/contact/ class="text-rose hover:underline">Contact</a></li></ul></div><div class=px-4><a href=/index.xml class="font-sans text-xs uppercase tracking-wider font-semibold text-[#4a4a48] hover:text-rose">RSS</a></div></aside></div></div></main><footer class="border-t border-[#d6d1bf] mt-20 bg-[#ede9da]"><div class="max-w-5xl mx-auto px-6 py-12"><div class="flex flex-wrap gap-6 items-baseline mb-10 text-sm text-[#4a4a48]"><div class="flex-1 min-w-[260px] leading-relaxed font-serif"><span class="font-display font-medium text-[#1a1a19]">Adam Gordon Bell</span> · Community Engineer at
-<a href=https://www.pulumi.com class="text-rose hover:underline">Pulumi</a> · Creator of
-<a href=https://corecursive.com class="text-rose hover:underline">CoRecursive</a>.</div><div class="flex gap-5 text-xs font-sans uppercase tracking-wider font-medium text-[#4a4a48]"><a href=https://bsky.app/profile/adamgordonbell.com class=hover:text-rose>Bluesky</a>
-<a href=https://github.com/adamgordonbell class=hover:text-rose>GitHub</a>
-<a href=https://www.linkedin.com/in/adamgordonbell class=hover:text-rose>LinkedIn</a>
-<a href=/index.xml class=hover:text-rose>RSS</a>
-<a href=/contact/ class=hover:text-rose>Contact</a></div></div><div class="bg-white border border-[#d6d1bf] rounded p-8 text-center"><p class="font-serif text-lg text-[#1a1a19] mb-4">Sign up to my monthly newsletter for new writing, podcast episodes, and other fun stuff.</p><script src=https://f.convertkit.com/ckjs/ck.5.js></script><form action=https://app.convertkit.com/forms/2082075/subscriptions class="seva-form formkit-form flex flex-wrap gap-2 justify-center items-center" method=post data-sv-form=2082075 data-uid=99a50e1951 data-format=inline data-version=5><input class="formkit-input font-sans border border-[#d6d1bf] rounded px-4 py-2 text-sm w-64 max-w-full focus:outline-none focus:border-rose bg-white" name=email_address aria-label="Email Address" placeholder="Email Address" required type=email>
-<button data-element=submit class="formkit-submit bg-rose hover:bg-[#420029] text-white text-sm font-sans font-medium uppercase tracking-wider px-5 py-2 rounded transition">
-<span>Subscribe</span></button></form></div></div></footer><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-9889209-5","auto"),ga("send","pageview")</script></body></html>
+</code></pre>
+    
+  </div>
+</article>
+
+
+
+<nav class="mt-10 pt-6 border-t border-slate-200">
+  <ul class="flex justify-between text-sm">
+    <li>
+      
+        <a href="/blog/page/4/" class="text-rose hover:underline">← Previous</a>
+      
+    </li>
+    <li>
+      
+    </li>
+  </ul>
+</nav>
+
+
+<h2 class="text-xs uppercase tracking-wider font-semibold text-slate-900 mb-3">Tags</h2>
+<div class="flex flex-wrap gap-x-3 gap-y-2 leading-snug">
+  
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      <a href="/tags/c%23/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 250%">
+        C# <span class="text-slate-400">(13)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/euler/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 213%">
+        Euler <span class="text-slate-400">(8)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/haskell/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 195%">
+        Haskell <span class="text-slate-400">(6)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/interview/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 195%">
+        Interview <span class="text-slate-400">(6)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/attribute-based-caching/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 174%">
+        Attribute-Based-Caching <span class="text-slate-400">(4)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/scala/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 161%">
+        Scala <span class="text-slate-400">(3)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/books/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 146%">
+        Books <span class="text-slate-400">(2)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/git/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 146%">
+        Git <span class="text-slate-400">(2)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/keyboard/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 146%">
+        Keyboard <span class="text-slate-400">(2)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/merging/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 146%">
+        Merging <span class="text-slate-400">(2)</span>
+      </a>
+    
+  
+    
+      
+      <a href="/tags/slick/" class="text-rose hover:opacity-70 hover:underline" style="font-size: 146%">
+        Slick <span class="text-slate-400">(2)</span>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+
+          </div>
+          <aside class="text-sm text-[#4a4a48] space-y-4">
+            <div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4">
+              <h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">About</h4>
+              <p class="font-serif leading-relaxed">Software engineer at Pulumi, host of CoRecursive, occasional conference speaker. <a href="/about/" class="text-rose hover:underline">More →</a></p>
+            </div>
+            <div class="bg-[#ede9da] border border-[#d6d1bf] rounded p-4">
+              <h4 class="font-sans text-xs uppercase tracking-wider font-semibold text-[#1a1a19] mb-2">Elsewhere</h4>
+              <ul class="space-y-1 font-serif">
+                <li><a href="https://corecursive.com" class="text-rose hover:underline">CoRecursive</a></li>
+                <li><a href="https://bsky.app/profile/adamgordonbell.com" class="text-rose hover:underline">Bluesky</a></li>
+                <li><a href="https://github.com/adamgordonbell" class="text-rose hover:underline">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/adamgordonbell" class="text-rose hover:underline">LinkedIn</a></li>
+                <li><a href="mailto:adam@corecursive.com" class="text-rose hover:underline">Email</a></li>
+              </ul>
+            </div>
+            <div class="px-4">
+              <a href="/index.xml" class="font-sans text-xs uppercase tracking-wider font-semibold text-[#4a4a48] hover:text-rose">RSS</a>
+            </div>
+          </aside>
+        </div>
+      
+    </div>
+  </main>
+
+  
+<footer class="border-t border-[#d6d1bf] mt-20 bg-[#ede9da]">
+  <div class="max-w-5xl mx-auto px-6 py-12">
+
+    
+    <div class="flex flex-wrap gap-6 items-baseline mb-10 text-sm text-[#4a4a48]">
+      <div class="flex-1 min-w-[260px] leading-relaxed font-serif">
+        <span class="font-display font-medium text-[#1a1a19]">Adam Gordon Bell</span> · Community Engineer at
+        <a href="https://www.pulumi.com" class="text-rose hover:underline">Pulumi</a> · Creator of
+        <a href="https://corecursive.com" class="text-rose hover:underline">CoRecursive</a>.
+      </div>
+      <div class="flex gap-5 text-xs font-sans uppercase tracking-wider font-medium text-[#4a4a48]">
+        <a href="https://bsky.app/profile/adamgordonbell.com" class="hover:text-rose">Bluesky</a>
+        <a href="https://github.com/adamgordonbell" class="hover:text-rose">GitHub</a>
+        <a href="https://www.linkedin.com/in/adamgordonbell" class="hover:text-rose">LinkedIn</a>
+        <a href="mailto:adam@corecursive.com" class="hover:text-rose">Email</a>
+        <a href="/index.xml" class="hover:text-rose">RSS</a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white border border-[#d6d1bf] rounded p-8 text-center">
+      <p class="font-serif text-lg text-[#1a1a19] mb-4">
+        Sign up to my monthly newsletter for new writing, podcast episodes, and other fun stuff.
+      </p>
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.convertkit.com/forms/2082075/subscriptions"
+            class="seva-form formkit-form flex flex-wrap gap-2 justify-center items-center"
+            method="post"
+            data-sv-form="2082075"
+            data-uid="99a50e1951"
+            data-format="inline"
+            data-version="5">
+        <input class="formkit-input font-sans border border-[#d6d1bf] rounded px-4 py-2 text-sm w-64 max-w-full focus:outline-none focus:border-rose bg-white"
+               name="email_address"
+               aria-label="Email Address"
+               placeholder="Email Address"
+               required
+               type="email">
+        <button data-element="submit"
+                class="formkit-submit bg-rose hover:bg-[#420029] text-white text-sm font-sans font-medium uppercase tracking-wider px-5 py-2 rounded transition">
+          <span>Subscribe</span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-9889209-5', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+</body>
+</html>

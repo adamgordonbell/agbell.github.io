@@ -2,7 +2,7 @@
 title: "Programming Throwdown"
 author: "Adam Bell"
 date: 2019-04-28
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed for the [programming throwdown podcast](https://www.programmingthrowdown.com/episodes/episode-91-functional-programming-with/).

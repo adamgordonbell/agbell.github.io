@@ -2,7 +2,7 @@
 title: "Lucid Programming Interview"
 author: "Adam Bell"
 date: 2019-04-28
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed for the Lucid Programming Podcast.

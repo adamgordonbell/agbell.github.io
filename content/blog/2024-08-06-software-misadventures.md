@@ -2,7 +2,7 @@
 title: "Software Misadventures Podcast"
 author: "Adam Bell"
 date: 2024-08-06
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed for the Software Misadventures Podcast.

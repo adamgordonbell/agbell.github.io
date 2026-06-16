@@ -2,7 +2,7 @@
 title: "A Geek Leader Interview"
 author: "Adam Bell"
 date: 2019-04-28
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed on ["A Geek Leader"](https://www.ageekleader.com/agl-102-corecursive-with-adam-gordon-bell/) Podcast. Here is a machine generated transcript.

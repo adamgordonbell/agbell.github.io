@@ -2,7 +2,7 @@
 title: "Signify Q&A With Adam Gordon Bell"
 author: "Adam Bell"
 date: 2019-04-20
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed for by Signify Technolgies for Scala in the City.

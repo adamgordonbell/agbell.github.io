@@ -2,7 +2,7 @@
 title: "The Accidental Engineer Interview"
 author: "Adam Bell"
 date: 2019-06-09
-tags: [media]
+tags: [interview]
 ---
 
 I was interviewed on [The Accidental Engineer](https://theaccidentalengineer.com/docker-telecommute-podcasting-adam-gordon-bell-corecursive/) Podcast. Here is a machine generated transcript.

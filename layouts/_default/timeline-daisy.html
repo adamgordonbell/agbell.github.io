@@ -162,6 +162,31 @@
     letter-spacing: 0.15em !important;
     display: inline-block;
   }
+
+  /* ---- Mobile — collapse zig-zag to single column ---- */
+  @media (max-width: 640px) {
+    /* Single-column: spine + card on the right */
+    ul.timeline > li[data-type] {
+      grid-template-columns: min-content 1fr !important;
+    }
+    /* Always show the end (right) card, hide start */
+    ul.timeline > li[data-type] .card-start { display: none !important; }
+    ul.timeline > li[data-type] .card-end   { display: block !important; }
+    ul.timeline > li[data-type] .timeline-start { display: none !important; }
+
+    /* Compact row — collapse date + venue into two columns */
+    body.compact ul.timeline > li[data-type] .compact-row {
+      grid-template-columns: 4rem 1fr !important;
+      gap: 0.4rem;
+    }
+    body.compact .compact-venue { display: none; }
+
+    /* Era ribbons — hide on mobile, not enough room */
+    .era-ribbon { display: none !important; }
+
+    /* Timeline wrap padding */
+    .timeline-wrap { padding-left: 0 !important; }
+  }
 </style>
 {{ end }}
 
@@ -172,14 +197,13 @@
 
 {{/* Chip labels and intro text per type. Intros render once and are
      swapped by JS on filter change so each filter has its own context. */}}
-{{ $labels := dict "talk" "Talks" "article" "Articles" "podcast" "Podcasts" "workshop" "Workshops" "media" "Media" "video" "Videos" "newsletter" "Newsletter" "blog" "Blog" }}
+{{ $labels := dict "talk" "Talks" "article" "Articles" "podcast" "Podcasts" "workshop" "Workshops" "video" "Videos" "newsletter" "Newsletter" "blog" "Blog" }}
 {{ $intros := dict
-  "all" "Everything in one reverse-chronological list. Filter by type or deep-link with /timeline/#talk, /timeline/#newsletter, etc."
+  "all" "Everything in one reverse-chronological list. Filter by type."
   "talk" "Conference talks given and upcoming engagements. For booking or CFP info, see the bio page."
   "article" "Long-form technical writing — Earthly blog, Pulumi blog, and curated pieces."
   "podcast" "Podcast hosting (CoRecursive + SE Radio) and full episode list."
   "workshop" "Hands-on workshops at conferences and corporate trainings."
-  "media" "Guest appearances on other podcasts and shows."
   "video" "YouTube videos — Earthly tutorials, Pulumi demos, conference recordings."
   "newsletter" "Monthly CoRecursive newsletter — short notes published with each episode."
   "blog" "Older posts and notes." }}
@@ -290,7 +314,6 @@
       {{ if eq .type "podcast" }}{{ $color = "bg-purple-500" }}{{ end }}
       {{ if eq .type "workshop" }}{{ $color = "bg-green-500" }}{{ end }}
       {{ if eq .type "blog" }}{{ $color = "bg-amber-500" }}{{ end }}
-      {{ if eq .type "media" }}{{ $color = "bg-teal-500" }}{{ end }}
       {{ if eq .type "newsletter" }}{{ $color = "bg-pink-500" }}{{ end }}
       {{ if eq .type "video" }}{{ $color = "bg-rose-600" }}{{ end }}
 
@@ -409,8 +432,14 @@
     requestAnimationFrame(layoutEras);
   }
   try {
-    if (localStorage.getItem('compactView') === '1') setView('compact');
-    else setView('visual');
+    const stored = localStorage.getItem('compactView');
+    if (stored !== null) {
+      setView(stored === '1' ? 'compact' : 'visual');
+    } else if (window.innerWidth <= 640) {
+      setView('compact');
+    } else {
+      setView('visual');
+    }
   } catch (e) { setView('visual'); }
   viewToggle.addEventListener('click', () => {
     setView(document.body.classList.contains('compact') ? 'visual' : 'compact');

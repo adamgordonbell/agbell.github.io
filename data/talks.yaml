@@ -32,9 +32,23 @@ items:
   - ml
   source: curated
 - type: talk
+  title: I Built an AI Running Coach (That Actually Remembers My Training)
+  date: '2026-04-18'
+  url: https://www.pytexas.org/2026/schedule/talks/#i-built-an-ai-running-coach-that-actually-remembers-my-training
+  venue: PyTexas
+  location: Austin, TX
+  format: 25 min
+  description: A serverless AI running coach that remembers your training — Python + Lambda + EventBridge.
+  video_url: https://www.youtube.com/watch?v=EfIbH20J97Q
+  tags:
+  - ai
+  - serverless
+  - python
+  source: curated
+- type: talk
   title: When AI Agents Meet Production Infrastructure
   date: '2026-03-07'
-  url: https://www.socallinuxexpo.org/scale/23x/presentations/when-ai-agents-meet-production-infrastructure
+  url: https://www.youtube.com/watch?v=mt-CAWubAFg
   venue: SCaLE 23x
   location: Pasadena, CA
   format: 45 min
@@ -60,8 +74,9 @@ items:
   source: curated
 - type: talk
   title: I Built an AI Running Coach
-  date: '2026-03-07'
-  url: https://www.socallinuxexpo.org/scale/23x/presentations/i-built-ai-running-coach
+  date: '2026-03-08'
+  url: https://www.youtube.com/watch?v=ZGjOQkS540g&t=10085s
+  video_url: https://www.youtube.com/watch?v=ZGjOQkS540g&t=10085s
   venue: SCaLE 23x
   location: Pasadena, CA
   format: 45 min
@@ -73,23 +88,39 @@ items:
   - python
   source: curated
 - type: talk
-  title: When AI Agents Meet Production Infrastructure
-  date: '2025-10-01'
-  venue: MCP Academy
+  title: 'AWS''s AI Bet: What re:Invent 2025 Actually Means'
+  date: '2026-01-22'
+  venue: Houston AWS SIG
   location: Online
-  format: Online
-  description: Online edition of the SCaLE talk on AI agent safety.
+  format: Meetup
+  description: A re:Invent 2025 takeaways talk for the Houston AWS user group — what AWS's AI stack means for builders.
+  tags:
+  - aws
+  - ai
+  - reinvent
+  source: curated
+- type: talk
+  title: Bridge Agents and Infrastructure to Extend Agents into Cloud Environments
+  date: '2025-10-29'
+  url: https://www.youtube.com/watch?v=StEKKBRnqYc
+  venue: MCP Academy PNW
+  location: Bellevue, WA
+  format: 15-20 min · co-presented with Artur Laksberg
+  description: How MCP-style agents can safely extend into cloud environments using IaC as the bridge.
+  video_url: https://www.youtube.com/watch?v=StEKKBRnqYc
   tags:
   - ai
   - agents
+  - mcp
+  - infrastructure
   source: curated
 - type: workshop
-  title: Pulumi — Interview / Demo
+  title: How Statsig Shipped Self-Service Infra at 2 Trillion Events per Day
   date: '2025-01-01'
   url: https://www.youtube.com/watch?v=9KMIpOofv0s
   venue: Pulumi
-  format: Demo / interview
-  description: Recorded Pulumi demo / interview.
+  format: Case study interview
+  description: Pulumi case study — how Statsig's one-person infra team scaled to 2 trillion events/day using self-service infrastructure.
   video_url: https://www.youtube.com/watch?v=9KMIpOofv0s
   tags:
   - pulumi
@@ -130,6 +161,18 @@ items:
   - linux
   source: curated
 - type: talk
+  title: The Other Kind of Staff Software Engineer
+  date: '2023-02-23'
+  url: https://confoo.ca/en/2023/session/the-other-kind-of-staff-software-engineer
+  venue: ConFoo
+  location: Montreal, QC
+  format: 45 min
+  description: Staff vs line engineers — how the business-literature distinction maps to engineering careers and org dynamics.
+  tags:
+  - career
+  - engineering-management
+  source: curated
+- type: talk
   title: Beating Timsort
   date: '2023-02-22'
   url: https://confoo.ca/en/2023/session/beating-timsort
@@ -142,3 +185,98 @@ items:
   - python
   - performance
   source: curated
+- type: talk
+  title: Beating TimSort at Merging
+  date: '2022-12-03'
+  url: https://www.youtube.com/watch?v=L4a0SSinGi8
+  venue: PyjamasConf 2022
+  location: Online
+  format: Online
+  description: Python audience version of the Timsort talk — beating Timsort's merge logic.
+  video_url: https://www.youtube.com/watch?v=L4a0SSinGi8
+  tags:
+  - python
+  - performance
+  source: curated
+- type: talk
+  title: Compiling Containers
+  date: '2021-06-02'
+  url: https://www.youtube.com/watch?v=RHqNNTqmfEA
+  venue: Conf42 Cloud Native
+  location: Online
+  format: Online
+  description: How Dockerfiles get compiled into running containers — BuildKit's LLB and image layers.
+  video_url: https://www.youtube.com/watch?v=RHqNNTqmfEA
+  tags:
+  - containers
+  - buildkit
+  source: curated
+- type: talk
+  title: Compiling to Containers with BuildKit
+  date: '2021-05-27'
+  url: https://www.youtube.com/watch?v=1x9OJ-Z-gnc
+  venue: DockerCon
+  location: Online
+  format: Online
+  description: A look at BuildKit and how Dockerfiles become container images.
+  video_url: https://www.youtube.com/watch?v=1x9OJ-Z-gnc
+  tags:
+  - containers
+  - docker
+  - buildkit
+  source: curated
+- type: talk
+  title: What if Dockerfiles and Makefiles Had a Baby?
+  date: '2020-11-26'
+  url: https://www.youtube.com/watch?v=bL432C2Hqfo
+  venue: Dev Ops Exchange
+  location: Online
+  format: Meetup
+  description: The case for builds that combine what Dockerfiles and Makefiles each do well.
+  video_url: https://www.youtube.com/watch?v=bL432C2Hqfo
+  tags:
+  - builds
+  - earthly
+  source: curated
+- type: talk
+  title: Trends in FP
+  date: '2020-10-21'
+  url: https://www.meetup.com/houston-functional-programmers/
+  venue: Houston Functional Programmers Meetup
+  location: Online
+  format: Meetup
+  description: Trends in functional programming — Scala and Docker Compose as a worked example.
+  tags:
+  - fp
+  - functional-programming
+  source: curated
+- type: talk
+  title: Brampton DevOps Meetup
+  date: '2021-01-01'
+  venue: Brampton DevOps Meetup
+  location: Brampton, ON
+  format: Meetup
+  description: DevOps talk at the Brampton meetup during the Earthly era.
+  tags:
+  - devops
+  source: roam-stub
+- type: talk
+  title: BluePrint LDN
+  date: '2021-01-01'
+  venue: BluePrint LDN
+  location: London, UK
+  format: Conference
+  description: Conference talk at BluePrint LDN during the Earthly era.
+  tags:
+  - devops
+  source: roam-stub
+- type: talk
+  title: DevFest Live
+  date: '2021-01-01'
+  venue: DevFest Live
+  location: Online
+  format: Online
+  description: Online talk at DevFest Live during the Earthly era.
+  tags:
+  - devops
+  source: roam-stub

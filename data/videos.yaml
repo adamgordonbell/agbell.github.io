@@ -27,6 +27,7 @@ items:
   date: '2025-09-27'
   url: https://www.youtube.com/watch?v=2SMwabKsxz0
   slug: 2SMwabKsxz0
+  description: Short walkthrough of using Earthly Lunar to roll out an SDLC compliance check across a fleet — turning a post-incident action item into an enforceable policy.
   duration: '5:23'
   source: youtube-earthly
 - type: video
@@ -194,6 +195,7 @@ items:
   date: '2023-06-19'
   url: https://www.youtube.com/watch?v=QZM5pDS3-FQ
   slug: QZM5pDS3-FQ
+  description: Earthly community office hours — open Q&A on Earthfiles, build caching, and CI patterns.
   duration: '53:22'
   source: youtube-earthly
 - type: video
@@ -268,7 +270,7 @@ items:
   duration: '6:51'
   source: youtube-earthly
 - type: video
-  title: Learn HOW to Read CSV Files in Python!
+  title: 'Learn HOW to Read CSV Files in Python! (Data Analysis Edition)'
   date: '2023-01-10'
   url: https://www.youtube.com/watch?v=H-hagjt65cE
   slug: H-hagjt65cE

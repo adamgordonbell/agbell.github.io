@@ -1,8 +1,3 @@
-# writing.yaml — auto-managed by sync scripts + hand edits.
-# Sync is ADDITIVE: scripts only add items whose url isn't already present.
-# Hand-edit titles, descriptions, types, etc. directly — they persist.
-# Schema: type, role?, title, date, url, slug?, description?, ...
-
 items:
 - type: article
   title: Ten More Things You Can Do With Pulumi Neo
@@ -211,60 +206,60 @@ items:
   date: '2024-05-03'
   url: https://newsletter.corecursive.com/posts/one-hundred-episodes
   slug: one-hundred-episodes
-  description: 'Adam Gordon Bell May 3rd One Hundred Episodes Hello, CoRecursive newsletter subscriber, It’s May now, and I have a new episode out. But it’s just not just any episode 100, and it’s something
-    special. : 100! https://corecursive.com/coding-machines-with-don-and-krystal/ It''s a…'
+  description: 'It’s May now, and I have a new episode out. But it’s just not just any episode 100, and it’s something special. : 100! https://corecursive.com/coding-machines-with-don-and-krystal/ It''s
+    a story about debugging code, and I don''t want to spoil it, but it blew my mind. It''s about…'
   source: corecursive-newsletter
 - type: article
   title: 'go delve - The Golang Debugger '
   date: '2024-04-18'
   url: https://earthly.dev/blog/golang-dlv/
   slug: golang-dlv
-  description: '&lt;p&gt;Delve (&lt;code&gt;dlv&lt;/code&gt;) is a CLI-based debugger for Go, tailored to the language’s concurrency model and runtime. It allows y...'
+  description: Delve (dlv) is a CLI-based debugger for Go, tailored to the language’s concurrency model and runtime. It allows y...
   source: earthly-blog
 - type: newsletter
   title: Skateboarding Meets Software
   date: '2024-04-02'
   url: https://newsletter.corecursive.com/posts/skateboarding-meets-software
   slug: skateboarding-meets-software
-  description: 'Adam Gordon Bell April 2nd Skateboarding Meets Software Welcome to April and a new CoRecursive episode: Code, Kickflips and Crunch Time: Mick West''s Neversoft Journey How do you build one
-    of the most successful video games? The one that tops the charts, leads to a franchise and…'
+  description: 'April and a new CoRecursive episode: Code, Kickflips and Crunch Time: Mick West''s Neversoft Journey How do you build one of the most successful video games? The one that tops the charts,
+    leads to a franchise and becomes a cultural phenomenon? Today, Mick West shares the story…'
   source: corecursive-newsletter
 - type: article
   title: 'The Montréal Effect: Why Programming Languages Need a Style Czar'
   date: '2024-03-15'
   url: https://earthly.dev/blog/language-style-czar/
   slug: language-style-czar
-  description: '&lt;p&gt;Here is a non-realistic scenario: You are choosing the programming language for what will eventually become something large. Picture a col...'
+  description: 'Here is a non-realistic scenario: You are choosing the programming language for what will eventually become something large. Picture a col...'
   source: earthly-blog
 - type: newsletter
   title: Choosing Engineering Excellence Over Expediency
   date: '2024-03-04'
   url: https://newsletter.corecursive.com/posts/choosing-engineering-excellence-over-expediency
   slug: choosing-engineering-excellence-over-expediency
-  description: 'Adam Gordon Bell March 4th Leaving LinkedIn Welcome to March and a new CoRecursive episode: Leaving LinkedIn - Choosing Engineering Excellence Over Expediency Can sustainable software development
-    and tech giant fast-paced cultures truly coexist? Imagine having to choose between…'
+  description: 'March and a new CoRecursive episode: Leaving LinkedIn - Choosing Engineering Excellence Over Expediency Can sustainable software development and tech giant fast-paced cultures truly coexist?
+    Imagine having to choose between your career at a tech giant and your deepest values.…'
   source: corecursive-newsletter
 - type: article
   title: 'From Go to Rust: The Two Types of Readable Code'
   date: '2024-02-14'
   url: https://earthly.dev/blog/readability/
   slug: readability
-  description: '&lt;p&gt;Ever looked at some code and thought, “Wow, that’s an ugly mess!”? Or maybe you picked up a new programming language and felt right at hom...'
+  description: Ever looked at some code and thought, “Wow, that’s an ugly mess!”? Or maybe you picked up a new programming language and felt right at hom...
   source: earthly-blog
 - type: newsletter
   title: Visual Basic and Beyond
   date: '2024-02-02'
   url: https://newsletter.corecursive.com/posts/visual-basic-and-beyond
   slug: visual-basic-and-beyond
-  description: 'Adam Gordon Bell Feb 2nd Beautiful Code Welcome to February and a new CoRecursive episode: Beautiful Code - Inside Greg Wilson''s Vision for Software Design Greg Wilson has been on a decades-long
-    quest to transform how we teach and talk about software design. From getting…'
+  description: 'February and a new CoRecursive episode: Beautiful Code - Inside Greg Wilson''s Vision for Software Design Greg Wilson has been on a decades-long quest to transform how we teach and talk
+    about software design. From getting rejections for using the term "beautiful code," to…'
   source: corecursive-newsletter
 - type: article
   title: Showboaters, Maximalists and You
   date: '2024-02-01'
   url: https://earthly.dev/blog/showboaters/
   slug: showboaters
-  description: '&lt;p&gt;&lt;em&gt;Following from &lt;a href=&quot;/blog/single-expression-functions&quot;&gt;Rust, Ruby, and the Art of Implicit Returns&lt;/a&gt;...'
+  description: Following from Rust, Ruby, and the Art of Implicit Returns...
   source: earthly-blog
 - type: article
   title: Rust, Ruby, and the Art of Implicit Returns
@@ -278,8 +273,8 @@ items:
   date: '2024-01-02'
   url: https://newsletter.corecursive.com/posts/resilience-and-renaissance-navigating-life-s-unexpected-turns
   slug: resilience-and-renaissance-navigating-life-s-unexpected-turns
-  description: 'Adam Gordon Bell Jan 2nd Brain Injury Sparks Python Mastery Welcome to 2024 and a new CoRecursive episode: Code As A Lifeline What if your dreams were suddenly ripped away? What if your
-    talents vanished, your passions erased? That’s what happened to Jason McDonald when a…'
+  description: '2024 and a new CoRecursive episode: Code As A Lifeline What if your dreams were suddenly ripped away? What if your talents vanished, your passions erased? That’s what happened to Jason McDonald
+    when a traumatic brain injury at 16 ravaged his planned destiny of becoming a doctor.…'
   source: corecursive-newsletter
 - type: article
   title: The Future is Rusty
@@ -293,8 +288,8 @@ items:
   date: '2023-12-04'
   url: https://newsletter.corecursive.com/posts/echoes-of-creation-decoding-vue-s-genesis-and-the-ftx-saga
   slug: echoes-of-creation-decoding-vue-s-genesis-and-the-ftx-saga
-  description: 'Adam Gordon Bell Dec 4th Echoes of Creation: Decoding Vue''s Genesis and the FTX Saga Hey, It''s December now, and I have a new podcast episode out here: From 486 to Vue.js - Evan You''s
-    Full-Time Gamble on Open Source It''s the unlikely origin story behind Vue.js and how Evan You''s…'
+  description: 'It''s December now, and I have a new podcast episode out here: From 486 to Vue.js - Evan You''s Full-Time Gamble on Open Source It''s the unlikely origin story behind Vue.js and how Evan
+    You''s frustration with Angular sparked a side project that snowballed into one of today''s most…'
   source: corecursive-newsletter
 - type: article
   title: Create a Python Package using Setup.py
@@ -322,8 +317,8 @@ items:
   date: '2023-11-02'
   url: https://newsletter.corecursive.com/posts/wooden-block-puzzles-and-spotify
   slug: wooden-block-puzzles-and-spotify
-  description: 'Adam Gordon Bell Nov 2nd Wooden Block Puzzles and Spotify Hello, CoRecursive newsletter subscriber, It’s November now, and I have a new episode out here: The Inside Story of Spotify''s Engineering
-    Growth It’s about Spotify, back in 2016-2018. Facing an IPO deadline, Pia Nilsson…'
+  description: 'It’s November now, and I have a new episode out here: The Inside Story of Spotify''s Engineering Growth It’s about Spotify, back in 2016-2018. Facing an IPO deadline, Pia Nilsson worked
+    with 300 teams to transform how Spotify built software. She spearheaded a movement that led…'
   source: corecursive-newsletter
 - type: article
   title: Earthly On devtools.FM
@@ -337,8 +332,8 @@ items:
   date: '2023-10-02'
   url: https://newsletter.corecursive.com/posts/sleep-sort
   slug: sleep-sort
-  description: 'Adam Gordon Bell Oct 2nd Sleep Sort Hello CoRecursive newsletter subscriber, It’s October now, and I have a new episode out here: Sloot Digital Coding System Jan Sloot claimed to have invented
-    revolutionary data compression that could fit a full movie into a tiny smart card…'
+  description: 'It’s October now, and I have a new episode out here: Sloot Digital Coding System Jan Sloot claimed to have invented revolutionary data compression that could fit a full movie into a tiny
+    smart card chip. Top executives and investors witnessed his demos and became true believers,…'
   source: corecursive-newsletter
 - type: article
   title: A Brief, Incomplete and Mostly Wrong Devops Glossary
@@ -359,54 +354,53 @@ items:
   date: '2023-09-01'
   url: https://newsletter.corecursive.com/posts/balancing-developer-identity
   slug: balancing-developer-identity
-  description: 'Adam Gordon Bell September 2023 Balancing Identity Hello, CoRecursive newsletter subscriber, It’s September now, and I have a new episode out here: https://corecursive.com/configuring-identity-adam-jacob/
-    It''s a look behind the scenes to the creation of Chef - the game-changing…'
+  description: 'It’s September now, and I have a new episode out here: https://corecursive.com/configuring-identity-adam-jacob/ It''s a look behind the scenes to the creation of Chef - the game-changing
+    infrastructure automation tool. Adam Jacob created Chef, and it became a massively popular…'
   source: corecursive-newsletter
 - type: newsletter
   title: Learning When to Learn
   date: '2023-08-03'
   url: https://newsletter.corecursive.com/posts/learning-when-to-learn
   slug: learning-when-to-learn
-  description: 'Adam Gordon Bell August 2023 Learning When to Learn Hello, CoRecursive newsletter subscriber, It’s August now, and I have a new episode out here: The Science of Learning to Code It''s about
-    learning, and this is a topic very dear to my own heart. The episode shares some history…'
+  description: 'It’s August now, and I have a new episode out here: The Science of Learning to Code It''s about learning, and this is a topic very dear to my own heart. The episode shares some history of
+    learning research and imparts some guidelines for embarking on a learning side project while…'
   source: corecursive-newsletter
 - type: article
-  title: Don&#39;t Configure Control Flow
+  title: Don't Configure Control Flow
   date: '2023-08-02'
   url: https://earthly.dev/blog/dont-configure-control-flow/
   slug: dont-configure-control-flow
-  description: Learn why using YAML for control flow configuration can lead to complex and hard-to-understand code, and why it&#39;s better to use existing progra...
+  description: Learn why using YAML for control flow configuration can lead to complex and hard-to-understand code, and why it's better to use existing progra...
   source: earthly-blog
 - type: article
   title: Mining Meaningful Methods from Large Language Models
   date: '2023-07-14'
   url: https://earthly.dev/blog/build-transpose/
   slug: build-transpose
-  description: Learn strategies for working with LLMs, such managing context, framing the problem, thinking outloud and more in this newbs&#39;s guide to applying...
+  description: Learn strategies for working with LLMs, such managing context, framing the problem, thinking outloud and more in this newbs's guide to applying...
   source: earthly-blog
 - type: newsletter
   title: Passion and Focus
   date: '2023-07-03'
   url: https://newsletter.corecursive.com/posts/passion-and-focus
   slug: passion-and-focus
-  description: 'Adam Gordon Bell July 3rd Passion and Focus Hello, CoRecursive newsletter subscriber, It''s July now, and I have a new episode out here: https://corecursive.com/a-dark-room-with-amir-rajan/
-    Amir is amazing. I identify with his early struggles – his struggles working with people…'
+  description: 'It''s July now, and I have a new episode out here: https://corecursive.com/a-dark-room-with-amir-rajan/ Amir is amazing. I identify with his early struggles – his struggles working with
+    people who didn''t care – so much. He is a little worried that his earlier self – who got…'
   source: corecursive-newsletter
 - type: newsletter
   title: Waiting for Marv
   date: '2023-06-02'
   url: https://newsletter.corecursive.com/posts/waiting-for-marv
   slug: waiting-for-marv
-  description: 'Adam Gordon Bell June 1st Waiting for Marv Quiting Stack Overflow It''s June now, and I have a new episode out here: https://corecursive.com/stack-overflow/ The episode is the story of the
-    longest-tenured employee at Stack Overflow, Ben Dumke-von der Ehe. He became an early…'
+  description: 'Waiting for Marv Quiting Stack Overflow It''s June now, and I have a new episode out here: https://corecursive.com/stack-overflow/ The episode is the story of the longest-tenured employee
+    at Stack Overflow, Ben Dumke-von der Ehe. He became an early employee of Stack Overflow by…'
   source: corecursive-newsletter
 - type: newsletter
   title: Learning to Learn
   date: '2023-05-02'
   url: https://newsletter.corecursive.com/posts/learning-to-learn
   slug: learning-to-learn
-  description: 'Adam Gordon Bell May 2nth Learning to Learn From Project Management to Data Compression Innovator It''s May now, and I have a new episode out here: https://corecursive.com/data-compression-yann--collet/
-    Yann Collet became interested in programming and discovered his passion for…'
+  description: 'It''s May now, and I have a new episode out here: https://corecursive.com/data-compression-yann--collet/ Yann Collet became interested in programming and discovered his passion for…'
   source: corecursive-newsletter
 - type: article
   title: Misaligned Incentives in Dev Tool Businesses
@@ -416,7 +410,7 @@ items:
   description: Discover the hidden pitfalls of dev tool businesses and how misaligned incentives can lead to bloated software and unsatisfied users. Learn how Ear...
   source: earthly-blog
 - type: article
-  title: To Understand Pants, Understand Bazel&#39;s History
+  title: To Understand Pants, Understand Bazel's History
   date: '2023-04-07'
   url: https://earthly.dev/blog/pants-build/
   slug: pants-build
@@ -427,24 +421,24 @@ items:
   date: '2023-04-03'
   url: https://newsletter.corecursive.com/posts/be-like-ken
   slug: be-like-ken
-  description: Adam Gordon Bell April 3rd Be Like Ken Hello, CoRecursive newsletter subscriber! April is here! March has been a challenging month for me. My dad is in the hospital, and I'm heading out on
-    a road trip to visit him shortly. Some months are tougher than others. Doug Crockford But…
+  description: April is here! March has been a challenging month for me. My dad is in the hospital, and I'm heading out on a road trip to visit him shortly. Some months are tougher than others. Doug Crockford
+    But Episode 087 of the podcast is out, and it's an interview with Doug Crockford —…
   source: corecursive-newsletter
 - type: newsletter
   title: Shades of Grey Personal Truths
   date: '2023-03-02'
   url: https://newsletter.corecursive.com/posts/shades-of-grey-personal-truths
   slug: shades-of-grey-personal-truths
-  description: 'Adam Gordon Bell March 2nd Shades of Grey Personal Truths ↓ Hello, CoRecursive newsletter subscriber, It''s March now, and I have a new episode out here: Sun''s Mobile Blunders Shai Almog
-    worked at Sun on Mobile JVMs just as phones started to turn from phones into something else.…'
+  description: 'It''s March now, and I have a new episode out here: Sun''s Mobile Blunders Shai Almog worked at Sun on Mobile JVMs just as phones started to turn from phones into something else. Sun had
+    deep expertise in mobile development and unique engineering-driven culture and relationships…'
   source: corecursive-newsletter
 - type: newsletter
   title: Make-Believe Projects
   date: '2023-02-02'
   url: https://newsletter.corecursive.com/posts/make-believe-projects
   slug: make-believe-projects
-  description: 'Hello, CoRecursive newsletter subscriber! It’s February now, and I have a new episode out here: https://corecursive.com/shipping-graphing-calculator/ It’s the story of sneaking onto the
-    Apple Campus to finish working on a project that got canceled. Each episode is only as good…'
+  description: 'It’s February now, and I have a new episode out here: https://corecursive.com/shipping-graphing-calculator/ It’s the story of sneaking onto the Apple Campus to finish working on a project
+    that got canceled. Each episode is only as good as the story, and it would be hard to find…'
   source: corecursive-newsletter
 - type: article
   title: Store VS Code `Settings.json` in Git
@@ -458,8 +452,8 @@ items:
   date: '2023-01-02'
   url: https://newsletter.corecursive.com/posts/when-working-hard-isn-t-enough
   slug: when-working-hard-isn-t-enough
-  description: Happy 2023 Newsletter, readers! The first episode of the year is a very special one to me. It’s an interview with long-time podcast guest and sort of neighbor Don McKay. Often times when
-    I have Don on the podcast it’s a zany light episode where we explore a tech topic in a…
+  description: Newsletter, readers! The first episode of the year is a very special one to me. It’s an interview with long-time podcast guest and sort of neighbor Don McKay. Often times when I have Don
+    on the podcast it’s a zany light episode where we explore a tech topic in a light-hearted…
   source: corecursive-newsletter
 - type: article
   title: We Built the Fastest CI and It Failed
@@ -494,7 +488,7 @@ items:
   date: '2022-11-22'
   url: https://earthly.dev/blog/bullshit-software-projects/
   slug: bullshit-software-projects
-  description: Discover the frustrations and challenges faced by software developers in the world of &quot;bullshit work.&quot; From pointless projects to busy wo...
+  description: Discover the frustrations and challenges faced by software developers in the world of "bullshit work." From pointless projects to busy wo...
   source: earthly-blog
 - type: article
   title: Containers are chroot with a Marketing Budget
@@ -531,7 +525,7 @@ items:
   date: '2022-09-13'
   url: https://earthly.dev/blog/bazel-build/
   slug: bazel-build
-  description: Learn about the benefits and challenges of using Bazel, Google&#39;s open-source monorepo build system, from experts who have experience with it. D...
+  description: Learn about the benefits and challenges of using Bazel, Google's open-source monorepo build system, from experts who have experience with it. D...
   source: earthly-blog
 - type: newsletter
   title: Prison Python
@@ -546,22 +540,22 @@ items:
   date: '2022-08-17'
   url: https://earthly.dev/blog/stop-10x-developer/
   slug: stop-10x-developer
-  description: In this article, the concept of the &quot;10x developer&quot; is dissected and examined. The author explores whether such developers truly exist an...
+  description: In this article, the concept of the "10x developer" is dissected and examined. The author explores whether such developers truly exist an...
   source: earthly-blog
 - type: article
   title: Terraform Route53 And DNS Fun
   date: '2022-08-02'
   url: https://earthly.dev/blog/terraform-route53/
   slug: terraform-route53
-  description: Learn how to fix DNS issues and import DNS records from AWS&#39;s Route53 into Terraform in this informative article by Adam. Discover the steps he...
+  description: Learn how to fix DNS issues and import DNS records from AWS's Route53 into Terraform in this informative article by Adam. Discover the steps he...
   source: earthly-blog
 - type: newsletter
   title: Three Cheers for CPAN
   date: '2022-08-01'
   url: https://newsletter.corecursive.com/posts/three-cheers-for-cpan
   slug: three-cheers-for-cpan
-  description: 'Hello CoRecursive subscriber, It''s August now, and I have a new episode out: This Day In History: CPAN CPAN CPAN, The Comprehensive Perl Archive Network, changed software development for
-    the better, and the story behind its creation is fascinating. The episode also touches on my…'
+  description: 'CoRecursive subscriber, It''s August now, and I have a new episode out: This Day In History: CPAN CPAN CPAN, The Comprehensive Perl Archive Network, changed software development for the
+    better, and the story behind its creation is fascinating. The episode also touches on my…'
   source: corecursive-newsletter
 - type: article
   title: S3 Terraform Backend
@@ -700,7 +694,7 @@ items:
   description: Learn how to run containers on AWS Lambda and leverage the scalability and cost-saving benefits of serverless computing. This article explores the ...
   source: earthly-blog
 - type: article
-  title: Avoiding Common Protobuf&#39;s Pitfalls with Buf
+  title: Avoiding Common Protobuf's Pitfalls with Buf
   date: '2022-03-18'
   url: https://earthly.dev/blog/buf-protobuf/
   slug: buf-protobuf
@@ -744,7 +738,7 @@ items:
   date: '2022-02-24'
   url: https://earthly.dev/blog/welcome-josh/
   slug: welcome-josh
-  description: Meet Josh Alletto, Earthly&#39;s new Senior Technical Content Engineer. In this article, he shares his journey from literature major to coding enth...
+  description: Meet Josh Alletto, Earthly's new Senior Technical Content Engineer. In this article, he shares his journey from literature major to coding enth...
   source: earthly-blog
 - type: article
   title: Golang gRPC Example
@@ -758,7 +752,7 @@ items:
   date: '2022-02-03'
   url: https://earthly.dev/blog/golang-sqlite/
   slug: golang-sqlite
-  description: Learn how to use Golang&#39;s `database/sql` package to work with SQLite databases. This tutorial covers topics such as installing SQLite, creating...
+  description: Learn how to use Golang's `database/sql` package to work with SQLite databases. This tutorial covers topics such as installing SQLite, creating...
   source: earthly-blog
 - type: newsletter
   title: Serenity OS
@@ -780,8 +774,8 @@ items:
   date: '2022-01-02'
   url: https://newsletter.corecursive.com/posts/hello-2022
   slug: hello-2022
-  description: 'Hello newsletter subscriber, It''s 2022 now, and I have a new episode out here: https://corecursive.com/internet-is-duct-tape/ It''s a continuation of episode #68 "Quines". Don Mckay is
-    back, and so is Krystal from episode 52. The three of us discuss how the world is messy, and…'
+  description: 'It''s 2022 now, and I have a new episode out here: https://corecursive.com/internet-is-duct-tape/ It''s a continuation of episode #68 "Quines". Don Mckay is back, and so is Krystal from
+    episode 52. The three of us discuss how the world is messy, and often…'
   source: corecursive-newsletter
 - type: article
   title: Don't Feed the Thought Leaders
@@ -844,7 +838,7 @@ items:
   date: '2021-10-26'
   url: https://earthly.dev/blog/bash-string/
   slug: bash-string
-  description: Learn how to manipulate strings in bash with this informative tutorial. From concatenating strings to replacing parts of a string, you&#39;ll disco...
+  description: Learn how to manipulate strings in bash with this informative tutorial. From concatenating strings to replacing parts of a string, you'll disco...
   source: earthly-blog
 - type: article
   title: 'Career Advice: Be Confidently Uncertain'
@@ -916,8 +910,8 @@ items:
   date: '2021-08-02'
   url: https://newsletter.corecursive.com/posts/zig-andrew-kelly-and-self-funding
   slug: zig-andrew-kelly-and-self-funding
-  description: 'Hi CoRecursive newsletter subscriber, The August episode is out and it''s really good. It''s an interview with Zig programming language creator Andrew Kelly: https://corecursive.com/067-zig-with-andrew-kelley/
-    Andrew is has been creating Zig, the programming language he always…'
+  description: 'The August episode is out and it''s really good. It''s an interview with Zig programming language creator Andrew Kelly: https://corecursive.com/067-zig-with-andrew-kelley/ Andrew is has
+    been creating Zig, the programming language he always wanted for 5 years and the story behind…'
   source: corecursive-newsletter
 - type: article
   title: An Introduction to JQ
@@ -937,7 +931,7 @@ items:
   date: '2021-07-30'
   url: https://earthly.dev/blog/idiots-and-maniacs/
   slug: idiots-and-maniacs
-  description: In this article, the author explores the concept of &quot;idiots and maniacs&quot; in software development, drawing parallels to driving in the sno...
+  description: In this article, the author explores the concept of "idiots and maniacs" in software development, drawing parallels to driving in the sno...
   source: earthly-blog
 - type: article
   title: 6 Command Line Tools for Productive Programmers
@@ -965,7 +959,7 @@ items:
   date: '2021-07-02'
   url: https://newsletter.corecursive.com/posts/sqlite-and-video-cameras
   slug: sqlite-and-video-cameras
-  description: 'Hi Everyone, It''s July now, and I have a new episode out with Richard Hipp about SQLite. You can find it here: https://corecursive.com/066-sqlite-with-richard-hipp/ SQLite is public domain
+  description: 'Everyone, It''s July now, and I have a new episode out with Richard Hipp about SQLite. You can find it here: https://corecursive.com/066-sqlite-with-richard-hipp/ SQLite is public domain
     and has a Christian blessing in place of a license agreement, so I went into the interview…'
   source: corecursive-newsletter
 - type: article
@@ -1076,11 +1070,11 @@ items:
   description: Learn how to use mitmproxy, a command-line tool that acts as an HTTP and HTTPS proxy, to capture and modify network traffic. This tutorial provides...
   source: earthly-blog
 - type: article
-  title: 5 Blogs for Scala&#39;s Birthday
+  title: 5 Blogs for Scala's Birthday
   date: '2021-01-20'
   url: https://earthly.dev/blog/top-5-scala-blogs/
   slug: top-5-scala-blogs
-  description: Looking for some interesting Scala blogs to celebrate Scala&#39;s birthday? Check out this list of active Scala blogs that cover a range of topics,...
+  description: Looking for some interesting Scala blogs to celebrate Scala's birthday? Check out this list of active Scala blogs that cover a range of topics,...
   source: earthly-blog
 - type: article
   title: Top 3 Resources For Learning GoLang
