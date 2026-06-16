@@ -103,13 +103,17 @@
   }
   body.compact ul.timeline > li[data-type] .compact-row {
     display: grid;
-    grid-template-columns: 5.5rem 5rem 1fr auto;
-    gap: 1rem; align-items: baseline;
+    grid-template-columns: 5.5rem 5rem 1fr;
+    gap: 0.75rem; align-items: baseline;
     padding: 0.6rem 0;
     border-bottom: 1px solid var(--paper-border);
     width: 100%; box-sizing: border-box;
     font-family: 'Fira Sans', ui-sans-serif, sans-serif;
   }
+  body.compact .compact-date { color: var(--ink-muted); }
+  body.compact .compact-meta { color: var(--ink-muted); font-size: 0.8em; }
+  body.compact .compact-title { color: var(--ink); }
+  body.compact .compact-title a { color: var(--rose); }
   body.compact ul.timeline > li.year-marker .badge {
     color: var(--ink-strong) !important;
   }
@@ -144,12 +148,12 @@
     ul.timeline > li[data-type] .card-end   { display: block !important; }
     ul.timeline > li[data-type] .timeline-start { display: none !important; }
 
-    /* Compact row — collapse date + venue into two columns */
+    /* Compact row — date | badge | title, no separate video column */
     body.compact ul.timeline > li[data-type] .compact-row {
-      grid-template-columns: 4rem 1fr !important;
+      grid-template-columns: 4rem auto 1fr !important;
       gap: 0.4rem;
     }
-    body.compact .compact-venue { display: none; }
+    body.compact .compact-video { display: none; }
 
     /* Era ribbons — hide on mobile, not enough room */
     .era-ribbon { display: none !important; }
@@ -290,18 +294,16 @@
       <li data-type="{{ .type }}" data-era="{{ $era }}">
         {{/* Compact-mode row — hidden in visual mode via CSS. */}}
         <div class="compact-row">
-          <time class="font-mono text-xs text-slate-500 whitespace-nowrap">{{ dateFormat "Jan 2006" .date }}</time>
-          <span class="text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded text-white {{ $color }} text-center">{{ .type }}</span>
-          <span class="text-sm">
-            <span class="font-semibold text-slate-900">
-              {{ if .url }}<a href="{{ .url }}" class="hover:text-rose">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+          <time class="compact-date font-mono text-xs whitespace-nowrap">{{ dateFormat "Jan 2006" .date }}</time>
+          <span class="compact-badge text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded text-white {{ $color }} text-center self-start">{{ .type }}</span>
+          <span class="compact-title text-sm">
+            <span class="font-semibold">
+              {{ if .url }}<a href="{{ .url }}" class="hover:underline">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
             </span>
-            {{ with .venue }}<span class="text-slate-500"> — {{ . }}</span>{{ end }}
-            {{ with .with }}<span class="text-slate-500"> · with {{ . }}</span>{{ end }}
+            {{ with .venue }}<span class="compact-meta"> — {{ . }}</span>{{ end }}
+            {{ with .with }}<span class="compact-meta"> · with {{ . }}</span>{{ end }}
             {{ if .upcoming }}<span class="text-amber-600 text-[10px] uppercase tracking-wider font-bold ml-2">upcoming</span>{{ end }}
-          </span>
-          <span class="text-xs uppercase tracking-wider font-medium whitespace-nowrap">
-            {{ with .video_url }}<a href="{{ . }}" class="text-rose hover:underline">▶ Video</a>{{ end }}
+            {{ with .video_url }}<span class="compact-video"> · <a href="{{ . }}" class="hover:underline">▶ video</a></span>{{ end }}
           </span>
         </div>
         <hr class="bg-base-300"/>
