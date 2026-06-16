@@ -10,6 +10,7 @@
       <a href="/videos/" class="hover:text-rose">Videos</a>
       <a href="/timeline/" class="hover:text-rose">Everything</a>
     </nav>
+    <button id="theme-toggle" aria-label="Toggle dark mode" class="ml-2 text-[#4a4a48] hover:text-rose text-lg leading-none" title="Toggle dark mode">☀</button>
     <button class="sm:hidden ml-auto text-[#4a4a48] hover:text-rose" id="nav-toggle" aria-label="Menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -31,4 +32,19 @@
   document.getElementById('nav-toggle').addEventListener('click', function() {
     document.getElementById('nav-mobile').classList.toggle('hidden');
   });
+  (function() {
+    const btn = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = stored ? stored === 'dark' : sysDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    btn.textContent = isDark ? '☀' : '🌙';
+    btn.addEventListener('click', function() {
+      const nowDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = nowDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '☀' : '🌙';
+    });
+  })();
 </script>

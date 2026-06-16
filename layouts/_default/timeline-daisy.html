@@ -22,10 +22,9 @@
 <style>
   /* Lora reserved for long-form prose inside the editorial expansion */
   details.timeline-more > div { font-family: 'Lora', ui-serif, Georgia, serif; font-size: 0.95rem; line-height: 1.6; }
-  /* Indigo accent on links instead of DaisyUI primary */
-  a.link, a.link-primary, a.link-hover:hover { color: #5f023e /* rose */; }
+  a.link, a.link-primary, a.link-hover:hover { color: var(--rose); }
   a.link-hover { color: inherit; }
-  a.link-hover:hover { color: #420029 /* rose-dark */; text-decoration: underline; }
+  a.link-hover:hover { color: var(--rose-dark); text-decoration: underline; }
 
   /* ---- Visual (zig-zag) mode — default ---- */
   /* Fixed-width side columns + center the whole li horizontally. Spine
@@ -74,36 +73,7 @@
     padding: 4px 0; white-space: nowrap;
   }
 
-  /* Filter chips — Maggie-styled small pills, paper bg, near-black active */
-  .filter-chip {
-    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em;
-    font-family: 'Fira Sans', ui-sans-serif, sans-serif;
-    padding: 0.4rem 0.9rem; border-radius: 9999px;
-    border: 1px solid #d6d1bf; background: #fff; color: #4a4a48;
-    transition: all 0.15s ease; cursor: pointer;
-  }
-  .filter-chip:hover { border-color: #5f023e; color: #1a1a19; }
-  .filter-chip.is-active { background: #5f023e; border-color: #5f023e; color: #fff; }
-
-  /* Cards on cream — white field with warm-gray border */
-  .timeline-box {
-    background: #ffffff !important;
-    border: 1px solid #e7e3d6 !important;
-    border-radius: 4px !important;
-    box-shadow: 0 1px 2px rgba(26, 26, 25, 0.04) !important;
-    padding: 1rem 1.25rem !important;
-  }
-
-  /* Year markers — small caps text instead of bold badge */
-  ul.timeline > li.year-marker .badge {
-    background: transparent !important;
-    color: #8a8780 !important;
-    border: 1px solid #d6d1bf !important;
-    font-family: 'Fira Sans', ui-sans-serif, sans-serif !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.1em !important;
-    font-size: 0.75rem !important;
-  }
+  /* Filter chips, timeline cards, year markers — all now in head-css.html vars */
 
   /* Inline `⌄ more` / `⌃ less` toggle */
   details.timeline-more > summary::-webkit-details-marker { display: none; }
@@ -136,12 +106,12 @@
     grid-template-columns: 5.5rem 5rem 1fr auto;
     gap: 1rem; align-items: baseline;
     padding: 0.6rem 0;
-    border-bottom: 1px solid #e7e3d6;
+    border-bottom: 1px solid var(--paper-border);
     width: 100%; box-sizing: border-box;
     font-family: 'Fira Sans', ui-sans-serif, sans-serif;
   }
   body.compact ul.timeline > li.year-marker .badge {
-    color: #1a1a19 !important;
+    color: var(--ink-strong) !important;
   }
   body.compact ul.timeline > li.year-marker {
     display: block;
@@ -154,7 +124,7 @@
   }
   body.compact ul.timeline > li.year-marker .badge {
     background: transparent !important;
-    color: #475569 !important;
+    color: var(--ink-muted) !important;
     border: none !important;
     padding: 0 !important;
     font-size: 0.7rem !important;
