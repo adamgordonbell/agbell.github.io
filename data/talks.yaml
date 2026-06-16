@@ -12,7 +12,6 @@ items:
   location: Kansas City, MO
   format: 50 min · Breakout
   description: Build a minimal IaC tool from scratch to demystify how Pulumi / Terraform / CDK actually work.
-  upcoming: true
   tags:
   - iac
   - infrastructure
@@ -25,7 +24,6 @@ items:
   location: San Diego, CA
   format: 45 min
   description: Building AI agents that take real actions, and the reliability patterns that keep them safe.
-  upcoming: true
   tags:
   - ai
   - agents

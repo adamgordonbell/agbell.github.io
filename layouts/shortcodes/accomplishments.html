@@ -33,14 +33,8 @@
   {{ $items = where $items "notable" true }}
 {{ end }}
 
-{{/* upcoming filter for talks */}}
-{{ with .Get "upcoming" }}
-  {{ if eq . "only" }}
-    {{ $items = where $items "upcoming" true }}
-  {{ else if eq . "exclude" }}
-    {{ $items = where $items "upcoming" "!=" true }}
-  {{ end }}
-{{ end }}
+{{/* Derive isUpcoming from date — no manual flag needed */}}
+{{ $today := now.Format "2006-01-02" }}
 
 {{/* tag filter */}}
 {{ with .Get "tag" }}
@@ -48,13 +42,34 @@
   {{ $items = where $items "tags" "intersect" (slice $tag) }}
 {{ end }}
 
-{{/* reverse-chron: upcoming first (descending date), then past (descending date) */}}
-{{ $upcoming := where $items "upcoming" true }}
-{{ $past := where $items "upcoming" "!=" true }}
+{{/* upcoming filter: compare date string to today */}}
+{{ $upcomingParam := .Get "upcoming" }}
+{{ $filteredItems := slice }}
+{{ range $items }}
+  {{ $isUpcoming := gt .date $today }}
+  {{ if eq $upcomingParam "only" }}
+    {{ if $isUpcoming }}{{ $filteredItems = $filteredItems | append . }}{{ end }}
+  {{ else if eq $upcomingParam "exclude" }}
+    {{ if not $isUpcoming }}{{ $filteredItems = $filteredItems | append . }}{{ end }}
+  {{ else }}
+    {{ $filteredItems = $filteredItems | append . }}
+  {{ end }}
+{{ end }}
+{{ $items = $filteredItems }}
+
+{{/* reverse-chron: upcoming asc, then past desc */}}
+{{ $upcoming := slice }}
+{{ $past := slice }}
+{{ range $items }}
+  {{ if gt .date $today }}
+    {{ $upcoming = $upcoming | append . }}
+  {{ else }}
+    {{ $past = $past | append . }}
+  {{ end }}
+{{ end }}
 {{ $upcoming = sort $upcoming "date" "asc" }}
 {{ $past = sort $past "date" "desc" }}
-{{ $items = append $past $upcoming }}
-{{ $items = sort $items "date" "desc" }}
+{{ $items = append $upcoming $past }}
 
 {{/* limit */}}
 {{ with .Get "limit" }}
@@ -65,7 +80,8 @@
 {{ with .Get "heading" }}<h2>{{ . }}</h2>{{ end }}
 <ul class="recent-list">
   {{ range $items }}
-    <li class="recent-item {{ if .upcoming }}upcoming{{ end }}">
+    {{ $isUpcoming := gt .date $today }}
+    <li class="recent-item {{ if $isUpcoming }}upcoming{{ end }}">
       <p>
         <span class="badge badge-{{ .type }}">{{ .type }}</span>
         {{ if .url }}
@@ -73,7 +89,7 @@
         {{ else }}
           <strong>{{ .title }}</strong>
         {{ end }}
-        {{ if .upcoming }} <em>(upcoming)</em>{{ end }}
+        {{ if $isUpcoming }} <em>(upcoming)</em>{{ end }}
         <br/>
         <span class="meta">
           {{ with .venue }}{{ . }}{{ end }}
