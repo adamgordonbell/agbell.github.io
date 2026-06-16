@@ -26,8 +26,9 @@ params:
       description: "Older posts and notes."
 
 # Configure pagination
-paginate: 10
-paginate_path: "/page/:num/"
+pagination:
+  pagerSize: 10
+  path: "page"
 
 # Enable tags taxonomies
 taxonomies:
