@@ -5,7 +5,20 @@
 
 items:
 - type: talk
-  title: 'Demystifying the Magic: Let''s Build an Infrastructure-as-Code Tool from Scratch'
+  title: When AI Agents Touch Real Infrastructure
+  date: '2026-09-22'
+  url: https://talks.devopsdays.org/dodroxrox26/
+  venue: DevOpsDays Rockies
+  location: Denver, CO
+  format: 5 min · Ignite
+  description: War stories from giving AI agents real infrastructure access — what broke, and the patterns that keep them safe.
+  tags:
+  - ai
+  - agents
+  - devops
+  source: curated
+- type: talk
+  title: Let's Build an Infrastructure-as-Code Tool from Scratch
   date: '2026-09-10'
   url: https://www.kcdc.info/
   venue: KCDC
@@ -15,6 +28,32 @@ items:
   tags:
   - iac
   - infrastructure
+  source: curated
+- type: talk
+  title: I Built an AI Running Coach (And Gave It Memory)
+  date: '2026-06-18'
+  url: https://luma.com/pinecone-m9my
+  venue: 'Pinecone Meetup NYC: Scaling AI Infrastructure'
+  location: New York, NY
+  format: 30 min
+  description: Adapting the AI running coach to use vector memory (Pinecone) for semantic recall over training history.
+  tags:
+  - ai
+  - agents
+  - rag
+  source: curated
+- type: talk
+  title: 'Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore'
+  date: '2026-06-17'
+  url: https://www.aicamp.ai/event/eventdetails/W2026061714
+  venue: AICamp New York
+  location: New York, NY
+  format: Workshop
+  description: Hands-on workshop deploying AI agents on AWS with Pulumi and Amazon Bedrock AgentCore.
+  tags:
+  - ai
+  - agents
+  - aws
   source: curated
 - type: talk
   title: 'Building Action-Taking AI Agents: Reliability Lessons from Real Systems'
