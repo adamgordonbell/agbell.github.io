@@ -6,6 +6,19 @@
 items:
 - type: podcast
   role: host
+  title: The Bitter Lesson
+  date: '2026-06-13'
+  url: https://corecursive.com/the-bitter-lesson/
+  slug: the-bitter-lesson
+  description: 'I''ve been trying to understand how machine learning actually works. Not use it, but to understand it, down to the ifs and loops. How does a program built out of plain conditionals get better
+    on its own? So late one night I sent Don a paper, reward is enough. The claim is that all of intelligence, the whole thing, comes down to a system maximizing a reward. So we backed up through the history
+    to find out how far "reward is enough" really goes: B.F. Skinner training pigeons, a backgammon program that taught itself, the Go move no human would have played. It''s a story about machine learning,
+    and what that leaves for the rest of us who still do it by hand.'
+  duration: 01:00:01
+  episode_number: 122
+  source: corecursive
+- type: podcast
+  role: host
   title: The Pre-Training Wall and the Treadmill After It
   date: '2026-05-09'
   url: https://corecursive.com/the-pre-training-wall-and-the-treadmill-after-it/
@@ -670,6 +683,20 @@ items:
     but it's also about community and teamwork.
   source: corecursive
 - type: podcast
+  role: guest
+  title: Dev Tool Time with Adam Gordon Bell
+  date: '2021-10-05'
+  url: https://www.youtube.com/watch?v=oPaPhFX7SeM
+  venue: Dev Tool Time
+  format: Interview
+  description: Live show interview about developer tools and Earthly.
+  video_url: https://www.youtube.com/watch?v=oPaPhFX7SeM
+  tags:
+  - podcast
+  - interview
+  - earthly
+  source: curated
+- type: podcast
   role: host
   title: The Original Remote Developer
   date: '2021-10-04'
@@ -1142,16 +1169,6 @@ items:
   source: corecursive
 - type: podcast
   role: host
-  title: Jonathan Boccara on Understanding Legacy Code
-  date: '2019-04-23'
-  url: https://se-radio.net/2019/04/363-jonathan-boccara-on-understanding-legacy-code/
-  slug: 363-jonathan-boccara-on-understanding-legacy-code
-  description: Jonathan Boccara, author of The Legacy Code Programmer’s Toolbox discusses understanding and working with legacy code. Working with legacy code is a key skill of professional software development
-    that is often neglected. Host Adam Gordon Bell spoke with Boccara about reading legacy code, developing the right attitude for approaching legacy code and several techniques for improving your legacy
-    code skill set.
-  source: se-radio
-- type: podcast
-  role: host
   title: Refinement Types
   date: '2019-05-15'
   url: https://corecursive.com/031-refinement-types-with-niki-vazou/
@@ -1200,6 +1217,16 @@ items:
   - interview
   - podcast
   source: curated
+- type: podcast
+  role: host
+  title: Jonathan Boccara on Understanding Legacy Code
+  date: '2019-04-23'
+  url: https://se-radio.net/2019/04/363-jonathan-boccara-on-understanding-legacy-code/
+  slug: 363-jonathan-boccara-on-understanding-legacy-code
+  description: Jonathan Boccara, author of The Legacy Code Programmer’s Toolbox discusses understanding and working with legacy code. Working with legacy code is a key skill of professional software development
+    that is often neglected. Host Adam Gordon Bell spoke with Boccara about reading legacy code, developing the right attitude for approaching legacy code and several techniques for improving your legacy
+    code skill set.
+  source: se-radio
 - type: podcast
   role: host
   title: Learning to Think
@@ -1599,18 +1626,4 @@ items:
   tags:
   - podcast
   - guest-host
-  source: curated
-- type: podcast
-  role: guest
-  title: Dev Tool Time with Adam Gordon Bell
-  date: '2021-10-05'
-  url: https://www.youtube.com/watch?v=oPaPhFX7SeM
-  venue: Dev Tool Time
-  format: Interview
-  description: Live show interview about developer tools and Earthly.
-  video_url: https://www.youtube.com/watch?v=oPaPhFX7SeM
-  tags:
-  - podcast
-  - interview
-  - earthly
   source: curated
