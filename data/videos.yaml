@@ -1,7 +1,7 @@
-# Videos — auto-managed by sync scripts + hand edits.
-# Sync is ADDITIVE: scripts only add items whose slug/url isn't already present.
+# videos.yaml — auto-managed by sync scripts + hand edits.
+# Sync is ADDITIVE: scripts only add items whose url isn't already present.
 # Hand-edit titles, descriptions, types, etc. directly — they persist.
-# Schema: type, role?, title, date, url, slug?, description?, venue?, ...
+# Schema: type, role?, title, date, url, slug?, description?, ...
 
 items:
 - type: video
@@ -270,7 +270,7 @@ items:
   duration: '6:51'
   source: youtube-earthly
 - type: video
-  title: 'Learn HOW to Read CSV Files in Python! (Data Analysis Edition)'
+  title: Learn HOW to Read CSV Files in Python! (Data Analysis Edition)
   date: '2023-01-10'
   url: https://www.youtube.com/watch?v=H-hagjt65cE
   slug: H-hagjt65cE
