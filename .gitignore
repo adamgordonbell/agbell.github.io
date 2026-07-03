@@ -1,12 +1,4 @@
-# Hakyll specific
-hakyll/_cache/
-hakyll/_site/
-hakyll/.stack-work/
-
 # Hugo
-hugo/public/
-hugo/resources/
-hugo/.hugo_build.lock
 
 # IDE
 .vscode/
@@ -17,3 +9,12 @@ codex.tags
 # OS
 .DS_Store
 Thumbs.db
+
+# Hugo (site at repo root — CI builds public/ itself, never committed)
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Working files
+scratch/
+__pycache__/
