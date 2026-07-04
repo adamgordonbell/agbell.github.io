@@ -5,6 +5,10 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    # Daily rebuild: self-heals transient Pages deploy failures (build succeeds,
+    # deploy flakes, artifact expires in ~1 day so a late re-run can't recover).
+    - cron: '17 11 * * *'
 
 permissions:
   contents: read
