@@ -4,6 +4,14 @@
 # Schema: type, role?, title, date, url, slug?, description?, ...
 
 items:
+- type: newsletter
+  title: Talking It Out with Don
+  date: '2026-07-05'
+  url: https://newsletter.corecursive.com/posts/adam-corecursive-com
+  slug: adam-corecursive-com
+  description: ( This is the CoRecursive / Adam Gordon Bell newsletter, and you probably signed up from the website, but then Adam stopped sending them for over a year, but now its back. ) It's July and
+    I don't have new CoRecursive episode out this month ( details below) , but I do have a lot…
+  source: corecursive-newsletter
 - type: article
   title: Ten More Things You Can Do With Pulumi Neo
   date: '2026-05-19'
