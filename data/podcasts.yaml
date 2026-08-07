@@ -6,6 +6,19 @@
 items:
 - type: podcast
   role: host
+  title: The Hutter Prize
+  date: '2026-08-04'
+  url: https://corecursive.com/the-hutter-prize/
+  slug: the-hutter-prize
+  description: 'I texted Don about a side gig: €5,000 for every 1% you shave off a zip file. It''s a real contest. For 20 years, Marcus Hutter has offered €500,000 to anyone who can losslessly compress
+    a gigabyte of Wikipedia small enough. Gzip gets you to 322. After that you''re on your own. So we tried. Run-length encoding. Pointing back instead of repeating yourself. Huffman coding worked out by
+    hand. Arithmetic coding, which spends less than one bit per character. Then Claude Shannon''s 1951 guessing game, and a paper where an LLM beats every record and still wins nothing, because the model
+    counts against you. Don wanted the euros. I had other reasons for bringing him over.'
+  duration: '52:54'
+  episode_number: 123
+  source: corecursive
+- type: podcast
+  role: host
   title: The Bitter Lesson
   date: '2026-06-13'
   url: https://corecursive.com/the-bitter-lesson/
