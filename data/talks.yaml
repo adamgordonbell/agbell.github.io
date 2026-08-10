@@ -5,6 +5,21 @@
 
 items:
 - type: talk
+  title: 'I Built an AI Running Coach: A Personal kagent Agent in Production'
+  date: '2026-11-10'
+  url: https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1246044
+  venue: KubeCon + CloudNativeCon North America
+  location: Salt Lake City, UT
+  format: 30 min · Breakout
+  description: A kagent Agent CRD on Kubernetes that reads Strava and Peloton, remembers
+    training history, and keeps me on track — and what broke along the way.
+  tags:
+  - ai
+  - agents
+  - kubernetes
+  - cloud-native
+  source: curated
+- type: talk
   title: When AI Agents Touch Real Infrastructure
   date: '2026-09-22'
   url: https://talks.devopsdays.org/dodroxrox26/
