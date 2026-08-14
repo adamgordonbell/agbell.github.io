@@ -4,6 +4,13 @@
 # Schema: type, role?, title, date, url, slug?, description?, ...
 
 items:
+- type: article
+  title: 'Kubernetes Agent Sandbox: What It Is and How to Deploy It with Pulumi'
+  date: '2026-07-21'
+  url: https://www.pulumi.com/blog/kubernetes-agent-sandbox/
+  slug: kubernetes-agent-sandbox
+  description: Agent Sandbox gives AI agents kernel-isolated, disposable environments as Kubernetes resources. Here's what it is and how to deploy it on GKE with Pulumi.
+  source: pulumi-blog
 - type: newsletter
   title: Talking It Out with Don
   date: '2026-07-05'
@@ -12,6 +19,20 @@ items:
   description: ( This is the CoRecursive / Adam Gordon Bell newsletter, and you probably signed up from the website, but then Adam stopped sending them for over a year, but now its back. ) It's July and
     I don't have new CoRecursive episode out this month ( details below) , but I do have a lot…
   source: corecursive-newsletter
+- type: article
+  title: 'Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More'
+  date: '2026-06-15'
+  url: https://www.pulumi.com/blog/getting-started-aks-pulumi-csharp/
+  slug: getting-started-aks-pulumi-csharp
+  description: Deploy an AKS cluster with Pulumi C#. Six Kubernetes recommendations from a live workshop, including the Docker Hub rate limit that hit mid-demo.
+  source: pulumi-blog
+- type: article
+  title: Seven Rules for Building an AI-Native Software Factory
+  date: '2026-05-21'
+  url: https://www.pulumi.com/blog/seven-rules-ai-native-software-factory/
+  slug: seven-rules-ai-native-software-factory
+  description: Ewan Dawson, CTO of Compostable AI, on building a software factory where AI agents write the code. Seven rules learned across nineteen client deployments.
+  source: pulumi-blog
 - type: article
   title: Ten More Things You Can Do With Pulumi Neo
   date: '2026-05-19'
