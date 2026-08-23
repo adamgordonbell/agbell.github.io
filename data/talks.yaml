@@ -34,7 +34,7 @@ items:
   source: curated
 - type: talk
   title: Let's Build an Infrastructure-as-Code Tool from Scratch
-  date: '2026-09-10'
+  date: '2026-09-11'
   url: https://www.kcdc.info/
   venue: KCDC
   location: Kansas City, MO
@@ -46,7 +46,7 @@ items:
   source: curated
 - type: talk
   title: I Built an AI Running Coach (That Actually Remembers My Training)
-  date: '2026-09-11'
+  date: '2026-09-10'
   url: https://www.kcdc.info/
   venue: KCDC
   location: Kansas City, MO
