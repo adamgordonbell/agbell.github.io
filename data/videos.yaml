@@ -5,6 +5,15 @@
 
 items:
 - type: video
+  title: 'Terraform and HCL in Pulumi: State, Modules, and OpenTofu-Compatible Code'
+  date: '2026-08-20'
+  url: https://www.youtube.com/watch?v=D6xMTnD-U-U
+  slug: D6xMTnD-U-U
+  description: 'You don''t have to throw out your Terraform to start using Pulumi. Three capabilities, demoed live: Pulumi Cloud hosting real Terraform state, publishing your Terraform modules so any Pulumi
+    language can consume them, and running plain HCL on the Pulumi engine. Webinar with…'
+  duration: '56:17'
+  source: youtube-pulumi
+- type: video
   title: Infrastructure as Code on AWS with TypeScript
   date: '2026-05-05'
   url: https://www.youtube.com/watch?v=Dn6WzP-6OXQ
