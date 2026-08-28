@@ -38,7 +38,7 @@ items:
   url: https://www.kcdc.info/
   venue: KCDC
   location: Kansas City, MO
-  format: 50 min · Breakout
+  format: 60 min · Breakout
   description: Build a minimal IaC tool from scratch to demystify how Pulumi / Terraform / CDK actually work.
   tags:
   - iac
@@ -50,7 +50,7 @@ items:
   url: https://www.kcdc.info/
   venue: KCDC
   location: Kansas City, MO
-  format: 50 min · Breakout
+  format: 60 min · Breakout
   description: An AI running coach on AWS that reads Strava, remembers training history,
     and keeps me on track — reliability lessons from a personal agent in production.
   tags:
