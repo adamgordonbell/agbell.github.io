@@ -5,6 +5,15 @@
 
 items:
 - type: video
+  title: 'Beyond the Hyperscalers: Leaving AWS, Cloud Sovereignty, and What Actually Protects You'
+  date: '2026-09-03'
+  url: https://www.youtube.com/watch?v=XF_W6pCBS50
+  slug: XF_W6pCBS50
+  description: 'Do you need an exit plan from your cloud provider? A panel with three people who''ve argued it from different sides: Waldemar Kindler (CEO, Think Ahead Technologies) plans migrations off
+    the hyperscalers for EU companies, Jim Dowling (CEO, Hopsworks) actually moved his company…'
+  duration: '1:25:21'
+  source: youtube-pulumi
+- type: video
   title: 'Terraform and HCL in Pulumi: State, Modules, and OpenTofu-Compatible Code'
   date: '2026-08-20'
   url: https://www.youtube.com/watch?v=D6xMTnD-U-U
