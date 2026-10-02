@@ -5,6 +5,24 @@
 
 items:
 - type: video
+  title: 'Neo in a Docker Sandbox: Using Pulumi''s Coding Agent for All Things Infra Safely and Securely'
+  date: '2026-09-29'
+  url: https://www.youtube.com/watch?v=aTimO_kMS0c
+  slug: aTimO_kMS0c
+  description: 'Give an AI coding agent real access to your cloud, and one bad call can wipe out production. This workshop shows how to unleash your agents safely: run Pulumi Neo, Pulumi''s infrastructure
+    agent, inside a Docker Sandbox, so it gets the access it needs and nothing more. Mike…'
+  duration: '1:11:27'
+  source: youtube-pulumi
+- type: video
+  title: 'Extending Pulumi Neo: MCP Servers and Cloud CLIs'
+  date: '2026-09-29'
+  url: https://www.youtube.com/watch?v=LxUHQgf6caM
+  slug: LxUHQgf6caM
+  description: 'Pulumi Neo is a year old, and the last few months turned it from a chat box into an operations agent. This workshop wires it into the rest of your stack: the Context API so it knows your
+    whole cloud, MCP servers and cloud CLIs so it can reach PagerDuty, Linear, and AWS, and…'
+  duration: '44:03'
+  source: youtube-pulumi
+- type: video
   title: 'Beyond the Hyperscalers: Leaving AWS, Cloud Sovereignty, and What Actually Protects You'
   date: '2026-09-03'
   url: https://www.youtube.com/watch?v=XF_W6pCBS50
