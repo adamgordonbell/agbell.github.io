@@ -5,6 +5,13 @@
 
 items:
 - type: article
+  title: 'Beyond the Hyperscalers: What Actually Protects You'
+  date: '2026-09-16'
+  url: https://www.pulumi.com/blog/beyond-the-hyperscalers-what-actually-protects-you/
+  slug: beyond-the-hyperscalers-what-actually-protects-you
+  description: Three people who have priced leaving AWS spent an hour arguing about cloud sovereignty. Here is the recording, and the advice each of them gave.
+  source: pulumi-blog
+- type: article
   title: 'Kubernetes Agent Sandbox: What It Is and How to Deploy It with Pulumi'
   date: '2026-07-21'
   url: https://www.pulumi.com/blog/kubernetes-agent-sandbox/
