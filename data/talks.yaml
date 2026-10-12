@@ -22,7 +22,8 @@ items:
 - type: talk
   title: When AI Agents Touch Real Infrastructure
   date: '2026-09-22'
-  url: https://talks.devopsdays.org/dodroxrox26/
+  url: https://www.youtube.com/watch?v=3SWXzY5N9kI&t=10434s
+  video_url: https://www.youtube.com/watch?v=3SWXzY5N9kI&t=10434s
   venue: DevOpsDays Rockies
   location: Denver, CO
   format: 5 min · Ignite
@@ -114,6 +115,7 @@ items:
   title: When AI Agents Meet Production Infrastructure
   date: '2026-03-07'
   url: https://www.youtube.com/watch?v=mt-CAWubAFg
+  video_url: https://www.youtube.com/watch?v=mt-CAWubAFg
   venue: SCaLE 23x
   location: Pasadena, CA
   format: 45 min
