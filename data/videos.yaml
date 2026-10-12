@@ -9,8 +9,7 @@ items:
   date: '2026-09-29'
   url: https://www.youtube.com/watch?v=aTimO_kMS0c
   slug: aTimO_kMS0c
-  description: 'Give an AI coding agent real access to your cloud, and one bad call can wipe out production. This workshop shows how to unleash your agents safely: run Pulumi Neo, Pulumi''s infrastructure
-    agent, inside a Docker Sandbox, so it gets the access it needs and nothing more. Mike…'
+  description: 'Pulumi workshop: Engin Diri runs Pulumi Neo inside a Docker Sandbox, and Mike Coleman (Docker) explains how the sandbox works. I ran chat and Q&A.'
   duration: '1:11:27'
   source: youtube-pulumi
 - type: video
