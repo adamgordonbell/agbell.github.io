@@ -9,6 +9,7 @@ type: "profile"
 show_social_proof: true
 image: "/images/profiles/IMG_1177_web_cropped2.jpg"
 high_res_image: "/images/profiles/IMG_1177_cropped.jpg"
+square_image: "/images/profiles/adam-gordon-bell-square.jpg"
 ---
 
 Adam Gordon Bell is a software engineer and Community Engineer at [Pulumi](https://www.pulumi.com/community/community-engineering/adam-gordon-bell/), where he focuses on developer communication — writing, recording, and live demos that explain how infrastructure tools actually work.

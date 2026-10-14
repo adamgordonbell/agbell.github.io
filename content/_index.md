@@ -5,6 +5,7 @@ description: "Community Engineer at Pulumi, host of the CoRecursive podcast, con
 type: "profile"
 image: "/images/profiles/IMG_1205_web.jpg"
 high_res_image: "/images/profiles/IMG_1205.jpg"
+square_image: "/images/profiles/adam-gordon-bell-square.jpg"
 aliases:
   - /contact/
 ---
