@@ -24,6 +24,9 @@
             {{ if .Params.high_res_image }}
               <p class="mt-2 text-center text-xs"><a href="{{ .Params.high_res_image }}" class="text-rose hover:underline">High-resolution version</a></p>
             {{ end }}
+            {{ if .Params.square_image }}
+              <p class="mt-1 text-center text-xs"><a href="{{ .Params.square_image }}" class="text-rose hover:underline">Square headshot</a></p>
+            {{ end }}
           </div>
           <div class="prose-body">
             {{ .Content }}
