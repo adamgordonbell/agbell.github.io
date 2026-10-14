@@ -161,6 +161,7 @@ items:
   location: Online
   format: Meetup
   description: A re:Invent 2025 takeaways talk for the Houston AWS user group — what AWS's AI stack means for builders.
+  slides_url: /slides/aws-ai-bet-reinvent-2025.pdf
   tags:
   - aws
   - ai
