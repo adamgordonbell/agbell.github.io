@@ -5,6 +5,15 @@
 
 items:
 - type: video
+  title: Who Spent All the Tokens? Per-Team AI Cost Control on Amazon Bedrock with Pulumi
+  date: '2026-11-05'
+  url: https://www.youtube.com/watch?v=Gw9P8Go8XEs
+  slug: Gw9P8Go8XEs
+  description: 'Several teams share one Amazon Bedrock account, the bill arrives as one line, and nobody can say which team burned the tokens. This workshop builds per-team token metering as code with Pulumi:
+    each team gets its own inference profile and a scoped role, Bedrock''s invocation logs…'
+  duration: '39:09'
+  source: youtube-pulumi
+- type: video
   title: Neo in a Docker Sandbox (EMEA session)
   date: '2026-10-21'
   url: https://www.youtube.com/watch?v=FYB5rht5lTs

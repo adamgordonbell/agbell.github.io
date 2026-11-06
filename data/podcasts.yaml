@@ -6,6 +6,18 @@
 items:
 - type: podcast
   role: host
+  title: Random to Whom?
+  date: '2026-11-03'
+  url: https://corecursive.com/random-to-whom/
+  slug: random-to-whom
+  description: 'I found a comment on the Call of Duty Mobile subreddit. Kevffinn: COMPUTERS CANNOT GENERATE RANDOM NUMBERS AND ANY SUGGESTION OTHERWISE IS FRAUDULENT. I''m not sure about the fraud part,
+    but what does and does not constitute a random number is a surprisingly deep question. So I built a randomness detector, and I bet Don that we would not be able to produce a truly random number. Loser
+    buys lunch.'
+  duration: '57:05'
+  episode_number: 124
+  source: corecursive
+- type: podcast
+  role: host
   title: The Hutter Prize
   date: '2026-08-04'
   url: https://corecursive.com/the-hutter-prize/
