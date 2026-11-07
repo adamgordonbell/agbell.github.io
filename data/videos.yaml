@@ -5,6 +5,24 @@
 
 items:
 - type: video
+  title: Who Spent All the Tokens? Per-Team AI Cost Control on Amazon Bedrock with Pulumi
+  date: '2026-11-05'
+  url: https://www.youtube.com/watch?v=Gw9P8Go8XEs
+  slug: Gw9P8Go8XEs
+  description: 'Several teams share one Amazon Bedrock account, the bill arrives as one line, and nobody can say which team burned the tokens. This workshop builds per-team token metering as code with Pulumi:
+    each team gets its own inference profile and a scoped role, Bedrock''s invocation logs…'
+  duration: '39:09'
+  source: youtube-pulumi
+- type: video
+  title: Neo in a Docker Sandbox (EMEA session)
+  date: '2026-10-21'
+  url: https://www.youtube.com/watch?v=FYB5rht5lTs
+  slug: FYB5rht5lTs
+  description: 'Coding agents are brilliant at code and blind to the downside in production. Adam Gordon Bell (Community Engineer, Pulumi) walks through three real incidents and shows how to unleash your
+    agents without losing prod: Pulumi Neo with read-only mode, plan mode and policies, inside…'
+  duration: '58:06'
+  source: youtube-pulumi
+- type: video
   title: 'Neo in a Docker Sandbox: Using Pulumi''s Coding Agent for All Things Infra Safely and Securely'
   date: '2026-09-29'
   url: https://www.youtube.com/watch?v=aTimO_kMS0c

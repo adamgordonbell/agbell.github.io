@@ -5,6 +5,32 @@
 
 items:
 - type: talk
+  title: 'When AI Agents Touch Real Infrastructure: Five War Stories'
+  date: '2027-02-26'
+  url: https://confoo.ca/en/2027/session/when-ai-agents-touch-real-infrastructure-five-war-stories
+  venue: ConFoo
+  location: Montreal, QC
+  format: 45 min · Breakout
+  description: Five war stories from giving AI agents real cloud infrastructure with the guardrails off, a framework for when agents are safe to use, and the benchmark we're still missing.
+  tags:
+  - ai
+  - agents
+  - devops
+  source: curated
+- type: talk
+  title: The PR Review Bottleneck Nobody Talks About
+  date: '2027-02-24'
+  url: https://confoo.ca/en/2027/session/the-pr-review-bottleneck-nobody-talks-about
+  venue: ConFoo
+  location: Montreal, QC
+  format: 45 min · Breakout
+  description: The real slowdown is the days PRs sit waiting for review — what research shows about review latency, why large PRs defeat reviewers, and how AI could make it better or much worse.
+  tags:
+  - code-review
+  - engineering-productivity
+  - ai
+  source: curated
+- type: talk
   title: 'I Built an AI Running Coach: A Personal kagent Agent in Production'
   date: '2026-11-10'
   url: https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1246044
