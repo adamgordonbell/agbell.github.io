@@ -33,7 +33,8 @@ items:
 - type: talk
   title: 'I Built an AI Running Coach: A Personal kagent Agent in Production'
   date: '2026-11-10'
-  url: https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1246044
+  url: https://www.youtube.com/watch?v=vc5k3GFRBoY
+  video_url: https://www.youtube.com/watch?v=vc5k3GFRBoY
   venue: KubeCon + CloudNativeCon North America
   location: Salt Lake City, UT
   format: 30 min · Breakout
